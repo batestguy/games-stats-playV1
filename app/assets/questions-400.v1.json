@@ -1,0 +1,1668 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "400-001",
+      "concept": "regression coefficient",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A parameter multiplies a predictor term in the model equation.",
+      "choices": [
+        "Regression coefficient",
+        "Residual",
+        "Fitted value",
+        "Interaction",
+        "Intercept"
+      ],
+      "answer": "Regression coefficient",
+      "explanation": "Its role is to quantify how that term contributes to the fitted response or link scale.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 362, Regression coefficient"
+    },
+    {
+      "id": "400-002",
+      "concept": "residual",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "An observed response minus the corresponding fitted response.",
+      "choices": [
+        "Regression coefficient",
+        "Residual",
+        "Fitted value",
+        "Interaction",
+        "Intercept"
+      ],
+      "answer": "Residual",
+      "explanation": "It measures the fitted model's error for a particular observation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 367, Residual"
+    },
+    {
+      "id": "400-003",
+      "concept": "fitted value",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The model's estimated response evaluated at a training observation's predictor values.",
+      "choices": [
+        "Regression coefficient",
+        "Residual",
+        "Fitted value",
+        "Interaction",
+        "Intercept"
+      ],
+      "answer": "Fitted value",
+      "explanation": "The fitted value is the model's prediction at that design point.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 367, Residual"
+    },
+    {
+      "id": "400-004",
+      "concept": "interaction",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The relationship between one predictor and the response changes with another predictor.",
+      "choices": [
+        "Regression coefficient",
+        "Residual",
+        "Fitted value",
+        "Interaction",
+        "Intercept"
+      ],
+      "answer": "Interaction",
+      "explanation": "A product term is one way to let the effect of a predictor depend on another variable.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 219, Interaction"
+    },
+    {
+      "id": "400-005",
+      "concept": "dummy variable",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A model uses 1 for the afternoon shift and 0 for the morning shift.",
+      "choices": [
+        "Dummy variable",
+        "Interaction",
+        "Regression coefficient",
+        "Residual",
+        "Offset term"
+      ],
+      "answer": "Dummy variable",
+      "explanation": "A zero-one indicator represents membership in the selected group.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 145, Dummy variables"
+    },
+    {
+      "id": "400-006",
+      "concept": "interaction",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Separate fitted lines show that sales rise faster with advertising in one region than another.",
+      "choices": [
+        "Dummy variable",
+        "Interaction",
+        "Regression coefficient",
+        "Residual",
+        "Offset term"
+      ],
+      "answer": "Interaction",
+      "explanation": "An advertising-by-region term allows different slopes by region.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 219, Interaction"
+    },
+    {
+      "id": "400-007",
+      "concept": "regression coefficient",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Holding the other predictors fixed, the fitted response rises by 2 units per extra machine hour.",
+      "choices": [
+        "Dummy variable",
+        "Interaction",
+        "Regression coefficient",
+        "Residual",
+        "Offset term"
+      ],
+      "answer": "Regression coefficient",
+      "explanation": "The slope coefficient gives the change associated with a one-unit predictor increase.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 362, Regression coefficient"
+    },
+    {
+      "id": "400-008",
+      "concept": "residual",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "At a design point with fitted value 10, an observation is 13. What is the observed-minus-fitted discrepancy called?",
+      "choices": [
+        "Dummy variable",
+        "Interaction",
+        "Regression coefficient",
+        "Residual",
+        "Offset term"
+      ],
+      "answer": "Residual",
+      "explanation": "Subtract the fitted response from the observed response to obtain the residual.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 367, Residual"
+    },
+    {
+      "id": "400-009",
+      "concept": "coefficient of determination",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "1 − SSE / SST, for ordinary least squares with an intercept",
+      "choices": [
+        "Coefficient of determination",
+        "Residual sum of squares",
+        "Error mean square",
+        "Mean square ratio",
+        "Total sum of squares"
+      ],
+      "answer": "Coefficient of determination",
+      "explanation": "This is the fraction of total variation accounted for by the fitted regression.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 89, Coefficient of determination",
+      "convention": "SSE is the residual sum of squares. SST is the centred total sum of squares."
+    },
+    {
+      "id": "400-010",
+      "concept": "residual sum of squares",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Σᵢ (yᵢ − ŷᵢ)²",
+      "choices": [
+        "Coefficient of determination",
+        "Residual sum of squares",
+        "Error mean square",
+        "Mean square ratio",
+        "Total sum of squares"
+      ],
+      "answer": "Residual sum of squares",
+      "explanation": "It totals the squared distances between observed and fitted responses.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 368, Residual sum of squares"
+    },
+    {
+      "id": "400-011",
+      "concept": "error mean square",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "SSE / (n − p), with p fitted coefficients including the intercept",
+      "choices": [
+        "Coefficient of determination",
+        "Residual sum of squares",
+        "Error mean square",
+        "Mean square ratio",
+        "Total sum of squares"
+      ],
+      "answer": "Error mean square",
+      "explanation": "Dividing the residual sum by residual degrees of freedom estimates the error variance in the classical linear model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 153, Error mean square"
+    },
+    {
+      "id": "400-012",
+      "concept": "mean square ratio",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "MS for a model term / MS for error, in a standard one-factor ANOVA",
+      "choices": [
+        "Coefficient of determination",
+        "Residual sum of squares",
+        "Error mean square",
+        "Mean square ratio",
+        "Total sum of squares"
+      ],
+      "answer": "Mean square ratio",
+      "explanation": "The ratio is the F statistic for the term in this ANOVA.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean square ratio"
+    },
+    {
+      "id": "400-013",
+      "concept": "factor",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A categorical explanatory variable whose categories define the groups being compared in ANOVA.",
+      "choices": [
+        "Factor",
+        "Contrast",
+        "Fixed effect",
+        "Random effect",
+        "Covariate"
+      ],
+      "answer": "Factor",
+      "explanation": "Each category is a level of the factor.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 161, Factor"
+    },
+    {
+      "id": "400-014",
+      "concept": "contrast",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A linear combination of group means with coefficients that sum to zero.",
+      "choices": [
+        "Factor",
+        "Contrast",
+        "Fixed effect",
+        "Random effect",
+        "Covariate"
+      ],
+      "answer": "Contrast",
+      "explanation": "The coefficients specify the comparison while cancelling a common shift in all means.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast"
+    },
+    {
+      "id": "400-015",
+      "concept": "fixed effect",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A term whose levels are the particular settings of interest, with separate parameters for them.",
+      "choices": [
+        "Factor",
+        "Contrast",
+        "Fixed effect",
+        "Random effect",
+        "Covariate"
+      ],
+      "answer": "Fixed effect",
+      "explanation": "A fixed-effects model treats differences among those settings as parameters.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 169, Fixed effects"
+    },
+    {
+      "id": "400-016",
+      "concept": "random effect",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A group-specific departure modeled as a draw from a distribution of such departures.",
+      "choices": [
+        "Factor",
+        "Contrast",
+        "Fixed effect",
+        "Random effect",
+        "Covariate"
+      ],
+      "answer": "Random effect",
+      "explanation": "The model learns about variation across groups through a common distribution.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 354, Random effects"
+    },
+    {
+      "id": "400-017",
+      "concept": "one-way anova",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Compare the mean yield across three fertilisers with one grouping variable.",
+      "choices": [
+        "One-way ANOVA",
+        "Two-way ANOVA",
+        "Analysis of covariance",
+        "Randomised block design",
+        "Simple linear regression"
+      ],
+      "answer": "One-way ANOVA",
+      "explanation": "A single factor defines the fertiliser groups whose means are compared.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 13, Analysis of variance (ANOVA)"
+    },
+    {
+      "id": "400-018",
+      "concept": "two-way anova",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Compare mean yield by fertiliser and irrigation category, allowing the fertiliser effect to differ by irrigation.",
+      "choices": [
+        "One-way ANOVA",
+        "Two-way ANOVA",
+        "Analysis of covariance",
+        "Randomised block design",
+        "Simple linear regression"
+      ],
+      "answer": "Two-way ANOVA",
+      "explanation": "Two factors and their interaction describe the group mean structure.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 13, Analysis of variance (ANOVA); 161, Factorial designs"
+    },
+    {
+      "id": "400-019",
+      "concept": "analysis of covariance",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Compare mean yield across fertilisers while adjusting for a numerical measure of initial soil quality.",
+      "choices": [
+        "One-way ANOVA",
+        "Two-way ANOVA",
+        "Analysis of covariance",
+        "Randomised block design",
+        "Simple linear regression"
+      ],
+      "answer": "Analysis of covariance",
+      "explanation": "ANCOVA combines a group comparison with adjustment for a covariate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 13, Analysis of covariance (ANCOVA)"
+    },
+    {
+      "id": "400-020",
+      "concept": "randomised block design",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Divide fields by soil type, then randomly assign the fertilisers within each soil type.",
+      "choices": [
+        "One-way ANOVA",
+        "Two-way ANOVA",
+        "Analysis of covariance",
+        "Randomised block design",
+        "Simple linear regression"
+      ],
+      "answer": "Randomised block design",
+      "explanation": "Randomisation within blocks separates treatment contrasts from block differences.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 58, Blocking"
+    },
+    {
+      "id": "400-021",
+      "concept": "factorial design",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Every combination of two processing temperatures and three mixing speeds is included in the experiment.",
+      "choices": [
+        "Factorial design",
+        "Planned contrast",
+        "Mixed-effects model",
+        "Least squares estimation",
+        "Bonferroni correction"
+      ],
+      "answer": "Factorial design",
+      "explanation": "Crossing the factor levels lets the analyst study main effects and interactions.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 161, Factorial designs"
+    },
+    {
+      "id": "400-022",
+      "concept": "planned contrast",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Before collecting data, specify a comparison between the control mean and the average of three treatment means.",
+      "choices": [
+        "Factorial design",
+        "Planned contrast",
+        "Mixed-effects model",
+        "Least squares estimation",
+        "Bonferroni correction"
+      ],
+      "answer": "Planned contrast",
+      "explanation": "A zero-sum set of weights defines this comparison in advance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast"
+    },
+    {
+      "id": "400-023",
+      "concept": "mixed-effects model",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Estimate a fixed treatment difference and model a random intercept for each clinic.",
+      "choices": [
+        "Factorial design",
+        "Planned contrast",
+        "Mixed-effects model",
+        "Least squares estimation",
+        "Bonferroni correction"
+      ],
+      "answer": "Mixed-effects model",
+      "explanation": "The model includes both fixed parameters and clinic-level random effects.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 205, Linear Models with Random Effects"
+    },
+    {
+      "id": "400-024",
+      "concept": "least squares estimation",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Choose regression coefficients by minimising the sum of squared prediction errors on the data.",
+      "choices": [
+        "Factorial design",
+        "Planned contrast",
+        "Mixed-effects model",
+        "Least squares estimation",
+        "Bonferroni correction"
+      ],
+      "answer": "Least squares estimation",
+      "explanation": "Least squares minimises the residual sum of squares.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 245, Least squares estimation"
+    },
+    {
+      "id": "400-025",
+      "concept": "contingency table",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Hospital type forms the rows and discharge status the columns, with patient counts in the cells.",
+      "choices": [
+        "Contingency table",
+        "Fisher’s exact test",
+        "McNemar’s test",
+        "Pearson chi-square test",
+        "Frequency distribution"
+      ],
+      "answer": "Contingency table",
+      "explanation": "A contingency table cross-classifies observations on categorical variables.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 101, Contingency tables"
+    },
+    {
+      "id": "400-026",
+      "concept": "fisher’s exact test",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Test independence in a sparse 2 × 2 table using exact probabilities conditional on its margins.",
+      "choices": [
+        "Contingency table",
+        "Fisher’s exact test",
+        "McNemar’s test",
+        "Pearson chi-square test",
+        "Frequency distribution"
+      ],
+      "answer": "Fisher’s exact test",
+      "explanation": "The exact test avoids relying on a large-sample chi-square approximation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s exact test"
+    },
+    {
+      "id": "400-027",
+      "concept": "mcnemar’s test",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Compare yes/no responses before and after treatment on the same patients using the discordant pairs.",
+      "choices": [
+        "Contingency table",
+        "Fisher’s exact test",
+        "McNemar’s test",
+        "Pearson chi-square test",
+        "Frequency distribution"
+      ],
+      "answer": "McNemar’s test",
+      "explanation": "McNemar's test looks for an imbalance between the two kinds of discordance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, McNemar’s test"
+    },
+    {
+      "id": "400-028",
+      "concept": "pearson chi-square test",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "With adequate cell counts, test independence by summing squared observed-minus-expected counts divided by expected counts.",
+      "choices": [
+        "Contingency table",
+        "Fisher’s exact test",
+        "McNemar’s test",
+        "Pearson chi-square test",
+        "Frequency distribution"
+      ],
+      "answer": "Pearson chi-square test",
+      "explanation": "The test compares actual cell counts with those expected under independence.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Pearson’s chi-squared statistic"
+    },
+    {
+      "id": "400-029",
+      "concept": "odds ratio",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "ad / bc for the table with rows (a, b) and (c, d)",
+      "choices": [
+        "Odds ratio",
+        "Relative risk",
+        "Logit",
+        "Pearson chi-square statistic",
+        "Risk difference"
+      ],
+      "answer": "Odds ratio",
+      "explanation": "Cross multiplication gives the ratio of the two row odds for a positive-cell table.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds ratio",
+      "convention": "Column one is the event in both rows."
+    },
+    {
+      "id": "400-030",
+      "concept": "relative risk",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "[a / (a + b)] ÷ [c / (c + d)] for rows (a, b) and (c, d)",
+      "choices": [
+        "Odds ratio",
+        "Relative risk",
+        "Logit",
+        "Pearson chi-square statistic",
+        "Risk difference"
+      ],
+      "answer": "Relative risk",
+      "explanation": "Divide the event proportion in the first row by that in the second row.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative risk",
+      "convention": "Column one is the event in both rows."
+    },
+    {
+      "id": "400-031",
+      "concept": "logit",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "ln[p / (1 − p)] for 0 < p < 1",
+      "choices": [
+        "Odds ratio",
+        "Relative risk",
+        "Logit",
+        "Pearson chi-square statistic",
+        "Risk difference"
+      ],
+      "answer": "Logit",
+      "explanation": "The logit converts a probability to the natural logarithm of its odds.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 258, Logit"
+    },
+    {
+      "id": "400-032",
+      "concept": "pearson chi-square statistic",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Σ cells (O − E)² / E, with E > 0",
+      "choices": [
+        "Odds ratio",
+        "Relative risk",
+        "Logit",
+        "Pearson chi-square statistic",
+        "Risk difference"
+      ],
+      "answer": "Pearson chi-square statistic",
+      "explanation": "Each cell contributes its squared count discrepancy scaled by its expected count.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Pearson’s chi-squared statistic"
+    },
+    {
+      "id": "400-033",
+      "concept": "multicollinearity",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "Some predictors are nearly linear combinations of other predictors.",
+      "choices": [
+        "Multicollinearity",
+        "Heteroscedasticity",
+        "Overdispersion",
+        "High leverage",
+        "Autocorrelation"
+      ],
+      "answer": "Multicollinearity",
+      "explanation": "It can make the separate coefficient estimates imprecise even if predictions remain stable.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 287, Multicollinearity"
+    },
+    {
+      "id": "400-034",
+      "concept": "heteroscedasticity",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "The conditional error variance changes across predictor values.",
+      "choices": [
+        "Multicollinearity",
+        "Heteroscedasticity",
+        "Overdispersion",
+        "High leverage",
+        "Autocorrelation"
+      ],
+      "answer": "Heteroscedasticity",
+      "explanation": "A changing error spread violates the constant-variance assumption.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 204, Heteroscedasticity"
+    },
+    {
+      "id": "400-035",
+      "concept": "overdispersion",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "The variability exceeds what the fitted Poisson or binomial model allows.",
+      "choices": [
+        "Multicollinearity",
+        "Heteroscedasticity",
+        "Overdispersion",
+        "High leverage",
+        "Autocorrelation"
+      ],
+      "answer": "Overdispersion",
+      "explanation": "An extra source of variability can make standard errors from the original model too small.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 314, Overdispersion"
+    },
+    {
+      "id": "400-036",
+      "concept": "high leverage",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "An observation lies unusually far from the centre of the predictor design.",
+      "choices": [
+        "Multicollinearity",
+        "Heteroscedasticity",
+        "Overdispersion",
+        "High leverage",
+        "Autocorrelation"
+      ],
+      "answer": "High leverage",
+      "explanation": "High leverage comes from unusual predictor values and can occur with a small residual.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 247, Leverage points"
+    },
+    {
+      "id": "400-037",
+      "concept": "cook’s distance",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analyst wants one index for how much the whole fitted regression shifts after removing a case.",
+      "choices": [
+        "Cook’s distance",
+        "DFBETA",
+        "Variance inflation factor",
+        "Normal probability plot",
+        "Residual plot"
+      ],
+      "answer": "Cook’s distance",
+      "explanation": "Cook’s distance summarizes a case’s influence on the fitted model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Cook’s distance"
+    },
+    {
+      "id": "400-038",
+      "concept": "dfbeta",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analyst wants the deletion effect on one particular regression coefficient.",
+      "choices": [
+        "Cook’s distance",
+        "DFBETA",
+        "Variance inflation factor",
+        "Normal probability plot",
+        "Residual plot"
+      ],
+      "answer": "DFBETA",
+      "explanation": "DFBETA isolates the change in a particular coefficient when an observation is removed.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 132, DFBETA"
+    },
+    {
+      "id": "400-039",
+      "concept": "variance inflation factor",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "After adding correlated predictors, an analyst measures how much less precisely one slope is estimated.",
+      "choices": [
+        "Cook’s distance",
+        "DFBETA",
+        "Variance inflation factor",
+        "Normal probability plot",
+        "Residual plot"
+      ],
+      "answer": "Variance inflation factor",
+      "explanation": "The VIF links the slope’s inflated variance to its predictor’s relationship with the other predictors.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance inflation factor"
+    },
+    {
+      "id": "400-040",
+      "concept": "normal probability plot",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analyst compares ordered residuals with expected normal quantiles to inspect the distributional assumption.",
+      "choices": [
+        "Cook’s distance",
+        "DFBETA",
+        "Variance inflation factor",
+        "Normal probability plot",
+        "Residual plot"
+      ],
+      "answer": "Normal probability plot",
+      "explanation": "Systematic departures from a straight line indicate departures from a normal shape.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 339, Probability plot"
+    },
+    {
+      "id": "400-041",
+      "concept": "variance inflation factor",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "1 / (1 − Rⱼ²), using the regression of predictor j on the other predictors",
+      "choices": [
+        "Variance inflation factor",
+        "Leverage",
+        "Cook’s distance",
+        "Externally studentized residual",
+        "Standardized residual"
+      ],
+      "answer": "Variance inflation factor",
+      "explanation": "A larger auxiliary R² means greater inflation of the coefficient’s variance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance inflation factor"
+    },
+    {
+      "id": "400-042",
+      "concept": "leverage",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "hᵢᵢ, the ith diagonal entry of X(XᵀX)⁻¹Xᵀ",
+      "choices": [
+        "Variance inflation factor",
+        "Leverage",
+        "Cook’s distance",
+        "Externally studentized residual",
+        "Standardized residual"
+      ],
+      "answer": "Leverage",
+      "explanation": "The diagonal weight measures how strongly an observation’s response enters its own fitted value.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 247, Leverage points"
+    },
+    {
+      "id": "400-043",
+      "concept": "cook’s distance",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "(eᵢ² / p MSE) × hᵢᵢ / (1 − hᵢᵢ)² in ordinary least squares",
+      "choices": [
+        "Variance inflation factor",
+        "Leverage",
+        "Cook’s distance",
+        "Externally studentized residual",
+        "Standardized residual"
+      ],
+      "answer": "Cook’s distance",
+      "explanation": "A large residual and high leverage can combine to give a case substantial influence.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Cook’s distance",
+      "convention": "p includes the intercept, and MSE is the full-model residual mean square."
+    },
+    {
+      "id": "400-044",
+      "concept": "externally studentized residual",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "eᵢ / [s₍ᵢ₎ √(1 − hᵢᵢ)], with s₍ᵢ₎ estimated after deleting case i",
+      "choices": [
+        "Variance inflation factor",
+        "Leverage",
+        "Cook’s distance",
+        "Externally studentized residual",
+        "Standardized residual"
+      ],
+      "answer": "Externally studentized residual",
+      "explanation": "The deleted-case variance estimate keeps the tested observation out of the scale estimate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Studentized residual"
+    },
+    {
+      "id": "400-045",
+      "concept": "response variable",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The outcome modeled as a function of other variables.",
+      "choices": [
+        "Response variable",
+        "Explanatory variable",
+        "Intercept",
+        "Regression coefficient",
+        "Sampling weight"
+      ],
+      "answer": "Response variable",
+      "explanation": "The regression equation predicts or describes this variable.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 369, Response variable"
+    },
+    {
+      "id": "400-046",
+      "concept": "explanatory variable",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "An input used to explain or predict changes in a modeled outcome.",
+      "choices": [
+        "Response variable",
+        "Explanatory variable",
+        "Intercept",
+        "Regression coefficient",
+        "Sampling weight"
+      ],
+      "answer": "Explanatory variable",
+      "explanation": "This variable is used on the predictor side of the model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 157, Explanatory variables"
+    },
+    {
+      "id": "400-047",
+      "concept": "intercept",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The fitted linear predictor when every numerical predictor equals zero and factors are at their reference levels.",
+      "choices": [
+        "Response variable",
+        "Explanatory variable",
+        "Intercept",
+        "Regression coefficient",
+        "Sampling weight"
+      ],
+      "answer": "Intercept",
+      "explanation": "The intercept is the constant term in the model equation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 253, Linear model"
+    },
+    {
+      "id": "400-048",
+      "concept": "regression coefficient",
+      "level": "400",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The parameter attached to a particular basis term of a regression equation.",
+      "choices": [
+        "Response variable",
+        "Explanatory variable",
+        "Intercept",
+        "Regression coefficient",
+        "Sampling weight"
+      ],
+      "answer": "Regression coefficient",
+      "explanation": "The coefficient determines the contribution of its associated term.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 362, Regression coefficient"
+    },
+    {
+      "id": "400-049",
+      "concept": "multiple linear regression",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A continuous outcome is fitted using additive linear terms for floor area, age and distance.",
+      "choices": [
+        "Multiple linear regression",
+        "Polynomial regression",
+        "Weighted least squares",
+        "Regression through the origin",
+        "Robust regression"
+      ],
+      "answer": "Multiple linear regression",
+      "explanation": "The model has more than one explanatory variable in a linear equation for the mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 291, Multiple linear regression"
+    },
+    {
+      "id": "400-050",
+      "concept": "polynomial regression",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A curve for a continuous outcome includes both x and x squared as predictors.",
+      "choices": [
+        "Multiple linear regression",
+        "Polynomial regression",
+        "Weighted least squares",
+        "Regression through the origin",
+        "Robust regression"
+      ],
+      "answer": "Polynomial regression",
+      "explanation": "Powers of the predictor let a model linear in its coefficients fit a curved relationship.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 331, Polynomial regression"
+    },
+    {
+      "id": "400-051",
+      "concept": "weighted least squares",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Fit a straight line by minimizing squared errors multiplied by known positive precision weights.",
+      "choices": [
+        "Multiple linear regression",
+        "Polynomial regression",
+        "Weighted least squares",
+        "Regression through the origin",
+        "Robust regression"
+      ],
+      "answer": "Weighted least squares",
+      "explanation": "The criterion gives lower-variance observations larger weights when weights are inverse variances.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 456, Weighted least squares"
+    },
+    {
+      "id": "400-052",
+      "concept": "regression through the origin",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A calibration line is required to predict a response of zero when its single input is zero.",
+      "choices": [
+        "Multiple linear regression",
+        "Polynomial regression",
+        "Weighted least squares",
+        "Regression through the origin",
+        "Robust regression"
+      ],
+      "answer": "Regression through the origin",
+      "explanation": "Fixing the intercept at zero forces the fitted line through the origin.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 363, Regression through the origin"
+    },
+    {
+      "id": "400-053",
+      "concept": "standardized regression coefficient",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "bⱼ × SD(xⱼ) / SD(y) for a fitted linear model with an intercept",
+      "choices": [
+        "Standardized regression coefficient",
+        "Partial correlation",
+        "Multiple correlation coefficient",
+        "Residual",
+        "Residual variance"
+      ],
+      "answer": "Standardized regression coefficient",
+      "explanation": "This is the slope for predictor j when both the outcome and predictor are put on standard deviation scales.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standardized regression coefficient"
+    },
+    {
+      "id": "400-054",
+      "concept": "partial correlation",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "corr(eₓ, eᵧ), after regressing both x and y separately on the same controls",
+      "choices": [
+        "Standardized regression coefficient",
+        "Partial correlation",
+        "Multiple correlation coefficient",
+        "Residual",
+        "Residual variance"
+      ],
+      "answer": "Partial correlation",
+      "explanation": "It measures the linear association left after removing the effects of the controls from both variables.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 318, Partial correlation"
+    },
+    {
+      "id": "400-055",
+      "concept": "multiple correlation coefficient",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "corr(y, ŷ) in a nonconstant least-squares fit with an intercept",
+      "choices": [
+        "Standardized regression coefficient",
+        "Partial correlation",
+        "Multiple correlation coefficient",
+        "Residual",
+        "Residual variance"
+      ],
+      "answer": "Multiple correlation coefficient",
+      "explanation": "The sample multiple correlation equals the nonnegative square root of R².",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 290, Multiple correlation coefficient"
+    },
+    {
+      "id": "400-056",
+      "concept": "residual",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "yᵢ − ŷᵢ for the ith fitted observation",
+      "choices": [
+        "Standardized regression coefficient",
+        "Partial correlation",
+        "Multiple correlation coefficient",
+        "Residual",
+        "Residual variance"
+      ],
+      "answer": "Residual",
+      "explanation": "Subtracting the fitted value from the observation gives the model error for that case.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 367, Residual"
+    },
+    {
+      "id": "400-057",
+      "concept": "two-way anova",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Analysis of a continuous outcome using two categorical factors and optionally their interaction.",
+      "choices": [
+        "Two-way ANOVA",
+        "One-way ANOVA",
+        "Randomised block design",
+        "Mixed-effects model",
+        "Analysis of covariance"
+      ],
+      "answer": "Two-way ANOVA",
+      "explanation": "Each factor contributes group differences, and the interaction captures departures from additivity.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 13, Analysis of variance (ANOVA); 161, Factorial designs"
+    },
+    {
+      "id": "400-058",
+      "concept": "one-way anova",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Analysis testing equality of several group means indexed by a single factor.",
+      "choices": [
+        "Two-way ANOVA",
+        "One-way ANOVA",
+        "Randomised block design",
+        "Mixed-effects model",
+        "Analysis of covariance"
+      ],
+      "answer": "One-way ANOVA",
+      "explanation": "One categorical variable defines the groups.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 13, Analysis of variance (ANOVA)"
+    },
+    {
+      "id": "400-059",
+      "concept": "randomised block design",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "An experiment randomly assigns treatments separately within each deliberately formed group of experimental units.",
+      "choices": [
+        "Two-way ANOVA",
+        "One-way ANOVA",
+        "Randomised block design",
+        "Mixed-effects model",
+        "Analysis of covariance"
+      ],
+      "answer": "Randomised block design",
+      "explanation": "Blocks remove some nuisance variation from comparisons among treatments.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 58, Blocking"
+    },
+    {
+      "id": "400-060",
+      "concept": "mixed-effects model",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A model combines population-level coefficients and subject-specific terms treated as draws from a distribution.",
+      "choices": [
+        "Two-way ANOVA",
+        "One-way ANOVA",
+        "Randomised block design",
+        "Mixed-effects model",
+        "Analysis of covariance"
+      ],
+      "answer": "Mixed-effects model",
+      "explanation": "It represents systematic differences and variation across subjects in one model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 205, Linear Models with Random Effects"
+    },
+    {
+      "id": "400-061",
+      "concept": "total sum of squares",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "Σᵢ (yᵢ − ȳ)²",
+      "choices": [
+        "Total sum of squares",
+        "Contrast",
+        "Mean square for treatment",
+        "ANOVA F statistic",
+        "Residual sum of squares"
+      ],
+      "answer": "Total sum of squares",
+      "explanation": "This quantity measures spread about the overall mean before accounting for regressors or treatments.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 432, Total sum of squares"
+    },
+    {
+      "id": "400-062",
+      "concept": "contrast",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "2μ₁ − μ₂ − μ₃, for three group means",
+      "choices": [
+        "Total sum of squares",
+        "Contrast",
+        "Mean square for treatment",
+        "ANOVA F statistic",
+        "Residual sum of squares"
+      ],
+      "answer": "Contrast",
+      "explanation": "The weights 2, −1 and −1 sum to zero, so a common shift in means cancels out.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast"
+    },
+    {
+      "id": "400-063",
+      "concept": "mean square for treatment",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "SS for treatment / df for treatment",
+      "choices": [
+        "Total sum of squares",
+        "Contrast",
+        "Mean square for treatment",
+        "ANOVA F statistic",
+        "Residual sum of squares"
+      ],
+      "answer": "Mean square for treatment",
+      "explanation": "An ANOVA mean square scales a sum of squares by its own degrees of freedom.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squares"
+    },
+    {
+      "id": "400-064",
+      "concept": "anova f statistic",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "MS for treatment / MS for error under the ordinary between-groups ANOVA test",
+      "choices": [
+        "Total sum of squares",
+        "Contrast",
+        "Mean square for treatment",
+        "ANOVA F statistic",
+        "Residual sum of squares"
+      ],
+      "answer": "ANOVA F statistic",
+      "explanation": "The numerator measures spread attributable to treatment relative to the denominator's error spread.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 176, F-test; 274, Mean square ratio"
+    },
+    {
+      "id": "400-065",
+      "concept": "bonferroni correction",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "To control familywise error at α, test each of six planned hypotheses at α/6.",
+      "choices": [
+        "Bonferroni correction",
+        "Contrast",
+        "Interaction",
+        "Fixed effect",
+        "ANOVA F statistic"
+      ],
+      "answer": "Bonferroni correction",
+      "explanation": "The union bound keeps the overall false-positive risk at or below α.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction"
+    },
+    {
+      "id": "400-066",
+      "concept": "contrast",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An agronomist compares the average response of two active treatments to the response of one control.",
+      "choices": [
+        "Bonferroni correction",
+        "Contrast",
+        "Interaction",
+        "Fixed effect",
+        "ANOVA F statistic"
+      ],
+      "answer": "Contrast",
+      "explanation": "Weights of ½, ½ and −1 express that comparison.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast"
+    },
+    {
+      "id": "400-067",
+      "concept": "interaction",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A drug improves scores in one age group and lowers them in another.",
+      "choices": [
+        "Bonferroni correction",
+        "Contrast",
+        "Interaction",
+        "Fixed effect",
+        "ANOVA F statistic"
+      ],
+      "answer": "Interaction",
+      "explanation": "Opposite treatment effects indicate a treatment-by-age interaction.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 219, Interaction"
+    },
+    {
+      "id": "400-068",
+      "concept": "fixed effect",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Researchers compare only four named office locations, using a separate parameter for each location's difference.",
+      "choices": [
+        "Bonferroni correction",
+        "Contrast",
+        "Interaction",
+        "Fixed effect",
+        "ANOVA F statistic"
+      ],
+      "answer": "Fixed effect",
+      "explanation": "Fixed location effects directly describe these four locations.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 169, Fixed effects"
+    },
+    {
+      "id": "400-069",
+      "concept": "logistic regression",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Model a yes/no outcome by making the log of its odds a linear function of patient age.",
+      "choices": [
+        "Logistic regression",
+        "Poisson regression",
+        "Probit regression",
+        "Proportional odds model",
+        "Pearson chi-square test"
+      ],
+      "answer": "Logistic regression",
+      "explanation": "The most common logistic model uses a logit link for a binary outcome.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 257, Logistic regression"
+    },
+    {
+      "id": "400-070",
+      "concept": "poisson regression",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Predict the number of arrivals per hour by modeling the log of the expected count.",
+      "choices": [
+        "Logistic regression",
+        "Poisson regression",
+        "Probit regression",
+        "Proportional odds model",
+        "Pearson chi-square test"
+      ],
+      "answer": "Poisson regression",
+      "explanation": "A log link keeps fitted Poisson means positive.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 330, Poisson regression"
+    },
+    {
+      "id": "400-071",
+      "concept": "probit regression",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Model a pass/fail outcome by applying the standard normal CDF to a linear predictor.",
+      "choices": [
+        "Logistic regression",
+        "Poisson regression",
+        "Probit regression",
+        "Proportional odds model",
+        "Pearson chi-square test"
+      ],
+      "answer": "Probit regression",
+      "explanation": "The inverse of the normal CDF gives the corresponding link function.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 340, Probit analysis"
+    },
+    {
+      "id": "400-072",
+      "concept": "proportional odds model",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Fit ordered ratings with a single set of predictor slopes across all cumulative logit cut points.",
+      "choices": [
+        "Logistic regression",
+        "Poisson regression",
+        "Probit regression",
+        "Proportional odds model",
+        "Pearson chi-square test"
+      ],
+      "answer": "Proportional odds model",
+      "explanation": "The intercept can vary with the threshold while the slopes are shared.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 344, Proportional-odds model"
+    },
+    {
+      "id": "400-073",
+      "concept": "marginal homogeneity",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "For paired ratings in a square table, the row and column variables have identical marginal distributions.",
+      "choices": [
+        "Marginal homogeneity",
+        "Symmetry",
+        "Cochran’s Q test",
+        "Mantel–Haenszel estimator",
+        "Pearson chi-square test"
+      ],
+      "answer": "Marginal homogeneity",
+      "explanation": "Each category has the same overall probability on each measurement occasion.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 267, Marginal homogeneity"
+    },
+    {
+      "id": "400-074",
+      "concept": "symmetry",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "In a square table, each off-diagonal cell has the same probability as its transposed cell.",
+      "choices": [
+        "Marginal homogeneity",
+        "Symmetry",
+        "Cochran’s Q test",
+        "Mantel–Haenszel estimator",
+        "Pearson chi-square test"
+      ],
+      "answer": "Symmetry",
+      "explanation": "Swapping the two categorical variables leaves the joint distribution unchanged.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 424, Symmetry in square contingency tables"
+    },
+    {
+      "id": "400-075",
+      "concept": "cochran’s q test",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "A test comparing the proportions of successes for three or more matched binary conditions.",
+      "choices": [
+        "Marginal homogeneity",
+        "Symmetry",
+        "Cochran’s Q test",
+        "Mantel–Haenszel estimator",
+        "Pearson chi-square test"
+      ],
+      "answer": "Cochran’s Q test",
+      "explanation": "The observations are linked within each experimental unit across conditions.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 88, Cochran’s Q-test"
+    },
+    {
+      "id": "400-076",
+      "concept": "mantel–haenszel estimator",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "A summary of the common odds ratio across several 2 × 2 strata.",
+      "choices": [
+        "Marginal homogeneity",
+        "Symmetry",
+        "Cochran’s Q test",
+        "Mantel–Haenszel estimator",
+        "Pearson chi-square test"
+      ],
+      "answer": "Mantel–Haenszel estimator",
+      "explanation": "It combines the within-stratum table information into a common effect estimate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 266, Mantel–Haenszel estimator"
+    },
+    {
+      "id": "400-077",
+      "concept": "simpson’s paradox",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "The treatment looks better within both age groups, yet looks worse after the groups are pooled.",
+      "choices": [
+        "Simpson’s paradox",
+        "Relative risk",
+        "Expected frequency",
+        "Fisher’s exact test",
+        "Odds ratio"
+      ],
+      "answer": "Simpson’s paradox",
+      "explanation": "Unequal group weights can reverse the direction of an association after aggregation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 394, Simpson’s paradox"
+    },
+    {
+      "id": "400-078",
+      "concept": "relative risk",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A report divides the event proportion among exposed patients by the event proportion among unexposed patients.",
+      "choices": [
+        "Simpson’s paradox",
+        "Relative risk",
+        "Expected frequency",
+        "Fisher’s exact test",
+        "Odds ratio"
+      ],
+      "answer": "Relative risk",
+      "explanation": "This ratio compares event probabilities directly.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative risk"
+    },
+    {
+      "id": "400-079",
+      "concept": "expected frequency",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Before testing association, a researcher computes row total × column total ÷ grand total for a cell.",
+      "choices": [
+        "Simpson’s paradox",
+        "Relative risk",
+        "Expected frequency",
+        "Fisher’s exact test",
+        "Odds ratio"
+      ],
+      "answer": "Expected frequency",
+      "explanation": "The formula uses the fitted table under row–column independence.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 156, Expected frequencies"
+    },
+    {
+      "id": "400-080",
+      "concept": "fisher’s exact test",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analyst sums hypergeometric probabilities over tables at least as extreme in a small 2 × 2 test with fixed margins.",
+      "choices": [
+        "Simpson’s paradox",
+        "Relative risk",
+        "Expected frequency",
+        "Fisher’s exact test",
+        "Odds ratio"
+      ],
+      "answer": "Fisher’s exact test",
+      "explanation": "Fixing the margins gives the null probabilities of the possible tables.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s exact test"
+    },
+    {
+      "id": "400-081",
+      "concept": "heteroscedasticity",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The vertical spread of residuals grows steadily as the fitted values increase.",
+      "choices": [
+        "Heteroscedasticity",
+        "Autocorrelation",
+        "Multicollinearity",
+        "High leverage",
+        "Overdispersion"
+      ],
+      "answer": "Heteroscedasticity",
+      "explanation": "A fan shape suggests the conditional error variance is changing.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 204, Heteroscedasticity"
+    },
+    {
+      "id": "400-082",
+      "concept": "autocorrelation",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Positive residuals tend to be followed by positive residuals in monthly order.",
+      "choices": [
+        "Heteroscedasticity",
+        "Autocorrelation",
+        "Multicollinearity",
+        "High leverage",
+        "Overdispersion"
+      ],
+      "answer": "Autocorrelation",
+      "explanation": "The error sequence shows dependence across time.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 25, Autocorrelation"
+    },
+    {
+      "id": "400-083",
+      "concept": "multicollinearity",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Floor area and room count predict each other closely, leaving individual coefficient estimates imprecise.",
+      "choices": [
+        "Heteroscedasticity",
+        "Autocorrelation",
+        "Multicollinearity",
+        "High leverage",
+        "Overdispersion"
+      ],
+      "answer": "Multicollinearity",
+      "explanation": "Similar predictors make separating their contributions difficult.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 287, Multicollinearity"
+    },
+    {
+      "id": "400-084",
+      "concept": "high leverage",
+      "level": "400",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A fitted observation has predictor values far from those of the other observations but a small residual.",
+      "choices": [
+        "Heteroscedasticity",
+        "Autocorrelation",
+        "Multicollinearity",
+        "High leverage",
+        "Overdispersion"
+      ],
+      "answer": "High leverage",
+      "explanation": "An unusual predictor profile can have high leverage without a large error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 247, Leverage points"
+    },
+    {
+      "id": "400-085",
+      "concept": "pearson residual",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "(O − E) / √E for a cell count where E > 0",
+      "choices": [
+        "Pearson residual",
+        "Deviance",
+        "DFBETA",
+        "Standardized residual",
+        "Pearson chi-square statistic"
+      ],
+      "answer": "Pearson residual",
+      "explanation": "It scales the signed cell discrepancy using the square root of the fitted expected count.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Pearson’s residual",
+      "convention": "Uses the raw Pearson form without an adjustment for fitted margins."
+    },
+    {
+      "id": "400-086",
+      "concept": "deviance",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "2 × [log L(saturated model) − log L(fitted model)]",
+      "choices": [
+        "Pearson residual",
+        "Deviance",
+        "DFBETA",
+        "Standardized residual",
+        "Pearson chi-square statistic"
+      ],
+      "answer": "Deviance",
+      "explanation": "The log-likelihood gap measures how much fit is lost by using the chosen model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 131, Deviance"
+    },
+    {
+      "id": "400-087",
+      "concept": "dfbeta",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "β̂ⱼ − β̂ⱼ₍ᵢ₎, where the second estimate omits observation i",
+      "choices": [
+        "Pearson residual",
+        "Deviance",
+        "DFBETA",
+        "Standardized residual",
+        "Pearson chi-square statistic"
+      ],
+      "answer": "DFBETA",
+      "explanation": "This measures the observed case's effect on one fitted coefficient.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 132, DFBETA",
+      "convention": "Uses the unscaled deletion difference."
+    },
+    {
+      "id": "400-088",
+      "concept": "standardized residual",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "eᵢ / [s √(1 − hᵢᵢ)] with s from the full linear model",
+      "choices": [
+        "Pearson residual",
+        "Deviance",
+        "DFBETA",
+        "Standardized residual",
+        "Pearson chi-square statistic"
+      ],
+      "answer": "Standardized residual",
+      "explanation": "The denominator accounts for both estimated error scale and leverage.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standardized residual",
+      "convention": "Uses the internally studentized convention."
+    },
+    {
+      "id": "400-089",
+      "concept": "residual plot",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A model checker graphs observed-minus-fitted values against the fitted values to look for curvature.",
+      "choices": [
+        "Residual plot",
+        "Normal probability plot",
+        "Robust regression",
+        "Outlier",
+        "Variance inflation factor"
+      ],
+      "answer": "Residual plot",
+      "explanation": "Curvature can indicate that the fitted mean model misses some systematic pattern.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 367, Residual plots"
+    },
+    {
+      "id": "400-090",
+      "concept": "normal probability plot",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A model checker compares each ranked residual with the normal score for that rank.",
+      "choices": [
+        "Residual plot",
+        "Normal probability plot",
+        "Robust regression",
+        "Outlier",
+        "Variance inflation factor"
+      ],
+      "answer": "Normal probability plot",
+      "explanation": "An approximately straight pattern supports a normal error shape.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 339, Probability plot"
+    },
+    {
+      "id": "400-091",
+      "concept": "robust regression",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A model fitting method limits how far a few very large residuals can pull the estimates.",
+      "choices": [
+        "Residual plot",
+        "Normal probability plot",
+        "Robust regression",
+        "Outlier",
+        "Variance inflation factor"
+      ],
+      "answer": "Robust regression",
+      "explanation": "Reducing the influence of unusually large errors protects the fit from outliers.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 372, Robust regression"
+    },
+    {
+      "id": "400-092",
+      "concept": "outlier",
+      "level": "400",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "One observed response is far from the fitted value, despite having typical predictor measurements.",
+      "choices": [
+        "Residual plot",
+        "Normal probability plot",
+        "Robust regression",
+        "Outlier",
+        "Variance inflation factor"
+      ],
+      "answer": "Outlier",
+      "explanation": "An unusually large residual flags a potential response outlier.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 313, Outlier; 362, Regression diagnostics"
+    }
+  ]
+}

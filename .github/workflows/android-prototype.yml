@@ -1,0 +1,43 @@
+name: Android prototype
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  internal-apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.12'
+      - name: Test game rules
+        run: |
+          python -m pip install pytest==9.1.1
+          python -m pytest -q
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes autoconf automake autopoint cmake gettext libffi-dev libltdl-dev libssl-dev libtool openjdk-17-jdk pkg-config unzip zip zlib1g-dev
+          python -m venv .android-venv
+          source .android-venv/bin/activate
+          python -m pip install buildozer==1.6.0 Cython==0.29.37 setuptools
+      - name: Build debug APK
+        env:
+          JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+        run: |
+          export PATH="$JAVA_HOME/bin:$PATH"
+          export APP_ANDROID_SDK_PATH="$ANDROID_HOME"
+          source .android-venv/bin/activate
+          buildozer android debug
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: statistics-game-internal
+          path: bin/*.apk
+          if-no-files-found: error
+          retention-days: 7

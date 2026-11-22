@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+.kivy/
+.buildozer/
+.android-venv/
+bin/
+*.apk
+*.aab
+*.jks
+*.keystore
+/Cambridge Dictionary Statistics 4th.pdf

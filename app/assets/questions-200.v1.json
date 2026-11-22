@@ -1,0 +1,1525 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "200-001",
+      "concept": "discrete random variable",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A numerical outcome whose possible values form a countable set.",
+      "choices": [
+        "Discrete random variable",
+        "Continuous random variable",
+        "Sample space",
+        "Probability mass",
+        "Continuous density"
+      ],
+      "answer": "Discrete random variable",
+      "explanation": "The possible values can be listed, even if the list has no end.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 356, Random variable"
+    },
+    {
+      "id": "200-002",
+      "concept": "continuous random variable",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A numerical outcome that can take any value in an interval, such as a measurement before rounding.",
+      "choices": [
+        "Continuous random variable",
+        "Discrete random variable",
+        "Indicator variable",
+        "Sample space",
+        "Probability mass"
+      ],
+      "answer": "Continuous random variable",
+      "explanation": "A density assigns probabilities to intervals of possible values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 102, Continuous variable"
+    },
+    {
+      "id": "200-003",
+      "concept": "probability mass function",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A function that gives the probability of each individual value of a discrete variable.",
+      "choices": [
+        "Probability mass function",
+        "Probability density function",
+        "Cumulative distribution function",
+        "Survival function",
+        "Quantile function"
+      ],
+      "answer": "Probability mass function",
+      "explanation": "Its values are point probabilities, and they sum to one.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 338, Probability distribution"
+    },
+    {
+      "id": "200-004",
+      "concept": "probability density function",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A nonnegative function whose area over an interval gives its probability.",
+      "choices": [
+        "Probability density function",
+        "Probability mass function",
+        "Cumulative distribution function",
+        "Quantile function",
+        "Survival function"
+      ],
+      "answer": "Probability density function",
+      "explanation": "Integrating the density over a range gives the chance of landing in that range.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 338, Probability density"
+    },
+    {
+      "id": "200-005",
+      "concept": "cumulative distribution function",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A function giving the chance that a random variable does not exceed a specified value.",
+      "choices": [
+        "Cumulative distribution function",
+        "Probability density function",
+        "Probability mass function",
+        "Quantile function",
+        "Survival function"
+      ],
+      "answer": "Cumulative distribution function",
+      "explanation": "For each cutoff x, it returns the probability that X is at most x.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 117, Cumulative distribution function. Uses the at-most convention from MIT 18.05, Spring 2022, Reading 5b: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class05-prep-b_pdf/",
+      "convention": "Uses F(x) = P(X ≤ x)."
+    },
+    {
+      "id": "200-006",
+      "concept": "indicator variable",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A variable coded 1 when an event occurs and 0 otherwise.",
+      "choices": [
+        "Indicator variable",
+        "Categorical label",
+        "Count variable",
+        "Rank statistic",
+        "Standard score"
+      ],
+      "answer": "Indicator variable",
+      "explanation": "Its numerical value records whether the specified event happened.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 216, Indicator variable"
+    },
+    {
+      "id": "200-007",
+      "concept": "bernoulli distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Record 1 if a single coin toss is heads and 0 otherwise. What is the model for the recorded value?",
+      "choices": [
+        "Bernoulli distribution",
+        "Binomial distribution with ten trials",
+        "Geometric distribution",
+        "Poisson distribution",
+        "Discrete uniform over three values"
+      ],
+      "answer": "Bernoulli distribution",
+      "explanation": "A single binary trial with fixed success probability follows a Bernoulli model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 42, Bernoulli distribution"
+    },
+    {
+      "id": "200-008",
+      "concept": "binomial distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Count heads in 20 independent tosses of the same coin, with a fixed chance of heads.",
+      "choices": [
+        "Binomial distribution",
+        "Bernoulli distribution",
+        "Poisson distribution",
+        "Geometric distribution",
+        "Hypergeometric distribution"
+      ],
+      "answer": "Binomial distribution",
+      "explanation": "This counts successes in a fixed number of independent trials with a common success chance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 47, Binomial distribution"
+    },
+    {
+      "id": "200-009",
+      "concept": "poisson distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Calls arrive one at a time, independently, at a steady rate. What models the hourly count?",
+      "choices": [
+        "Poisson distribution",
+        "Binomial distribution",
+        "Geometric distribution",
+        "Exponential distribution",
+        "Normal distribution"
+      ],
+      "answer": "Poisson distribution",
+      "explanation": "The event count in a fixed period of a homogeneous Poisson process has a Poisson distribution.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 330, Poisson distribution"
+    },
+    {
+      "id": "200-010",
+      "concept": "geometric distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Toss the same coin independently until the first head. Record the total tosses.",
+      "choices": [
+        "Geometric distribution",
+        "Bernoulli distribution",
+        "Binomial distribution",
+        "Poisson distribution",
+        "Hypergeometric distribution"
+      ],
+      "answer": "Geometric distribution",
+      "explanation": "The geometric model describes trials to the first success under independent trials with constant success probability.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 186, Geometric distribution",
+      "convention": "Counts the successful trial, so the smallest value is 1."
+    },
+    {
+      "id": "200-011",
+      "concept": "hypergeometric distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Draw five cards from a shuffled deck without replacement. Count the aces.",
+      "choices": [
+        "Hypergeometric distribution",
+        "Binomial distribution",
+        "Geometric distribution",
+        "Poisson distribution",
+        "Bernoulli distribution"
+      ],
+      "answer": "Hypergeometric distribution",
+      "explanation": "Sampling without replacement from a fixed population leads to a hypergeometric count.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 211, Hypergeometric distribution"
+    },
+    {
+      "id": "200-012",
+      "concept": "continuous uniform distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A wheel’s landing angle has equal probability in every arc of the same length.",
+      "choices": [
+        "Continuous uniform distribution",
+        "Normal distribution",
+        "Exponential distribution",
+        "Lognormal distribution",
+        "Gamma distribution"
+      ],
+      "answer": "Continuous uniform distribution",
+      "explanation": "A continuous uniform model has constant density on its range.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 441, Uniform distribution"
+    },
+    {
+      "id": "200-013",
+      "concept": "expected value",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "Σₓ x · P(X = x)\nfor a discrete X",
+      "choices": [
+        "Expected value",
+        "Variance",
+        "Standard deviation",
+        "Median",
+        "Mode"
+      ],
+      "answer": "Expected value",
+      "explanation": "The expected value weights each possible outcome by its probability.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 156, Expected value"
+    },
+    {
+      "id": "200-014",
+      "concept": "variance of a random variable",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "E[(X − μ)²]\nwhere μ = E[X]",
+      "choices": [
+        "Variance of X",
+        "Expected value",
+        "Standard deviation",
+        "Second raw moment",
+        "Mean absolute deviation"
+      ],
+      "answer": "Variance of X",
+      "explanation": "Variance measures the expected squared distance from the mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance"
+    },
+    {
+      "id": "200-015",
+      "concept": "standard error of the mean",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "σ / √n\nfor n independent draws with standard deviation σ",
+      "choices": [
+        "Standard error of the mean",
+        "Sample standard deviation",
+        "Population standard deviation",
+        "Standard error of the sum",
+        "Variance of the mean"
+      ],
+      "answer": "Standard error of the mean",
+      "explanation": "Averaging n independent draws divides their standard deviation by the square root of n.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error"
+    },
+    {
+      "id": "200-016",
+      "concept": "sample proportion",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "X / n\nwhere X is the number of successes in n trials",
+      "choices": [
+        "Sample proportion",
+        "Success count",
+        "Sample odds",
+        "Population proportion",
+        "Sample variance"
+      ],
+      "answer": "Sample proportion",
+      "explanation": "The proportion is the observed number of successes divided by the total trial count.",
+      "reference": "UC Berkeley STAT 2, Fall 2024, Module 7, sample percentage: https://stat2.berkeley.edu/fall-2024/#module-7-sampling-from-a-population-weeks-11-12"
+    },
+    {
+      "id": "200-017",
+      "concept": "population z-score",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "(x − μ) / σ\nwhere μ and σ are population values",
+      "choices": [
+        "Population z-score",
+        "Raw score",
+        "Percentile rank",
+        "Relative frequency",
+        "Prediction error"
+      ],
+      "answer": "Population z-score",
+      "explanation": "This gives the number of population standard deviations from the mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standard scores"
+    },
+    {
+      "id": "200-018",
+      "concept": "interval probability",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "F(b) − F(a)\nfor a cumulative distribution function F and a < b",
+      "choices": [
+        "Interval probability",
+        "Point probability at b",
+        "Tail probability above b",
+        "Tail probability at a",
+        "Cumulative probability at b"
+      ],
+      "answer": "Interval probability",
+      "explanation": "Subtracting the cumulative probabilities gives P(a < X ≤ b).",
+      "reference": "MIT 18.05, Spring 2022, Reading 5b, Cumulative Distribution Function: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class05-prep-b_pdf/"
+    },
+    {
+      "id": "200-019",
+      "concept": "sampling distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "The probability distribution of a statistic across repeated samples of a fixed size.",
+      "choices": [
+        "Sampling distribution",
+        "Empirical distribution",
+        "Population distribution",
+        "Probability density",
+        "Sampling frame"
+      ],
+      "answer": "Sampling distribution",
+      "explanation": "The variable here is the statistic, such as a sample mean, rather than an individual measurement.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 377, Sampling distribution"
+    },
+    {
+      "id": "200-020",
+      "concept": "sampling variation",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Differences in a statistic that arise when equal-sized random samples are drawn from one population.",
+      "choices": [
+        "Sampling variation",
+        "Measurement bias",
+        "Response bias",
+        "Selection bias",
+        "Within-sample spread"
+      ],
+      "answer": "Sampling variation",
+      "explanation": "Different random samples can give different values of the same statistic.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 377, Sampling variation"
+    },
+    {
+      "id": "200-021",
+      "concept": "independence of draws",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Learning the outcomes of earlier draws leaves the probability law for the next draw unchanged.",
+      "choices": [
+        "Independence of draws",
+        "Equal means",
+        "Identical distributions",
+        "Equal variances",
+        "Equal sample sizes"
+      ],
+      "answer": "Independence of draws",
+      "explanation": "Earlier outcomes carry no information about the next draw when the draws are independent.",
+      "reference": "MIT 18.05, Spring 2022, Reading 3, §6: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class03-prep.pdf"
+    },
+    {
+      "id": "200-022",
+      "concept": "central limit theorem",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "What theorem gives a normal limit for standardized means of independent draws from one finite-variance population?",
+      "choices": [
+        "Central limit theorem",
+        "Law of large numbers",
+        "Bayes’ theorem",
+        "Addition rule",
+        "Multiplication rule"
+      ],
+      "answer": "Central limit theorem",
+      "explanation": "This theorem concerns the shape of the standardized sampling distribution.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 73, Central limit theorem"
+    },
+    {
+      "id": "200-023",
+      "concept": "law of large numbers",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "As independent draws accumulate, their average approaches the population mean, when the mean exists.",
+      "choices": [
+        "Law of large numbers",
+        "Central limit theorem",
+        "Bayes’ theorem",
+        "Addition rule",
+        "Multiplication rule"
+      ],
+      "answer": "Law of large numbers",
+      "explanation": "The law concerns the location of the average as the sample grows.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 244, Law of large numbers"
+    },
+    {
+      "id": "200-024",
+      "concept": "normal approximation",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Using a bell-shaped model for averages of large independent samples from a skewed, finite-variance population.",
+      "choices": [
+        "Normal approximation",
+        "Continuity correction",
+        "Exact sampling distribution",
+        "Poisson approximation",
+        "Empirical resampling"
+      ],
+      "answer": "Normal approximation",
+      "explanation": "For large samples, the central limit theorem makes the normal model a useful approximation for the sample mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 305, Normal approximation. Sample mean case in MIT 18.05, Spring 2022, Reading 6b: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class06-prep-b_pdf/"
+    },
+    {
+      "id": "200-025",
+      "concept": "exponential distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Measure the wait from now until the first arrival of a constant-rate Poisson process.",
+      "choices": [
+        "Exponential distribution",
+        "Poisson distribution",
+        "Geometric distribution",
+        "Normal distribution",
+        "Uniform distribution"
+      ],
+      "answer": "Exponential distribution",
+      "explanation": "The continuous wait to the next event is exponential under this process.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 157, Exponential distribution"
+    },
+    {
+      "id": "200-026",
+      "concept": "gamma distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Measure the time to the fourth arrival in a constant-rate Poisson process.",
+      "choices": [
+        "Gamma distribution",
+        "Exponential distribution",
+        "Poisson distribution",
+        "Geometric distribution",
+        "Lognormal distribution"
+      ],
+      "answer": "Gamma distribution",
+      "explanation": "A sum of four independent exponential waits with a common rate has a gamma distribution.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 179, Gamma distribution",
+      "convention": "Shape 4, with rate equal to the arrival rate. The scale is its reciprocal."
+    },
+    {
+      "id": "200-027",
+      "concept": "lognormal distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A positive variable becomes normally distributed after taking its natural logarithm.",
+      "choices": [
+        "Lognormal distribution",
+        "Normal distribution",
+        "Exponential distribution",
+        "Uniform distribution",
+        "Beta distribution"
+      ],
+      "answer": "Lognormal distribution",
+      "explanation": "The normality applies to the log of the variable itself.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 259, Lognormal distribution"
+    },
+    {
+      "id": "200-028",
+      "concept": "standard normal distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Gaussian sensor readings are rescaled to have mean zero and variance one. What is the resulting distribution?",
+      "choices": [
+        "Standard normal distribution",
+        "Standard uniform distribution",
+        "Student’s t-distribution",
+        "Chi-squared distribution",
+        "Exponential distribution"
+      ],
+      "answer": "Standard normal distribution",
+      "explanation": "A normal distribution with mean zero and variance one is standard normal.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standard normal variable"
+    },
+    {
+      "id": "200-029",
+      "concept": "negative binomial distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Toss the same coin independently. Count tails before the fourth head.",
+      "choices": [
+        "Negative binomial distribution",
+        "Binomial distribution",
+        "Geometric distribution",
+        "Poisson distribution",
+        "Hypergeometric distribution"
+      ],
+      "answer": "Negative binomial distribution",
+      "explanation": "For independent tosses with a fixed success probability, the failure count before a fixed number of successes follows a negative binomial model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 298, Negative binomial distribution",
+      "convention": "Counts failures before the fixed success count."
+    },
+    {
+      "id": "200-030",
+      "concept": "beta distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A probability p varies across machines with density proportional to p(1 − p) for 0 < p < 1.",
+      "choices": [
+        "Beta distribution",
+        "Gamma distribution",
+        "Uniform distribution",
+        "Normal distribution",
+        "Binomial distribution"
+      ],
+      "answer": "Beta distribution",
+      "explanation": "The density is a beta model with both shape parameters equal to two.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 43, Beta distribution"
+    },
+    {
+      "id": "200-031",
+      "concept": "finite population correction",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "√[(N − n) / (N − 1)]\nfor n draws without replacement from N > 1 units",
+      "choices": [
+        "Finite population correction",
+        "Degrees of freedom",
+        "Design effect",
+        "Sampling fraction",
+        "Standard normal critical value"
+      ],
+      "answer": "Finite population correction",
+      "explanation": "This factor shrinks the standard error relative to drawing with replacement.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 166, Finite population correction",
+      "convention": "Here the population variance uses denominator N and the correction multiplies the standard error."
+    },
+    {
+      "id": "200-032",
+      "concept": "covariance",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "E[(X − μₓ)(Y − μᵧ)]",
+      "choices": [
+        "Covariance",
+        "Pearson correlation",
+        "Joint variance",
+        "Marginal variance",
+        "Conditional expectation"
+      ],
+      "answer": "Covariance",
+      "explanation": "Covariance averages the product of the centered variables.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 110, Covariance"
+    },
+    {
+      "id": "200-033",
+      "concept": "pearson correlation",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Cov(X, Y) / (σₓσᵧ)\nwith positive standard deviations",
+      "choices": [
+        "Pearson correlation",
+        "Covariance",
+        "Regression slope",
+        "Rank correlation",
+        "Residual variance"
+      ],
+      "answer": "Pearson correlation",
+      "explanation": "Pearson correlation is covariance scaled by the two standard deviations.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 107, Correlation coefficient"
+    },
+    {
+      "id": "200-034",
+      "concept": "marginal probability mass",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Σᵧ P(X = x, Y = y)\nfor discrete X and Y",
+      "choices": [
+        "Marginal probability mass",
+        "Joint probability mass",
+        "Conditional probability mass",
+        "Cumulative probability",
+        "Survival probability"
+      ],
+      "answer": "Marginal probability mass",
+      "explanation": "Summing over Y gives the probability that X takes the specified value.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 267, Marginal distribution"
+    },
+    {
+      "id": "200-035",
+      "concept": "conditional probability mass",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "P(X = x, Y = y) / P(Y = y)\nwith a positive denominator",
+      "choices": [
+        "Conditional probability mass",
+        "Joint probability mass",
+        "Marginal probability mass",
+        "Cumulative probability",
+        "Survival probability"
+      ],
+      "answer": "Conditional probability mass",
+      "explanation": "The ratio gives the chance that X equals x within the group where Y equals y.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 98, Conditional distribution"
+    },
+    {
+      "id": "200-036",
+      "concept": "survival function",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "1 − F(t)\nwhere F(t) = P(T ≤ t) and T is time to an event",
+      "choices": [
+        "Survival function",
+        "Cumulative distribution function",
+        "Probability density function",
+        "Instantaneous hazard",
+        "Cumulative hazard"
+      ],
+      "answer": "Survival function",
+      "explanation": "The survival function gives the chance that the event happens after t.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 423, Survival function"
+    },
+    {
+      "id": "200-037",
+      "concept": "exact normal sampling distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Independent readings are normally distributed. What describes the sample mean’s distribution, even with only four readings?",
+      "choices": [
+        "Exact normal sampling distribution",
+        "Approximate normal sampling distribution",
+        "Student’s t-distribution",
+        "Chi-squared distribution",
+        "Exponential distribution"
+      ],
+      "answer": "Exact normal sampling distribution",
+      "explanation": "The mean of independent normal readings is itself exactly normal.",
+      "reference": "Penn State STAT 414, Lesson 26, §26.1, Sums of Independent Normal Random Variables: https://online.stat.psu.edu/stat414/Lesson26"
+    },
+    {
+      "id": "200-038",
+      "concept": "simple random sampling",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A computer picks eight distinct employees so that every possible group of eight has the same chance.",
+      "choices": [
+        "Simple random sampling",
+        "Stratified sampling",
+        "Cluster sampling",
+        "Systematic sampling",
+        "Convenience sampling"
+      ],
+      "answer": "Simple random sampling",
+      "explanation": "A simple random sample without replacement makes all size-eight subsets equally likely.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 394, Simple random sampling"
+    },
+    {
+      "id": "200-039",
+      "concept": "moment generating function",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "E[exp(tX)]\nwhere this expectation exists around t = 0",
+      "choices": [
+        "Moment generating function",
+        "Cumulative distribution function",
+        "Probability density function",
+        "Survival function",
+        "Quantile function"
+      ],
+      "answer": "Moment generating function",
+      "explanation": "Taking the expectation of the exponential gives the moment generating function.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 282, Moment generating function"
+    },
+    {
+      "id": "200-040",
+      "concept": "variance of a sum",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Var(X) + Var(Y)\nfor independent X and Y with finite variances",
+      "choices": [
+        "Variance of a sum",
+        "Variance of an average",
+        "Standard deviation of a sum",
+        "Covariance of X and Y",
+        "Expected value of a sum"
+      ],
+      "answer": "Variance of a sum",
+      "explanation": "Independence makes the covariance zero, so the variances add.",
+      "reference": "MIT 18.05, Spring 2022, Reading 7b, Covariance and Correlation, variance of a sum: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class07-prep-b_pdf/"
+    },
+    {
+      "id": "200-041",
+      "concept": "population parameter",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A fixed numerical feature of the entire population, such as its true proportion of left-handed people.",
+      "choices": [
+        "Population parameter",
+        "Sample statistic",
+        "Sample proportion",
+        "Sampling error",
+        "Standard error"
+      ],
+      "answer": "Population parameter",
+      "explanation": "A population parameter describes the population supplying the sample.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 317, Parameter"
+    },
+    {
+      "id": "200-042",
+      "concept": "sample statistic",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A numerical summary calculated from sample data alone, without unknown population quantities.",
+      "choices": [
+        "Sample statistic",
+        "Population parameter",
+        "Sampling unit",
+        "Sampling frame",
+        "Design weight"
+      ],
+      "answer": "Sample statistic",
+      "explanation": "A statistic is a function of the observed sample, such as its mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 411, Statistic"
+    },
+    {
+      "id": "200-043",
+      "concept": "percentile",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A cutoff at or below which a specified percentage of a continuous distribution falls.",
+      "choices": [
+        "Percentile",
+        "Relative frequency",
+        "Probability density",
+        "Standard deviation",
+        "Standard score"
+      ],
+      "answer": "Percentile",
+      "explanation": "A percentile translates a cumulative percentage into a value on the measurement scale.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Percentile"
+    },
+    {
+      "id": "200-044",
+      "concept": "sampling frame",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The list used to identify the units from which a sample can actually be drawn.",
+      "choices": [
+        "Sampling frame",
+        "Target population",
+        "Sample statistic",
+        "Sampling error",
+        "Probability model"
+      ],
+      "answer": "Sampling frame",
+      "explanation": "The frame is the operational list, which can differ from the target population.",
+      "reference": "Penn State STAT 100, Lesson 2, Sampling Methods: https://online.stat.psu.edu/stat100/Lesson02"
+    },
+    {
+      "id": "200-045",
+      "concept": "discrete uniform distribution",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A fair ten-sided die has one face for each integer from 0 to 9. What models the number shown?",
+      "choices": [
+        "Discrete uniform distribution",
+        "Continuous uniform distribution",
+        "Binomial distribution",
+        "Geometric distribution",
+        "Poisson distribution"
+      ],
+      "answer": "Discrete uniform distribution",
+      "explanation": "Each of the ten discrete results has the same probability.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 441, Uniform distribution"
+    },
+    {
+      "id": "200-046",
+      "concept": "stratified sampling",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A library splits its branches by region and randomly samples branches from every region.",
+      "choices": [
+        "Stratified sampling",
+        "Cluster sampling",
+        "Systematic sampling",
+        "Convenience sampling",
+        "Simple random sampling"
+      ],
+      "answer": "Stratified sampling",
+      "explanation": "The regions are strata, and every stratum contributes to the sample.",
+      "reference": "Penn State STAT 100, Lesson 2, Sampling Methods: https://online.stat.psu.edu/stat100/Lesson02"
+    },
+    {
+      "id": "200-047",
+      "concept": "one-stage cluster sampling",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A library randomly selects two branches and surveys every staff member at both.",
+      "choices": [
+        "One-stage cluster sampling",
+        "Stratified sampling",
+        "Systematic sampling",
+        "Convenience sampling",
+        "Simple random sampling"
+      ],
+      "answer": "One-stage cluster sampling",
+      "explanation": "The branches are clusters, and all people in selected clusters are included.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 87, Cluster sampling"
+    },
+    {
+      "id": "200-048",
+      "concept": "systematic sampling",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "From a list, a pollster picks a random start among the first ten entries, then takes every tenth entry.",
+      "choices": [
+        "Systematic sampling",
+        "Stratified sampling",
+        "Cluster sampling",
+        "Matched sampling",
+        "Convenience sampling"
+      ],
+      "answer": "Systematic sampling",
+      "explanation": "A random start followed by a fixed interval defines systematic sampling.",
+      "reference": "Penn State STAT 100, Lesson 2, Sampling Methods: https://online.stat.psu.edu/stat100/Lesson02"
+    },
+    {
+      "id": "200-049",
+      "concept": "mean of a linear transformation",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "aE[X] + b\nwhen a and b are constants and Y = aX + b",
+      "choices": [
+        "Mean of a linear transformation",
+        "Variance of Y",
+        "Standard deviation of Y",
+        "Covariance of X and Y",
+        "Mean of X"
+      ],
+      "answer": "Mean of a linear transformation",
+      "explanation": "Multiplying values multiplies their mean, and adding a fixed amount shifts it.",
+      "reference": "MIT 18.05, Spring 2022, Problem Set 4 Solutions, affine transformations: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04_sol.pdf"
+    },
+    {
+      "id": "200-050",
+      "concept": "variance of a linear transformation",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "a² Var(X)\nfor Y = aX + b, with a and b fixed",
+      "choices": [
+        "Variance of a linear transformation",
+        "Mean of Y",
+        "Standard deviation of Y",
+        "Covariance of X and Y",
+        "Variance of X"
+      ],
+      "answer": "Variance of a linear transformation",
+      "explanation": "Adding b shifts the center; multiplying by a scales the variance by a squared.",
+      "reference": "MIT 18.05, Spring 2022, Problem Set 4 Solutions, affine transformations: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04_sol.pdf"
+    },
+    {
+      "id": "200-051",
+      "concept": "mean of a binomial count",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "np\nfor X counting successes in n independent trials with fixed success chance p",
+      "choices": [
+        "Mean of a binomial count",
+        "Variance of a binomial count",
+        "Mean of one trial",
+        "Standard deviation of a binomial count",
+        "Number of trials"
+      ],
+      "answer": "Mean of a binomial count",
+      "explanation": "The count is a sum of n variables whose individual means are p.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 47, Binomial distribution"
+    },
+    {
+      "id": "200-052",
+      "concept": "variance of a bernoulli trial",
+      "level": "200",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "p(1 − p)\nfor X equal to 1 with probability p and 0 otherwise",
+      "choices": [
+        "Variance of a Bernoulli trial",
+        "Mean of the trial",
+        "Standard deviation of the trial",
+        "Probability of failure",
+        "Second raw moment"
+      ],
+      "answer": "Variance of a Bernoulli trial",
+      "explanation": "The variance of a single indicator is p times one minus p.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 42, Bernoulli distribution"
+    },
+    {
+      "id": "200-053",
+      "concept": "joint distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "One probability model describes two random variables together, including how their values occur in combination.",
+      "choices": [
+        "Joint distribution",
+        "Marginal distribution",
+        "Conditional distribution",
+        "Sampling distribution",
+        "Empirical distribution"
+      ],
+      "answer": "Joint distribution",
+      "explanation": "The joint distribution retains information about the relationship between the variables.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 229, Joint distribution"
+    },
+    {
+      "id": "200-054",
+      "concept": "positive skewness",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "In a distribution with a finite third moment, the average cubed deviation from the mean is positive.",
+      "choices": [
+        "Positive skewness",
+        "Negative skewness",
+        "Positive kurtosis",
+        "Positive covariance",
+        "High mean"
+      ],
+      "answer": "Positive skewness",
+      "explanation": "Cubing retains the sign of deviations, so large positive deviations can dominate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 397, Skewness"
+    },
+    {
+      "id": "200-055",
+      "concept": "excess kurtosis",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "The standardized fourth central moment minus the corresponding value for a normal distribution.",
+      "choices": [
+        "Excess kurtosis",
+        "Standardized skewness",
+        "Standardized variance",
+        "Central covariance",
+        "Raw fourth moment"
+      ],
+      "answer": "Excess kurtosis",
+      "explanation": "A normal distribution has kurtosis of three, so its excess kurtosis is zero.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 239, Kurtosis",
+      "convention": "Excess kurtosis uses normal as the zero reference."
+    },
+    {
+      "id": "200-056",
+      "concept": "empirical bootstrap",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Repeatedly drawing same-size samples with replacement from the observed data to approximate a statistic’s sampling behavior.",
+      "choices": [
+        "Empirical bootstrap",
+        "Jackknife resampling",
+        "Permutation testing",
+        "Systematic sampling",
+        "Sampling without replacement"
+      ],
+      "answer": "Empirical bootstrap",
+      "explanation": "The nonparametric bootstrap uses the observed sample as a stand-in for the population.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bootstrap"
+    },
+    {
+      "id": "200-057",
+      "concept": "convergence in probability",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "For every fixed positive tolerance, the chance of an estimator missing its limit by more than that tolerance tends to zero.",
+      "choices": [
+        "Convergence in probability",
+        "Convergence in distribution",
+        "Equality in distribution",
+        "Independence",
+        "Unbiasedness"
+      ],
+      "answer": "Convergence in probability",
+      "explanation": "This mode of convergence controls the probability of deviations from the limit.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Convergence in probability"
+    },
+    {
+      "id": "200-058",
+      "concept": "chebyshev’s inequality",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "What inequality bounds tails for any distribution with finite variance using only distance from the mean in standard deviation units?",
+      "choices": [
+        "Chebyshev’s inequality",
+        "Bayes’ rule",
+        "Central limit theorem",
+        "Law of large numbers",
+        "Normal approximation"
+      ],
+      "answer": "Chebyshev’s inequality",
+      "explanation": "The upper bound for being at least k standard deviations away is 1/k², with positive variance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 77, Chebyshev’s inequality"
+    },
+    {
+      "id": "200-059",
+      "concept": "multinomial distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Forty independent voters each pick one of three candidates with fixed probabilities. Model the three counts jointly.",
+      "choices": [
+        "Multinomial distribution",
+        "Binomial distribution",
+        "Poisson distribution",
+        "Multivariate normal distribution",
+        "Negative binomial distribution"
+      ],
+      "answer": "Multinomial distribution",
+      "explanation": "A multinomial model counts several possible categories across a fixed number of independent trials.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 290, Multinomial distribution"
+    },
+    {
+      "id": "200-060",
+      "concept": "chi-squared distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A researcher adds the squares of four independent standard normal values.",
+      "choices": [
+        "Chi-squared distribution",
+        "Student’s t-distribution",
+        "Standard normal distribution",
+        "F-distribution",
+        "Lognormal distribution"
+      ],
+      "answer": "Chi-squared distribution",
+      "explanation": "The sum of four independent squared standard normal variables has four chi-squared degrees of freedom.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 79, Chi-squared distribution"
+    },
+    {
+      "id": "200-061",
+      "concept": "cauchy distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A lab divides one standard normal reading by another independent standard normal reading.",
+      "choices": [
+        "Cauchy distribution",
+        "Standard normal distribution",
+        "F-distribution",
+        "Chi-squared distribution",
+        "Lognormal distribution"
+      ],
+      "answer": "Cauchy distribution",
+      "explanation": "The ratio of independent standard normal variables follows the standard Cauchy model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 70, Cauchy distribution Ratio example in University of Minnesota STAT 3701, Statistical Models, Part II: https://www.stat.umn.edu/geyer/3701/notes/models2.html"
+    },
+    {
+      "id": "200-062",
+      "concept": "exponential distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A newly started machine has a constant failure rate, and its time to failure is continuous.",
+      "choices": [
+        "Exponential distribution",
+        "Poisson distribution",
+        "Lognormal distribution",
+        "Normal distribution",
+        "Uniform distribution"
+      ],
+      "answer": "Exponential distribution",
+      "explanation": "A constant hazard in continuous time leads to an exponential lifetime.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 157, Exponential distribution"
+    },
+    {
+      "id": "200-063",
+      "concept": "law of large numbers",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "As many independent fair-coin tosses accumulate, the proportion of heads stays close to one half with high probability.",
+      "choices": [
+        "Law of large numbers",
+        "Central limit theorem",
+        "Addition rule",
+        "Bayes’ theorem",
+        "Multiplication rule"
+      ],
+      "answer": "Law of large numbers",
+      "explanation": "For indicators of heads, the sample mean is the head proportion, and its target is one half.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 244, Law of large numbers"
+    },
+    {
+      "id": "200-064",
+      "concept": "central limit theorem",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Repair times are right-skewed. For repeated groups of 200 independent repairs, standardized average times have a bell-shaped distribution. Which theorem explains this?",
+      "choices": [
+        "Central limit theorem",
+        "Law of large numbers",
+        "Bayes’ rule",
+        "Continuity correction",
+        "Markov’s inequality"
+      ],
+      "answer": "Central limit theorem",
+      "explanation": "Independent draws with finite positive variance produce a normal limiting shape after standardization.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 73, Central limit theorem"
+    },
+    {
+      "id": "200-065",
+      "concept": "poisson distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "exp(−λ) λᵏ / k!\nfor counts k = 0, 1, 2, …",
+      "choices": [
+        "Poisson probability mass",
+        "Binomial probability mass",
+        "Geometric probability mass",
+        "Hypergeometric probability mass",
+        "Negative binomial probability mass"
+      ],
+      "answer": "Poisson probability mass",
+      "explanation": "The Poisson count law uses a positive expected count λ.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 330, Poisson distribution"
+    },
+    {
+      "id": "200-066",
+      "concept": "exponential distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "λ exp(−λx)\nfor x ≥ 0 and λ > 0",
+      "choices": [
+        "Exponential density",
+        "Normal density",
+        "Lognormal density",
+        "Uniform density",
+        "Beta density"
+      ],
+      "answer": "Exponential density",
+      "explanation": "The exponential density decays from λ at rate λ.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 157, Exponential distribution",
+      "convention": "λ is the rate, with mean 1/λ."
+    },
+    {
+      "id": "200-067",
+      "concept": "binomial distribution",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "np(1 − p)\nfor a count X from n independent binary trials with success chance p",
+      "choices": [
+        "Binomial variance",
+        "Binomial mean",
+        "Binomial standard deviation",
+        "Bernoulli variance",
+        "Poisson variance"
+      ],
+      "answer": "Binomial variance",
+      "explanation": "The count sums n independent indicators, each with variance p times one minus p.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 47, Binomial distribution"
+    },
+    {
+      "id": "200-068",
+      "concept": "standard error of a proportion",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "√[p(1 − p) / n]\nfor n independent trials with true success chance p",
+      "choices": [
+        "Standard error of a proportion",
+        "Standard deviation of a binary outcome",
+        "Standard error of the success count",
+        "Variance of the sample proportion",
+        "Mean of the success count"
+      ],
+      "answer": "Standard error of a proportion",
+      "explanation": "The spread of the sample proportion is the spread of its count divided by n.",
+      "reference": "Penn State STAT 500, Lesson 4, §4.2, Sampling Distribution of the Sample Proportion: https://online.stat.psu.edu/stat500/Lesson04"
+    },
+    {
+      "id": "200-069",
+      "concept": "fourth raw moment",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "E[X⁴], when finite",
+      "choices": [
+        "Fourth raw moment",
+        "Fourth central moment",
+        "Fourth cumulant",
+        "Fourth percentile",
+        "Excess kurtosis"
+      ],
+      "answer": "Fourth raw moment",
+      "explanation": "A raw moment uses powers of X itself, without centering.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 282, Moments"
+    },
+    {
+      "id": "200-070",
+      "concept": "variance of a random variable",
+      "level": "200",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "E[(X − E[X])²]",
+      "choices": [
+        "Second central moment",
+        "Second raw moment",
+        "Standard deviation",
+        "Covariance with the mean",
+        "Mean absolute deviation"
+      ],
+      "answer": "Second central moment",
+      "explanation": "A central moment uses deviations around the mean; the second one equals variance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 282, Moments"
+    },
+    {
+      "id": "200-071",
+      "concept": "independence of random variables",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "Their joint probability can be written as the product of the two marginal probabilities for every pair of sets.",
+      "choices": [
+        "Independence of random variables",
+        "Zero covariance",
+        "Equal means",
+        "Conditional association",
+        "Identical distribution"
+      ],
+      "answer": "Independence of random variables",
+      "explanation": "Independence requires the factorization for every pair of events defined by the variables.",
+      "reference": "MIT 18.05, Spring 2022, Reading 7a, Joint Distributions and Independence: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class07-prep-a_pdf/"
+    },
+    {
+      "id": "200-072",
+      "concept": "zero correlation",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "What describes two variables with finite positive variances when their centered product has expectation zero?",
+      "choices": [
+        "Zero correlation",
+        "Perfect agreement",
+        "Equal means",
+        "Positive association",
+        "Identical distributions"
+      ],
+      "answer": "Zero correlation",
+      "explanation": "Zero covariance gives zero Pearson correlation, even if dependence remains.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 107, Correlation coefficient"
+    },
+    {
+      "id": "200-073",
+      "concept": "normal approximation for a proportion",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "A bell curve approximates P̂ from independent binary draws when expected success and failure counts are both large.",
+      "choices": [
+        "Normal approximation for a proportion",
+        "Exact binomial calculation",
+        "Poisson approximation",
+        "Finite population correction",
+        "Continuity correction"
+      ],
+      "answer": "Normal approximation for a proportion",
+      "explanation": "A sample proportion is an average of binary indicators; its large-sample shape is approximately normal.",
+      "reference": "Penn State STAT 500, Lesson 4, §4.2, Sampling Distribution of the Sample Proportion: https://online.stat.psu.edu/stat500/Lesson04"
+    },
+    {
+      "id": "200-074",
+      "concept": "continuity correction",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "When using a continuous approximation for an integer count, move an inclusive upper integer cutoff up by one half.",
+      "choices": [
+        "Continuity correction",
+        "Variance stabilization",
+        "Finite population correction",
+        "Affine standardization",
+        "Resampling with replacement"
+      ],
+      "answer": "Continuity correction",
+      "explanation": "The half-unit change includes the whole bar for the last qualifying integer.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 305, Normal approximation See the half-unit correction in Penn State STAT 414, Lesson 28: https://online.stat.psu.edu/stat414/Lesson28"
+    },
+    {
+      "id": "200-075",
+      "concept": "student’s t-distribution",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Divide a standard normal value by √(V/8), where V is independent chi-squared with eight degrees of freedom.",
+      "choices": [
+        "Student’s t-distribution",
+        "F-distribution",
+        "Standard Cauchy distribution",
+        "Normal distribution",
+        "Lognormal distribution"
+      ],
+      "answer": "Student’s t-distribution",
+      "explanation": "This ratio follows Student’s t with degrees of freedom inherited from the chi-squared term.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student’s t-distribution Ratio definition in Penn State STAT 414, Lesson 26, §26.4: https://online.stat.psu.edu/stat414/Lesson26"
+    },
+    {
+      "id": "200-076",
+      "concept": "poisson approximation",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A factory checks thousands of independent parts, each with a tiny defect probability. Which model can approximate the defect count using its mean alone?",
+      "choices": [
+        "Poisson approximation",
+        "Normal approximation",
+        "Uniform approximation",
+        "Geometric approximation",
+        "Exponential approximation"
+      ],
+      "answer": "Poisson approximation",
+      "explanation": "A binomial count with many trials and small success probability can be approximated by a Poisson count.",
+      "reference": "Penn State STAT 414, Lesson 12, The Poisson Distribution: https://online.stat.psu.edu/stat414/Lesson12"
+    },
+    {
+      "id": "200-077",
+      "concept": "failure of the finite-variance condition",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Averages of independent Cauchy observations remain Cauchy. Which usual central-limit condition fails?",
+      "choices": [
+        "No finite variance",
+        "Identical sampling laws",
+        "Independence of draws",
+        "Positive sample size",
+        "Common support"
+      ],
+      "answer": "No finite variance",
+      "explanation": "The Cauchy distribution has no finite variance, so the elementary normal limit theorem does not apply.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 70, Cauchy distribution"
+    },
+    {
+      "id": "200-078",
+      "concept": "dependence between draws",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A sensor repeats the same reading 500 times. Which issue defeats an independent-draw central limit argument?",
+      "choices": [
+        "Dependence between draws",
+        "Equal marginal distributions",
+        "Stable measurement units",
+        "Finite population variance",
+        "Finite variance of each draw"
+      ],
+      "answer": "Dependence between draws",
+      "explanation": "Copying one observation creates perfectly dependent values, not 500 independent observations.",
+      "reference": "MIT 18.05, Spring 2022, Reading 6b, Central Limit Theorem and the Law of Large Numbers: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class06-prep-b_pdf/"
+    },
+    {
+      "id": "200-079",
+      "concept": "clt standardization",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "√n · (X̄ − μ) / σ\nfor an independent sample with common mean μ and positive finite SD σ",
+      "choices": [
+        "CLT standardization",
+        "Standardization of one observation",
+        "Standard error estimate",
+        "Variance stabilization",
+        "Sample coefficient of variation"
+      ],
+      "answer": "CLT standardization",
+      "explanation": "Subtract the population mean and divide by the standard error of the sample mean.",
+      "reference": "MIT 18.05, Spring 2022, Reading 6b, Central Limit Theorem and the Law of Large Numbers: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class06-prep-b_pdf/"
+    },
+    {
+      "id": "200-080",
+      "concept": "variance of the sample mean",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "σ² / n\nfor n independent draws from one distribution with variance σ²",
+      "choices": [
+        "Variance of the sample mean",
+        "Variance of the sum",
+        "Standard error of the mean",
+        "Population variance",
+        "Expected sample mean"
+      ],
+      "answer": "Variance of the sample mean",
+      "explanation": "The variance of the sum is nσ², and scaling by 1/n divides variance by n².",
+      "reference": "Penn State STAT 414, Lesson 24, Several Independent Random Variables: https://online.stat.psu.edu/stat414/Lesson24"
+    },
+    {
+      "id": "200-081",
+      "concept": "variance of a dependent sum",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "Var(X) + Var(Y) + 2 Cov(X, Y)",
+      "choices": [
+        "Variance of a dependent sum",
+        "Variance of a difference",
+        "Covariance of a product",
+        "Correlation of a sum",
+        "Standard error of an average"
+      ],
+      "answer": "Variance of a dependent sum",
+      "explanation": "Dependence can add or subtract from variance through the covariance term.",
+      "reference": "MIT 18.05, Spring 2022, Reading 7b, Covariance and Correlation: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class07-prep-b_pdf/"
+    },
+    {
+      "id": "200-082",
+      "concept": "probability density from a cdf",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "dF(x)/dx\nfor a differentiable cumulative distribution function F",
+      "choices": [
+        "Probability density from a CDF",
+        "Point probability",
+        "Quantile function",
+        "Survival function",
+        "Standardized score"
+      ],
+      "answer": "Probability density from a CDF",
+      "explanation": "The derivative of the CDF gives the density where the derivative exists.",
+      "reference": "MIT 18.05, Spring 2022, Reading 5b, Continuous Random Variables: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class05-prep-b_pdf/"
+    },
+    {
+      "id": "200-083",
+      "concept": "markov’s inequality",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "P(X ≥ a) ≤ E[X] / a\nfor nonnegative X with finite mean and a > 0",
+      "choices": [
+        "Markov’s inequality",
+        "Chebyshev’s inequality",
+        "Bayes’ rule",
+        "Central limit theorem",
+        "Law of large numbers"
+      ],
+      "answer": "Markov’s inequality",
+      "explanation": "Nonnegative values above a contribute at least a times their probability to the mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 270, Markov inequality"
+    },
+    {
+      "id": "200-084",
+      "concept": "normal approximation for a sum",
+      "level": "200",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "N(nμ, nσ²)\nfor the total of many independent draws from one nonnormal population",
+      "choices": [
+        "Normal approximation for a sum",
+        "Normal approximation for their average",
+        "Exact count distribution",
+        "Standard normal for the total",
+        "Exact law for one draw"
+      ],
+      "answer": "Normal approximation for a sum",
+      "explanation": "Adding n observations scales the mean and variance by n, and the central limit theorem supplies the shape.",
+      "reference": "MIT 18.05, Spring 2022, Reading 6b, Central Limit Theorem and the Law of Large Numbers: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class06-prep-b_pdf/",
+      "convention": "N(mean, variance). Population mean μ and finite positive variance σ²."
+    }
+  ]
+}

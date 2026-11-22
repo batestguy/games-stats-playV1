@@ -1,0 +1,201 @@
+1. Full Workflow
+1.1 Content Preparation Workflow
+Step 1 — Build the statistics dictionary and formula corpus.
+Create two master lists: statistical terms (e.g., “heteroscedasticity”, “kurtosis”, “Bartlett’s test”) and formulas (e.g., “standard error of the mean”, “Pearson correlation coefficient”, “Cramér’s V”). Each entry needs: the prompt (word or formula), the correct answer, and four plausible distractors. Distractors must be drawn from the same level and conceptual neighbourhood — otherwise the 10-second timer becomes trivial.
+
+Step 2 — Tag every item by academic level.
+Use six buckets: LEVEL_100, LEVEL_200, LEVEL_300, LEVEL_400, FINAL_YEAR, GRAD_MIX. The graduate/postgraduate mix should be a separate pool, not a random spillover from earlier levels. Each item also gets a difficulty sub-tag (EASY, MEDIUM, HARD) so the ladder does not plateau.
+
+Step 3 — Author the two-player “Brady-style” pairing logic.
+In Brady-style head-to-head quizzes, two participants face off and a scoreboard tracks them in parallel. In your single-device version, each player receives a different question from the same level and difficulty band, so the comparison is fair but the questions are not identical. The pairing rule should be: same level, same difficulty, different item ID, neither item previously seen by either player in that session.
+
+Step 4 — QA the five-option set.
+Every item must pass a distractor plausibility review. A common failure mode in statistics quizzes is that one option is obviously “the formula-looking one” and the rest are filler. Reject items where the correct answer is the only option with Greek letters, summation signs, or subscripts.
+
+Step 5 — Build and sign the APK.
+Compile a release build signed with a private keystore. Generate a universal APK (or an ABI split if size becomes an issue), host it over HTTPS, and provide a QR code and clear sideloading instructions, since Android blocks unknown sources by default.
+
+1.2 Player-Facing Gameplay Workflow
+Solo Level Mode (Level 100 → Final Year → Grad Mix)
+Level selection screen. The student chooses a level card. A level is locked until the previous level reaches a minimum accuracy threshold (e.g., 60%) — this prevents a Level 100 student from jumping straight into the graduate mix and getting discouraged.
+
+Question presentation. A word or formula appears. Five options are shown below. A circular 10-second countdown begins immediately.
+
+No-skip rule. There is no “skip” button. The student must either tap an option or let the timer expire. Timeout scores zero and advances to the next item. This is the core cheating-control mechanic: you cannot stall, Google the term, and come back.
+
+Feedback. On tap or timeout, the correct option is highlighted, the chosen option is marked, and a one-line definition or formula explanation appears. A short “Next” delay (1–2 seconds) preserves pace without making the game feel like a textbook.
+
+Ladder progression. After a fixed round size (e.g., 10 or 15 items), a results screen shows accuracy, average response time, and whether the next level is unlocked. Store the best score per level in Room.
+
+Two-Player Pass-and-Play Mode (Brady-Style Head-to-Head)
+Setup. Both players enter names. The device is placed flat between them. The app uses a handover screen before every turn: “Pass the phone to [Player 1]. Tap when ready.” This prevents Player 2 from seeing Player 1’s question.
+
+Turn structure. Player 1 answers a 10-second item. Score is updated. Handover screen. Player 2 answers a different 10-second item from the same level/difficulty band. Repeat for a fixed number of rounds per player (e.g., 10 each).
+
+Parallel scoring. Both players are scored independently across the same number of items. At the end, a comparison screen shows side-by-side accuracy, average time, and a head-to-head winner. If the scores are tied, a sudden-death tiebreaker item is drawn from the same level pool.
+
+Rotating UI (optional but recommended). For a truly Brady-style face-off, the UI can rotate 180 degrees between turns so the active player always has the screen facing them. This pattern is already used in local pass-and-play Android games to avoid physical handovers.
+
+2. Architecture
+2.1 Recommended Tech Stack
+Layer	Choice	Reason
+Language	Kotlin	Native Android, coroutines for timer and scoring
+UI	Jetpack Compose	Fast iteration on timer-driven UI and option cards
+Architecture pattern	MVVM + unidirectional data flow	Recommended for quiz state that must survive configuration changes
+State	StateFlow / MutableStateFlow	Ideal for a countdown that continuously broadcasts remaining time
+Local database	Room	Stores the dictionary/formula bank, per-level best scores, and two-player session history
+Dependency injection	Hilt (or manual DI for a small team)	Repositories and timer managers should be injectable for testing
+Formula rendering	KaTeX via WebView, or pre-rendered SVG/PNG	Statistics formulas are not plain text; Compose Text cannot render LaTeX natively
+Distribution	Signed APK + HTTPS direct link / Firebase App Distribution / Diawi	No Play Store listing required; direct download and test-distribution channels are sufficient
+A native Kotlin + Jetpack Compose stack is the right baseline. Ready-made quiz-app architectures also confirm that Kotlin/Compose handles timed challenges, score tracking, and level progression cleanly.
+
+2.2 High-Level Module Architecture
+text
+app/
+├── data/
+│   ├── local/
+│   │   ├── QuestionDao.kt
+│   │   ├── ScoreDao.kt
+│   │   └── AppDatabase.kt
+│   ├── model/
+│   │   ├── QuestionEntity.kt
+│   │   ├── Level.kt
+│   │   └── Difficulty.kt
+│   └── repository/
+│       ├── QuestionRepository.kt
+│       └── ScoreRepository.kt
+├── domain/
+│   ├── GameEngine.kt
+│   ├── QuestionPairingStrategy.kt
+│   └── ScoringRule.kt
+├── ui/
+│   ├── solo/
+│   │   ├── SoloGameViewModel.kt
+│   │   └── SoloGameScreen.kt
+│   ├── twoplayer/
+│   │   ├── TwoPlayerCoordinator.kt
+│   │   ├── TwoPlayerViewModel.kt
+│   │   └── TwoPlayerScreen.kt
+│   ├── components/
+│   │   ├── OptionCard.kt
+│   │   ├── CountdownRing.kt
+│   │   ├── FormulaRenderer.kt
+│   │   └── HandoverOverlay.kt
+│   └── navigation/
+│       └── AppNavGraph.kt
+└── util/
+    ├── TimerManager.kt
+    └── Result.kt
+2.3 Data Model
+kotlin
+@Entity(tableName = "questions")
+data class QuestionEntity(
+    @PrimaryKey val id: String,
+    val prompt: String,              // word or formula LaTeX
+    val promptType: PromptType,      // WORD or FORMULA
+    val correctOption: String,
+    val optionB: String,
+    val optionC: String,
+    val optionD: String,
+    val optionE: String,
+    val level: Level,                // LEVEL_100 ... GRAD_MIX
+    val difficulty: Difficulty,
+    val explanation: String
+)
+
+@Entity(tableName = "solo_scores")
+data class SoloScoreEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val level: Level,
+    val correct: Int,
+    val total: Int,
+    val averageResponseMs: Long,
+    val timestamp: Long
+)
+
+data class TwoPlayerSession(
+    val playerA: PlayerResult,
+    val playerB: PlayerResult,
+    val level: Level,
+    val winner: Winner             // PLAYER_A, PLAYER_B, DRAW
+)
+The critical design choice is storing the five options as columns on the question row, not as a separate options table. This keeps a question and its distractors atomic; if you later add “report a bad distractor,” you know exactly which item to quarantine.
+
+2.4 Timer Architecture
+The 10-second timer is the highest-risk component. It must survive recomposition, configuration changes, and the handover between two players.
+
+Recommended implementation:
+
+TimerManager exposes StateFlow<Int> for remainingSeconds.
+
+In SoloGameViewModel, a viewModelScope.launch starts the countdown when a question is emitted.
+
+The UI observes remainingSeconds and renders the countdown ring.
+
+On reaching zero, the ViewModel emits QuestionResult.Timeout, scores zero, and advances.
+
+The timer must be cancelled and restarted on every question, and cancelled when the screen leaves composition. Do not use a Thread.sleep loop; use delay(1000) inside a coroutine scoped to the ViewModel.
+
+This pattern aligns with documented Compose quiz implementations that use MutableStateFlow for _remainingTimeSeconds and pass it into the timer composable.
+
+2.5 Two-Player Coordination Architecture
+The two-player mode should not be built as two independent solo sessions glued together. It needs a dedicated coordinator.
+
+text
+TwoPlayerCoordinator
+├── currentTurn: PlayerA | PlayerB
+├── roundIndex: Int
+├── questionsServed: Map<Player, Set<QuestionId>>
+├── scores: Map<Player, Int>
+├── selectNextQuestion(player: Player, level: Level): QuestionEntity
+└── isMatchComplete(): Boolean
+selectNextQuestion must enforce:
+
+Same level and difficulty band for both players.
+
+The question has not been served to either player in this session (prevents one player from hearing the answer through the handover).
+
+The two players never receive the same question ID in the same round.
+
+When isMatchComplete() returns true, the coordinator emits a TwoPlayerSession to the results screen. This separation makes the “Brady-style” comparison rule testable without UI.
+
+2.6 Distribution Architecture (No Play Store)
+For a direct download link, the minimal viable pipeline is:
+
+Build a signed release APK in Android Studio.
+
+Host the APK on an HTTPS server (or Cloudflare R2 / GitHub Releases). The server must serve the correct MIME type for .apk so browsers do not render it as text.
+
+Provide a QR code and a short sideloading guide that tells users how to enable “Install from this source” on their Android version.
+
+Version the APK and keep a changelog. Because there is no store update mechanism, users will not be prompted to update. Add a simple in-app version check that compares the installed versionCode against a small JSON file hosted alongside the APK.
+
+For a lighter-weight test distribution, Firebase App Distribution or Diawi-style links are acceptable alternatives. A self-hosted solution such as Drop — which gives each build a QR code and install page — is also viable if you want to avoid third-party test-distribution quotas.
+
+3. Criticisms and Risks
+3.1 The 10-Second Timer Is Both the Anti-Cheat Mechanism and the Biggest Fairness Risk
+The timer solves the “student opens another app and searches the term” problem, but it creates a new one: formula recognition speed is not the same as statistical understanding. A student who knows what the standard error formula is but needs three seconds to visually parse the notation will score lower than a student who has memorized the shape of the formula. If the goal is assessment, this is a validity problem; if the goal is a game, it is acceptable. Recommendation: keep 10 seconds for word items, but consider 12–15 seconds for formula items at Level 300 and above, and do not mix word and formula latencies in the same scoring average without labelling them separately.
+
+3.2 “No Skip” Does Not Fully Prevent Cheating
+A determined user can screenshot the question, use a second device, or use a screen-reading overlay. The timer only prevents the most casual cheating. Do not market the app as “cheat-proof.” Market it as “fast-paced” and “pressure-based.” If cheating deterrence matters more than game feel, you need server-side question rotation and response-time anomaly detection — which conflicts with the offline, sideloaded architecture.
+
+3.3 Two-Player Pass-and-Play Has a Structural Privacy Leak
+The handover screen is necessary but not sufficient. If Player 1’s question remains on screen for even a fraction of a second after they answer, Player 2 may see it. Criticism: the current workflow relies on the honour system. Fix: the handover screen must be a full-screen opaque overlay that appears before the next question is composed, not after. The next question should only be fetched from Room and rendered after the overlay is dismissed.
+
+3.4 Content Volume Is the Real Bottleneck, Not the Code
+A Level 100 → Final Year ladder with 10–15 items per round and six levels requires a minimum of roughly 300–500 high-quality items to avoid obvious repetition. The graduate mix needs another 150–250 items. Criticism: this is a content project disguised as an app project. If you author items manually without a distractor-quality rubric, the game will feel like a flashcard app with four random wrong answers. Recommendation: build a simple CSV import pipeline and a distractor audit sheet before writing a single line of UI code.
+
+3.5 Formula Rendering in Compose Is Not a Solved Problem
+Statistics formulas involve fractions, summation operators, Greek letters, and subscripts. Rendering them inside a Compose Text composable requires either a WebView with KaTeX (heavy, introduces a second rendering engine) or pre-rendered images (inflexible for dynamic question banks). Criticism: the architecture above assumes LaTeX support, but LaTeX support adds meaningful complexity. Alternative: restrict Volume 1 formula items to plain-text renderable notation (e.g., s = sqrt(Σ(x - x̄)² / (n - 1))) and save full LaTeX rendering for Volume 2. This keeps the first release shippable.
+
+3.6 Sideloading Friction Will Suppress Adoption
+Every user must enable “Install unknown apps” and navigate a security warning. This is acceptable for a statistics department distributing to students, but it will kill organic growth. Criticism: “no Play Store, download link only” is a distribution strategy with a built-in ceiling. Recommendation: if the goal is classroom use, pair the APK link with a one-page PDF and a QR code on a printed handout. If the goal is broader reach, reconsider Play Store internal testing or a private track later.
+
+3.7 Update Management Is Fragile Without a Store
+Because there is no store, a bug fix or a distractor correction requires users to manually download a new APK. Criticism: if Volume 1 ships with even a handful of wrong answers, those wrong answers will persist in the wild indefinitely unless you build an in-app content-update path. Recommendation: treat the question bank as a versioned asset. Host a questions_v1.json alongside the APK. On launch, the app checks the asset version and, if a newer version exists, downloads and imports it into Room. This gives you a content-update mechanism without rebuilding the APK.
+
+3.8 The Brady-Style Comparison Needs a Clear Winner Rule
+“Compare their scores at the end” is underspecified. Two players can have the same number of correct answers but different average response times. The comparison screen must define the winner hierarchy explicitly: (1) most correct answers, (2) if tied, lower average response time, (3) if still tied, sudden-death. Without this, the results screen will produce ambiguous draws that feel unfair.
+
+Summary
+The game is buildable as a native Kotlin + Jetpack Compose Android app with Room, a StateFlow-driven 10-second timer, and a dedicated two-player coordinator. The hardest problems are not the solo quiz loop — they are content volume, distractor quality, formula rendering, and the privacy handover in pass-and-play. The recommended first move is to lock the question bank CSV schema and the distractor audit process before building the timer UI, because the game’s perceived quality will be determined more by the five options than by the countdown ring.

@@ -1,0 +1,1518 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "300-001",
+      "concept": "estimator",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A rule that converts a sample into a value for an unknown population quantity.",
+      "choices": [
+        "Estimator",
+        "Estimate",
+        "Population parameter",
+        "Observed residual",
+        "Confidence level"
+      ],
+      "answer": "Estimator",
+      "explanation": "An estimator is the rule applied to the sample.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 154, Estimator"
+    },
+    {
+      "id": "300-002",
+      "concept": "estimate",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The specific numerical result obtained after applying a rule to the observed data.",
+      "choices": [
+        "Estimate",
+        "Estimator",
+        "Population parameter",
+        "Sampling distribution",
+        "Standard error"
+      ],
+      "answer": "Estimate",
+      "explanation": "An estimate is the result of applying an estimator to one sample.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 154, Estimate"
+    },
+    {
+      "id": "300-003",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A range calculated from sample data by a method with a stated long-run success rate for containing the target parameter.",
+      "choices": [
+        "Confidence interval",
+        "Prediction interval",
+        "Data range",
+        "Sampling distribution",
+        "Credible interval"
+      ],
+      "answer": "Confidence interval",
+      "explanation": "The confidence rate describes the repeated-sampling behavior of the interval procedure.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-004",
+      "concept": "confidence level",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The stated long-run capture rate of an interval procedure under its model assumptions.",
+      "choices": [
+        "Confidence level",
+        "Significance level",
+        "Margin of error",
+        "Confidence limit",
+        "Standard error"
+      ],
+      "answer": "Confidence level",
+      "explanation": "For a valid 95% procedure, about 95% of repeated intervals capture the fixed target.",
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+    },
+    {
+      "id": "300-005",
+      "concept": "null hypothesis",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The reference claim evaluated by a significance test, often expressing no difference.",
+      "choices": [
+        "Null hypothesis",
+        "Alternative hypothesis",
+        "Sampling assumption",
+        "Research design",
+        "Confidence level"
+      ],
+      "answer": "Null hypothesis",
+      "explanation": "The test assesses how unusual the evidence is under this reference claim.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 307, Null hypothesis"
+    },
+    {
+      "id": "300-006",
+      "concept": "alternative hypothesis",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The claim that specifies how the population could differ from the test’s reference claim.",
+      "choices": [
+        "Alternative hypothesis",
+        "Null hypothesis",
+        "Sampling assumption",
+        "Sampling distribution",
+        "Decision threshold"
+      ],
+      "answer": "Alternative hypothesis",
+      "explanation": "The alternative determines which directions or values count against the null.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 13, Alternative hypothesis"
+    },
+    {
+      "id": "300-007",
+      "concept": "observational study",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Researchers record patients’ existing diets and follow their health without choosing diets for them.",
+      "choices": [
+        "Observational study",
+        "Randomized trial",
+        "Crossover trial",
+        "Laboratory experiment",
+        "Factorial experiment"
+      ],
+      "answer": "Observational study",
+      "explanation": "The researchers observe existing exposures without assigning them.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 308, Observational study"
+    },
+    {
+      "id": "300-008",
+      "concept": "random allocation",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A coin toss determines which treatment each participant receives.",
+      "choices": [
+        "Random allocation",
+        "Simple random sampling",
+        "Matched sampling",
+        "Assessor masking",
+        "Stratified sampling"
+      ],
+      "answer": "Random allocation",
+      "explanation": "Chance assigns treatment to enrolled participants.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 354, Random allocation"
+    },
+    {
+      "id": "300-009",
+      "concept": "participant blinding",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "People receive a pill but are kept unaware of whether it contains the study drug.",
+      "choices": [
+        "Participant blinding",
+        "Random sampling",
+        "Random assignment",
+        "Outcome matching",
+        "Statistical adjustment"
+      ],
+      "answer": "Participant blinding",
+      "explanation": "Hiding treatment identity from participants limits expectation effects.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 57, Blinding"
+    },
+    {
+      "id": "300-010",
+      "concept": "placebo",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A comparison pill looks just like the study drug but contains none of its active ingredient.",
+      "choices": [
+        "Placebo",
+        "Active comparator",
+        "Standard treatment",
+        "Rescue medication",
+        "Dose adjustment"
+      ],
+      "answer": "Placebo",
+      "explanation": "A placebo mimics treatment without including its active component.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 327, Placebo"
+    },
+    {
+      "id": "300-011",
+      "concept": "cross-sectional study",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "One survey measures employment and current health during the same interview, with no follow-up.",
+      "choices": [
+        "Cross-sectional study",
+        "Crossover study",
+        "Cohort study",
+        "Case-control study",
+        "Controlled trial"
+      ],
+      "answer": "Cross-sectional study",
+      "explanation": "Exposure and outcome information are measured at one time in a cross-sectional study.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Cross-sectional study"
+    },
+    {
+      "id": "300-012",
+      "concept": "cohort study",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Researchers group people by a recorded exposure and follow both groups for new cases of illness.",
+      "choices": [
+        "Cohort study",
+        "Case-control study",
+        "Cross-sectional study",
+        "Crossover trial",
+        "Factorial experiment"
+      ],
+      "answer": "Cohort study",
+      "explanation": "A cohort study follows a defined group to observe outcomes over time.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 90, Cohort study"
+    },
+    {
+      "id": "300-013",
+      "concept": "margin of error",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "c × SE\nwhere a symmetric interval is estimate ± c × SE",
+      "choices": [
+        "Margin of error",
+        "Critical value",
+        "Interval width",
+        "Point estimate",
+        "Standard error"
+      ],
+      "answer": "Margin of error",
+      "explanation": "In a symmetric interval, the multiplier times the standard error is the half-width.",
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+    },
+    {
+      "id": "300-014",
+      "concept": "lower confidence limit",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "x̄ − c × SE\nfor a symmetric interval with c > 0",
+      "choices": [
+        "Lower confidence limit",
+        "Upper confidence limit",
+        "Point estimate",
+        "Margin of error",
+        "Confidence level"
+      ],
+      "answer": "Lower confidence limit",
+      "explanation": "Subtracting the margin of error gives the lower endpoint.",
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+    },
+    {
+      "id": "300-015",
+      "concept": "upper confidence limit",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "x̄ + c × SE\nfor a symmetric interval with c > 0",
+      "choices": [
+        "Upper confidence limit",
+        "Lower confidence limit",
+        "Point estimate",
+        "Margin of error",
+        "Confidence level"
+      ],
+      "answer": "Upper confidence limit",
+      "explanation": "Adding the margin of error gives the upper endpoint.",
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+    },
+    {
+      "id": "300-016",
+      "concept": "estimated standard error",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "s / √n\nfor the mean of n independent observations with sample SD s",
+      "choices": [
+        "Estimated standard error",
+        "Sample standard deviation",
+        "Standard error of the sum",
+        "Variance of the mean",
+        "Margin of error"
+      ],
+      "answer": "Estimated standard error",
+      "explanation": "Replacing the population standard deviation with s estimates the standard error of the mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error"
+    },
+    {
+      "id": "300-017",
+      "concept": "confidence interval width",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "2c × SE\nfor a symmetric interval x̄ ± c × SE",
+      "choices": [
+        "Confidence interval width",
+        "Margin of error",
+        "Standard error",
+        "Confidence level",
+        "Upper confidence limit"
+      ],
+      "answer": "Confidence interval width",
+      "explanation": "The upper and lower limits each lie one margin of error from the center, so the total width is twice the margin.",
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+    },
+    {
+      "id": "300-018",
+      "concept": "false-positive probability",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "P(reject H₀ given H₀ is true)\nfor a simple null hypothesis",
+      "choices": [
+        "False-positive probability",
+        "False-negative probability",
+        "Power at an alternative",
+        "Correct non-rejection probability",
+        "Observed p-value"
+      ],
+      "answer": "False-positive probability",
+      "explanation": "This is the probability of making a Type I error, rejecting a true null.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type I error"
+    },
+    {
+      "id": "300-019",
+      "concept": "estimator bias",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "The difference between an estimator’s average over repeated samples and its target parameter.",
+      "choices": [
+        "Estimator bias",
+        "Mean squared error",
+        "Estimator variance",
+        "Standard error",
+        "Sampling error"
+      ],
+      "answer": "Estimator bias",
+      "explanation": "Bias measures systematic departure in the estimator’s long-run average.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 45, Bias"
+    },
+    {
+      "id": "300-020",
+      "concept": "consistency",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "An estimator becomes arbitrarily close to its target with probability approaching one as sample size grows.",
+      "choices": [
+        "Consistency",
+        "Unbiasedness",
+        "Efficiency",
+        "Sufficiency",
+        "Identifiability"
+      ],
+      "answer": "Consistency",
+      "explanation": "Consistency describes accuracy in probability as the sample grows.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency"
+    },
+    {
+      "id": "300-021",
+      "concept": "relative efficiency",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A comparison of how much two unbiased estimators of the same parameter vary over repeated samples.",
+      "choices": [
+        "Relative efficiency",
+        "Relative bias",
+        "Consistency",
+        "Sufficiency",
+        "Robustness"
+      ],
+      "answer": "Relative efficiency",
+      "explanation": "Among unbiased estimators for one target, the smaller-variance estimator is more efficient.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 149, Efficiency"
+    },
+    {
+      "id": "300-022",
+      "concept": "p-value",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Under the null model, the chance of a test result at least as extreme as the observed result.",
+      "choices": [
+        "p-value",
+        "Confidence level",
+        "Significance threshold",
+        "Test statistic",
+        "Statistical power"
+      ],
+      "answer": "p-value",
+      "explanation": "Extremeness is measured by the chosen test in the direction or directions specified by its alternative.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value"
+    },
+    {
+      "id": "300-023",
+      "concept": "statistical power",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "At a specified alternative, the long-run probability of rejecting the null hypothesis.",
+      "choices": [
+        "Statistical power",
+        "Significance level",
+        "Type II error probability",
+        "Confidence level",
+        "Observed p-value"
+      ],
+      "answer": "Statistical power",
+      "explanation": "Power is the probability of detecting the specified departure from the null.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+    },
+    {
+      "id": "300-024",
+      "concept": "critical region",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "The set of test statistic values that trigger rejection of the reference claim.",
+      "choices": [
+        "Critical region",
+        "Confidence interval",
+        "Critical value",
+        "Null distribution",
+        "Sampling frame"
+      ],
+      "answer": "Critical region",
+      "explanation": "The decision rule rejects the null if the statistic lands in this set.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 115, Critical region"
+    },
+    {
+      "id": "300-025",
+      "concept": "case-control study",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Researchers start with people with and without a disease, then compare past exposure between the two groups.",
+      "choices": [
+        "Case-control study",
+        "Cohort study",
+        "Cross-sectional survey",
+        "Crossover trial",
+        "Factorial experiment"
+      ],
+      "answer": "Case-control study",
+      "explanation": "Selection starts with disease status, and the study compares earlier exposures.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 69, Case-control study"
+    },
+    {
+      "id": "300-026",
+      "concept": "crossover design",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Each participant receives both treatments in different periods, with treatment order assigned by chance.",
+      "choices": [
+        "Crossover design",
+        "Parallel-group trial",
+        "Case-control study",
+        "Cross-sectional survey",
+        "Case series"
+      ],
+      "answer": "Crossover design",
+      "explanation": "Each person receives more than one treatment in different periods.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Crossover design"
+    },
+    {
+      "id": "300-027",
+      "concept": "matched pairs",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Researchers match one treated patient with one untreated patient of similar age, then compare within each pair.",
+      "choices": [
+        "Matched pairs",
+        "Independent groups",
+        "Random sample",
+        "Cluster sample",
+        "Factorial groups"
+      ],
+      "answer": "Matched pairs",
+      "explanation": "Pairing links comparable observations for a within-pair comparison.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 271, Matched pairs"
+    },
+    {
+      "id": "300-028",
+      "concept": "blocking",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Plots are grouped by soil type, then treatments are randomly assigned within each soil group.",
+      "choices": [
+        "Blocking",
+        "Cluster sampling",
+        "Simple random sampling",
+        "Outcome masking",
+        "Treatment concealment"
+      ],
+      "answer": "Blocking",
+      "explanation": "Blocking builds known plot differences into the design before treatment is assigned.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 58, Blocking"
+    },
+    {
+      "id": "300-029",
+      "concept": "factorial design",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A trial assigns every combination of two temperatures and three processing speeds.",
+      "choices": [
+        "Factorial design",
+        "Crossover design",
+        "Matched-pair design",
+        "Case-control design",
+        "Single-factor design"
+      ],
+      "answer": "Factorial design",
+      "explanation": "A factorial experiment combines levels of two or more factors to study their effects.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 161, Factorial designs"
+    },
+    {
+      "id": "300-030",
+      "concept": "double blinding",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Neither study participants nor the people who measure their outcomes are told which treatment was assigned.",
+      "choices": [
+        "Double blinding",
+        "Random treatment allocation",
+        "Sample stratification",
+        "Placebo control",
+        "Allocation concealment"
+      ],
+      "answer": "Double blinding",
+      "explanation": "Both specified groups are kept unaware of treatment identity.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 142, Double-blind",
+      "convention": "Names the two masked groups because practices vary between trials."
+    },
+    {
+      "id": "300-031",
+      "concept": "confounding",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The treatment group is younger, and age itself affects the outcome. What threatens a causal interpretation?",
+      "choices": [
+        "Confounding",
+        "Sampling variation",
+        "Measurement resolution",
+        "Outcome masking",
+        "Random allocation"
+      ],
+      "answer": "Confounding",
+      "explanation": "Age is associated with treatment and also affects outcome, so the treatment comparison mixes the effects.",
+      "reference": "UC Berkeley STAT 2, Fall 2024, Module 1, Data collection and variables: https://stat2.berkeley.edu/fall-2024/"
+    },
+    {
+      "id": "300-032",
+      "concept": "one-sided test",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Researchers test for a decrease in wait time. An increase provides no evidence for their specified alternative.",
+      "choices": [
+        "One-sided test",
+        "Two-sided test",
+        "Equivalence test",
+        "Prediction test",
+        "Goodness-of-fit test"
+      ],
+      "answer": "One-sided test",
+      "explanation": "This test’s alternative specifies just one direction of departure.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 311, One-sided test"
+    },
+    {
+      "id": "300-033",
+      "concept": "mean squared error",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "E[(θ̂ − θ)²]\nwhere θ̂ estimates the fixed target θ",
+      "choices": [
+        "Mean squared error",
+        "Estimator bias",
+        "Estimator variance",
+        "Standard error",
+        "Absolute error"
+      ],
+      "answer": "Mean squared error",
+      "explanation": "The mean squared error averages the squared difference between estimator and target.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error"
+    },
+    {
+      "id": "300-034",
+      "concept": "method of moments",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Set x̄ = Eθ[X] and solve for θ.\nAssume one unknown parameter.",
+      "choices": [
+        "Method of moments",
+        "Maximum likelihood",
+        "Least squares",
+        "Median matching",
+        "Bayesian updating"
+      ],
+      "answer": "Method of moments",
+      "explanation": "The method equates a sample moment to the corresponding population moment.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 277, Method of moments"
+    },
+    {
+      "id": "300-035",
+      "concept": "maximum likelihood estimate",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "The value of θ that maximizes L(θ)\nfor the observed data.",
+      "choices": [
+        "Maximum likelihood estimate",
+        "Method of moments estimate",
+        "Least squares estimate",
+        "Posterior mean",
+        "Posterior median"
+      ],
+      "answer": "Maximum likelihood estimate",
+      "explanation": "The maximizing parameter value is the maximum likelihood estimate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation"
+    },
+    {
+      "id": "300-036",
+      "concept": "one-sample t statistic",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "(x̄ − μ₀) / (s / √n)\nfor a hypothesized mean μ₀ and sample SD s",
+      "choices": [
+        "One-sample t statistic",
+        "One-sample z statistic",
+        "Paired t statistic",
+        "Two-sample z statistic",
+        "Pearson chi-squared statistic"
+      ],
+      "answer": "One-sample t statistic",
+      "explanation": "The one-sample t statistic uses an estimated standard error for a single sample mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student’s t-distribution"
+    },
+    {
+      "id": "300-037",
+      "concept": "false-negative probability",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "P(do not reject H₀ given a specified alternative is true)",
+      "choices": [
+        "False-negative probability",
+        "False-positive probability",
+        "Power at that alternative",
+        "Confidence level",
+        "Observed p-value"
+      ],
+      "answer": "False-negative probability",
+      "explanation": "This is the probability of making a Type II error at the specified alternative.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type II error"
+    },
+    {
+      "id": "300-038",
+      "concept": "one-sample z statistic",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "(x̄ − μ₀) / (σ / √n)\nfor known population SD σ and hypothesized mean μ₀",
+      "choices": [
+        "One-sample z statistic",
+        "One-sample t statistic",
+        "Two-sample z statistic",
+        "Paired t statistic",
+        "Pearson chi-squared statistic"
+      ],
+      "answer": "One-sample z statistic",
+      "explanation": "The z statistic uses the known population standard deviation in its standard error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 468, z-test"
+    },
+    {
+      "id": "300-039",
+      "concept": "critical value",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "The number c satisfying P(Z > c) = α\nwhen Z follows its null distribution.",
+      "choices": [
+        "Critical value",
+        "Observed test statistic",
+        "Significance level",
+        "Observed p-value",
+        "Standard error"
+      ],
+      "answer": "Critical value",
+      "explanation": "The critical value is the cutoff for the test statistic.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 115, Critical value"
+    },
+    {
+      "id": "300-040",
+      "concept": "test inversion",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Keep all values θ₀ for which the matching two-sided test of H₀: θ = θ₀ does not reject at level α.",
+      "choices": [
+        "Test inversion",
+        "Multiple testing adjustment",
+        "Model averaging",
+        "Likelihood maximization",
+        "Significance correction"
+      ],
+      "answer": "Test inversion",
+      "explanation": "Inverting a family of tests gives a confidence set from the null values not rejected.",
+      "reference": "Penn State STAT 415, Lesson 10, confidence interval and hypothesis test duality: https://online.stat.psu.edu/stat415/Lesson10"
+    },
+    {
+      "id": "300-041",
+      "concept": "estimand",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "The population quantity a study is trying to estimate, before choosing an analysis rule.",
+      "choices": [
+        "Estimand",
+        "Estimator",
+        "Estimate",
+        "Standard error",
+        "Confidence level"
+      ],
+      "answer": "Estimand",
+      "explanation": "The estimand defines the target, such as a population mean difference.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 154, Estimand"
+    },
+    {
+      "id": "300-042",
+      "concept": "unbiased estimator",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A rule whose expected value exactly equals the target parameter at every parameter value in the model.",
+      "choices": [
+        "Unbiased estimator",
+        "Consistent estimator",
+        "Efficient estimator",
+        "Sufficient statistic",
+        "Observed estimate"
+      ],
+      "answer": "Unbiased estimator",
+      "explanation": "Across repeated samples at a fixed parameter, the average result equals that parameter.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 440, Unbiased"
+    },
+    {
+      "id": "300-043",
+      "concept": "sufficient statistic",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "A summary that retains all the sample’s information about the parameter under the specified model.",
+      "choices": [
+        "Sufficient statistic",
+        "Unbiased estimator",
+        "Ancillary statistic",
+        "Confidence limit",
+        "Critical value"
+      ],
+      "answer": "Sufficient statistic",
+      "explanation": "Given this statistic, the conditional distribution of the data contains no further dependence on the parameter.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 420, Sufficient statistic"
+    },
+    {
+      "id": "300-044",
+      "concept": "plug-in principle",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "Estimate an unknown function of a parameter by substituting a sample estimate for that parameter.",
+      "choices": [
+        "Plug-in principle",
+        "Test inversion",
+        "Random allocation",
+        "Permutation test",
+        "Multiple testing"
+      ],
+      "answer": "Plug-in principle",
+      "explanation": "The unknown parameter is replaced by its estimate inside the function.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 327, Plug-in principle"
+    },
+    {
+      "id": "300-045",
+      "concept": "parallel-group design",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Each volunteer stays on the one treatment they were assigned for the full follow-up.",
+      "choices": [
+        "Parallel-group design",
+        "Crossover design",
+        "Case-control study",
+        "Cross-sectional study",
+        "Before-and-after comparison"
+      ],
+      "answer": "Parallel-group design",
+      "explanation": "Separate treatment groups are followed at the same time.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 316, Parallel groups design"
+    },
+    {
+      "id": "300-046",
+      "concept": "case series",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A clinic describes six patients with an unusual condition, without a separate comparison group.",
+      "choices": [
+        "Case series",
+        "Case-control study",
+        "Randomized trial",
+        "Crossover study",
+        "Factorial experiment"
+      ],
+      "answer": "Case series",
+      "explanation": "A case series describes multiple cases without a comparator group.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 70, Case series"
+    },
+    {
+      "id": "300-047",
+      "concept": "retrospective cohort study",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Old employment files identify groups with different past exposures. Later disease records already exist for both groups.",
+      "choices": [
+        "Retrospective cohort study",
+        "Case-control study",
+        "Cross-sectional study",
+        "Prospective cohort study",
+        "Randomized trial"
+      ],
+      "answer": "Retrospective cohort study",
+      "explanation": "The groups are defined by exposure, and historical records provide outcomes.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 370, Retrospective cohort study"
+    },
+    {
+      "id": "300-048",
+      "concept": "wash-out period",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A crossover trial leaves a treatment-free gap between periods so the first treatment can wear off.",
+      "choices": [
+        "Wash-out period",
+        "Baseline period",
+        "Recruitment window",
+        "Follow-up period",
+        "Randomization window"
+      ],
+      "answer": "Wash-out period",
+      "explanation": "The gap reduces the chance that the previous treatment affects the next period.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 453, Wash-out period"
+    },
+    {
+      "id": "300-049",
+      "concept": "one-sample t interval",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "x̄ ± c × s/√n\nwhere c comes from a t distribution with n − 1 degrees of freedom",
+      "choices": [
+        "One-sample t interval",
+        "Known-variance z interval",
+        "Two-sample t interval",
+        "Prediction interval",
+        "Tolerance interval"
+      ],
+      "answer": "One-sample t interval",
+      "explanation": "The t multiplier and sample standard deviation produce an interval for one population mean.",
+      "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals"
+    },
+    {
+      "id": "300-050",
+      "concept": "known-variance z interval",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "x̄ ± c × σ/√n\nwhere σ is known and c is a standard normal cutoff",
+      "choices": [
+        "Known-variance z interval",
+        "One-sample t interval",
+        "Prediction interval",
+        "Paired t interval",
+        "Two-proportion interval"
+      ],
+      "answer": "Known-variance z interval",
+      "explanation": "With known population standard deviation, a normal cutoff sets the confidence interval’s margin.",
+      "reference": "Penn State STAT 415, Lesson 6, Theorem 6.1, Z-Interval for a Mean: https://online.stat.psu.edu/stat415/Lesson06"
+    },
+    {
+      "id": "300-051",
+      "concept": "estimated standard error of a proportion",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "√[p̂(1 − p̂) / n]\nfor an observed proportion p̂ and n independent trials",
+      "choices": [
+        "Estimated standard error of a proportion",
+        "Standard error under a specified null",
+        "Conditional probability estimate",
+        "Sample variance of outcomes",
+        "Mean absolute error"
+      ],
+      "answer": "Estimated standard error of a proportion",
+      "explanation": "The sample proportion substitutes for the unknown population probability in the standard error.",
+      "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08"
+    },
+    {
+      "id": "300-052",
+      "concept": "unbiased sample variance",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "Σᵢ (xᵢ − x̄)² / (n − 1)\nfor n > 1 independent draws with a common finite variance",
+      "choices": [
+        "Unbiased sample variance",
+        "Maximum-likelihood normal variance estimate",
+        "Sample standard deviation",
+        "Mean absolute deviation",
+        "Variance of the sample mean"
+      ],
+      "answer": "Unbiased sample variance",
+      "explanation": "With the n − 1 correction, the estimator’s expectation equals the population variance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance"
+    },
+    {
+      "id": "300-053",
+      "concept": "prediction interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A range designed to contain a new individual observation at a stated long-run rate.",
+      "choices": [
+        "Prediction interval",
+        "Confidence interval for a mean",
+        "Tolerance interval",
+        "Sample range",
+        "Critical region"
+      ],
+      "answer": "Prediction interval",
+      "explanation": "Predicting an individual includes variation of the new observation itself.",
+      "reference": "Penn State STAT 462, §4.11 Prediction Interval for a New Response: https://online.stat.psu.edu/stat462/node/127/"
+    },
+    {
+      "id": "300-054",
+      "concept": "tolerance interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A range intended to contain at least a chosen fraction of the population with a stated confidence level.",
+      "choices": [
+        "Tolerance interval",
+        "Prediction interval",
+        "Confidence interval for a mean",
+        "Sample range",
+        "Critical region"
+      ],
+      "answer": "Tolerance interval",
+      "explanation": "The target is a fraction of the population, such as at least 90% of individual values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 432, Tolerance interval"
+    },
+    {
+      "id": "300-055",
+      "concept": "two-sided test",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A significance test whose alternative allows a population mean to differ from its reference in either direction.",
+      "choices": [
+        "Two-sided test",
+        "One-sided test",
+        "Equivalence test",
+        "Paired design",
+        "Precision assessment"
+      ],
+      "answer": "Two-sided test",
+      "explanation": "Departures above and below the null value can provide evidence against the null.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 438, Two-sided test"
+    },
+    {
+      "id": "300-056",
+      "concept": "practical significance",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A difference is large enough to matter in its real-world setting, even before considering its p-value.",
+      "choices": [
+        "Practical significance",
+        "Statistical significance",
+        "Sampling precision",
+        "Type I error control",
+        "Measurement reliability"
+      ],
+      "answer": "Practical significance",
+      "explanation": "Practical relevance depends on the size and consequences of the effect.",
+      "reference": "Penn State STAT 200, Lesson 6, Hypothesis Testing Part 2, Practical Significance: https://online.stat.psu.edu/stat200/Lesson06"
+    },
+    {
+      "id": "300-057",
+      "concept": "precision",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "The extent to which an estimator gives similar values across repeated samples.",
+      "choices": [
+        "Precision",
+        "Accuracy",
+        "Unbiasedness",
+        "Consistency",
+        "Power"
+      ],
+      "answer": "Precision",
+      "explanation": "A smaller sampling standard deviation indicates greater precision.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 335, Precision"
+    },
+    {
+      "id": "300-058",
+      "concept": "effect size",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A quantitative measure of how large a group difference or association is.",
+      "choices": [
+        "Effect size",
+        "p-value",
+        "Confidence level",
+        "Sample size",
+        "Standard error"
+      ],
+      "answer": "Effect size",
+      "explanation": "An effect size expresses magnitude, such as a mean difference in original or standardized units.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 148, Effect size"
+    },
+    {
+      "id": "300-059",
+      "concept": "type i error",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A trial finds a treatment effect and rejects no effect, but in truth the treatments are equally effective.",
+      "choices": [
+        "Type I error",
+        "Type II error",
+        "Correct rejection",
+        "Correct non-rejection",
+        "Measurement error"
+      ],
+      "answer": "Type I error",
+      "explanation": "The test rejected a true null hypothesis.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type I error"
+    },
+    {
+      "id": "300-060",
+      "concept": "type ii error",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A test fails to detect a real treatment effect and leaves the no-effect hypothesis unrejected.",
+      "choices": [
+        "Type II error",
+        "Type I error",
+        "Correct rejection",
+        "Correct non-rejection",
+        "Selection bias"
+      ],
+      "answer": "Type II error",
+      "explanation": "The test failed to reject a false null hypothesis.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type II error"
+    },
+    {
+      "id": "300-061",
+      "concept": "intention-to-treat analysis",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A trial analyzes patients under their originally assigned groups, even when some switch treatments.",
+      "choices": [
+        "Intention-to-treat analysis",
+        "Per-protocol analysis",
+        "As-treated analysis",
+        "Complete-case analysis",
+        "Matched-pairs analysis"
+      ],
+      "answer": "Intention-to-treat analysis",
+      "explanation": "Keeping original groups preserves the randomized comparison for the assignment strategy.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 219, Intention-to-treat analysis"
+    },
+    {
+      "id": "300-062",
+      "concept": "allocation concealment",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A recruiter confirms eligibility and enrolls a participant before a central service reveals the upcoming assignment.",
+      "choices": [
+        "Allocation concealment",
+        "Participant blinding",
+        "Outcome assessor blinding",
+        "Cluster sampling",
+        "Stratified randomization"
+      ],
+      "answer": "Allocation concealment",
+      "explanation": "Concealing upcoming assignments prevents foreknowledge from influencing who is enrolled.",
+      "reference": "Cochrane Handbook for Systematic Reviews of Interventions, v5.1, Chapter 8, allocation concealment: https://training.cochrane.org/sites/training.cochrane.org/files/public/uploads/resources/Handbook5_1/Chapter_8_Handbook_5_2_8.pdf"
+    },
+    {
+      "id": "300-063",
+      "concept": "placebo effect",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Some volunteers report relief after an inert pill because they expected it to help.",
+      "choices": [
+        "Placebo effect",
+        "Carryover effect",
+        "Treatment interaction",
+        "Selection bias",
+        "Randomization effect"
+      ],
+      "answer": "Placebo effect",
+      "explanation": "Expectations can affect outcomes even if the pill lacks an active ingredient.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 327, Placebo effect"
+    },
+    {
+      "id": "300-064",
+      "concept": "double-dummy technique",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "One treatment is a pill and the other an injection. Each group receives its active treatment and the other route’s look-alike placebo.",
+      "choices": [
+        "Double-dummy technique",
+        "Single placebo control",
+        "Wash-out design",
+        "Crossover design",
+        "Allocation concealment"
+      ],
+      "answer": "Double-dummy technique",
+      "explanation": "The paired delivery routes make treatment identity harder to infer.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 142, Double-dummy technique"
+    },
+    {
+      "id": "300-065",
+      "concept": "risk difference",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "p₁ − p₂\nwhere p₁ and p₂ are two groups’ event probabilities",
+      "choices": [
+        "Risk difference",
+        "Risk ratio",
+        "Odds ratio",
+        "Group 1 odds",
+        "Relative change"
+      ],
+      "answer": "Risk difference",
+      "explanation": "Subtracting the risks gives the absolute difference on the probability scale.",
+      "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03"
+    },
+    {
+      "id": "300-066",
+      "concept": "risk ratio",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "p₁ / p₂\nwhere p₁ and p₂ are group risks and p₂ > 0",
+      "choices": [
+        "Risk ratio",
+        "Risk difference",
+        "Odds ratio",
+        "Group 1 odds",
+        "Pooled risk"
+      ],
+      "answer": "Risk ratio",
+      "explanation": "Dividing the probabilities gives risk in group one relative to group two.",
+      "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03"
+    },
+    {
+      "id": "300-067",
+      "concept": "odds ratio",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "[p₁/(1 − p₁)] / [p₂/(1 − p₂)]\nfor group probabilities strictly between 0 and 1",
+      "choices": [
+        "Odds ratio",
+        "Risk ratio",
+        "Risk difference",
+        "Group 1 odds",
+        "Pooled proportion"
+      ],
+      "answer": "Odds ratio",
+      "explanation": "Convert each probability to odds, then divide the two odds.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds ratio"
+    },
+    {
+      "id": "300-068",
+      "concept": "equal-tail probability",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "α/2\nfor each of the two equally sized tails outside the central area 1 − α",
+      "choices": [
+        "Equal-tail probability",
+        "Total tail probability",
+        "Central coverage probability",
+        "Standard error",
+        "Critical value"
+      ],
+      "answer": "Equal-tail probability",
+      "explanation": "The two tails share the total probability α evenly.",
+      "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals"
+    },
+    {
+      "id": "300-069",
+      "concept": "welch’s t statistic",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "(x̄₁ − x̄₂) / √(s₁²/n₁ + s₂²/n₂)\nfor independent means and a null difference of zero",
+      "choices": [
+        "Welch’s t statistic",
+        "Paired t statistic",
+        "Pooled-variance t statistic",
+        "One-sample z statistic",
+        "Two-proportion z statistic"
+      ],
+      "answer": "Welch’s t statistic",
+      "explanation": "Welch’s standard error uses the two separate sample variances.",
+      "reference": "Penn State STAT 555, §2.6, t-tests, Welch’s two-sample t statistic: https://online.stat.psu.edu/stat555/node/36/"
+    },
+    {
+      "id": "300-070",
+      "concept": "statistical power",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "1 − β\nwhere β is the probability of missing a fixed real effect",
+      "choices": [
+        "Statistical power",
+        "Type II error probability",
+        "Type I error probability",
+        "Nominal confidence level",
+        "Observed p-value"
+      ],
+      "answer": "Statistical power",
+      "explanation": "The chance of detecting the fixed effect is one minus the chance of missing it.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+    },
+    {
+      "id": "300-071",
+      "concept": "familywise error rate",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "The probability of making one or more false rejections across a family of tests.",
+      "choices": [
+        "Familywise error rate",
+        "False discovery rate",
+        "Per-test significance level",
+        "Type II error probability",
+        "Power"
+      ],
+      "answer": "Familywise error rate",
+      "explanation": "The event is at least one rejected true null in the entire family.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 164, Familywise error rate"
+    },
+    {
+      "id": "300-072",
+      "concept": "carryover effect",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "A treatment administered earlier continues to influence outcomes during the next treatment period.",
+      "choices": [
+        "Carryover effect",
+        "Period effect",
+        "Placebo effect",
+        "Baseline imbalance",
+        "Selection bias"
+      ],
+      "answer": "Carryover effect",
+      "explanation": "Residual effects from the earlier treatment contaminate the later period.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 69, Carryover effects"
+    },
+    {
+      "id": "300-073",
+      "concept": "per-protocol analysis",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "A trial comparison restricted to participants meeting predefined adherence requirements.",
+      "choices": [
+        "Per-protocol analysis",
+        "Intention-to-treat analysis",
+        "As-treated analysis",
+        "Randomization test",
+        "Matched-pairs comparison"
+      ],
+      "answer": "Per-protocol analysis",
+      "explanation": "Restriction by adherence can change the comparability initially provided by random assignment.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 324, Per protocol"
+    },
+    {
+      "id": "300-074",
+      "concept": "jackknife",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "An estimate is recalculated repeatedly, leaving out a different single observation each time.",
+      "choices": [
+        "Jackknife",
+        "Empirical bootstrap",
+        "Permutation test",
+        "Parametric simulation",
+        "Sample splitting"
+      ],
+      "answer": "Jackknife",
+      "explanation": "Leave-one-out estimates can be combined to assess bias or standard error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 226, Jackknife"
+    },
+    {
+      "id": "300-075",
+      "concept": "permutation test",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Under an exchangeable no-group-effect model, shuffle group labels many times and compare the observed mean difference with the shuffled differences.",
+      "choices": [
+        "Permutation test",
+        "Bootstrap interval",
+        "Paired t-test",
+        "Sign test",
+        "Prediction interval"
+      ],
+      "answer": "Permutation test",
+      "explanation": "Shuffling labels builds a reference distribution under the null model.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 324, Permutation test"
+    },
+    {
+      "id": "300-076",
+      "concept": "sign test",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For paired measurements with no ties, a researcher counts increases and compares the count with a fair-binomial reference.",
+      "choices": [
+        "Sign test",
+        "Paired t-test",
+        "Wilcoxon signed-rank test",
+        "Independent means test",
+        "Variance ratio test"
+      ],
+      "answer": "Sign test",
+      "explanation": "The sign test uses directions of change without their magnitudes.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 393, Sign test"
+    },
+    {
+      "id": "300-077",
+      "concept": "outcome assessor blinding",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Participants know their treatments, but the reviewer scoring their scans sees anonymized IDs without group labels.",
+      "choices": [
+        "Outcome assessor blinding",
+        "Participant blinding",
+        "Allocation concealment",
+        "Placebo control",
+        "Per-protocol analysis"
+      ],
+      "answer": "Outcome assessor blinding",
+      "explanation": "Keeping assessors unaware can reduce differences in judgment across groups.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 57, Blinding"
+    },
+    {
+      "id": "300-078",
+      "concept": "one-sided upper confidence bound",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A factory needs an upper limit for its mean defect concentration at a chosen confidence level, with no lower endpoint.",
+      "choices": [
+        "One-sided upper confidence bound",
+        "Two-sided confidence interval",
+        "One-sided lower confidence bound",
+        "Individual prediction interval",
+        "Tolerance interval"
+      ],
+      "answer": "One-sided upper confidence bound",
+      "explanation": "This procedure limits the parameter from above while allowing all smaller values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-079",
+      "concept": "pooled proportion",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "(x₁ + x₂) / (n₁ + n₂)\nfor independent success counts x₁ and x₂ with a shared probability",
+      "choices": [
+        "Pooled proportion",
+        "Unweighted mean of proportions",
+        "Risk difference",
+        "Ratio of proportions",
+        "Pooled variance"
+      ],
+      "answer": "Pooled proportion",
+      "explanation": "Add all successes and divide by the combined number of trials.",
+      "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09"
+    },
+    {
+      "id": "300-080",
+      "concept": "paired mean confidence interval",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "d̄ ± c × s_d/√n\nwhere c is a t cutoff and d is the within-pair difference",
+      "choices": [
+        "Paired mean confidence interval",
+        "Independent means confidence interval",
+        "Individual prediction interval",
+        "One-proportion interval",
+        "Two-proportion interval"
+      ],
+      "answer": "Paired mean confidence interval",
+      "explanation": "Use one observation per pair, namely its difference.",
+      "reference": "Penn State STAT 500, Lesson 7, Comparing Two Population Parameters: https://online.stat.psu.edu/stat500/Lesson07"
+    },
+    {
+      "id": "300-081",
+      "concept": "bonferroni threshold",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "α/m\nused as each local cutoff when testing m hypotheses to control familywise error",
+      "choices": [
+        "Bonferroni threshold",
+        "Unadjusted significance level",
+        "False discovery rate estimate",
+        "Equal-tail probability",
+        "Unadjusted observed p-value"
+      ],
+      "answer": "Bonferroni threshold",
+      "explanation": "The sum of the local Type I error bounds is at most α.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction"
+    },
+    {
+      "id": "300-082",
+      "concept": "one-proportion z statistic",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "(p̂ − p₀) / √[p₀(1 − p₀)/n]\nfor a sample proportion p̂ and hypothesized p₀",
+      "choices": [
+        "One-proportion z statistic",
+        "One-sample t statistic",
+        "Two-proportion z statistic",
+        "Population z-score",
+        "Binomial count estimate"
+      ],
+      "answer": "One-proportion z statistic",
+      "explanation": "The denominator uses the null probability p₀ in the standard error.",
+      "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08"
+    },
+    {
+      "id": "300-083",
+      "concept": "bias–variance decomposition",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "MSE of θ̂ = Var(θ̂) + [E(θ̂) − θ]²",
+      "choices": [
+        "Bias–variance decomposition",
+        "Variance of a sum",
+        "Finite population correction",
+        "Standard error propagation",
+        "Expected value decomposition"
+      ],
+      "answer": "Bias–variance decomposition",
+      "explanation": "Expanding squared error shows variance and squared bias add to total mean squared error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error"
+    },
+    {
+      "id": "300-084",
+      "concept": "unpooled interval standard error",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "√[p̂₁(1 − p̂₁)/n₁ + p̂₂(1 − p̂₂)/n₂]\nfor two independent sample proportions",
+      "choices": [
+        "Unpooled interval standard error",
+        "Pooled null standard error",
+        "One-proportion standard error",
+        "Standard error of paired means",
+        "Standard deviation of a sum"
+      ],
+      "answer": "Unpooled interval standard error",
+      "explanation": "Estimate each group’s variance separately when constructing the usual interval for their difference.",
+      "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09"
+    }
+  ]
+}

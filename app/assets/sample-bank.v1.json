@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "sample-100-01",
+      "concept": "arithmetic mean",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "Σᵢ xᵢ / n\nfor n observations",
+      "choices": ["Arithmetic mean", "Root mean square", "Sample median", "Sample standard deviation", "Geometric mean"],
+      "answer": "Arithmetic mean",
+      "explanation": "Add the observed values and divide by their count.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean"
+    },
+    {
+      "id": "sample-100-02",
+      "concept": "interquartile range",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "Q₃ − Q₁",
+      "choices": ["Standard deviation", "Interquartile range", "Median absolute deviation", "Mean absolute deviation", "Sample range"],
+      "answer": "Interquartile range",
+      "explanation": "Subtract the lower quartile from the upper quartile to find the span of the middle half.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 220, Interquartile range"
+    },
+    {
+      "id": "sample-100-03",
+      "concept": "sample variance",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Σ (xᵢ − x̄)² / (n − 1)\nwhere x̄ is the sample mean",
+      "choices": ["Range", "Variance", "Standard deviation", "Mean deviation", "Interquartile range"],
+      "answer": "Variance",
+      "explanation": "The sample variance divides the sum of squared deviations from the sample mean by n − 1.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance",
+      "convention": "Uses the n − 1 denominator."
+    },
+    {
+      "id": "sample-100-04",
+      "concept": "conditional probability",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "P(A ∩ B) / P(B)\nwhere P(B) > 0",
+      "choices": ["Marginal probability of A", "Joint probability of A and B", "Probability of A or B", "Probability of A given B", "Probability of B given A"],
+      "answer": "Probability of A given B",
+      "explanation": "The conditional probability of A given B is the probability of A within B.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 98, Conditional probability. Formula also in MIT 18.05, Class 3, section 2, equation (1): https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class03-prep.pdf"
+    },
+    {
+      "id": "sample-100-05",
+      "concept": "median",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Order the five waiting times and report the third.",
+      "choices": ["Arithmetic mean", "Sample median", "Sample mode", "First quartile", "Sample minimum"],
+      "answer": "Sample median",
+      "explanation": "With five ordered observations, the third observation is the middle one.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 275, Median"
+    },
+    {
+      "id": "sample-100-06",
+      "concept": "mode",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "One shoe size outsold every other size this week. Which summary is that size?",
+      "choices": ["Sample maximum", "Sample median", "Sample mode", "Third quartile", "Arithmetic mean"],
+      "answer": "Sample mode",
+      "explanation": "The mode is the value with the highest frequency.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 281, Mode"
+    },
+    {
+      "id": "sample-100-07",
+      "concept": "histogram",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "A plot of numerical intervals where each rectangle's area represents its frequency.",
+      "choices": ["Frequency polygon", "Histogram", "Quantile plot", "Dot plot", "Box plot"],
+      "answer": "Histogram",
+      "explanation": "Histogram rectangles cover numerical intervals, with areas proportional to how often observations fall in them.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 206, Histogram"
+    },
+    {
+      "id": "sample-100-08",
+      "concept": "scatterplot",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Each point marks one subject's two numeric measurements, one on each axis.",
+      "choices": ["Line graph", "Dot plot", "Quantile plot", "Scatterplot", "Box plot"],
+      "answer": "Scatterplot",
+      "explanation": "A scatterplot shows the joint pattern of two numeric measurements.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 379, Scatterplot"
+    }
+  ]
+}
