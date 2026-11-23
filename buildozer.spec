@@ -3,7 +3,7 @@ title = Games Statisticians Play (Internal)
 package.name = internal
 package.domain = org.gamesstatisticiansplay.volumeone
 source.dir = app
-source.include_exts = py,json
+source.include_exts = py,json,jpg
 version = 0.1.0
 requirements = python3,kivy==2.3.1,pyjnius
 orientation = portrait, landscape

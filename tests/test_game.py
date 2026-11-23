@@ -1,8 +1,11 @@
 from collections import Counter
+from base64 import b64decode
 from dataclasses import replace
 from fractions import Fraction
 from pathlib import Path
 from random import Random
+import re
+import json
 
 import pytest
 
@@ -10,6 +13,8 @@ from app.game import (
     AI_ML, LEVELS, MAX_ROUND_SIZE, PRO, QUESTION_MS, Match, Outcome, Progress, Turn, load_bank,
     load_question_bank, match_questions, matched_pairs, score, solo_questions,
 )
+from app.equations import equation_parts
+from app.hints import CLUE_PROMPTS, GENERAL_PROMPTS, normalized, reflection_hint
 
 ASSETS = Path(__file__).parents[1] / "app" / "assets"
 
@@ -19,19 +24,48 @@ def bank():
     return load_bank(ASSETS / "sample-bank.v1.json")
 
 
+def test_bundled_missed_question_hints_do_not_repeat_answers():
+    generic = {*CLUE_PROMPTS.values(), *GENERAL_PROMPTS}
+    questions = load_question_bank(ASSETS)
+    for question in questions:
+        hint = reflection_hint(question)
+        answer = re.escape(normalized(question.answer))
+        assert not re.search(rf"(?<!\w){answer}(?!\w)", normalized(hint)), question.id
+        assert normalized(hint) != normalized(question.explanation), question.id
+    examples = {reflection_hint(q) for q in questions if q.id in ("sample-100-04", "aiml-046")}
+    assert len(examples) == 2 and not examples & generic
+
+
+def test_bundled_equations_have_matching_offline_images():
+    images = json.loads((ASSETS / "equations.json").read_text(encoding="utf-8"))
+    authored = set()
+    for question in load_question_bank(ASSETS):
+        parts = {part for is_math, part in equation_parts(question.math_clue) if is_math}
+        parts.update(question.math_choices.values())
+        if question.clue_type == "formula":
+            assert parts, question.id
+        authored.update(parts)
+    assert authored == images.keys()
+    for image in images.values():
+        assert image["width"] > 0 and image["height"] > 0
+        assert b64decode(image["png"], validate=True).startswith(b"\x89PNG\r\n\x1a\n")
+
+
 def test_answer_at_deadline_is_timeout_and_does_not_accept_second_outcome(bank):
     question = bank[0]
     turn = Turn(question, Random(1), 25)
+    assert QUESTION_MS == 25_000
+    assert turn.deadline_ms == 25_025
     assert turn.resolve(None, 24) is None
-    assert turn.resolve(None, 10_024) is None
-    assert turn.resolve(question.answer, 10_025) == Outcome(question, None, QUESTION_MS)
-    assert turn.resolve(question.answer, 10_026) is None
+    assert turn.resolve(None, 25_024) is None
+    assert turn.resolve(question.answer, 25_025) == Outcome(question, None, QUESTION_MS)
+    assert turn.resolve(question.answer, 25_026) is None
 
 
 def test_answer_one_millisecond_before_deadline_counts(bank):
     question = bank[0]
     turn = Turn(question, Random(1), 25)
-    assert turn.resolve(question.answer, 10_024) == Outcome(question, question.answer, 9_999)
+    assert turn.resolve(question.answer, 25_024) == Outcome(question, question.answer, 24_999)
 
 
 def test_pairing_keeps_all_possible_pairs_with_uneven_concept_counts(bank):
@@ -106,7 +140,7 @@ def test_sudden_death_uses_correctness_or_finishes_as_draw(bank, hits, winner, p
     assert match.pair_index == pairs_played
 
 
-def test_progress_persists_best_and_six_points_unlock_next_level(tmp_path, bank):
+def test_progress_persists_best_and_only_a_perfect_round_unlocks_next_level(tmp_path, bank):
     path = tmp_path / "progress.json"
     progress = Progress(path)
     question = bank[0]
@@ -115,12 +149,13 @@ def test_progress_persists_best_and_six_points_unlock_next_level(tmp_path, bank)
     assert progress.unlocked("100") and not progress.unlocked("200")
     with pytest.raises(ValueError):
         progress.record("200", [hit] * 10)
-    progress.record("100", [hit] * 5 + [miss] * 5)
-    assert not progress.unlocked("200")
-    progress.record("100", [hit] * 6 + [miss] * 4)
+    progress.record("100", [hit] * 19 + [miss])
+    assert Progress(path).best == {"100": Fraction(19, 20)}
+    assert not Progress(path).unlocked("200")
+    progress.record("100", [hit] * 3)
     progress.record("100", [miss] * 10)
     reopened = Progress(path)
-    assert reopened.best == {"100": Fraction(3, 5)}
+    assert reopened.best == {"100": Fraction(1)}
     assert reopened.unlocked("200") and not reopened.unlocked("300")
 
 
@@ -186,13 +221,18 @@ def test_old_progress_and_review_outcomes_save_as_accuracy(tmp_path, bank):
     path = tmp_path / "progress.json"
     path.write_text('{"version": 1, "best": {"100": 6}}', encoding="utf-8")
     progress = Progress(path)
-    assert progress.unlocked("200")
+    assert progress.best == {"100": Fraction(3, 5)}
+    assert not progress.unlocked("200")
     review = bank[0]
     current = replace(review, id="200-test", level="200")
     outcomes = [Outcome(review, review.answer, 200)] + [Outcome(current, current.answer, 200)] * 4
+    with pytest.raises(ValueError):
+        progress.record("200", outcomes)
+    progress.record("100", [Outcome(review, review.answer, 200)])
+    assert progress.unlocked("200")
     progress.record("200", outcomes)
-    progress.record("200", [Outcome(current, current.answer, 200)] * 16 + [Outcome(current, None, 10000)] * 4)
-    assert Progress(path).best == {"100": Fraction(3, 5), "200": Fraction(1)}
+    progress.record("200", [Outcome(current, current.answer, 200)] * 16 + [Outcome(current, None, QUESTION_MS)] * 4)
+    assert Progress(path).best == {"100": Fraction(1), "200": Fraction(1)}
     assert progress.unlocked("300")
     with pytest.raises(ValueError):
         progress.record("100", outcomes)

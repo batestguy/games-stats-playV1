@@ -1,7 +1,7 @@
 """Offline game rules shared by the prototype and future release screens."""
 
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from fractions import Fraction
 from pathlib import Path
 from random import Random
@@ -14,10 +14,10 @@ AI_ML = "AI/ML"
 PRO = "Pro"
 QUESTION_LEVELS = (*LEVELS, AI_ML)
 PLAY_LEVELS = (*QUESTION_LEVELS, PRO)
-QUESTION_MS = 10_000
+QUESTION_MS = 25_000
 ROUND_SIZE = 10
 MAX_ROUND_SIZE = 20
-PASS_RATE = Fraction(3, 5)
+PASS_RATE = Fraction(1)
 TIE_LIMIT = 3
 
 
@@ -34,6 +34,8 @@ class Question:
     explanation: str
     reference: str
     convention: str = ""
+    math_clue: str = ""
+    math_choices: dict[str, str] = field(default_factory=dict, hash=False)
 
 
 def load_bank(path: Path) -> list[Question]:
@@ -60,6 +62,10 @@ def load_bank(path: Path) -> list[Question]:
             or len({choice.strip().casefold() for choice in item.choices}) != 5
             or item.answer not in item.choices
             or not isinstance(item.convention, str)
+            or not isinstance(item.math_clue, str)
+            or not isinstance(item.math_choices, dict)
+            or any(choice not in item.choices or not isinstance(tex, str) or not tex.strip()
+                   for choice, tex in item.math_choices.items())
         ):
             raise ValueError(f"Invalid question {item.id}")
         seen.add(item.id)

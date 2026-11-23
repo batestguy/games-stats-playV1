@@ -7,10 +7,16 @@
   <title>Games Statisticians Play · Phone preview</title>
   <link rel="stylesheet" href="preview.css">
   <script defer src="bank.js"></script>
+  <script defer src="equations.js"></script>
+  <script defer src="author.js"></script>
   <script defer src="game.js"></script>
   <script defer src="preview.js"></script>
 </head>
-<body>
+<body class="opening">
+  <section id="opening-screen" aria-label="Galton board opening" tabindex="-1" hidden>
+    <canvas id="opening-board" width="860" height="720" role="img" aria-label="Galton board with beads, pegs, and collection bins."></canvas>
+  </section>
+
   <header class="topbar">
     <div class="brand">
       <span class="app-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
@@ -35,6 +41,14 @@
             <section id="app-screen" class="app-screen" aria-label="Game screen">
               <p>Loading the question bank…</p>
             </section>
+            <dialog id="exit-dialog" aria-labelledby="exit-title" aria-describedby="exit-description">
+              <form method="dialog">
+                <h2 id="exit-title">Leave the game?</h2>
+                <p id="exit-description"></p>
+                <button class="game-button primary" value="keep" autofocus>Keep playing</button>
+                <button class="game-button" id="confirm-exit" value="exit">Exit to home</button>
+              </form>
+            </dialog>
             <div class="system-nav" aria-hidden="true"><i></i></div>
           </div>
         </div>

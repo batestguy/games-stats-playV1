@@ -8,7 +8,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "A distribution for an unknown parameter before updating with the current dataset.",
-      "choices": ["Posterior distribution", "Prior distribution", "Sampling distribution", "Posterior predictive distribution", "Prior predictive distribution"],
+      "choices": [
+        "Posterior distribution",
+        "Prior distribution",
+        "Sampling distribution",
+        "Posterior predictive distribution",
+        "Prior predictive distribution"
+      ],
       "answer": "Prior distribution",
       "explanation": "A prior expresses uncertainty about the parameter before the current observations enter the update.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 338, Prior distributions"
@@ -20,7 +26,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "The density or mass of the observed data, viewed as a function of an unknown parameter.",
-      "choices": ["Prior density", "Posterior density", "Predictive density", "Parameter density", "Likelihood function"],
+      "choices": [
+        "Prior density",
+        "Posterior density",
+        "Predictive density",
+        "Parameter density",
+        "Likelihood function"
+      ],
       "answer": "Likelihood function",
       "explanation": "Likelihood keeps the recorded data fixed while comparing parameter values.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood"
@@ -32,7 +44,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "Each school has a different baseline taken from a shared distribution, with one common slope.",
-      "choices": ["Random-slope-only model", "Common-intercept model", "Random-intercept model", "Single-group model", "No-intercept model"],
+      "choices": [
+        "Random-slope-only model",
+        "Common-intercept model",
+        "Random-intercept model",
+        "Single-group model",
+        "No-intercept model"
+      ],
       "answer": "Random-intercept model",
       "explanation": "The varying baseline is the school-specific intercept.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 354, Random effects model Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -44,7 +62,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "As sample size grows, an estimator converges in probability to the true parameter.",
-      "choices": ["Consistency", "Unbiasedness", "Asymptotic efficiency", "Asymptotic normality", "Finite-sample exactness"],
+      "choices": [
+        "Consistency",
+        "Unbiasedness",
+        "Asymptotic efficiency",
+        "Asymptotic normality",
+        "Finite-sample exactness"
+      ],
       "answer": "Consistency",
       "explanation": "A consistent estimator gets arbitrarily close to its target with probability approaching one.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency"
@@ -56,7 +80,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "A prior for a defect rate is updated with the results of 20 inspections. What is the updated distribution?",
-      "choices": ["Prior distribution", "Sampling distribution", "Prior predictive distribution", "Posterior distribution", "Posterior predictive distribution"],
+      "choices": [
+        "Prior distribution",
+        "Sampling distribution",
+        "Prior predictive distribution",
+        "Posterior distribution",
+        "Posterior predictive distribution"
+      ],
       "answer": "Posterior distribution",
       "explanation": "The posterior summarizes uncertainty about the defect rate given the observed inspections.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior distributions"
@@ -68,7 +98,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "All eight hospitals share one fitted infection rate. What pooling strategy is used?",
-      "choices": ["Partial pooling", "No pooling", "Complete pooling", "Random-intercept pooling", "Random-slope pooling"],
+      "choices": [
+        "Partial pooling",
+        "No pooling",
+        "Complete pooling",
+        "Random-intercept pooling",
+        "Random-slope pooling"
+      ],
       "answer": "Complete pooling",
       "explanation": "One shared parameter treats all groups as having the same underlying rate.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -80,7 +116,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "After fitting, simulate full datasets from posterior draws and compare their medians with the observed median.",
-      "choices": ["Posterior predictive check", "Prior predictive check", "Leave-one-out validation", "Bayes factor comparison", "Prior sensitivity analysis"],
+      "choices": [
+        "Posterior predictive check",
+        "Prior predictive check",
+        "Leave-one-out validation",
+        "Bayes factor comparison",
+        "Prior sensitivity analysis"
+      ],
       "answer": "Posterior predictive check",
       "explanation": "The observed median is compared with medians from data generated under the fitted Bayesian model.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior predictive checks"
@@ -92,7 +134,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "An analyst chooses the rate parameter giving the observed counts their largest joint probability.",
-      "choices": ["Maximum a posteriori estimation", "Posterior mean estimation", "Least absolute deviations", "Maximum likelihood estimation", "Method of moments estimation"],
+      "choices": [
+        "Maximum a posteriori estimation",
+        "Posterior mean estimation",
+        "Least absolute deviations",
+        "Maximum likelihood estimation",
+        "Method of moments estimation"
+      ],
       "answer": "Maximum likelihood estimation",
       "explanation": "Maximum likelihood estimation chooses the parameter value maximizing the likelihood.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation"
@@ -104,10 +152,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "Σᵢ log f(yᵢ∣θ)\nIndependent observations, fixed data.",
-      "choices": ["Likelihood", "Log likelihood", "Log prior density", "Log posterior density", "Likelihood score"],
+      "choices": [
+        "Likelihood",
+        "Log likelihood",
+        "Log prior density",
+        "Log posterior density",
+        "Likelihood score"
+      ],
       "answer": "Log likelihood",
       "explanation": "The logarithm turns the product of independent observations’ likelihood contributions into a sum.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 258, Log-likelihood"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 258, Log-likelihood",
+      "math_clue": "$\\sum_i\\log f(y_i\\mid\\theta)$\nIndependent observations, fixed data."
     },
     {
       "id": "grad-010",
@@ -116,10 +171,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "p(θ)p(y∣θ) / p(y)\ny is the observed data, θ the parameter.",
-      "choices": ["Prior density of θ", "Prior predictive density of y", "Likelihood as a function of θ", "Posterior predictive density of y", "Posterior density of θ"],
+      "choices": [
+        "Prior density of θ",
+        "Prior predictive density of y",
+        "Likelihood as a function of θ",
+        "Posterior predictive density of y",
+        "Posterior density of θ"
+      ],
       "answer": "Posterior density of θ",
       "explanation": "Bayes’ rule normalizes the product of the prior and the likelihood by the marginal density of the data.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 39, Bayes’ Theorem Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 39, Bayes’ Theorem Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
+      "math_clue": "$\\frac{p(\\theta)p(y\\mid\\theta)}{p(y)}$\ny is the observed data and θ is the parameter."
     },
     {
       "id": "grad-011",
@@ -128,11 +190,18 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "θⱼ ∣ μ, τ ∼ Normal(μ, τ²)\nθⱼ is the latent mean for group j. What is τ²?",
-      "choices": ["Within-group variance", "Group mean", "Population mean", "Between-group variance", "Posterior variance of μ"],
+      "choices": [
+        "Within-group variance",
+        "Group mean",
+        "Population mean",
+        "Between-group variance",
+        "Posterior variance of μ"
+      ],
       "answer": "Between-group variance",
       "explanation": "The group means vary around μ with conditional variance τ².",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
-      "convention": "Normal(mean, variance)."
+      "convention": "Normal(mean, variance).",
+      "math_clue": "$\\theta_j\\mid\\mu,\\tau\\sim\\mathcal{N}(\\mu,\\tau^2)$\nThe indexed theta is the latent mean for group j. What is the variance parameter?"
     },
     {
       "id": "grad-012",
@@ -141,10 +210,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "P(∣Xₙ − X∣ > ε) → 0 for every ε > 0",
-      "choices": ["Convergence in mean square", "Convergence in probability", "Almost sure convergence", "Convergence in distribution", "Convergence of the means"],
+      "choices": [
+        "Convergence in mean square",
+        "Convergence in probability",
+        "Almost sure convergence",
+        "Convergence in distribution",
+        "Convergence of the means"
+      ],
       "answer": "Convergence in probability",
       "explanation": "The probability of an error greater than any fixed tolerance goes to zero.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Convergence in probability"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Convergence in probability",
+      "math_clue": "$P(|X_n-X|>\\varepsilon)\\to0$\nThe statement holds for every positive ε."
     },
     {
       "id": "grad-013",
@@ -153,7 +229,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "Group estimates remain distinct while sharing information through an estimated common distribution.",
-      "choices": ["Complete pooling", "No pooling", "Data splitting", "Pairwise matching", "Partial pooling"],
+      "choices": [
+        "Complete pooling",
+        "No pooling",
+        "Data splitting",
+        "Pairwise matching",
+        "Partial pooling"
+      ],
       "answer": "Partial pooling",
       "explanation": "The shared distribution allows estimates from different groups to inform one another.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -165,7 +247,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "An interval contains 95% of the posterior mass for one unknown parameter.",
-      "choices": ["Prediction interval for a new datum", "Frequentist confidence interval", "Credible interval", "Prior predictive interval", "Tolerance interval"],
+      "choices": [
+        "Prediction interval for a new datum",
+        "Frequentist confidence interval",
+        "Credible interval",
+        "Prior predictive interval",
+        "Tolerance interval"
+      ],
       "answer": "Credible interval",
       "explanation": "Its posterior probability refers to the parameter given the observed data and the model.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 114, Credible region"
@@ -177,7 +265,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "Two responses are independent when the group effect is fixed. What property is stated?",
-      "choices": ["Conditional independence", "Marginal independence", "Zero marginal correlation", "Marginal exchangeability", "Perfect dependence"],
+      "choices": [
+        "Conditional independence",
+        "Marginal independence",
+        "Zero marginal correlation",
+        "Marginal exchangeability",
+        "Perfect dependence"
+      ],
       "answer": "Conditional independence",
       "explanation": "Conditioning fixes the shared effect. Marginalizing over that effect can make the responses dependent.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -189,7 +283,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "For each candidate value of the target parameter, maximize likelihood over all nuisance parameters.",
-      "choices": ["Marginal likelihood", "Conditional likelihood", "Prior predictive density", "Integrated posterior density", "Profile likelihood"],
+      "choices": [
+        "Marginal likelihood",
+        "Conditional likelihood",
+        "Prior predictive density",
+        "Integrated posterior density",
+        "Profile likelihood"
+      ],
       "answer": "Profile likelihood",
       "explanation": "The nuisance parameters are optimized separately at each fixed value of the target.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 342, Profile likelihood"
@@ -201,10 +301,17 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Xₙ converges in distribution to X. Which theorem gives exp(Xₙ) converging in distribution to exp(X)?",
-      "choices": ["Central limit theorem", "Law of large numbers", "Continuous mapping theorem", "Wilks’ theorem", "Chebyshev’s inequality"],
+      "choices": [
+        "Central limit theorem",
+        "Law of large numbers",
+        "Continuous mapping theorem",
+        "Wilks’ theorem",
+        "Chebyshev’s inequality"
+      ],
       "answer": "Continuous mapping theorem",
       "explanation": "The exponential is continuous, so applying it preserves convergence in distribution to the transformed limit.",
-      "reference": "Stanford STATS 200, Lecture 4, Asymptotics and simulation. https://web.stanford.edu/class/archive/stats/stats200/stats200.1172/Lecture04.pdf"
+      "reference": "Stanford STATS 200, Lecture 4, Asymptotics and simulation. https://web.stanford.edu/class/archive/stats/stats200/stats200.1172/Lecture04.pdf",
+      "math_clue": "$X_n\\overset{d}{\\to}X\\quad\\Longrightarrow\\quad\\exp(X_n)\\overset{d}{\\to}\\exp(X)$\nWhich theorem gives this result?"
     },
     {
       "id": "grad-018",
@@ -213,7 +320,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Change the prior scale, keep the likelihood fixed, and compare posterior conclusions. What is this?",
-      "choices": ["Prior sensitivity analysis", "Posterior predictive checking", "Prior predictive checking", "Cross-validation", "Posterior simulation diagnostics"],
+      "choices": [
+        "Prior sensitivity analysis",
+        "Posterior predictive checking",
+        "Prior predictive checking",
+        "Cross-validation",
+        "Posterior simulation diagnostics"
+      ],
       "answer": "Prior sensitivity analysis",
       "explanation": "Refitting with different priors shows whether conclusions depend on the prior specification.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 7, Evaluating, comparing, and expanding models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf Everitt and Skrondal (2010), 4th ed., p. 388, Sensitivity analysis"
@@ -225,7 +338,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Temperature changes electricity use at a different fitted rate in each city. The rates follow a shared distribution.",
-      "choices": ["Random intercept only", "Fixed common slope", "Fixed common intercept", "Random slope", "Observation-specific residual"],
+      "choices": [
+        "Random intercept only",
+        "Fixed common slope",
+        "Fixed common intercept",
+        "Random slope",
+        "Observation-specific residual"
+      ],
       "answer": "Random slope",
       "explanation": "The slope is the change per unit of temperature, and this coefficient varies by city.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -237,7 +356,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "A researcher estimates each branch’s mean from that branch’s data alone, with independent fixed priors.",
-      "choices": ["Partial pooling", "No pooling", "Complete pooling", "Variance pooling", "Covariate pooling"],
+      "choices": [
+        "Partial pooling",
+        "No pooling",
+        "Complete pooling",
+        "Variance pooling",
+        "Covariate pooling"
+      ],
       "answer": "No pooling",
       "explanation": "With independent fixed priors and separate data, the group estimates borrow no information across branches.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -249,10 +374,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "dℓ(θ)/dθ\nℓ is the log likelihood for fixed observations.",
-      "choices": ["Score function", "Fisher information", "Observed information", "Log likelihood itself", "Likelihood-ratio statistic"],
+      "choices": [
+        "Score function",
+        "Fisher information",
+        "Observed information",
+        "Log likelihood itself",
+        "Likelihood-ratio statistic"
+      ],
       "answer": "Score function",
       "explanation": "The score is the first derivative of the log likelihood with respect to θ.",
-      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf"
+      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
+      "math_clue": "$\\frac{d\\ell(\\theta)}{d\\theta}$\nThe function being differentiated is the log likelihood for fixed observations."
     },
     {
       "id": "grad-022",
@@ -261,11 +393,18 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "sqrt(n)(θ̂ₙ − θ) → in distribution to Normal(0, V), V > 0.",
-      "choices": ["Exact normality", "Finite-sample unbiasedness", "Mean-square convergence", "Asymptotic normality", "Asymptotic independence"],
+      "choices": [
+        "Exact normality",
+        "Finite-sample unbiasedness",
+        "Mean-square convergence",
+        "Asymptotic normality",
+        "Asymptotic independence"
+      ],
       "answer": "Asymptotic normality",
       "explanation": "The centered and scaled estimation error has a normal limiting distribution.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotic distribution Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
-      "convention": "Normal(mean, variance)."
+      "convention": "Normal(mean, variance).",
+      "math_clue": "$\\sqrt{n}(\\hat{\\theta}_n-\\theta)\\overset{d}{\\to}\\mathcal{N}(0,V),\\quad V>0$"
     },
     {
       "id": "grad-023",
@@ -274,10 +413,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "∫ p(ỹ∣θ,y) p(θ∣y) dθ\ny is observed, ỹ is one future outcome.",
-      "choices": ["Prior predictive density", "Posterior predictive density", "Marginal posterior density", "Conditional likelihood", "Marginal likelihood of observed data"],
+      "choices": [
+        "Prior predictive density",
+        "Posterior predictive density",
+        "Marginal posterior density",
+        "Conditional likelihood",
+        "Marginal likelihood of observed data"
+      ],
       "answer": "Posterior predictive density",
       "explanation": "Predictive uncertainty averages the conditional outcome density over the updated distribution for θ.",
-      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf Ohio State STAT 6570, Spring 2024 syllabus, pp. 1–2, Course Learning Outcomes. https://stat.osu.edu/sites/default/files/2024-02/Spring%202024%20STAT%206570%20syllabus%20for%20insructor%20Chkrebtii.pdf"
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf Ohio State STAT 6570, Spring 2024 syllabus, pp. 1–2, Course Learning Outcomes. https://stat.osu.edu/sites/default/files/2024-02/Spring%202024%20STAT%206570%20syllabus%20for%20insructor%20Chkrebtii.pdf",
+      "math_clue": "$\\int p(\\tilde{y}\\mid\\theta,y)p(\\theta\\mid y)\\,d\\theta$\ny is observed and y with a tilde is one future outcome."
     },
     {
       "id": "grad-024",
@@ -286,10 +432,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "Fₙ(x) → F(x) wherever F is continuous.\nFₙ and F are cumulative distribution functions.",
-      "choices": ["Almost sure convergence", "Convergence in mean square", "Convergence in probability", "Convergence of the means", "Convergence in distribution"],
+      "choices": [
+        "Almost sure convergence",
+        "Convergence in mean square",
+        "Convergence in probability",
+        "Convergence of the means",
+        "Convergence in distribution"
+      ],
       "answer": "Convergence in distribution",
       "explanation": "Agreement at all continuity points defines convergence in distribution.",
-      "reference": "Stanford STAT 208, Lectures, Notions of Convergence, Convergence in Law. https://web.stanford.edu/class/stat208/node3.html"
+      "reference": "Stanford STAT 208, Lectures, Notions of Convergence, Convergence in Law. https://web.stanford.edu/class/stat208/node3.html",
+      "math_clue": "$F_n(x)\\to F(x)$ wherever F is continuous.\nBoth functions are cumulative distribution functions."
     },
     {
       "id": "grad-025",
@@ -298,7 +451,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "A regular estimator attains the lowest limiting variance allowed by the model under the same scaling.",
-      "choices": ["Asymptotic unbiasedness", "Asymptotic independence", "Asymptotic efficiency", "Consistency in probability", "Exact finite-sample normality"],
+      "choices": [
+        "Asymptotic unbiasedness",
+        "Asymptotic independence",
+        "Asymptotic efficiency",
+        "Consistency in probability",
+        "Exact finite-sample normality"
+      ],
       "answer": "Asymptotic efficiency",
       "explanation": "Efficiency compares the large-sample precision of estimators using the same scaling.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 24, Asymptotic efficiency"
@@ -310,11 +469,18 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "Under a regular nested null, twice the maximized log-likelihood gain tends to χ² with degrees equal to the parameter-count difference.",
-      "choices": ["Slutsky’s theorem", "Wilks’ theorem", "Wald’s fundamental identity", "Bayes’ theorem", "Rao–Blackwell theorem"],
+      "choices": [
+        "Slutsky’s theorem",
+        "Wilks’ theorem",
+        "Wald’s fundamental identity",
+        "Bayes’ theorem",
+        "Rao–Blackwell theorem"
+      ],
       "answer": "Wilks’ theorem",
       "explanation": "This gives the large-sample null reference distribution for the likelihood-ratio statistic.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 460, Wilks’ theorem",
-      "convention": "Assumes an interior true parameter and the standard regularity conditions."
+      "convention": "Assumes an interior true parameter and the standard regularity conditions.",
+      "math_clue": "Under a regular nested null, twice the maximized log-likelihood gain tends to $\\chi^2$ with degrees equal to the parameter-count difference."
     },
     {
       "id": "grad-027",
@@ -323,7 +489,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "A higher-level distribution is assigned to τ, the scale of a distribution for group effects. What is p(τ)?",
-      "choices": ["Group-level likelihood", "Group-level posterior", "Sampling distribution", "Posterior predictive distribution", "Hyperprior"],
+      "choices": [
+        "Group-level likelihood",
+        "Group-level posterior",
+        "Sampling distribution",
+        "Posterior predictive distribution",
+        "Hyperprior"
+      ],
       "answer": "Hyperprior",
       "explanation": "A hyperprior specifies uncertainty about a parameter of another prior distribution.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 211, Hyperprior"
@@ -335,7 +507,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "Combine model-specific predictions using each candidate’s posterior probability as its weight.",
-      "choices": ["Predictive stacking", "Bayes factor testing", "Bayesian model averaging", "Model selection by WAIC", "Complete pooling across groups"],
+      "choices": [
+        "Predictive stacking",
+        "Bayes factor testing",
+        "Bayesian model averaging",
+        "Model selection by WAIC",
+        "Complete pooling across groups"
+      ],
       "answer": "Bayesian model averaging",
       "explanation": "The averaged prediction integrates uncertainty about which candidate model applies.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 38, Bayesian model averaging"
@@ -347,10 +525,17 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A statistic tends in distribution to Z. Its random scale estimate tends in probability to c > 0. Which theorem gives the ratio limit Z/c?",
-      "choices": ["Slutsky’s theorem", "Wilks’ theorem", "Central limit theorem", "Law of large numbers", "Rao–Blackwell theorem"],
+      "choices": [
+        "Slutsky’s theorem",
+        "Wilks’ theorem",
+        "Central limit theorem",
+        "Law of large numbers",
+        "Rao–Blackwell theorem"
+      ],
       "answer": "Slutsky’s theorem",
       "explanation": "Slutsky’s theorem allows the estimated scale to be replaced by its nonzero probability limit in the ratio’s limit.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 399, Slutsky’s theorem Stanford STATS 200, Lecture 4, Asymptotics and simulation. https://web.stanford.edu/class/archive/stats/stats200/stats200.1172/Lecture04.pdf"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 399, Slutsky’s theorem Stanford STATS 200, Lecture 4, Asymptotics and simulation. https://web.stanford.edu/class/archive/stats/stats200/stats200.1172/Lecture04.pdf",
+      "math_clue": "$X_n\\overset{d}{\\to}Z,\\quad S_n\\overset{p}{\\to}c>0\\quad\\Longrightarrow\\quad X_n/S_n\\overset{d}{\\to}Z/c$\nWhich theorem gives this ratio limit?"
     },
     {
       "id": "grad-030",
@@ -359,7 +544,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "The observed maximum exceeds nearly every replicated maximum. Which model feature does this check flag?",
-      "choices": ["Lower-tail fit", "Prior model odds", "Chain mixing", "Upper-tail fit", "Predictor collinearity"],
+      "choices": [
+        "Lower-tail fit",
+        "Prior model odds",
+        "Chain mixing",
+        "Upper-tail fit",
+        "Predictor collinearity"
+      ],
       "answer": "Upper-tail fit",
       "explanation": "The fitted model rarely generates a maximum as large as the one observed.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior predictive checks Gelman et al., Bayesian Data Analysis, 3rd ed., §6.3, Posterior predictive checking. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
@@ -371,7 +562,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Before fitting, draw rates from the prior and simulate outcomes to see if implausible counts are common.",
-      "choices": ["Posterior predictive check", "Prior sensitivity analysis", "Prior predictive check", "Bayes factor comparison", "Posterior simulation diagnostics"],
+      "choices": [
+        "Posterior predictive check",
+        "Prior sensitivity analysis",
+        "Prior predictive check",
+        "Bayes factor comparison",
+        "Posterior simulation diagnostics"
+      ],
       "answer": "Prior predictive check",
       "explanation": "The simulation asks what data the joint prior and likelihood imply before conditioning on observations.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Exercise 7, prior versus posterior predictive checks. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -383,7 +580,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Predict outcomes at a hospital unseen during fitting by holding out each entire hospital in turn.",
-      "choices": ["Leave-one-group-out validation", "Leave-one-patient-out validation", "In-sample prediction scoring", "Posterior predictive replication", "Bayes factor comparison"],
+      "choices": [
+        "Leave-one-group-out validation",
+        "Leave-one-patient-out validation",
+        "In-sample prediction scoring",
+        "Posterior predictive replication",
+        "Bayes factor comparison"
+      ],
       "answer": "Leave-one-group-out validation",
       "explanation": "Holding out whole groups assesses prediction for new groups instead of additional data from known groups.",
       "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation, Cross-validation with structured data. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html"
@@ -395,11 +598,18 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "Eθ[−ℓ″(θ)]\nℓ is the sample log likelihood, with expectation over the data.",
-      "choices": ["Observed information", "Expected score", "Score function", "Expected Fisher information", "Likelihood-ratio statistic"],
+      "choices": [
+        "Observed information",
+        "Expected score",
+        "Score function",
+        "Expected Fisher information",
+        "Likelihood-ratio statistic"
+      ],
       "answer": "Expected Fisher information",
       "explanation": "The expected negative curvature measures the information available about θ.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s information Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
-      "convention": "Assumes differentiability and the regularity conditions for the expected curvature identity."
+      "convention": "Assumes differentiability and the regularity conditions for the expected curvature identity.",
+      "math_clue": "$\\mathrm{E}_{\\theta}\\!\\left[-\\ell''(\\theta)\\right]$\nThe ell symbol is the sample log likelihood, with expectation over the data."
     },
     {
       "id": "grad-034",
@@ -408,11 +618,18 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "2(ℓ̂full − ℓ̂null)\nBoth log likelihoods are maximized under their respective nested models.",
-      "choices": ["Wald statistic", "Likelihood-ratio statistic", "Score statistic", "Akaike information criterion", "Bayesian information criterion"],
+      "choices": [
+        "Wald statistic",
+        "Likelihood-ratio statistic",
+        "Score statistic",
+        "Akaike information criterion",
+        "Bayesian information criterion"
+      ],
       "answer": "Likelihood-ratio statistic",
       "explanation": "The test statistic measures how much fit improves when the null restrictions are relaxed.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood ratio test",
-      "convention": "Uses the common deviance scale, −2 times the log of the restricted/unrestricted likelihood ratio."
+      "convention": "Uses the common deviance scale, −2 times the log of the restricted/unrestricted likelihood ratio.",
+      "math_clue": "$2(\\hat{\\ell}_{\\mathrm{full}}-\\hat{\\ell}_{\\mathrm{null}})$\nBoth log likelihoods are maximized under their respective nested models."
     },
     {
       "id": "grad-035",
@@ -421,10 +638,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "p(y∣M₁) / p(y∣M₀)\nEach model’s likelihood is integrated over its own prior.",
-      "choices": ["Posterior odds for M₁ vs M₀", "Prior odds for M₁ vs M₀", "Ratio of maximized likelihoods", "Posterior probability of M₁", "Bayes factor for M₁ vs M₀"],
+      "choices": [
+        "Posterior odds for M₁ vs M₀",
+        "Prior odds for M₁ vs M₀",
+        "Ratio of maximized likelihoods",
+        "Posterior probability of M₁",
+        "Bayes factor for M₁ vs M₀"
+      ],
       "answer": "Bayes factor for M₁ vs M₀",
       "explanation": "The ratio updates prior odds to posterior odds between the two models.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayes factor"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayes factor",
+      "math_clue": "$\\frac{p(y\\mid M_1)}{p(y\\mid M_0)}$\nEach model’s likelihood is integrated over its own prior."
     },
     {
       "id": "grad-036",
@@ -433,11 +657,18 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "If sqrt(n)(θ̂ − θ) tends to N(0,V), the scaled error for g(θ̂) has limiting variance [g′(θ)]²V. Which method?",
-      "choices": ["Slutsky’s theorem alone", "Wilks’ theorem", "Rao–Blackwell theorem", "Delta method", "Law of large numbers"],
+      "choices": [
+        "Slutsky’s theorem alone",
+        "Wilks’ theorem",
+        "Rao–Blackwell theorem",
+        "Delta method",
+        "Law of large numbers"
+      ],
       "answer": "Delta method",
       "explanation": "A first-order expansion of g scales the limiting error by its derivative.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 128, Delta (δ) method",
-      "convention": "Assumes g is differentiable at θ with a nonzero derivative. N(mean, variance)."
+      "convention": "Assumes g is differentiable at θ with a nonzero derivative. N(mean, variance).",
+      "math_clue": "$\\sqrt{n}(\\hat{\\theta}-\\theta)\\overset{d}{\\to}\\mathcal{N}(0,V)$\nThe scaled error after applying g has limiting variance $[g'(\\theta)]^2V$. Which method?"
     },
     {
       "id": "grad-037",
@@ -446,7 +677,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "An analyst takes the ratio of two models’ probabilities after observing the data. What does that ratio give?",
-      "choices": ["Prior model odds", "Posterior model odds", "Bayes factor", "Posterior model probability", "Marginal likelihood"],
+      "choices": [
+        "Prior model odds",
+        "Posterior model odds",
+        "Bayes factor",
+        "Posterior model probability",
+        "Marginal likelihood"
+      ],
       "answer": "Posterior model odds",
       "explanation": "Posterior odds equal prior odds multiplied by the Bayes factor.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayes factor"
@@ -458,7 +695,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "A clinic model has one mean θⱼ for each clinic. At what level does θⱼ vary?",
-      "choices": ["Patient level", "Visit level", "Measurement level", "Population level", "Clinic level"],
+      "choices": [
+        "Patient level",
+        "Visit level",
+        "Measurement level",
+        "Population level",
+        "Clinic level"
+      ],
       "answer": "Clinic level",
       "explanation": "Each θⱼ belongs to a particular clinic and is shared by observations within that clinic.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -470,7 +713,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A Beta prior for a binomial probability gives another Beta distribution after updating. What property is illustrated?",
-      "choices": ["Exchangeability", "Marginal independence", "Conjugacy", "Posterior consistency", "Prior impropriety"],
+      "choices": [
+        "Exchangeability",
+        "Marginal independence",
+        "Conjugacy",
+        "Posterior consistency",
+        "Prior impropriety"
+      ],
       "answer": "Conjugacy",
       "explanation": "Conjugacy preserves the prior’s distribution family after updating with its matching likelihood.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Conjugate prior"
@@ -482,7 +731,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Which criterion uses posterior variance of pointwise log likelihoods as a penalty for predictive fit?",
-      "choices": ["WAIC", "DIC", "AIC", "BIC", "Bayes factor"],
+      "choices": [
+        "WAIC",
+        "DIC",
+        "AIC",
+        "BIC",
+        "Bayes factor"
+      ],
       "answer": "WAIC",
       "explanation": "The common WAIC form subtracts a pointwise posterior-variance penalty from the log predictive fit.",
       "reference": "Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.4, WAIC. https://stat.columbia.edu/~gelman/research/published/waic_understand3.pdf",
@@ -495,7 +750,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "An unknown parameter affects the likelihood but is outside the main inferential target.",
-      "choices": ["Target parameter", "Sample statistic", "Observed outcome", "Standard error", "Nuisance parameter"],
+      "choices": [
+        "Target parameter",
+        "Sample statistic",
+        "Observed outcome",
+        "Standard error",
+        "Nuisance parameter"
+      ],
       "answer": "Nuisance parameter",
       "explanation": "Inference must account for the unknown quantity even though the question targets something else.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood"
@@ -507,7 +768,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "The distribution of possible observations before conditioning on any observed outcomes.",
-      "choices": ["Posterior predictive distribution", "Prior distribution for parameters", "Prior predictive distribution", "Posterior distribution for parameters", "Empirical distribution"],
+      "choices": [
+        "Posterior predictive distribution",
+        "Prior distribution for parameters",
+        "Prior predictive distribution",
+        "Posterior distribution for parameters",
+        "Empirical distribution"
+      ],
       "answer": "Prior predictive distribution",
       "explanation": "The prior predictive averages possible outcomes over parameter values from the prior.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Exercise 7, prior versus posterior predictive checks. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -519,7 +786,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "A test statistic has its reference distribution for every supported sample size.",
-      "choices": ["Exact reference distribution", "Asymptotic reference distribution", "Prior predictive distribution", "Posterior predictive distribution", "Empirical sample distribution"],
+      "choices": [
+        "Exact reference distribution",
+        "Asymptotic reference distribution",
+        "Prior predictive distribution",
+        "Posterior predictive distribution",
+        "Empirical sample distribution"
+      ],
       "answer": "Exact reference distribution",
       "explanation": "An exact reference distribution applies at finite sample sizes under the test assumptions.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 24, Asymptotic methods"
@@ -531,7 +804,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "In a model for many clinic effects, one shared parameter describes the center of their distribution.",
-      "choices": ["Within-clinic residual", "Observed clinic count", "Clinic treatment assignment", "Population-level mean", "Patient measurement"],
+      "choices": [
+        "Within-clinic residual",
+        "Observed clinic count",
+        "Clinic treatment assignment",
+        "Population-level mean",
+        "Patient measurement"
+      ],
       "answer": "Population-level mean",
       "explanation": "The center of the clinic-effect distribution is a population-level parameter.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., §5.4, Estimating a normal population. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -543,7 +822,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "A scientist summarizes earlier lab results in a tightly concentrated distribution for a parameter before collecting new data.",
-      "choices": ["Flat prior", "Informative prior", "Posterior density", "Sampling distribution", "Marginal likelihood"],
+      "choices": [
+        "Flat prior",
+        "Informative prior",
+        "Posterior density",
+        "Sampling distribution",
+        "Marginal likelihood"
+      ],
       "answer": "Informative prior",
       "explanation": "The prior concentrates probability using information available before the new experiment.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 218, Informative prior"
@@ -555,21 +840,33 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "For one dataset, an analyst divides the likelihood at one proposed parameter value by that at another. What is reported?",
-      "choices": ["Likelihood ratio", "Likelihood score", "Posterior odds", "Prior odds", "Observed information"],
+      "choices": [
+        "Likelihood ratio",
+        "Likelihood score",
+        "Posterior odds",
+        "Prior odds",
+        "Observed information"
+      ],
       "answer": "Likelihood ratio",
       "explanation": "The ratio compares how much the same observations support the two specified parameter values.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 244, Law of likelihood"
     },
     {
       "id": "grad-047",
-      "concept": "group shrinkage direction",
+      "concept": "direction of group shrinkage",
       "level": "Graduate Mix",
       "difficulty": "easy",
       "clue_type": "scenario",
-      "clue": "A small school’s fitted effect moves from 12 to 8 after pooling toward a group-wide mean of 6. Where did it move?",
-      "choices": ["Away from the group-wide mean", "To the common mean exactly", "To the raw school estimate", "Toward the group-wide mean", "To the opposite sign"],
-      "answer": "Toward the group-wide mean",
-      "explanation": "Partial pooling pulls a noisy estimate closer to the common center while allowing school differences.",
+      "clue": "A school’s unpooled effect is above the population mean. With a normal partial-pooling model, where does its posterior mean tend to move?",
+      "choices": [
+        "Up away from the population mean",
+        "Past the population mean in every case",
+        "To the effect of the largest school",
+        "Down toward the population mean",
+        "To a fixed zero regardless of the population mean"
+      ],
+      "answer": "Down toward the population mean",
+      "explanation": "Under this model, partial pooling moves the school estimate toward the population mean.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., §5.5, Estimating treatment effects in eight schools. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
     },
     {
@@ -579,7 +876,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "A model is scored on the same cases used to estimate every parameter. What kind of assessment is this?",
-      "choices": ["Leave-one-out assessment", "In-sample assessment", "Holdout assessment", "External validation", "Prior predictive assessment"],
+      "choices": [
+        "Leave-one-out assessment",
+        "In-sample assessment",
+        "Holdout assessment",
+        "External validation",
+        "Prior predictive assessment"
+      ],
       "answer": "In-sample assessment",
       "explanation": "The score evaluates fit on the observations already seen during estimation.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 7, Evaluating, comparing, and expanding models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -591,10 +894,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "∏ᵢ f(yᵢ∣θ)\nData yᵢ are independent and held fixed. What function of θ is this?",
-      "choices": ["Log likelihood", "Score", "Posterior density", "Prior density", "Likelihood"],
+      "choices": [
+        "Log likelihood",
+        "Score",
+        "Posterior density",
+        "Prior density",
+        "Likelihood"
+      ],
       "answer": "Likelihood",
       "explanation": "Independent observations contribute multiplicative terms to the likelihood.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood",
+      "math_clue": "$\\prod_i f(y_i\\mid\\theta)$\nData are independent and held fixed. What function of the parameter is this?"
     },
     {
       "id": "grad-050",
@@ -603,10 +913,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "−ℓ″(θ)\nℓ is the fixed-sample log likelihood and no expectation is taken.",
-      "choices": ["Expected Fisher information", "Likelihood score", "Observed information", "Log likelihood", "Likelihood ratio"],
+      "choices": [
+        "Expected Fisher information",
+        "Likelihood score",
+        "Observed information",
+        "Log likelihood",
+        "Likelihood ratio"
+      ],
       "answer": "Observed information",
       "explanation": "Observed information is the negative curvature of the log likelihood for the actual data.",
-      "reference": "Stanford STATS 364, Approximate likelihood and Bayesian methods (1), Fisher and observed information. https://web.stanford.edu/class/stats364/notebooks/Likelihood.html"
+      "reference": "Stanford STATS 364, Approximate likelihood and Bayesian methods (1), Fisher and observed information. https://web.stanford.edu/class/stats364/notebooks/Likelihood.html",
+      "math_clue": "$-\\ell''(\\theta)$\nThe ell symbol is the fixed-sample log likelihood and no expectation is taken."
     },
     {
       "id": "grad-051",
@@ -615,10 +932,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "arg max over θ of p(θ∣y)",
-      "choices": ["Maximum likelihood estimate", "Maximum a posteriori estimate", "Posterior mean estimate", "Posterior median estimate", "Posterior standard deviation"],
+      "choices": [
+        "Maximum likelihood estimate",
+        "Maximum a posteriori estimate",
+        "Posterior mean estimate",
+        "Posterior median estimate",
+        "Posterior standard deviation"
+      ],
       "answer": "Maximum a posteriori estimate",
       "explanation": "The maximum a posteriori estimate is a parameter value with highest posterior density or probability mass.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 272, Maximum a posteriori estimate (MAP)"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 272, Maximum a posteriori estimate (MAP)",
+      "math_clue": "$\\arg\\max_{\\theta}p(\\theta\\mid y)$"
     },
     {
       "id": "grad-052",
@@ -627,10 +951,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "E[θ∣y]\nAssume this expectation exists. Which posterior summary is it?",
-      "choices": ["Posterior median", "Posterior mode", "Posterior standard deviation", "Posterior interquartile range", "Posterior mean"],
+      "choices": [
+        "Posterior median",
+        "Posterior mode",
+        "Posterior standard deviation",
+        "Posterior interquartile range",
+        "Posterior mean"
+      ],
       "answer": "Posterior mean",
       "explanation": "A conditional expectation of the parameter given the data is its posterior mean.",
-      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
+      "math_clue": "$\\mathrm{E}[\\theta\\mid y]$\nAssume the expectation exists. Which posterior summary is it?"
     },
     {
       "id": "grad-053",
@@ -639,7 +970,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "Relabeling the groups leaves the joint prior for their effects unchanged.",
-      "choices": ["Mutual independence", "Identical realized effects", "Exchangeability", "Conditional linearity", "Zero residual correlation"],
+      "choices": [
+        "Mutual independence",
+        "Identical realized effects",
+        "Exchangeability",
+        "Conditional linearity",
+        "Zero residual correlation"
+      ],
       "answer": "Exchangeability",
       "explanation": "Exchangeability means the joint distribution is invariant under permutation of labels.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 155, Exchangeability Gelman et al., Bayesian Data Analysis, 3rd ed., §5.2, Exchangeability. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
@@ -651,7 +988,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "Conditioning on this statistic makes the remaining data distribution independent of the unknown parameter.",
-      "choices": ["Sufficient statistic", "Consistent estimator", "Asymptotically normal statistic", "Pivot", "Unbiased estimator"],
+      "choices": [
+        "Sufficient statistic",
+        "Consistent estimator",
+        "Asymptotically normal statistic",
+        "Pivot",
+        "Unbiased estimator"
+      ],
       "answer": "Sufficient statistic",
       "explanation": "A sufficient statistic retains the information about the parameter contained in the sample.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 420, Sufficient statistic"
@@ -663,7 +1006,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "A proposed prior density is proportional to a positive constant over the entire real line.",
-      "choices": ["Proper uniform prior", "Proper normal prior", "Posterior density", "Improper prior", "Marginal density"],
+      "choices": [
+        "Proper uniform prior",
+        "Proper normal prior",
+        "Posterior density",
+        "Improper prior",
+        "Marginal density"
+      ],
       "answer": "Improper prior",
       "explanation": "The constant over an unbounded line cannot be normalized to integrate to one.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 213, Improper prior distribution"
@@ -675,7 +1024,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "The estimator’s expected value tends to the true parameter as n grows. Which property follows directly?",
-      "choices": ["Consistency", "Asymptotic normality", "Asymptotic unbiasedness", "Asymptotic efficiency", "Almost sure convergence"],
+      "choices": [
+        "Consistency",
+        "Asymptotic normality",
+        "Asymptotic unbiasedness",
+        "Asymptotic efficiency",
+        "Almost sure convergence"
+      ],
       "answer": "Asymptotic unbiasedness",
       "explanation": "Asymptotic unbiasedness requires bias to tend to zero. It concerns expectations.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotically unbiased estimator"
@@ -687,21 +1042,33 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "A mean of i.i.d. readings converges in probability to the population mean. Which law gives this when the mean is finite?",
-      "choices": ["Weak law of large numbers", "Central limit theorem", "Continuous mapping theorem", "Slutsky’s theorem", "Wilks’ theorem"],
+      "choices": [
+        "Weak law of large numbers",
+        "Central limit theorem",
+        "Continuous mapping theorem",
+        "Slutsky’s theorem",
+        "Wilks’ theorem"
+      ],
       "answer": "Weak law of large numbers",
       "explanation": "For independent identically distributed observations with a finite mean, the weak law gives this probability limit.",
       "reference": "Stanford STATS 200, Lecture 4, Asymptotics and simulation. https://web.stanford.edu/class/archive/stats/stats200/stats200.1172/Lecture04.pdf"
     },
     {
       "id": "grad-058",
-      "concept": "nonidentical weak and probability limits",
+      "concept": "marginal versus paired convergence",
       "level": "Graduate Mix",
       "difficulty": "medium",
       "clue_type": "scenario",
-      "clue": "Let X be +1 or −1 with equal chance. Set Xₙ = −X for every n. How does Xₙ converge to X?",
-      "choices": ["In probability only", "Almost surely only", "In mean square only", "In distribution only", "In both probability and distribution"],
-      "answer": "In distribution only",
-      "explanation": "The distributions match at every n, but the distance between Xₙ and X is always 2.",
+      "clue": "Every Xₙ has the same distribution as X, but Xₙ stays a fixed positive distance from X on an event whose probability stays positive. What convergence follows?",
+      "choices": [
+        "Convergence in probability only",
+        "Almost sure convergence only",
+        "Both convergence in distribution and probability",
+        "Convergence in distribution only",
+        "No convergence in distribution"
+      ],
+      "answer": "Convergence in distribution only",
+      "explanation": "Matching marginal distributions ensures distributional convergence. The persistent paired error rules out convergence in probability and almost sure convergence.",
       "reference": "Stanford STAT 208, Lectures, Notions of Convergence, Convergence in Law. https://web.stanford.edu/class/stat208/node3.html"
     },
     {
@@ -711,21 +1078,33 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Estimate the shared prior scale from all groups, then condition on that single estimate for group-level inference.",
-      "choices": ["Fully Bayesian prior averaging", "Empirical Bayes", "Complete pooling", "No pooling", "Prior predictive simulation"],
+      "choices": [
+        "Fully Bayesian prior averaging",
+        "Empirical Bayes",
+        "Complete pooling",
+        "No pooling",
+        "Prior predictive simulation"
+      ],
       "answer": "Empirical Bayes",
       "explanation": "Estimating prior parameters from the data and plugging them in is an empirical Bayes strategy.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 150, Empirical Bayes method"
     },
     {
       "id": "grad-060",
-      "concept": "predictive interval coverage",
+      "concept": "predictive interval coverage diagnosis",
       "level": "Graduate Mix",
       "difficulty": "medium",
       "clue_type": "scenario",
-      "clue": "Across many held-out cases, 67% fall within the supplied 90% predictive intervals. What pattern is evident?",
-      "choices": ["Empirical overcoverage", "Exact nominal coverage", "Higher within-group correlation", "A larger effective sample size", "Empirical undercoverage"],
+      "clue": "Across many held-out cases, realized outcomes fall inside the predictive intervals less often than their nominal coverage. What does this indicate?",
+      "choices": [
+        "Empirical overcoverage",
+        "Exact calibration",
+        "Prior sensitivity",
+        "Adequate point prediction",
+        "Empirical undercoverage"
+      ],
       "answer": "Empirical undercoverage",
-      "explanation": "The observed fraction covered falls short of the advertised level on these test cases.",
+      "explanation": "Empirical coverage is how often the realized outcome falls inside its predicted interval.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., §7.1, Measures of predictive accuracy. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
     },
     {
@@ -735,10 +1114,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "ℓ′(θ̂) = 0\nθ̂ is a differentiable interior maximum of the log likelihood. Which quantity is zero?",
-      "choices": ["Likelihood at the estimate", "Prior density at the estimate", "Observed information at the estimate", "Score at the estimate", "Posterior density at the estimate"],
+      "choices": [
+        "Likelihood at the estimate",
+        "Prior density at the estimate",
+        "Observed information at the estimate",
+        "Score at the estimate",
+        "Posterior density at the estimate"
+      ],
       "answer": "Score at the estimate",
       "explanation": "At a differentiable interior maximum the first derivative vanishes.",
-      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf"
+      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
+      "math_clue": "$\\ell'(\\hat{\\theta})=0$\nThe estimate is a differentiable interior maximum of the log likelihood. Which quantity is zero?"
     },
     {
       "id": "grad-062",
@@ -747,10 +1133,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "1 / sqrt[n I(θ̂)]\nI is expected information per observation for a regular scalar model.",
-      "choices": ["Approximate MLE variance", "Approximate MLE standard error", "Estimated score magnitude", "Estimated bias of the MLE", "Expected sample information"],
+      "choices": [
+        "Approximate MLE variance",
+        "Approximate MLE standard error",
+        "Estimated score magnitude",
+        "Estimated bias of the MLE",
+        "Expected sample information"
+      ],
       "answer": "Approximate MLE standard error",
       "explanation": "Information adds across independent identically distributed observations. Taking the inverse square root gives a standard error.",
-      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf"
+      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
+      "math_clue": "$\\frac{1}{\\sqrt{n I(\\hat{\\theta})}}$\nI is expected information per observation for a regular scalar model."
     },
     {
       "id": "grad-063",
@@ -759,10 +1152,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "∫ p(y∣θ) p(θ) dθ\nWhat is this function of y before observing it?",
-      "choices": ["Posterior predictive density", "Prior density of θ", "Posterior density of θ", "Likelihood as a function of θ", "Prior predictive density"],
+      "choices": [
+        "Posterior predictive density",
+        "Prior density of θ",
+        "Posterior density of θ",
+        "Likelihood as a function of θ",
+        "Prior predictive density"
+      ],
       "answer": "Prior predictive density",
       "explanation": "Averaging the observation model over the prior gives the prior predictive density.",
-      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Exercise 7, prior versus posterior predictive checks. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Exercise 7, prior versus posterior predictive checks. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
+      "math_clue": "$\\int p(y\\mid\\theta)p(\\theta)\\,d\\theta$\nWhat is this function of y before observing it?"
     },
     {
       "id": "grad-064",
@@ -771,11 +1171,18 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "Yᵢⱼ ∣ θⱼ, σ ∼ Normal(θⱼ, σ²)\nGroups vary through θⱼ. What does σ² represent?",
-      "choices": ["Between-group variance", "Variance of the group mean parameter", "Within-group observation variance", "Variance of all group effects", "Variance of the grand mean parameter"],
+      "choices": [
+        "Between-group variance",
+        "Variance of the group mean parameter",
+        "Within-group observation variance",
+        "Variance of all group effects",
+        "Variance of the grand mean parameter"
+      ],
       "answer": "Within-group observation variance",
       "explanation": "Holding the group mean fixed leaves the observation variance within its group.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., §5.4, Estimating a normal population. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
-      "convention": "Normal(mean, variance)."
+      "convention": "Normal(mean, variance).",
+      "math_clue": "$Y_{ij}\\mid\\theta_j,\\sigma\\sim\\mathcal{N}(\\theta_j,\\sigma^2)$\nGroups vary through the indexed theta. What does $\\sigma^2$ represent?"
     },
     {
       "id": "grad-065",
@@ -784,21 +1191,33 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "This test computes the score at the restricted null fit and scales it by information under the null.",
-      "choices": ["Score test", "Wald test", "Likelihood-ratio test", "Permutation test", "Posterior predictive test"],
+      "choices": [
+        "Score test",
+        "Wald test",
+        "Likelihood-ratio test",
+        "Permutation test",
+        "Posterior predictive test"
+      ],
       "answer": "Score test",
       "explanation": "A score test asks whether the null fit has a large likelihood gradient in the direction of departure.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 383, Score test Stanford STATS 300B, Lecture 6, Testing: likelihood ratio, Wald, Score tests. https://web.stanford.edu/class/stats300b/syllabus.html"
     },
     {
       "id": "grad-066",
-      "concept": "asymptotic variance comparison",
+      "concept": "limiting variance interpretation",
       "level": "Graduate Mix",
       "difficulty": "hard",
       "clue_type": "definition",
-      "clue": "Two estimators have the same normal limit center and scaling. One has limiting variance 2 and the other 5. What favors the first?",
-      "choices": ["Lower finite-sample bias", "A higher convergence rate", "Exact finite-sample coverage", "Lower sample size by definition", "Greater asymptotic precision"],
+      "clue": "Two asymptotically normal estimators have equal centers and scaling. What does a smaller limiting variance imply?",
+      "choices": [
+        "Greater asymptotic bias",
+        "Slower convergence in probability",
+        "A larger limiting standard error",
+        "Exact finite-sample normality",
+        "Greater asymptotic precision"
+      ],
       "answer": "Greater asymptotic precision",
-      "explanation": "Under the same scaling, the smaller limiting variance gives a narrower large-sample distribution.",
+      "explanation": "Under the same scaling, a smaller limiting variance indicates a more concentrated large-sample error.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 24, Asymptotic efficiency"
     },
     {
@@ -808,7 +1227,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "A 90% credible set includes only points whose posterior density is at least the density anywhere outside it.",
-      "choices": ["Equal-tail credible set", "Central prediction interval", "Highest posterior density set", "Wald confidence set", "Bootstrap percentile set"],
+      "choices": [
+        "Equal-tail credible set",
+        "Central prediction interval",
+        "Highest posterior density set",
+        "Wald confidence set",
+        "Bootstrap percentile set"
+      ],
       "answer": "Highest posterior density set",
       "explanation": "A highest-density set collects the most dense parameter values until reaching the required posterior mass.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 205, Highest posterior density region Lehmann and Romano, Testing Statistical Hypotheses, §5.7, Bayesian Confidence Sets. https://sites.stat.washington.edu/jaw/COURSES/580s/582/HO/Lehmann_and_Romano-TestingStatisticalHypotheses.pdf"
@@ -820,7 +1245,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "What happens to information sharing if independent group effects have known common prior hyperparameters?",
-      "choices": ["Common prior targets, no group-to-group learning", "Data in each group update the shared hyperparameters", "Group estimates must all be identical", "The groups become perfectly correlated", "Within-group noise becomes zero"],
+      "choices": [
+        "Common prior targets, no group-to-group learning",
+        "Data in each group update the shared hyperparameters",
+        "Group estimates must all be identical",
+        "The groups become perfectly correlated",
+        "Within-group noise becomes zero"
+      ],
       "answer": "Common prior targets, no group-to-group learning",
       "explanation": "With fixed hyperparameters and independent likelihoods, observations in other groups cannot update a group effect.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
@@ -833,7 +1264,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "To assess next-month forecasts, train on earlier months and repeatedly score the next available month.",
-      "choices": ["Random leave-one-out validation", "In-sample fit assessment", "Prior predictive checking", "Rolling-origin validation", "Leave-one-group-out validation"],
+      "choices": [
+        "Random leave-one-out validation",
+        "In-sample fit assessment",
+        "Prior predictive checking",
+        "Rolling-origin validation",
+        "Leave-one-group-out validation"
+      ],
       "answer": "Rolling-origin validation",
       "explanation": "Keeping training before the forecast cutoff mimics the information available at deployment.",
       "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation, Cross-validation with spatio-temporal data. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html"
@@ -845,7 +1282,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Want to simulate a new hospital, not more patients in observed hospitals. Which quantities must be generated anew?",
-      "choices": ["Only the existing hospital effects", "The new hospital’s latent effects", "Only the original fitted values", "The old patients’ observed outcomes", "The previously recorded covariates"],
+      "choices": [
+        "Only the existing hospital effects",
+        "The new hospital’s latent effects",
+        "Only the original fitted values",
+        "The old patients’ observed outcomes",
+        "The previously recorded covariates"
+      ],
       "answer": "The new hospital’s latent effects",
       "explanation": "A replicate from a new hospital needs its own draw from the group-level distribution.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 7, Evaluating, comparing, and expanding models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §2.5, Choices in defining the likelihood and predictive quantities. https://stat.columbia.edu/~gelman/research/published/waic_understand3.pdf"
@@ -857,21 +1300,33 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A count model looks good on the mean but may miss extra zeros. What statistic directly probes this issue?",
-      "choices": ["Number of zero counts", "Sample mean count", "Largest observed count", "Median positive count", "Number of distinct positive counts"],
+      "choices": [
+        "Number of zero counts",
+        "Sample mean count",
+        "Largest observed count",
+        "Median positive count",
+        "Number of distinct positive counts"
+      ],
       "answer": "Number of zero counts",
       "explanation": "Replicated zero counts can be compared with the observed zero count to assess that specific mismatch.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., §6.3, Posterior predictive checking. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
     },
     {
       "id": "grad-072",
-      "concept": "group shrinkage and reliability",
+      "concept": "shrinkage and group size",
       "level": "Graduate Mix",
       "difficulty": "hard",
       "clue_type": "scenario",
-      "clue": "Two schools have identical raw scores. One estimate is based on five pupils, the other on 500. Which is pulled more toward the modeled mean?",
-      "choices": ["The 500-pupil school", "Both equally in any model", "The school with the larger raw score", "The five-pupil school", "Neither when using partial pooling"],
-      "answer": "The five-pupil school",
-      "explanation": "A noisier group estimate gets less weight than a more precise one in a normal hierarchical model.",
+      "clue": "Two schools have the same unpooled effect above the shared mean and equal residual variance. Which school’s estimate is pulled more toward the shared mean?",
+      "choices": [
+        "The school with more observations",
+        "Both receive identical shrinkage",
+        "The school with the larger unpooled effect",
+        "The school with fewer observations",
+        "The school with the smaller residual variance"
+      ],
+      "answer": "The school with fewer observations",
+      "explanation": "Fewer observations normally make the unpooled estimate less precise, so its posterior estimate leans more on the shared mean.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., §5.5, Estimating treatment effects in eight schools. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
       "convention": "Assume otherwise equal conditions, including the same per-pupil variance and a positive between-school variance."
     },
@@ -882,10 +1337,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "Var(T) ≥ 1 / I(θ)\nT is unbiased for θ, and I is sample Fisher information in a regular scalar model.",
-      "choices": ["Chebyshev bound", "Cramér–Rao lower bound", "Hoeffding bound", "Wald confidence bound", "Bayesian van Trees bound"],
+      "choices": [
+        "Chebyshev bound",
+        "Cramér–Rao lower bound",
+        "Hoeffding bound",
+        "Wald confidence bound",
+        "Bayesian van Trees bound"
+      ],
       "answer": "Cramér–Rao lower bound",
       "explanation": "The Cramér–Rao inequality bounds the variance of a regular unbiased estimator from below.",
-      "reference": "Stanford STATS 200, Lecture 15, Fisher information and the Cramér–Rao lower bound. https://web.stanford.edu/class/stats200/Lecture15.pdf"
+      "reference": "Stanford STATS 200, Lecture 15, Fisher information and the Cramér–Rao lower bound. https://web.stanford.edu/class/stats200/Lecture15.pdf",
+      "math_clue": "$\\operatorname{Var}(T)\\geq\\frac{1}{I(\\theta)}$\nT is unbiased for the parameter and I is sample Fisher information in a regular scalar model."
     },
     {
       "id": "grad-074",
@@ -894,10 +1356,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "[(θ̂ − θ₀) / SE(θ̂)]²\nUse the unrestricted estimate and its estimated standard error.",
-      "choices": ["Scalar score statistic", "Likelihood-ratio statistic", "Posterior predictive p-value", "Bayes factor", "Scalar Wald statistic"],
+      "choices": [
+        "Scalar score statistic",
+        "Likelihood-ratio statistic",
+        "Posterior predictive p-value",
+        "Bayes factor",
+        "Scalar Wald statistic"
+      ],
       "answer": "Scalar Wald statistic",
       "explanation": "The Wald statistic measures the squared estimated distance from the null in standard-error units.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 451, Wald’s test Stanford STATS 300B, Lecture 6, Testing: likelihood ratio, Wald, Score tests. https://web.stanford.edu/class/stats300b/syllabus.html"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 451, Wald’s test Stanford STATS 300B, Lecture 6, Testing: likelihood ratio, Wald, Score tests. https://web.stanford.edu/class/stats300b/syllabus.html",
+      "math_clue": "$\\left[\\frac{\\hat{\\theta}-\\theta_0}{\\operatorname{SE}(\\hat{\\theta})}\\right]^2$\nUse the unrestricted estimate and its estimated standard error."
     },
     {
       "id": "grad-075",
@@ -906,10 +1375,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "τ² / (τ² + σ²)\nIndependent random-intercept variance τ² and residual variance σ².",
-      "choices": ["Between-group variance", "Residual variance", "Within-group intraclass correlation", "Cross-group correlation", "Posterior predictive variance"],
+      "choices": [
+        "Between-group variance",
+        "Residual variance",
+        "Within-group intraclass correlation",
+        "Cross-group correlation",
+        "Posterior predictive variance"
+      ],
       "answer": "Within-group intraclass correlation",
       "explanation": "Two distinct members of a group share the random intercept, which contributes their covariance.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 221, Intraclass correlation Penn State STAT 502, Lesson 6, Random Effects and Introduction to Mixed Models, intraclass correlation coefficient. https://online.stat.psu.edu/stat502/Lesson06"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 221, Intraclass correlation Penn State STAT 502, Lesson 6, Random Effects and Introduction to Mixed Models, intraclass correlation coefficient. https://online.stat.psu.edu/stat502/Lesson06",
+      "math_clue": "$\\frac{\\tau^2}{\\tau^2+\\sigma^2}$\nThe variances are for the independent random intercept and residual, respectively."
     },
     {
       "id": "grad-076",
@@ -918,10 +1394,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "Σᵢ log p(yᵢ∣y₋ᵢ)\nEach i is left out when fitting the predictor for yᵢ.",
-      "choices": ["In-sample log predictive score", "Leave-one-out log predictive score", "Prior predictive log score", "Log Bayes factor", "Maximum log likelihood"],
+      "choices": [
+        "In-sample log predictive score",
+        "Leave-one-out log predictive score",
+        "Prior predictive log score",
+        "Log Bayes factor",
+        "Maximum log likelihood"
+      ],
       "answer": "Leave-one-out log predictive score",
       "explanation": "Every observation is scored using a predictive density conditioned on the remaining data.",
-      "reference": "Vehtari, Gelman and Gabry, Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC, expected log pointwise predictive density for leave-one-out cross-validation. https://sites.stat.columbia.edu/gelman/research/published/loo_stan.pdf"
+      "reference": "Vehtari, Gelman and Gabry, Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC, expected log pointwise predictive density for leave-one-out cross-validation. https://sites.stat.columbia.edu/gelman/research/published/loo_stan.pdf",
+      "math_clue": "$\\sum_i\\log p(y_i\\mid y_{-i})$\nEach i is left out when fitting the predictor for that outcome."
     },
     {
       "id": "grad-077",
@@ -930,7 +1413,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "The sequence converges pointwise on an event with probability one.",
-      "choices": ["Convergence in distribution", "Convergence of means", "Convergence in mean square", "Convergence in probability", "Almost sure convergence"],
+      "choices": [
+        "Convergence in distribution",
+        "Convergence of means",
+        "Convergence in mean square",
+        "Convergence in probability",
+        "Almost sure convergence"
+      ],
       "answer": "Almost sure convergence",
       "explanation": "Convergence almost surely concerns entire sample paths except on a probability-zero event.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 11, Almost sure convergence"
@@ -942,7 +1431,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "Which posterior point summary minimizes expected absolute error for a scalar parameter?",
-      "choices": ["Posterior mean", "Posterior mode", "Posterior median", "Posterior standard deviation", "Posterior variance"],
+      "choices": [
+        "Posterior mean",
+        "Posterior mode",
+        "Posterior median",
+        "Posterior standard deviation",
+        "Posterior variance"
+      ],
       "answer": "Posterior median",
       "explanation": "A posterior median balances posterior mass on either side and minimizes absolute loss.",
       "reference": "Luc Demortier, Bayesian Statistics, Bayesian Point Estimation, absolute loss. https://hep-physics.rockefeller.edu/luc/talks/BayesianStatistics2013.pdf"
@@ -954,7 +1449,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "An analyst uses posterior quantiles that leave the same probability below and above the interval. Which interval is this?",
-      "choices": ["Equal-tail credible interval", "Highest-density credible interval", "Prior predictive interval", "Posterior predictive interval", "Wald confidence interval"],
+      "choices": [
+        "Equal-tail credible interval",
+        "Highest-density credible interval",
+        "Prior predictive interval",
+        "Posterior predictive interval",
+        "Wald confidence interval"
+      ],
       "answer": "Equal-tail credible interval",
       "explanation": "The posterior probability excluded by the interval is split equally between the lower and upper tails.",
       "reference": "Lehmann and Romano, Testing Statistical Hypotheses, §5.7, Bayesian Confidence Sets. https://sites.stat.washington.edu/jaw/COURSES/580s/582/HO/Lehmann_and_Romano-TestingStatisticalHypotheses.pdf"
@@ -966,7 +1467,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "For a nested comparison, how does the unrestricted log-likelihood maximum compare with the restricted maximum?",
-      "choices": ["Always strictly lower", "Always strictly higher", "Never higher", "Never lower", "Always exactly equal"],
+      "choices": [
+        "Always strictly lower",
+        "Always strictly higher",
+        "Never higher",
+        "Never lower",
+        "Always exactly equal"
+      ],
       "answer": "Never lower",
       "explanation": "Every parameter value allowed by the restricted model is also available to the unrestricted fit.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood ratio test"
@@ -978,7 +1485,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A first-order delta approximation gives variance zero at the target. What could yield a nondegenerate transformed limit?",
-      "choices": ["A different likelihood score only", "Ignoring the centering constant", "A higher-order expansion", "Keeping the zero variance formula", "Replacing the sample size with one"],
+      "choices": [
+        "A different likelihood score only",
+        "Ignoring the centering constant",
+        "A higher-order expansion",
+        "Keeping the zero variance formula",
+        "Replacing the sample size with one"
+      ],
       "answer": "A higher-order expansion",
       "explanation": "If the first derivative is zero, a higher-order term can determine the transformed statistic’s scaling and limit.",
       "reference": "Stanford STATS 300B, Delta method, Higher-order delta methods. https://web.stanford.edu/class/stats300b/Slides/02-delta-method.pdf"
@@ -990,7 +1503,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Choose weights for combining models by maximizing the ensemble’s held-out log predictive performance.",
-      "choices": ["Predictive stacking", "Bayesian model averaging by posterior odds", "Bayes factor testing", "Prior predictive checking", "Choosing the minimum DIC model"],
+      "choices": [
+        "Predictive stacking",
+        "Bayesian model averaging by posterior odds",
+        "Bayes factor testing",
+        "Prior predictive checking",
+        "Choosing the minimum DIC model"
+      ],
       "answer": "Predictive stacking",
       "explanation": "Stacking optimizes weights for the combined predictive distribution using out-of-sample scores.",
       "reference": "Yao et al., Using Stacking to Average Bayesian Predictive Distributions, stacking of predictive distributions. https://sites.stat.columbia.edu/gelman/research/published/stacking.pdf"
@@ -1002,10 +1521,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "p ∼ Dirichlet(α) and X ∣ p ∼ Multinomial(n, p).\nWhich family contains p’s posterior?",
-      "choices": ["Multinomial", "Multivariate normal", "Multivariate Student t", "Dirichlet", "Logistic normal"],
+      "choices": [
+        "Multinomial",
+        "Multivariate normal",
+        "Multivariate Student t",
+        "Dirichlet",
+        "Logistic normal"
+      ],
       "answer": "Dirichlet",
       "explanation": "The Dirichlet prior is conjugate for the multinomial probabilities. Observed category counts update its parameters.",
-      "reference": "UC Berkeley STAT 238, Lecture Thirteen, Dirichlet Prior and Multinomial Likelihood. https://stat238.berkeley.edu/spring-2026/lecturethirteen238spring2026/"
+      "reference": "UC Berkeley STAT 238, Lecture Thirteen, Dirichlet Prior and Multinomial Likelihood. https://stat238.berkeley.edu/spring-2026/lecturethirteen238spring2026/",
+      "math_clue": "$p\\sim\\operatorname{Dirichlet}(\\alpha)$\n$X\\mid p\\sim\\operatorname{Multinomial}(n,p)$\nWhich family contains the posterior of p?"
     },
     {
       "id": "grad-084",
@@ -1014,10 +1540,1220 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "For any ε > 0, some finite M satisfies supₙ P(∣Zₙ∣ > M) < ε. What property does this define?",
-      "choices": ["Uniform integrability", "Tightness", "Asymptotic normality", "Almost sure convergence", "Mean-square convergence"],
+      "choices": [
+        "Uniform integrability",
+        "Tightness",
+        "Asymptotic normality",
+        "Almost sure convergence",
+        "Mean-square convergence"
+      ],
       "answer": "Tightness",
       "explanation": "A single bounded interval can contain arbitrarily high probability for every distribution in the sequence.",
-      "reference": "Stanford STATS 300B, Lecture 14, Tightness, Definitions 0.1–0.2 and Theorem 2. https://web.stanford.edu/class/stats300b/ScribeNotes/2021/lecture-14.pdf"
+      "reference": "Stanford STATS 300B, Lecture 14, Tightness, Definitions 0.1–0.2 and Theorem 2. https://web.stanford.edu/class/stats300b/ScribeNotes/2021/lecture-14.pdf",
+      "math_clue": "$\\sup_n P(|Z_n|>M)<\\varepsilon$\nFor any positive ε, there is some finite M satisfying this inequality. What property does this define?"
+    },
+    {
+      "id": "grad-085",
+      "concept": "relative support direction",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "For fixed observed data, the likelihood at θ₁ exceeds the likelihood at θ₂. How should this comparison be read?",
+      "choices": [
+        "The data favor θ₁ over θ₂ by the likelihood criterion",
+        "The prior must favor θ₁ over θ₂",
+        "The data favor θ₂ over θ₁ by the likelihood criterion",
+        "Both parameter values have equal support",
+        "The probability that θ₁ is true must exceed one half"
+      ],
+      "answer": "The data favor θ₁ over θ₂ by the likelihood criterion",
+      "explanation": "The likelihood comparison concerns which parameter value assigns more support to the observed data.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 244, Law of likelihood",
+      "math_clue": "For fixed data, $L(\\theta_1)>L(\\theta_2)$.\nHow should this comparison be read?"
+    },
+    {
+      "id": "grad-086",
+      "concept": "likelihood scale invariance",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Every value of a likelihood L(θ) is multiplied by 10. What happens to the maximizer?",
+      "choices": [
+        "It stays the same",
+        "It becomes ten times larger",
+        "It becomes zero",
+        "It becomes ten times smaller",
+        "It shifts by ln(10)"
+      ],
+      "answer": "It stays the same",
+      "explanation": "Scaling by a positive constant preserves the ordering of likelihood values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood",
+      "math_clue": "Every value of likelihood $L(\\theta)$ is multiplied by 10. What happens to the maximizer?"
+    },
+    {
+      "id": "grad-087",
+      "concept": "bernoulli likelihood factorization",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "pˢ(1 − p)ᶠ\nIndependent binary trials have s successes and f failures. What is this expression as a function of p?",
+      "choices": [
+        "Binomial probability of the success count with all orderings",
+        "Bernoulli posterior density under any prior",
+        "Bernoulli likelihood for the observed trial sequence",
+        "Score function for a Bernoulli probability",
+        "Expected information from the trials"
+      ],
+      "answer": "Bernoulli likelihood for the observed trial sequence",
+      "explanation": "The product gives one success factor or failure factor for each observation in the particular sequence.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood",
+      "math_clue": "$p^s(1-p)^f$\nIndependent binary trials have s successes and f failures. What is this expression as a function of p?"
+    },
+    {
+      "id": "grad-088",
+      "concept": "boundary maximum and score equation",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A likelihood is increasing throughout a closed parameter interval. Which feature describes its maximum over that interval?",
+      "choices": [
+        "It occurs at the lower boundary",
+        "It occurs at the upper boundary",
+        "It occurs at an interior score root",
+        "It is attained equally throughout the interval",
+        "It requires switching to a posterior mode"
+      ],
+      "answer": "It occurs at the upper boundary",
+      "explanation": "The largest admissible parameter gives the highest value when the likelihood increases throughout the interval.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation"
+    },
+    {
+      "id": "grad-089",
+      "concept": "stationary point score equation",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "U(λ) = dℓ(λ)/dλ\nAt an interior point, the score changes from positive to negative as λ increases. What does that indicate for the log-likelihood there?",
+      "choices": [
+        "A local minimum",
+        "An increasing slope throughout the interval",
+        "A local maximum",
+        "A flat log-likelihood everywhere",
+        "A change in the parameter space"
+      ],
+      "answer": "A local maximum",
+      "explanation": "A positive score means the log-likelihood rises, and a negative score means it falls.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 383, Score test",
+      "math_clue": "$U(\\lambda)=\\frac{d\\ell(\\lambda)}{d\\lambda}$\nAt an interior point the score changes from positive to negative as λ increases. What does that indicate for the log-likelihood there?"
+    },
+    {
+      "id": "grad-090",
+      "concept": "likelihood curvature and uncertainty",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two regular scalar likelihoods use the same parameter scale. One log-likelihood is more sharply peaked near its maximum. What does the curvature approximation indicate for that fit?",
+      "choices": [
+        "Greater observed information and a smaller standard error",
+        "Less observed information and a smaller standard error",
+        "Greater observed information and a larger standard error",
+        "Equal observed information and a larger standard error",
+        "Less observed information and an unchanged standard error"
+      ],
+      "answer": "Greater observed information and a smaller standard error",
+      "explanation": "Greater negative curvature at the maximum yields greater observed information and a smaller curvature-based standard error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s information"
+    },
+    {
+      "id": "grad-091",
+      "concept": "likelihood versus parameter density",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "After collecting data, a likelihood is graphed against θ. What is on the vertical axis?",
+      "choices": [
+        "The posterior density after updating",
+        "The sampling frequency of each possible dataset",
+        "The frequency distribution of observed θ values",
+        "The prior density of θ",
+        "The model's support for the fixed data at each θ"
+      ],
+      "answer": "The model's support for the fixed data at each θ",
+      "explanation": "A likelihood treats the observed data as fixed and varies the parameter.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood"
+    },
+    {
+      "id": "grad-092",
+      "concept": "conditional nuisance removal",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A model removes a nuisance parameter by forming the likelihood given a statistic sufficient for that nuisance parameter. What method is this?",
+      "choices": [
+        "Marginal likelihood via integration",
+        "Composite likelihood",
+        "Conditional likelihood",
+        "Profile likelihood",
+        "Penalized likelihood"
+      ],
+      "answer": "Conditional likelihood",
+      "explanation": "The construction conditions on a statistic to remove the nuisance parameter.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 98, Conditional likelihood"
+    },
+    {
+      "id": "grad-093",
+      "concept": "nested comparison zero gain",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A restricted model attains the same maximized likelihood as its unrestricted alternative. What does the likelihood-ratio comparison show?",
+      "choices": [
+        "The unrestricted fit gained no log-likelihood",
+        "The unrestricted fit gained the maximum possible log-likelihood",
+        "The restricted fit has fewer data points",
+        "The score must be undefined under either fit",
+        "The models necessarily make identical predictions everywhere"
+      ],
+      "answer": "The unrestricted fit gained no log-likelihood",
+      "explanation": "Equal maxima give no improvement in fitted likelihood when the restrictions are released.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood ratio test"
+    },
+    {
+      "id": "grad-094",
+      "concept": "ancillary sample size",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A random sample size is generated by a known mechanism independent of the response model parameter. What is the realized size with respect to that parameter?",
+      "choices": [
+        "An observed information value",
+        "An ancillary statistic",
+        "A score statistic",
+        "A sufficient statistic for the response parameter",
+        "A maximum likelihood estimate"
+      ],
+      "answer": "An ancillary statistic",
+      "explanation": "Its sampling distribution is known without the response parameter.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 14, Ancillary statistic"
+    },
+    {
+      "id": "grad-095",
+      "concept": "wilks degrees of freedom interpretation",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For regular nested models, what determines the chi-square degrees of freedom in Wilks’ theorem?",
+      "choices": [
+        "The full model’s number of training records",
+        "The number of free parameter dimensions removed by the null restrictions",
+        "The number of nuisance parameters shared by both models",
+        "The full model’s number of fitted values",
+        "The number of distinct likelihood optima found"
+      ],
+      "answer": "The number of free parameter dimensions removed by the null restrictions",
+      "explanation": "The degrees of freedom equal the dimension difference between the two nested parameter spaces.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 460, Wilks’ theorem"
+    },
+    {
+      "id": "grad-096",
+      "concept": "profile maximization order",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Interest is in θ, and η is a nuisance parameter. How is the profile likelihood at θ = 2 found?",
+      "choices": [
+        "Fix both parameters at 2",
+        "Average the likelihood over observed θ values",
+        "Maximize jointly and report the fitted θ",
+        "Fix θ at 2 and maximize over η",
+        "Fix η at 2 and maximize over θ"
+      ],
+      "answer": "Fix θ at 2 and maximize over η",
+      "explanation": "The profile at a chosen θ comes from the best fitting nuisance value at that θ.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 342, Profile likelihood"
+    },
+    {
+      "id": "grad-097",
+      "concept": "consistency despite variance",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "For a sequence of unbiased estimates, the variance tends to zero. Which conclusion follows from Chebyshev’s inequality?",
+      "choices": [
+        "The estimates converge in probability to the parameter",
+        "The estimates cannot be consistent",
+        "The estimates have exactly zero error after a finite sample size",
+        "The estimates are normal at every sample size",
+        "The estimates are unbiased only in the limit"
+      ],
+      "answer": "The estimates converge in probability to the parameter",
+      "explanation": "Chebyshev bounds the probability of a fixed-size error by the variance divided by the squared error threshold.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 77, Chebyshev’s inequality"
+    },
+    {
+      "id": "grad-098",
+      "concept": "sqrt sample size standard error rate",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "SE(Tₙ) ≈ c/√n\nWhat does this large-sample expression describe?",
+      "choices": [
+        "An inverse-sample-size standard-error rate",
+        "A standard error growing with sample size",
+        "An inverse-square-root standard-error rate",
+        "A constant nonvanishing bias",
+        "A fixed standard error across sample sizes"
+      ],
+      "answer": "An inverse-square-root standard-error rate",
+      "explanation": "When the multiplier stays fixed, the denominator grows at the square-root rate.",
+      "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
+      "math_clue": "$\\operatorname{SE}(T_n)\\approx\\frac{c}{\\sqrt{n}}$\nWhat does this large-sample expression describe?"
+    },
+    {
+      "id": "grad-099",
+      "concept": "coin frequency convergence",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An i.i.d. coin has success probability 0.4. What does the weak law say about the success fraction’s chance of missing 0.4 by more than 0.1?",
+      "choices": [
+        "It tends to 0.4",
+        "It reaches zero at every sufficiently large finite n",
+        "It tends to 0.1",
+        "It tends to zero",
+        "It stays at its one-trial value"
+      ],
+      "answer": "It tends to zero",
+      "explanation": "A fixed nonzero error tolerance eventually contains the sample fraction with probability approaching one.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 244, Law of large numbers"
+    },
+    {
+      "id": "grad-100",
+      "concept": "delta method transformed variance",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "[g′(θ)]²V\nAn asymptotically normal estimate of θ has limiting variance V on the √n scale. What does this expression give?",
+      "choices": [
+        "The untransformed limiting standard error",
+        "The variance of g evaluated only at the fixed θ",
+        "The second-order bias of the transformed estimator",
+        "The transformed estimate’s exact variance at every sample size",
+        "The first-order limiting variance after transforming by g"
+      ],
+      "answer": "The first-order limiting variance after transforming by g",
+      "explanation": "The first-order delta method multiplies the limiting variance by the squared derivative at the target.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 128, Delta (δ) method",
+      "math_clue": "$[g'(\\theta)]^2 V$\nAn asymptotically normal estimate of θ has limiting variance V on the square-root-n scale. What does this expression give?"
+    },
+    {
+      "id": "grad-101",
+      "concept": "plug-in denominator",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A centered estimator has a normal limit after scaling. Its true standard error multiplier is replaced by a consistent positive estimate. What justifies the same limit?",
+      "choices": [
+        "Wilks’ theorem",
+        "The law of total variance",
+        "The factorization criterion",
+        "Slutsky’s theorem",
+        "Bayes’ theorem"
+      ],
+      "answer": "Slutsky’s theorem",
+      "explanation": "A ratio involving a random denominator that converges in probability to a nonzero constant has the corresponding distributional limit.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 399, Slutsky’s theorem"
+    },
+    {
+      "id": "grad-102",
+      "concept": "normal limit without exact normality",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A centered and scaled statistic converges in distribution to standard normal. What does this imply about the unscaled statistic’s finite-sample distribution?",
+      "choices": [
+        "Its exact variance must be one",
+        "It is normal once the sample reaches 30",
+        "It is normal for every sample size",
+        "It must have a continuous sampling distribution",
+        "It can be nonnormal at every finite sample size"
+      ],
+      "answer": "It can be nonnormal at every finite sample size",
+      "explanation": "Convergence describes the limiting behavior and does not require exact finite-sample normality.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotic distribution"
+    },
+    {
+      "id": "grad-103",
+      "concept": "asymptotic efficiency comparison caveat",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two consistent estimators both have normal limits, one scaled by n and the other by √n. Why can their displayed limiting variances not be compared directly?",
+      "choices": [
+        "Normal limits never permit precision comparisons",
+        "Consistency requires both limiting variances to be zero",
+        "Normal limits imply equal exact finite-sample variances",
+        "The sample size must be random to compare the estimators",
+        "The two variances are stated under different rates of scaling"
+      ],
+      "answer": "The two variances are stated under different rates of scaling",
+      "explanation": "Limiting variances measure fluctuations after rescaling. A comparison must account for how each estimator was scaled.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 24, Asymptotic relative efficiency"
+    },
+    {
+      "id": "grad-104",
+      "concept": "persistent bias asymptotic",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An estimator’s expected value remains θ + 0.2 at every n. What follows about asymptotic unbiasedness?",
+      "choices": [
+        "It is not asymptotically unbiased",
+        "Only its variance determines asymptotic unbiasedness",
+        "It is asymptotically unbiased if the sample is random",
+        "It is asymptotically unbiased because the bias is constant",
+        "A statement about its expectation cannot address unbiasedness"
+      ],
+      "answer": "It is not asymptotically unbiased",
+      "explanation": "For asymptotic unbiasedness the expected value must approach θ, leaving no limiting bias.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotically unbiased estimator"
+    },
+    {
+      "id": "grad-105",
+      "concept": "almost sure exceptional paths",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "What kind of exceptional sample paths can fail to converge without contradicting almost sure convergence?",
+      "choices": [
+        "Any paths comprising a fixed positive fraction of outcomes",
+        "Any paths on which the estimator is unbiased",
+        "All paths for an estimator without a normal limit",
+        "All paths on which the target is positive",
+        "Paths confined to an event of probability zero"
+      ],
+      "answer": "Paths confined to an event of probability zero",
+      "explanation": "Almost sure convergence allows nonconvergent paths only within a probability-zero event.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 11, Almost sure convergence"
+    },
+    {
+      "id": "grad-106",
+      "concept": "continuous mapping with square root",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A nonnegative estimator tends in probability to a positive target. Why does applying the square root preserve convergence in probability to the transformed target?",
+      "choices": [
+        "The square root must be linear at the target",
+        "The square root is continuous at the target",
+        "The estimator must have a normal sampling distribution",
+        "The transformation preserves all moments",
+        "The estimator already equals its target almost surely"
+      ],
+      "answer": "The square root is continuous at the target",
+      "explanation": "Continuity of the mapping at the target is sufficient for the probability limit to transform with it.",
+      "reference": "Stanford STATS 300B, Convergence of Random Variables, Continuous mapping theorem. https://web.stanford.edu/class/stats300b/Slides/01-convergence.pdf"
+    },
+    {
+      "id": "grad-107",
+      "concept": "slutsky product limit recognition",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "Xₙ →ᵈ X and Aₙ →ᵖ a imply AₙXₙ →ᵈ aX.\nWhich theorem guarantees this when a is a constant?",
+      "choices": [
+        "Wilks’ theorem",
+        "The Cramér–Rao inequality",
+        "The law of total variance",
+        "The Neyman–Pearson lemma",
+        "Slutsky’s theorem"
+      ],
+      "answer": "Slutsky’s theorem",
+      "explanation": "Slutsky’s theorem combines a distributional limit with convergence in probability to a constant.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 399, Slutsky’s theorem",
+      "math_clue": "$X_n\\overset{d}{\\to}X,\\quad A_n\\overset{p}{\\to}a\\quad\\Longrightarrow\\quad A_nX_n\\overset{d}{\\to}aX$\nWhich theorem guarantees this when a is a constant?"
+    },
+    {
+      "id": "grad-108",
+      "concept": "vanishing excursions in probability",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Why can increasingly large but increasingly rare errors be compatible with convergence in probability to a target?",
+      "choices": [
+        "Every realized sequence must eventually stay within one common tolerance",
+        "The expected size of the error must grow",
+        "The estimator must equal its target once enough data are observed",
+        "Only the probability of exceeding each fixed tolerance must tend to zero",
+        "Nearly all errors must be exactly the same size"
+      ],
+      "answer": "Only the probability of exceeding each fixed tolerance must tend to zero",
+      "explanation": "A large error is compatible with convergence in probability when the chance of exceeding any fixed tolerance vanishes.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Convergence in probability"
+    },
+    {
+      "id": "grad-109",
+      "concept": "consistency and persistent bias",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A consistent estimator is deliberately shifted by adding a fixed nonzero offset. Why does this break consistency for the original target?",
+      "choices": [
+        "The variance is forced to diverge",
+        "Its convergence changes to almost sure convergence only",
+        "The offset disappears with increasing sample size",
+        "A constant shift destroys its distributional limit",
+        "The probability limit retains the fixed offset"
+      ],
+      "answer": "The probability limit retains the fixed offset",
+      "explanation": "A fixed displacement does not vanish as the sample grows.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency"
+    },
+    {
+      "id": "grad-110",
+      "concept": "posterior odds factors",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "formula",
+      "clue": "Opost = B₁₀ Oprior\nWhat does B₁₀ represent in this comparison of two Bayesian models?",
+      "choices": [
+        "The posterior probability of model 1",
+        "The prior probability of model 0",
+        "The ratio of maximized likelihoods in all cases",
+        "The model 1 posterior predictive mean",
+        "The Bayes factor for model 1 against model 0"
+      ],
+      "answer": "The Bayes factor for model 1 against model 0",
+      "explanation": "The Bayes factor measures how the observed data change the prior odds into posterior odds.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 39, Bayes’ Theorem",
+      "math_clue": "$O_{\\mathrm{post}}=B_{10}\\,O_{\\mathrm{prior}}$\nWhat does the multiplier represent in this comparison of two Bayesian models?"
+    },
+    {
+      "id": "grad-111",
+      "concept": "beta update parameter roles",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Prior Beta(α, β) becomes posterior Beta(α + s, β + f) after Bernoulli data.\nWhich observation increases the second shape parameter?",
+      "choices": [
+        "A failure",
+        "A success",
+        "Any observation, irrespective of outcome",
+        "Only a missing observation",
+        "Only a change in the observation probability before collecting data"
+      ],
+      "answer": "A failure",
+      "explanation": "The second beta shape receives the observed failure count.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Conjugate prior",
+      "math_clue": "$\\operatorname{Beta}(\\alpha,\\beta)\\longrightarrow\\operatorname{Beta}(\\alpha+s,\\beta+f)$\nThis is a Bernoulli update. Which observation increases the second shape parameter?"
+    },
+    {
+      "id": "grad-112",
+      "concept": "posterior predictive bernoulli expectation",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For a future Bernoulli observation, which summary of the posterior for success probability gives its predictive chance of success?",
+      "choices": [
+        "The posterior mean of the success probability",
+        "The posterior mode of the success probability",
+        "The posterior median of the success probability",
+        "The posterior variance of the success probability",
+        "The posterior probability that the success probability exceeds one half"
+      ],
+      "answer": "The posterior mean of the success probability",
+      "explanation": "A single future success has conditional probability p, so averaging over posterior draws gives the posterior mean of p.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior distributions"
+    },
+    {
+      "id": "grad-113",
+      "concept": "posterior disjoint interval credibility",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A posterior is bimodal and has a low-density gap between its modes. Which report can summarize posterior mass without including the gap?",
+      "choices": [
+        "A connected interval spanning both modes and the gap",
+        "A credible set with two disjoint intervals",
+        "The single posterior mean",
+        "A predictive interval for an observation",
+        "A confidence interval for a fitted average"
+      ],
+      "answer": "A credible set with two disjoint intervals",
+      "explanation": "A credible set need not be connected. Separated pieces may represent separated high-density regions.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 114, Credible region"
+    },
+    {
+      "id": "grad-114",
+      "concept": "prior support under updating",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Can ordinary Bayes updating with finite positive evidence place posterior mass on a parameter set to which the prior assigns no mass?",
+      "choices": [
+        "Yes, whenever the likelihood density is positive there",
+        "Yes, whenever the fitted estimate lies in that set",
+        "Yes, if the sample is sufficiently large",
+        "No, it leaves that set at zero mass",
+        "Yes, if the prior is continuous"
+      ],
+      "answer": "No, it leaves that set at zero mass",
+      "explanation": "Multiplying by the likelihood and normalizing preserves zero probability on any prior-null set.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 39, Bayes’ Theorem"
+    },
+    {
+      "id": "grad-115",
+      "concept": "prior predictive simulation ordering",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "To simulate a single hypothetical outcome before seeing any data, what is drawn immediately before drawing that outcome from its sampling model?",
+      "choices": [
+        "A parameter value from the posterior",
+        "A residual from the fitted data",
+        "A hypothesis from the likelihood",
+        "An estimate from a held-out fold",
+        "A parameter value from the prior"
+      ],
+      "answer": "A parameter value from the prior",
+      "explanation": "The prior predictive recipe samples unknown parameters from the prior, then data from the sampling distribution.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-116",
+      "concept": "bayes factor direction of evidence",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The posterior odds for model A against model B are lower than the prior odds for the same comparison. Which model did the new data favor?",
+      "choices": [
+        "Model A, because its prior odds remain known",
+        "Neither, because the models have the same names",
+        "Model A, regardless of the direction of change",
+        "Model B, because the odds for A fell",
+        "The model with more parameters, regardless of the odds"
+      ],
+      "answer": "Model B, because the odds for A fell",
+      "explanation": "The data changed the odds against A. The factor by which the odds changed favors B.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayes factor"
+    },
+    {
+      "id": "grad-117",
+      "concept": "posterior normalization purpose",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Why normalize unscaled posterior weights across a set of mutually exclusive and exhaustive parameter values?",
+      "choices": [
+        "To force the weights to be equally likely",
+        "To make their probabilities sum to one",
+        "To make the prior weights sum to zero",
+        "To remove all differences in their likelihoods",
+        "To replace the posterior with the sampling distribution"
+      ],
+      "answer": "To make their probabilities sum to one",
+      "explanation": "Dividing by the sum of all unscaled weights yields a proper discrete posterior.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior distributions"
+    },
+    {
+      "id": "grad-118",
+      "concept": "integrating posterior parameter uncertainty",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A predictive interval comes from conditioning on one fitted parameter value. What component is missing compared with full posterior prediction?",
+      "choices": [
+        "Outcome variability at that fixed value",
+        "Variation across posterior parameter draws",
+        "The mean of the fitted sampling distribution",
+        "The number of observations in the observed dataset",
+        "The sampling-model noise already included in each draw"
+      ],
+      "answer": "Variation across posterior parameter draws",
+      "explanation": "Full prediction mixes the conditional outcome distributions over the posterior uncertainty in the parameters.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-119",
+      "concept": "posterior density parameterization",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A positive parameter θ is transformed to log θ. What generally happens to the posterior mode when changing coordinates?",
+      "choices": [
+        "The mode always becomes zero",
+        "The transformed mode is always log of the original mode",
+        "The transformed mode is always the posterior median",
+        "The change deletes the contribution of the prior",
+        "The mode must be recomputed in the transformed density"
+      ],
+      "answer": "The mode must be recomputed in the transformed density",
+      "explanation": "Density changes by a nonconstant Jacobian, so its maximizing point need not follow the transformation of the original mode.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 272, Maximum a posteriori estimate (MAP)"
+    },
+    {
+      "id": "grad-120",
+      "concept": "credible interval monotone reexpression",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A posterior credible interval describes a positive parameter. Under a monotone log transformation, how can the same posterior mass be represented?",
+      "choices": [
+        "Apply the log transformation to both interval endpoints",
+        "Take the log of the interval width and use it as both endpoints",
+        "Keep the same endpoints in the new units",
+        "Transform only the upper endpoint",
+        "Replace the interval with a prediction for future data"
+      ],
+      "answer": "Apply the log transformation to both interval endpoints",
+      "explanation": "A monotone transformation preserves the probability of an interval event when its endpoints are transformed.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 114, Credible region"
+    },
+    {
+      "id": "grad-121",
+      "concept": "asymmetric loss shifts point summary",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Overestimating a parameter costs more per unit than underestimating it. Which posterior summary reflects this asymmetric absolute loss?",
+      "choices": [
+        "A quantile at a probability above one half",
+        "The median regardless of the cost ratio",
+        "A quantile at a probability below one half",
+        "The posterior mode regardless of the cost ratio",
+        "The posterior standard deviation"
+      ],
+      "answer": "A quantile at a probability below one half",
+      "explanation": "The optimal quantile probability is the underestimation cost divided by the sum of both costs.",
+      "reference": "Manuel Arellano, CEMFI, Quantile Methods, p. 1, Asymmetric absolute loss. https://www.cemfi.es/~arellano/quantile-methods-notes.pdf"
+    },
+    {
+      "id": "grad-122",
+      "concept": "beta prior strength response to data",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Two beta priors have the same mean but one has more total prior concentration. Which mean usually moves less after the same Bernoulli data?",
+      "choices": [
+        "The posterior mean under the less concentrated prior",
+        "The posterior mean under the more concentrated prior",
+        "Both posterior means always move equally",
+        "Whichever posterior has more observed successes when both use the same data",
+        "Whichever prior has greater variance at that mean"
+      ],
+      "answer": "The posterior mean under the more concentrated prior",
+      "explanation": "Holding the prior mean fixed, larger total beta concentration gives the data less relative weight.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Conjugate prior"
+    },
+    {
+      "id": "grad-123",
+      "concept": "nested repeated patient measurements",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Blood pressure is repeatedly measured on each of 40 participants. In a two-level model, what are the groups?",
+      "choices": [
+        "Blood pressure values",
+        "Measurement occasions considered one by one",
+        "Residuals",
+        "Participants",
+        "All readings treated as one group"
+      ],
+      "answer": "Participants",
+      "explanation": "Repeated measurements are nested within participants, allowing person-specific effects.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 288, Multilevel models"
+    },
+    {
+      "id": "grad-124",
+      "concept": "random slope contrast",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Hospitals have different treatment effects but identical modeled baselines. Which term needs to vary by hospital?",
+      "choices": [
+        "The fixed adjustment for age",
+        "The common calendar slope",
+        "The treatment slope",
+        "The outcome measurement unit",
+        "The shared baseline intercept"
+      ],
+      "answer": "The treatment slope",
+      "explanation": "The effect is the contrast between treatment levels, represented by the treatment slope.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 354, Random coefficient models"
+    },
+    {
+      "id": "grad-125",
+      "concept": "pooling target beyond grand mean",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A hierarchical regression models school effects after accounting for school poverty rates. Toward what can a noisy school estimate shrink?",
+      "choices": [
+        "The expected school effect at its poverty rate",
+        "The mean of the unrelated response errors",
+        "The overall mean of raw school scores in all cases",
+        "Its unpooled school estimate",
+        "The poverty rate itself"
+      ],
+      "answer": "The expected school effect at its poverty rate",
+      "explanation": "The group-level regression supplies a conditional target based on the school's predictor.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 288, Multilevel models"
+    },
+    {
+      "id": "grad-126",
+      "concept": "partial pooling heterogeneity limit",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For a normal random-intercept model, what happens to the group intercepts as the between-group variance goes to zero?",
+      "choices": [
+        "They become independent unpooled estimates",
+        "They collapse to a common intercept",
+        "Their residual variance necessarily vanishes",
+        "They remain separated by the original group means",
+        "They take on the observation variance"
+      ],
+      "answer": "They collapse to a common intercept",
+      "explanation": "A distribution with no between-group variance assigns the same intercept to every group.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance components"
+    },
+    {
+      "id": "grad-127",
+      "concept": "normal pooling precision weighting",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "μpost = (wₛ x̄ + wₚ μ)/(wₛ + wₚ)\nThe weights are sampling precision and prior precision. What quantity does the formula describe?",
+      "choices": [
+        "An unpooled maximum likelihood estimate",
+        "A posterior predictive variance",
+        "A partially pooled posterior mean",
+        "A marginal prior mean with no data",
+        "A posterior effective sample size"
+      ],
+      "answer": "A partially pooled posterior mean",
+      "explanation": "With normal sampling and prior distributions, their precisions determine how much each mean contributes.",
+      "reference": "Duke University STA 601, Lecture 3, The Normal Model and Prior/Posterior Predictive Distributions. https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/03-normal-predictive-distributions.html",
+      "math_clue": "$\\mu_{\\mathrm{post}}=\\frac{w_s\\bar{x}+w_p\\mu}{w_s+w_p}$\nThe weights are sampling precision and prior precision. What quantity does the formula describe?"
+    },
+    {
+      "id": "grad-128",
+      "concept": "group-level predictor",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Students are nested in schools. Which candidate is naturally a school-level predictor?",
+      "choices": [
+        "Each student's last exam score",
+        "Each student's age",
+        "Annual budget for the school",
+        "Each student's attendance count",
+        "Each student's study time"
+      ],
+      "answer": "Annual budget for the school",
+      "explanation": "School budget is shared by the students grouped in that institution.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 288, Multilevel models"
+    },
+    {
+      "id": "grad-129",
+      "concept": "crossed grouping factors",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Each clinician treats patients at several clinics, and each clinic has several clinicians. Which random-intercept structure fits these associations?",
+      "choices": [
+        "One patient intercept alone",
+        "Clinicians nested uniquely within clinics",
+        "Crossed clinician and clinic effects",
+        "A common intercept with no group effects",
+        "Clinics nested uniquely within clinicians"
+      ],
+      "answer": "Crossed clinician and clinic effects",
+      "explanation": "The levels overlap in both directions, so neither grouping factor uniquely contains the other.",
+      "reference": "Bates et al., Fitting Linear Mixed-Effects Models Using lme4, Multiple random-effects terms. https://cran.r-project.org/web/packages/lme4/vignettes/lmer.pdf"
+    },
+    {
+      "id": "grad-130",
+      "concept": "conditional exchangeability and cues",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Before seeing outcomes a model treats school effects as exchangeable given the same school-level covariates. What change leaves their joint prior unchanged?",
+      "choices": [
+        "Force the effects to be equal",
+        "Remove the noisiest school",
+        "Permute labels among schools with matching covariates",
+        "Change the recorded covariates",
+        "Replace the hyperprior with a point mass"
+      ],
+      "answer": "Permute labels among schools with matching covariates",
+      "explanation": "Conditional exchangeability means relabeling otherwise comparable groups leaves the joint distribution unchanged.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 155, Exchangeability"
+    },
+    {
+      "id": "grad-131",
+      "concept": "shared hospital effect in prediction",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A predictive simulation generates two outcomes for patients in the same new hospital. How should their simulated hospital effects be related?",
+      "choices": [
+        "Draw a different hospital effect for each patient",
+        "Reuse the effect for a different observed hospital in each outcome",
+        "Give one patient a new hospital effect and omit it for the other",
+        "Replace both hospital effects with independent residuals",
+        "Use the same new hospital effect for both outcomes"
+      ],
+      "answer": "Use the same new hospital effect for both outcomes",
+      "explanation": "Patients in the same simulated hospital share one hospital effect while their individual residuals can differ.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-132",
+      "concept": "group dependence covariance",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "For a random-intercept model with independent residuals, what causes outcomes from the same group to be correlated marginally?",
+      "choices": [
+        "Their shared random intercept",
+        "The independence of their errors",
+        "Centering the outcome before fitting",
+        "A fixed intercept shared by all records",
+        "Different sample sizes per group"
+      ],
+      "answer": "Their shared random intercept",
+      "explanation": "The same random shift appears in both outcomes, inducing covariance when averaged over that shift.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 221, Intraclass correlation"
+    },
+    {
+      "id": "grad-133",
+      "concept": "marginal variance component recognition",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "Var(Yᵢⱼ given fixed covariates) = τ² + σ²\nWhat does the variance sum represent in an independent random-intercept model?",
+      "choices": [
+        "Within-group variance conditional on the group effect",
+        "Covariance of outcomes in two independent groups",
+        "Marginal variance of one outcome after averaging over the group effect",
+        "Variance of the group effect alone",
+        "The standard error of the fixed intercept"
+      ],
+      "answer": "Marginal variance of one outcome after averaging over the group effect",
+      "explanation": "A single outcome receives both the group-level random shift and individual residual noise.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance components",
+      "math_clue": "$\\operatorname{Var}(Y_{ij}\\mid\\mathrm{fixed\\ covariates})=\\tau^2+\\sigma^2$\nWhat does the variance sum represent in an independent random-intercept model?"
+    },
+    {
+      "id": "grad-134",
+      "concept": "hyperparameter interpretation",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A clinic effect has prior N(μ, τ²). Which feature of this model controls spread across clinic effects?",
+      "choices": [
+        "Variance of the clinic-level effects",
+        "Number of patients per clinic",
+        "Within-patient measurement error",
+        "Prior centre of the clinic-level effects",
+        "Estimated effect of the first clinic"
+      ],
+      "answer": "Variance of the clinic-level effects",
+      "explanation": "The variance parameter of the shared prior governs how widely clinic-level effects vary around the common centre.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 211, Hyperparameter",
+      "math_clue": "A clinic effect has prior $N(\\mu,\\tau^2)$. Which feature of this model controls spread across clinic effects?"
+    },
+    {
+      "id": "grad-135",
+      "concept": "pooling heterogeneity increase",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two otherwise identical hierarchical fits differ only in their assumed between-group variance. Which fit tends to leave group estimates closer to their unpooled means?",
+      "choices": [
+        "The one with exactly zero between-group variance",
+        "The one imposing one common group intercept",
+        "Both use the same shrinkage",
+        "The one with more between-group variance",
+        "The one with less between-group variance"
+      ],
+      "answer": "The one with more between-group variance",
+      "explanation": "A broader group distribution tolerates larger true differences, so it pulls the group estimates less strongly toward its center.",
+      "reference": "Duke University STA 601, Lecture 3, The Normal Model and Prior/Posterior Predictive Distributions. https://www2.stat.duke.edu/courses/Fall21/sta601.001/slides/03-normal-predictive-distributions.html"
+    },
+    {
+      "id": "grad-136",
+      "concept": "replicate design sample size",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "When comparing observed and replicated minima in a posterior predictive check, why usually keep the replicate sample size fixed to the observed size?",
+      "choices": [
+        "Replicate size changes the observed minimum retrospectively",
+        "The distribution of a sample minimum depends on the number of observations",
+        "Posterior samples must always equal the observed sample size",
+        "A fixed size makes every replicated minimum identical",
+        "Using the same size makes the underlying model true"
+      ],
+      "answer": "The distribution of a sample minimum depends on the number of observations",
+      "explanation": "The more observations in a replicate, the greater the chance it contains an unusually small value.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-137",
+      "concept": "graphical discrepancy localization",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A model gets the overall spread right but misses the pattern across time. Which check would expose that specific mismatch?",
+      "choices": [
+        "Compare unconditional means again",
+        "Compare the width of the prior to its median",
+        "Compare posterior mean and mode of the variance",
+        "Compare time-ordered residual autocorrelation to replications",
+        "Compare simulated and observed sample size"
+      ],
+      "answer": "Compare time-ordered residual autocorrelation to replications",
+      "explanation": "A discrepancy that preserves time ordering can detect serial dependence hidden by overall spread.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-138",
+      "concept": "posterior predictive internal fit",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An observed mean is typical of replicated means, but the observed minimum is far below all the replicated minima. What conclusion is justified?",
+      "choices": [
+        "The model captures the mean better than the lower tail",
+        "The model captures both features equally well",
+        "The model gives an exact out-of-sample error estimate",
+        "The model captures the lower tail better than the mean",
+        "The posterior must have used an improper prior"
+      ],
+      "answer": "The model captures the mean better than the lower tail",
+      "explanation": "Different discrepancies probe different aspects, and the minimum points to the tail failure.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-139",
+      "concept": "posterior predictive upper tail diagnostic",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "P(Trep ≥ Tobs given y)\nWhat does this posterior predictive check summarize?",
+      "choices": [
+        "The share of observations included in the model fit",
+        "The share of replicated discrepancies at least as large as observed",
+        "The share of prior parameter draws above their posterior mean",
+        "The chance of a smaller discrepancy under the prior",
+        "A posterior probability that the entire model is true"
+      ],
+      "answer": "The share of replicated discrepancies at least as large as observed",
+      "explanation": "The upper-tail check compares the observed discrepancy against discrepancies from replicated datasets.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf",
+      "math_clue": "$P(T_{\\mathrm{rep}}\\geq T_{\\mathrm{obs}}\\mid y)$\nWhat does this posterior predictive check summarize?"
+    },
+    {
+      "id": "grad-140",
+      "concept": "forecast horizon validation",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The target is sales four weeks ahead. Which forecast errors should validate that target?",
+      "choices": [
+        "Errors from one-week-ahead forecasts using all weeks",
+        "Residuals fitted to the full sales series",
+        "Errors from four-week-ahead forecasts made using only data then available",
+        "Errors from fitting a model to each forecasted observation",
+        "Errors from forecasts made with future covariates unavailable in practice"
+      ],
+      "answer": "Errors from four-week-ahead forecasts made using only data then available",
+      "explanation": "Validation should match the planned forecast horizon and information available when predicting.",
+      "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html"
+    },
+    {
+      "id": "grad-141",
+      "concept": "bayes factor prior normalization",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two candidate models use improper priors with arbitrary multiplicative constants. What goes wrong with a Bayes factor formed directly from their marginal likelihoods?",
+      "choices": [
+        "It must equal zero",
+        "It becomes the ratio of posterior modes",
+        "It is determined by the held-out log score instead",
+        "It can depend on the arbitrary constants",
+        "It is unchanged because all such constants cancel across models"
+      ],
+      "answer": "It can depend on the arbitrary constants",
+      "explanation": "An arbitrary prior scaling carries through to model evidence and can alter its ratio.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-142",
+      "concept": "bma model uncertainty purpose",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Two candidate models make different forecasts, and neither has overwhelming posterior support. What does Bayesian model averaging account for by keeping both forecasts?",
+      "choices": [
+        "A lack of uncertainty within each model",
+        "The random ordering of observations",
+        "Uncertainty about which candidate model to use",
+        "A need to estimate all prior probabilities from the held-out cases",
+        "A guarantee that both models are correct"
+      ],
+      "answer": "Uncertainty about which candidate model to use",
+      "explanation": "Averaging can carry uncertainty about the model choice into the combined predictive distribution.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 38, Bayesian model averaging"
+    },
+    {
+      "id": "grad-143",
+      "concept": "waic source of variability",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "Σᵢ Varposterior[log p(yᵢ∣θ)]\nWhat variation gives this WAIC complexity term?",
+      "choices": [
+        "Variation across data points at one fixed parameter value",
+        "Variation across posterior parameter draws within each data contribution",
+        "Variation across prior draws without using data",
+        "Variation across sample sizes for a fixed observed point",
+        "Variation across models with no parameter draws"
+      ],
+      "answer": "Variation across posterior parameter draws within each data contribution",
+      "explanation": "Each observation contributes posterior variability in its log-likelihood, and those pointwise variances are added.",
+      "reference": "Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.4, WAIC. https://sites.stat.columbia.edu/gelman/research/published/waic_understand3.pdf",
+      "math_clue": "$\\sum_i\\operatorname{Var}_{\\mathrm{post}}\\left[\\log p(y_i\\mid\\theta)\\right]$\nWhat variation gives this WAIC complexity term?"
+    },
+    {
+      "id": "grad-144",
+      "concept": "psis tail diagnostic",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A few importance weights dominate a leave-one-out approximation, and the estimated Pareto shape is large. What should this flag?",
+      "choices": [
+        "A near-perfect holdout prediction",
+        "A missing likelihood normalization constant in all models",
+        "An exact refit for the affected case",
+        "An unreliable approximation for the affected held-out case",
+        "Overly narrow priors in every parameter"
+      ],
+      "answer": "An unreliable approximation for the affected held-out case",
+      "explanation": "A heavy upper tail of importance weights makes the approximate held-out prediction unstable.",
+      "reference": "Vehtari, Gelman and Gabry, Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC. https://sites.stat.columbia.edu/gelman/research/published/loo_stan.pdf"
+    },
+    {
+      "id": "grad-145",
+      "concept": "marginal likelihood for bayes factor",
+      "level": "Graduate Mix",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What does each model average over to obtain the marginal likelihood used in a Bayes factor?",
+      "choices": [
+        "Its prior over its own unknown parameters",
+        "Its posterior over its own unknown parameters",
+        "Its sampling distribution over all possible datasets",
+        "The priors of the other candidate models",
+        "The best scoring held-out partition"
+      ],
+      "answer": "Its prior over its own unknown parameters",
+      "explanation": "Marginal likelihood averages the likelihood of the observed data over possible parameters weighted by that model’s prior.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayes factor"
+    },
+    {
+      "id": "grad-146",
+      "concept": "existing-group validation unit",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A multilevel model will predict new patients at the same hospitals used in training. Which holdout best mimics this use?",
+      "choices": [
+        "Fit to the held-out patient before scoring that patient",
+        "Score all patients used for fitting",
+        "Hold out hospitals based on their true outcome rates",
+        "Hold out patients within hospitals while retaining other patients at those hospitals",
+        "Hold out every patient from selected hospitals"
+      ],
+      "answer": "Hold out patients within hospitals while retaining other patients at those hospitals",
+      "explanation": "Within-hospital holdouts preserve the hospital context that will be available in deployment.",
+      "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html"
+    },
+    {
+      "id": "grad-147",
+      "concept": "dic deviance and effective complexity",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "D(θ̄) + 2 pD\nD is deviance, θ̄ is the posterior mean, and pD is an effective parameter count. Which criterion has this form?",
+      "choices": [
+        "Bayesian information criterion",
+        "Deviance information criterion",
+        "Akaike information criterion",
+        "Leave-one-out predictive score",
+        "Raw posterior predictive deviance"
+      ],
+      "answer": "Deviance information criterion",
+      "explanation": "This DIC form adds a complexity correction to the deviance evaluated at the posterior mean.",
+      "reference": "Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.3, DIC. https://sites.stat.columbia.edu/gelman/research/published/waic_understand3.pdf",
+      "math_clue": "$D(\\bar{\\theta})+2p_D$\nD is deviance, θ̄ is the posterior mean, and pD is an effective parameter count. Which criterion has this form?"
+    },
+    {
+      "id": "grad-148",
+      "concept": "why different stacking and bma weights",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Which property lets predictive stacking give different model weights from Bayesian model averaging on the same data?",
+      "choices": [
+        "Stacking always uses each model’s posterior probability",
+        "Stacking can compare only nested models",
+        "Stacking optimizes a score for the held-out predictions of a mixture",
+        "Stacking disregards the component predictive distributions",
+        "Stacking chooses weights before any observations are available"
+      ],
+      "answer": "Stacking optimizes a score for the held-out predictions of a mixture",
+      "explanation": "The stacking target is predictive performance of the combined distribution rather than a posterior allocation of model probability.",
+      "reference": "Yao et al., Using Stacking to Average Bayesian Predictive Distributions. https://sites.stat.columbia.edu/gelman/research/published/stacking.pdf"
+    },
+    {
+      "id": "grad-149",
+      "concept": "prior predictive impossible outcomes",
+      "level": "Graduate Mix",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Before fitting a time-to-event model, simulations often generate impossible negative event times. What is the first component to reconsider?",
+      "choices": [
+        "The numbers in a posterior predictive check",
+        "The recorded posterior means",
+        "The fold-level calculation of log scores",
+        "The model’s held-out classification threshold",
+        "The prior and sampling model together"
+      ],
+      "answer": "The prior and sampling model together",
+      "explanation": "These failures occur before the data are used, so they arise from the assumptions of the prior predictive model.",
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Model checking and improvement. https://sites.stat.columbia.edu/gelman/bayescomputation/bdachapter6.pdf"
+    },
+    {
+      "id": "grad-150",
+      "concept": "predictive model superiority scope",
+      "level": "Graduate Mix",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Model A places higher probability on held-out observations than model B under the same log score. What did the comparison directly favor?",
+      "choices": [
+        "The assumption that A has no bad residual patterns",
+        "A’s parameter estimates for every scientific question",
+        "The claim that A is the true data-generating process",
+        "A larger prior probability for A",
+        "A’s held-out predictive accuracy under that score"
+      ],
+      "answer": "A’s held-out predictive accuracy under that score",
+      "explanation": "Held-out log score measures scored prediction of the held-out data.",
+      "reference": "Vehtari, Gelman and Gabry, Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC. https://sites.stat.columbia.edu/gelman/research/published/loo_stan.pdf"
     }
   ]
 }

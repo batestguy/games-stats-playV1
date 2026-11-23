@@ -377,7 +377,8 @@
       ],
       "answer": "Range",
       "explanation": "The range spans the full observed data from minimum to maximum.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 356, Range"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 356, Range",
+      "math_clue": "$\\max_i x_i-\\min_i x_i$"
     },
     {
       "id": "100-022",
@@ -396,7 +397,8 @@
       "answer": "Standard deviation",
       "explanation": "The square root of sample variance restores the original measurement units.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard deviation",
-      "convention": "Sample variance uses the n − 1 denominator."
+      "convention": "Sample variance uses the n − 1 denominator.",
+      "math_clue": "$\\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}$ for a sample."
     },
     {
       "id": "100-023",
@@ -414,7 +416,8 @@
       ],
       "answer": "Variance",
       "explanation": "Population variance averages the squared distance from the population mean.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance",
+      "math_clue": "$\\mathrm{E}[(X-\\mu)^2]$, where $\\mu=\\mathrm{E}[X]$."
     },
     {
       "id": "100-024",
@@ -433,7 +436,8 @@
       "answer": "Coefficient of variation",
       "explanation": "The ratio expresses spread relative to the level of the mean.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 89, Coefficient of variation",
-      "convention": "Uses the ratio form. Multiplying by 100 expresses the same measure as a percentage."
+      "convention": "Uses the ratio form. Multiplying by 100 expresses the same measure as a percentage.",
+      "math_clue": "$\\frac{s}{\\bar{x}}$, with a positive sample mean."
     },
     {
       "id": "100-025",
@@ -451,7 +455,8 @@
       ],
       "answer": "Geometric mean",
       "explanation": "Multiply the values and take the nth root.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 186, Geometric mean"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 186, Geometric mean",
+      "math_clue": "$(x_1x_2\\cdots x_n)^{1/n}$ for positive values."
     },
     {
       "id": "100-026",
@@ -469,7 +474,8 @@
       ],
       "answer": "Harmonic mean",
       "explanation": "Take the reciprocal of the arithmetic mean of the reciprocals.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 200, Harmonic mean"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 200, Harmonic mean",
+      "math_clue": "$\\frac{n}{\\sum_{i=1}^{n} 1/x_i}$ for positive values."
     },
     {
       "id": "100-027",
@@ -487,7 +493,8 @@
       ],
       "answer": "Weighted mean",
       "explanation": "Each observation contributes in proportion to its weight.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 455, Weighted average"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 455, Weighted average",
+      "math_clue": "$\\frac{\\sum_i w_ix_i}{\\sum_i w_i}$ for positive weights."
     },
     {
       "id": "100-028",
@@ -505,7 +512,8 @@
       ],
       "answer": "Arithmetic mean",
       "explanation": "The ordinary arithmetic mean gives every observation the same weight.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean",
+      "math_clue": "$\\frac{x_1+\\cdots+x_n}{n}$"
     },
     {
       "id": "100-029",
@@ -741,7 +749,8 @@
       ],
       "answer": "Odds of success",
       "explanation": "The ratio compares the chance of success with the chance of failure.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds",
+      "math_clue": "$\\frac{p}{1-p}$ where p is the chance of success and lies strictly between zero and one."
     },
     {
       "id": "100-042",
@@ -759,7 +768,8 @@
       ],
       "answer": "Relative frequency",
       "explanation": "The fraction describes the recorded outcomes of the sample.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative frequency"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative frequency",
+      "math_clue": "$\\frac{\\text{observed successes}}{\\text{observed trials}}$"
     },
     {
       "id": "100-043",
@@ -777,7 +787,8 @@
       ],
       "answer": "Complement probability",
       "explanation": "The outcomes where A does not occur fill the rest of the sample space.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 93, Complementary events"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 93, Complementary events",
+      "math_clue": "$1-P(A)$"
     },
     {
       "id": "100-044",
@@ -795,7 +806,8 @@
       ],
       "answer": "Union probability",
       "explanation": "Adding both probabilities counts the overlap twice, so subtract it once.",
-      "reference": "MIT 18.05, Class 2, Reading 2, basic probability rules: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class02-prep_pdf/"
+      "reference": "MIT 18.05, Class 2, Reading 2, basic probability rules: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class02-prep_pdf/",
+      "math_clue": "$P(A)+P(B)-P(A\\cap B)$"
     },
     {
       "id": "100-045",
@@ -1391,7 +1403,8 @@
       "answer": "Sample percentile",
       "explanation": "This inverse-ECDF rule returns the sample's 90th percentile.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Percentile; 150, Empirical distribution function",
-      "convention": "Uses the inverse empirical CDF convention, without interpolation."
+      "convention": "Uses the inverse empirical CDF convention, without interpolation.",
+      "math_clue": "The smallest x satisfying $F_n(x)\\geq0.90$ where F is the empirical distribution function for the sample."
     },
     {
       "id": "100-078",
@@ -1409,7 +1422,8 @@
       ],
       "answer": "Midrange",
       "explanation": "The midrange is the midpoint of the two observed extremes.",
-      "reference": "NIST DADS, midrange: https://www.nist.gov/dads/HTML/midrange.html"
+      "reference": "NIST DADS, midrange: https://www.nist.gov/dads/HTML/midrange.html",
+      "math_clue": "$\\frac{\\min_i x_i+\\max_i x_i}{2}$"
     },
     {
       "id": "100-079",
@@ -1428,7 +1442,8 @@
       "answer": "Median absolute deviation",
       "explanation": "Use absolute deviations from the median, then take their median.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 275, Median absolute deviation (MAD)",
-      "convention": "Unscaled form."
+      "convention": "Unscaled form.",
+      "math_clue": "$\\operatorname{median}_i\\left|x_i-\\operatorname{median}_j x_j\\right|$"
     },
     {
       "id": "100-080",
@@ -1446,7 +1461,8 @@
       ],
       "answer": "Cumulative frequency",
       "explanation": "Add the counts from every class that ends at or before the stated cutoff.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 117, Cumulative frequency distribution"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 117, Cumulative frequency distribution",
+      "math_clue": "$\\sum_{i=1}^{j} f_i$ where f is the count for each class and j identifies the last class included."
     },
     {
       "id": "100-081",
@@ -1608,7 +1624,8 @@
       ],
       "answer": "Complement probability",
       "explanation": "The two events are complements, regardless of any relationship among the trials.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 93, Complementary events"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 93, Complementary events",
+      "math_clue": "$P(\\text{no successes})=1-P(\\text{at least one success})$"
     },
     {
       "id": "100-090",
@@ -1626,7 +1643,8 @@
       ],
       "answer": "Independent joint probability",
       "explanation": "For independent events the intersection probability is the product of the separate probabilities.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 214, Independence"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 214, Independence",
+      "math_clue": "$P(A\\cap B)=P(A)P(B)$ when the events do not affect one another."
     },
     {
       "id": "100-091",
@@ -1644,7 +1662,8 @@
       ],
       "answer": "Conditional probability",
       "explanation": "This is the probability of B given A.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 98, Conditional probability; MIT 18.05, Class 3, §2"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 98, Conditional probability; MIT 18.05, Class 3, §2",
+      "math_clue": "$\\frac{P(A\\cap B)}{P(A)}$ where $P(A)>0$. What type of probability is found?"
     },
     {
       "id": "100-092",
@@ -1662,7 +1681,909 @@
       ],
       "answer": "Relative frequency",
       "explanation": "Scaling by the total gives the observed fraction for that category.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative frequency",
+      "math_clue": "$\\frac{f}{n}$ where f is the observed count for a category and n is the total count."
+    },
+    {
+      "id": "100-093",
+      "concept": "nominal variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A barcode is stored as an integer, but the digits identify a product. How should these values be analysed?",
+      "choices": [
+        "Nominal variable",
+        "Ordinal variable",
+        "Count variable",
+        "Continuous variable",
+        "Ranked score"
+      ],
+      "answer": "Nominal variable",
+      "explanation": "The digits are labels. Their numerical size has no quantitative meaning.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 301, Nominal variable"
+    },
+    {
+      "id": "100-094",
+      "concept": "ordinal variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A trail is rated green, blue or black in increasing order of difficulty. The gaps have no numeric meaning. What is the rating scale?",
+      "choices": [
+        "Ordinal variable",
+        "Nominal variable",
+        "Count variable",
+        "Continuous variable",
+        "Elapsed time"
+      ],
+      "answer": "Ordinal variable",
+      "explanation": "Rank matters, and spacing between categories is unspecified.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 312, Ordinal variable"
+    },
+    {
+      "id": "100-095",
+      "concept": "binary variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A camera flags each frame as usable or unusable. What is recorded for each frame?",
+      "choices": [
+        "Binary variable",
+        "Continuous variable",
+        "Count variable",
+        "Numeric rank",
+        "Time series"
+      ],
+      "answer": "Binary variable",
+      "explanation": "Exactly two labels are possible.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 47, Binary variable"
+    },
+    {
+      "id": "100-096",
+      "concept": "continuous variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A sensor displays pressure rounded to the nearest pascal. What kind of variable is the underlying pressure?",
+      "choices": [
+        "Continuous variable",
+        "Binary variable",
+        "Discrete variable",
+        "Ordinal variable",
+        "Nominal variable"
+      ],
+      "answer": "Continuous variable",
+      "explanation": "Intermediate pressures are possible even though the display rounds them.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 102, Continuous variable"
+    },
+    {
+      "id": "100-097",
+      "concept": "count variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "For each bicycle, a mechanic records how many spokes need replacing. What does each entry represent?",
+      "choices": [
+        "Count data",
+        "Elapsed time",
+        "Category labels",
+        "Ordinal ranks",
+        "Continuous measurements"
+      ],
+      "answer": "Count data",
+      "explanation": "Each entry counts occurrences and is a nonnegative integer.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 110, Count data"
+    },
+    {
+      "id": "100-098",
+      "concept": "discrete variable",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A meter is designed to dispense exactly 0.25, 0.50 or 0.75 litres per press. How should the actual volume per press be classified under this design?",
+      "choices": [
+        "Discrete variable",
+        "Continuous variable",
+        "Nominal variable",
+        "Binary variable",
+        "Time series"
+      ],
+      "answer": "Discrete variable",
+      "explanation": "Only distinct numeric values are possible. A discrete variable can have fractional values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 138, Discrete variables"
+    },
+    {
+      "id": "100-099",
+      "concept": "cross-sectional study",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Inspectors visit every station on Tuesday and record whether its lift works. They never revisit the stations. What is the design?",
+      "choices": [
+        "Cross-sectional study",
+        "Longitudinal study",
+        "Time series",
+        "Randomized trial",
+        "Repeated-measures study"
+      ],
+      "answer": "Cross-sectional study",
+      "explanation": "The stations are measured in a single snapshot.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Cross-sectional study"
+    },
+    {
+      "id": "100-100",
+      "concept": "longitudinal study",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A library tracks the same patrons' borrowing over four yearly surveys. What is the design?",
+      "choices": [
+        "Longitudinal study",
+        "Cross-sectional study",
+        "Single-case report",
+        "Randomized trial",
+        "One-time census"
+      ],
+      "answer": "Longitudinal study",
+      "explanation": "Following the same units across occasions makes the study longitudinal.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 261, Longitudinal studies"
+    },
+    {
+      "id": "100-101",
+      "concept": "time series",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "One monitor logs river depth daily. The analyst keeps the dates to examine the order of peaks. What is the data structure?",
+      "choices": [
+        "Time series",
+        "Contingency table",
+        "Frequency table",
+        "Single snapshot",
+        "Unordered sample"
+      ],
+      "answer": "Time series",
+      "explanation": "The sequence of observations is indexed by time.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 430, Time series"
+    },
+    {
+      "id": "100-102",
+      "concept": "contingency table",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Rows are fare types, columns are payment methods, and each cell holds the number of tickets. What is this summary?",
+      "choices": [
+        "Contingency table",
+        "Scatterplot",
+        "Rank table",
+        "Grouped histogram",
+        "Time series"
+      ],
+      "answer": "Contingency table",
+      "explanation": "It cross-classifies counts by two categorical variables.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 101, Contingency tables"
+    },
+    {
+      "id": "100-103",
+      "concept": "measurement error",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An oven sensor reads 180°C while a trusted reference reads 174°C at the same position and moment. What is the discrepancy called?",
+      "choices": [
+        "Measurement error",
+        "Sampling error",
+        "Sampling bias",
+        "Unit conversion",
+        "Category rank"
+      ],
+      "answer": "Measurement error",
+      "explanation": "The discrepancy is between the measurement and the reference value for the same quantity.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 275, Measurement error"
+    },
+    {
+      "id": "100-104",
+      "concept": "rounding",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A report reduces 7.846 m to 7.85 m under a nearest-hundredth rule. What happened to the value?",
+      "choices": [
+        "Rounding",
+        "Ranking",
+        "Unit conversion",
+        "Truncation",
+        "Rescaling"
+      ],
+      "answer": "Rounding",
+      "explanation": "The value was replaced by its nearest multiple of 0.01 m.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 373, Rounding"
+    },
+    {
+      "id": "100-105",
+      "concept": "nominal variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A dataset codes red, yellow and blue as 1, 2 and 3. Swapping code numbers leaves the meaning intact. What type is colour?",
+      "choices": [
+        "Nominal variable",
+        "Ordinal variable",
+        "Continuous variable",
+        "Count variable",
+        "Binary variable"
+      ],
+      "answer": "Nominal variable",
+      "explanation": "The integers are interchangeable labels once the codebook follows them.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 301, Nominal variable"
+    },
+    {
+      "id": "100-106",
+      "concept": "ordinal variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Which scale supports saying that a reviewer rated one film higher than another without treating a one-step difference as constant?",
+      "choices": [
+        "Ordinal variable",
+        "Nominal variable",
+        "Ratio scale",
+        "Interval scale",
+        "Binary indicator"
+      ],
+      "answer": "Ordinal variable",
+      "explanation": "An ordinal scale supports ordering without requiring equal differences.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 312, Ordinal variable"
+    },
+    {
+      "id": "100-107",
+      "concept": "discrete variable",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A game always awards one of 0, 5, 10 or 15 points per move. What is points earned on a move?",
+      "choices": [
+        "Discrete variable",
+        "Continuous variable",
+        "Nominal variable",
+        "Binary variable",
+        "Time series"
+      ],
+      "answer": "Discrete variable",
+      "explanation": "The score is quantitative and restricted to a set of possible values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 138, Discrete variables"
+    },
+    {
+      "id": "100-108",
+      "concept": "continuous variable",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A lab records the height reached by water before a valve closes. Which model allows any intermediate height in the measuring interval?",
+      "choices": [
+        "Continuous variable",
+        "Binary variable",
+        "Ordinal variable",
+        "Nominal variable",
+        "Count variable"
+      ],
+      "answer": "Continuous variable",
+      "explanation": "A continuous variable can take any value in the interval.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 102, Continuous variable"
+    },
+    {
+      "id": "100-109",
+      "concept": "contingency table",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Nurses want a table showing how many bookings fall into each combination of clinic and weekday. Which summary supplies those counts?",
+      "choices": [
+        "Contingency table",
+        "Box plot",
+        "Scatterplot",
+        "Stem-and-leaf plot",
+        "Cumulative curve"
+      ],
+      "answer": "Contingency table",
+      "explanation": "A contingency table gives the count for each combination of the two labels.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 101, Contingency tables"
+    },
+    {
+      "id": "100-110",
+      "concept": "bar chart",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Which display uses separated rectangles to compare counts for Monday's sandwich types?",
+      "choices": [
+        "Bar chart",
+        "Histogram",
+        "Frequency polygon",
+        "Scatterplot",
+        "Box plot"
+      ],
+      "answer": "Bar chart",
+      "explanation": "Separate bars suit named categories where their widths carry no data meaning.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 33, Bar chart"
+    },
+    {
+      "id": "100-111",
+      "concept": "histogram",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An analyst groups rainfall amounts into intervals and wants rectangle areas to show bin proportions, even for unequal bin widths. Which display fits?",
+      "choices": [
+        "Histogram",
+        "Bar chart",
+        "Box plot",
+        "Dot plot",
+        "Pie chart"
+      ],
+      "answer": "Histogram",
+      "explanation": "A density histogram uses frequency divided by width so area reflects frequency.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 206, Histogram"
+    },
+    {
+      "id": "100-112",
+      "concept": "scatterplot",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "For each kite, the analyst pairs its surface area with its lift and gives that kite one point. What display results?",
+      "choices": [
+        "Scatterplot",
+        "Histogram",
+        "Box plot",
+        "Pie chart",
+        "Frequency polygon"
+      ],
+      "answer": "Scatterplot",
+      "explanation": "Each point has two coordinates from the same observation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 379, Scatterplot"
+    },
+    {
+      "id": "100-113",
+      "concept": "stem-and-leaf plot",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The stem 4 with leaves 1, 6 and 9 lets readers recover 41, 46 and 49 from one line. What is this display?",
+      "choices": [
+        "Stem-and-leaf plot",
+        "Box plot",
+        "Bar chart",
+        "Scatterplot",
+        "Frequency polygon"
+      ],
+      "answer": "Stem-and-leaf plot",
+      "explanation": "The shared leading digit groups the values, and the trailing digits preserve the observations.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 414, Stem-and-leaf plot"
+    },
+    {
+      "id": "100-114",
+      "concept": "dot plot",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A baker wants a one-axis display of exact cookie weights, stacking a mark above the axis for each repeated weight. Which plot fits?",
+      "choices": [
+        "Dot plot",
+        "Scatterplot",
+        "Box plot",
+        "Pie chart",
+        "Frequency polygon"
+      ],
+      "answer": "Dot plot",
+      "explanation": "Stacked dots keep the observed values and show their multiplicities.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 142, Dot plot"
+    },
+    {
+      "id": "100-115",
+      "concept": "pie chart",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A budget chart gives a quarter of the circle to postage because postage is a quarter of the budget. Which display is this?",
+      "choices": [
+        "Pie chart",
+        "Bar chart",
+        "Histogram",
+        "Box plot",
+        "Scatterplot"
+      ],
+      "answer": "Pie chart",
+      "explanation": "Each sector's angle gives a share of one total.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 326, Pie chart"
+    },
+    {
+      "id": "100-116",
+      "concept": "box plot",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An editor wants aligned summaries for five groups, each showing a median line inside its central-half interval. Which display fits?",
+      "choices": [
+        "Box plot",
+        "Pie chart",
+        "Dot plot",
+        "Scatterplot",
+        "Frequency polygon"
+      ],
+      "answer": "Box plot",
+      "explanation": "A box plot shows the quartile interval and its median for each group.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 62, Box plot"
+    },
+    {
+      "id": "100-117",
+      "concept": "time-series plot",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A greenhouse manager wants the hourly temperature joined in collection order to see when the heater switches on. Which plot fits?",
+      "choices": [
+        "Time-series plot",
+        "Box plot",
+        "Pie chart",
+        "Frequency polygon",
+        "Stem-and-leaf plot"
+      ],
+      "answer": "Time-series plot",
+      "explanation": "Connecting successive timestamps shows how the measurement changes over time.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 430, Time series"
+    },
+    {
+      "id": "100-118",
+      "concept": "empirical distribution function",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which step display gives the fraction of observed deliveries taking at most the horizontal-axis time?",
+      "choices": [
+        "Empirical distribution function",
+        "Histogram",
+        "Scatterplot",
+        "Box plot",
+        "Bar chart"
+      ],
+      "answer": "Empirical distribution function",
+      "explanation": "At any threshold the sample proportion at or below it is the empirical distribution function.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 150, Empirical distribution function"
+    },
+    {
+      "id": "100-119",
+      "concept": "frequency polygon",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A meteorologist marks each speed bin's midpoint at its count and joins neighbouring marks. Which display results?",
+      "choices": [
+        "Frequency polygon",
+        "Bar chart",
+        "Box plot",
+        "Pie chart",
+        "Scatterplot"
+      ],
+      "answer": "Frequency polygon",
+      "explanation": "A frequency polygon joins the frequencies plotted over bin midpoints.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 174, Frequency polygon"
+    },
+    {
+      "id": "100-120",
+      "concept": "bimodal distribution",
+      "level": "100",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "One queue forms two distinct peaks in waiting times, with a clear dip in between. What shape does this suggest?",
+      "choices": [
+        "Bimodal distribution",
+        "Unimodal distribution",
+        "Uniform distribution",
+        "Point distribution",
+        "Constant sequence"
+      ],
+      "answer": "Bimodal distribution",
+      "explanation": "The two clearly separated local peaks make the distribution bimodal.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 46, Bimodal distribution"
+    },
+    {
+      "id": "100-121",
+      "concept": "right-skewed distribution",
+      "level": "100",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Most online orders cost under $40, and a thinner tail stretches toward several hundred dollars. Which shape is suggested?",
+      "choices": [
+        "Right-skewed distribution",
+        "Left-skewed distribution",
+        "Symmetric distribution",
+        "Uniform distribution",
+        "Point distribution"
+      ],
+      "answer": "Right-skewed distribution",
+      "explanation": "The long tail points toward larger values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 397, Skewness"
+    },
+    {
+      "id": "100-122",
+      "concept": "arithmetic mean",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The longest delay grows while all other delays stay fixed. Which measure of centre must increase?",
+      "choices": [
+        "Arithmetic mean",
+        "Median",
+        "Mode",
+        "Lower quartile",
+        "Minimum"
+      ],
+      "answer": "Arithmetic mean",
+      "explanation": "The sum increases and the number of observations stays fixed.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean"
+    },
+    {
+      "id": "100-123",
+      "concept": "median",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A sorted list has an even number of observations. Which pair defines its median?",
+      "choices": [
+        "The two middle observations",
+        "The first and last observations",
+        "The two most frequent observations",
+        "The two closest observations",
+        "The two largest observations"
+      ],
+      "answer": "The two middle observations",
+      "explanation": "With an even sample size, average the observations immediately on either side of the centre.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 275, Median"
+    },
+    {
+      "id": "100-124",
+      "concept": "interquartile range",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Two box plots have identical box lengths. Which summary must they share?",
+      "choices": [
+        "Interquartile range",
+        "Median",
+        "Total range",
+        "Standard deviation",
+        "Mean"
+      ],
+      "answer": "Interquartile range",
+      "explanation": "The length of each box is the distance between the lower and upper quartiles.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 220, Interquartile range"
+    },
+    {
+      "id": "100-125",
+      "concept": "standard deviation",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "One spread measure is the square root of the sample variance. Which measure is it?",
+      "choices": [
+        "Standard deviation",
+        "Mean absolute deviation",
+        "Interquartile range",
+        "Coefficient of variation",
+        "Sample range"
+      ],
+      "answer": "Standard deviation",
+      "explanation": "Taking the square root returns the spread to the observations' original units.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard deviation"
+    },
+    {
+      "id": "100-126",
+      "concept": "variance",
+      "level": "100",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A lab reports sample weights in grams. Which measure of spread is expressed in square grams?",
+      "choices": [
+        "Variance",
+        "Standard deviation",
+        "Interquartile range",
+        "Range",
+        "Median absolute deviation"
+      ],
+      "answer": "Variance",
+      "explanation": "The deviations are squared before they are averaged, so the measurement unit is squared too.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance"
+    },
+    {
+      "id": "100-127",
+      "concept": "weighted mean",
+      "level": "100",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "To combine two groups of sizes n₁ and n₂, use (n₁x̄₁ + n₂x̄₂)/(n₁+n₂), where x̄ᵢ is a group mean. Which summary does this give?",
+      "choices": [
+        "Overall mean weighted by group size",
+        "Unweighted mean of the group means",
+        "Overall sample median",
+        "Largest group mean",
+        "Overall midrange"
+      ],
+      "answer": "Overall mean weighted by group size",
+      "explanation": "Multiplying by each group size reconstructs its total, so each observation contributes equally to the overall mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 455, Weighted average",
+      "math_clue": "To combine two groups, use $\\frac{n_1\\bar{x}_1+n_2\\bar{x}_2}{n_1+n_2}$. Here each bar denotes a group mean. Which summary does this give?"
+    },
+    {
+      "id": "100-128",
+      "concept": "range",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A data summary can be recovered from just the smallest and largest observations. Which spread summary is it?",
+      "choices": [
+        "Range",
+        "Interquartile range",
+        "Standard deviation",
+        "Median absolute deviation",
+        "Variance"
+      ],
+      "answer": "Range",
+      "explanation": "The difference between the extreme values needs no information about the interior observations.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 356, Range"
+    },
+    {
+      "id": "100-129",
+      "concept": "trimmed mean",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An analyst drops the lowest two and highest two scores and averages the rest. Which summary is used?",
+      "choices": [
+        "Trimmed mean",
+        "Weighted mean",
+        "Geometric mean",
+        "Harmonic mean",
+        "Midrange"
+      ],
+      "answer": "Trimmed mean",
+      "explanation": "Trimming removes a specified number of observations from each end before averaging.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 435, Trimmed mean"
+    },
+    {
+      "id": "100-130",
+      "concept": "space",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A coin is tossed repeatedly. The recorded result is the full ordered sequence. What belongs in the sample space?",
+      "choices": [
+        "Every possible ordered sequence",
+        "Only previously observed sequences",
+        "Only sequences with at least one head",
+        "Only the most likely sequence",
+        "Only the number of heads"
+      ],
+      "answer": "Every possible ordered sequence",
+      "explanation": "The sample space contains every possible value of the recorded outcome.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 376, Sample space"
+    },
+    {
+      "id": "100-131",
+      "concept": "mutually exclusive events",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "One ticket has only one price band. How are the events that it is low-price and that it is high-price related?",
+      "choices": [
+        "Mutually exclusive",
+        "Independent",
+        "Complementary",
+        "Overlapping",
+        "Equally likely"
+      ],
+      "answer": "Mutually exclusive",
+      "explanation": "A single ticket cannot fall in two different price bands.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 296, Mutually exclusive events"
+    },
+    {
+      "id": "100-132",
+      "concept": "complementary events",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "How are the events that the next lift is occupied and that it is empty related, if one of those is always true?",
+      "choices": [
+        "Complementary",
+        "Independent",
+        "Overlapping",
+        "Equally likely",
+        "Identical"
+      ],
+      "answer": "Complementary",
+      "explanation": "Exactly one must occur, so each event is the other's complement.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 93, Complementary events"
+    },
+    {
+      "id": "100-133",
+      "concept": "independent events",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "On separate fair coin tosses, the first toss is tails and the second is heads. What describes these two events?",
+      "choices": [
+        "Independent",
+        "Complementary",
+        "Mutually exclusive",
+        "Identical",
+        "Exhaustive"
+      ],
+      "answer": "Independent",
+      "explanation": "The chance of heads on the second toss stays one half given the first result.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 214, Independence"
+    },
+    {
+      "id": "100-134",
+      "concept": "joint probability",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In a study of commuters, an analyst divides the number who bike and arrive early by the total number of commuters. What kind of probability is estimated?",
+      "choices": [
+        "Joint probability",
+        "Conditional probability",
+        "Marginal probability",
+        "Complement probability",
+        "Union probability"
+      ],
+      "answer": "Joint probability",
+      "explanation": "The numerator counts commuters meeting both conditions at once.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 229, Joint distribution"
+    },
+    {
+      "id": "100-135",
+      "concept": "marginal probability",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A table lists school grade by mode of travel. The analyst divides the entire bus column total by the grand total. What kind of probability is this?",
+      "choices": [
+        "Marginal probability",
+        "Joint probability",
+        "Conditional probability",
+        "Complement probability",
+        "Union probability"
+      ],
+      "answer": "Marginal probability",
+      "explanation": "The probability averages across the grades by using the column total.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 267, Marginal distribution"
+    },
+    {
+      "id": "100-136",
+      "concept": "conditional probability",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team estimates the probability of a late bus given that it rained. Which set is the reference group?",
+      "choices": [
+        "The runs on rainy days",
+        "The runs on dry days",
+        "Every bus run",
+        "All late runs",
+        "All on-time runs"
+      ],
+      "answer": "The runs on rainy days",
+      "explanation": "Conditioning on rain restricts the denominator to runs where it rained.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 98, Conditional probability"
+    },
+    {
+      "id": "100-137",
+      "concept": "complement probability",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A report gives the chance that a meeting takes place. Which relationship connects this event to the meeting being cancelled if those are the only options?",
+      "choices": [
+        "Complementary events",
+        "Independent events",
+        "Identical events",
+        "Overlapping events",
+        "Equally likely events"
+      ],
+      "answer": "Complementary events",
+      "explanation": "Exactly one of the two events occurs, so knowing one probability determines the other.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 93, Complementary events"
+    },
+    {
+      "id": "100-138",
+      "concept": "odds of success",
+      "level": "100",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "When a bookmaker states odds in favour of a win, which chances are being compared?",
+      "choices": [
+        "Winning to not winning",
+        "Winning to all possibilities",
+        "Not winning to winning",
+        "Drawing to losing",
+        "Winning to drawing only"
+      ],
+      "answer": "Winning to not winning",
+      "explanation": "Odds in favour compare the chance of the event with the chance of its complement.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds"
+    },
+    {
+      "id": "100-139",
+      "concept": "independent events",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Two machines fail independently. What operation combines their separate failure probabilities into the probability that both fail?",
+      "choices": [
+        "Multiplication",
+        "Addition",
+        "Subtraction",
+        "Division",
+        "Taking the larger one"
+      ],
+      "answer": "Multiplication",
+      "explanation": "For independent events, the joint probability is the product of the separate probabilities.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 214, Independence"
+    },
+    {
+      "id": "100-140",
+      "concept": "relative frequency",
+      "level": "100",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A record contains departures from many shifts. Which description matches the relative frequency of early departures?",
+      "choices": [
+        "The share of departures that were early",
+        "The total number of early departures",
+        "The number of shifts without an early departure",
+        "The average departure time",
+        "The share of days that had any departure"
+      ],
+      "answer": "The share of departures that were early",
+      "explanation": "Relative frequency uses the count in the category as a share of all the observations.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative frequency"
+    },
+    {
+      "id": "100-141",
+      "concept": "union probability",
+      "level": "100",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A tally adds everyone who cycles to everyone who takes buses. What does it count twice?",
+      "choices": [
+        "People who do both",
+        "People who only cycle",
+        "People who only take buses",
+        "People who use neither",
+        "Everyone who uses either"
+      ],
+      "answer": "People who do both",
+      "explanation": "Each person who uses both appears in both counts, so the overlap needs to be removed once.",
+      "reference": "MIT 18.05, Class 2, Reading 2, basic probability rules: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class02-prep_pdf/"
+    },
+    {
+      "id": "100-142",
+      "concept": "mutually exclusive events",
+      "level": "100",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Two prizes must go to different tickets. For any one ticket, how are the events of winning the first and winning the second prize related?",
+      "choices": [
+        "Mutually exclusive",
+        "Independent",
+        "Complementary",
+        "Identical",
+        "Exhaustive"
+      ],
+      "answer": "Mutually exclusive",
+      "explanation": "The same ticket cannot receive both prizes and may win neither.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 296, Mutually exclusive events"
     }
   ]
 }

@@ -1,6 +1,7 @@
 """Check a question bank and curriculum map before cutting a release."""
 
 from argparse import ArgumentParser
+from collections import Counter
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -10,6 +11,9 @@ from app.game import (
     MAX_ROUND_SIZE, QUESTION_LEVELS, TIE_LIMIT, bank_files, load_question_bank, matched_pairs,
     review_count,
 )
+
+
+QUESTIONS_PER_LEVEL = 150
 
 
 def bank_fingerprint(bank_path: Path) -> str:
@@ -28,13 +32,13 @@ def check_release(bank_path: Path, coverage_path: Path) -> list[str]:
         raise ValueError("Unsupported curriculum map version")
 
     errors = []
-    if len(questions) < 525:
-        errors.append(f"Question bank has {len(questions)} items. The release target is 525.")
     if coverage["approved_bank_sha256"] != bank_fingerprint(bank_path):
         errors.append("The curriculum map has no approval for this version of the bank.")
 
+    counts = Counter(item.level for item in questions)
     outcome_ids = set()
     mapped_levels = set()
+    mapped_questions = set()
     for row in coverage["outcomes"]:
         outcome, level = row["id"], row["level"]
         if outcome in outcome_ids:
@@ -47,12 +51,19 @@ def check_release(bank_path: Path, coverage_path: Path) -> list[str]:
         for item_id in row["question_ids"]:
             if item_id in by_id and by_id[item_id].level == level:
                 correct_level_ids.add(item_id)
+                mapped_questions.add(item_id)
             else:
                 errors.append(f"{outcome} has an unknown or wrong-level question {item_id}.")
         if len(correct_level_ids) < 2:
             errors.append(f"{outcome} needs at least two distinct questions.")
 
+    unmapped_questions = sorted(by_id.keys() - mapped_questions)
+    if unmapped_questions:
+        errors.append(f"No curriculum outcome for: {', '.join(unmapped_questions)}.")
+
     for level in QUESTION_LEVELS:
+        if counts[level] < QUESTIONS_PER_LEVEL:
+            errors.append(f"{level} has {counts[level]} questions. The release target is {QUESTIONS_PER_LEVEL}.")
         if level not in mapped_levels:
             errors.append(f"{level} has no learning outcomes.")
         try:

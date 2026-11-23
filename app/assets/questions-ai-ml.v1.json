@@ -8,7 +8,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "A description of the current situation that contains the information needed to evaluate future actions.",
-      "choices": ["Search action", "Search state", "Goal test", "Path cost", "Heuristic estimate"],
+      "choices": [
+        "Search action",
+        "Search state",
+        "Goal test",
+        "Path cost",
+        "Heuristic estimate"
+      ],
       "answer": "Search state",
       "explanation": "The state records the facts the planner needs to decide what can happen next.",
       "reference": "Stanford CS 221 teaching notes, States-based Models, Search optimization and Tree search. https://web.stanford.edu/~shervine/teaching/cs-221/cheatsheet-states-models/"
@@ -20,7 +26,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "The known outcome a supervised model is trained to predict for each example.",
-      "choices": ["Input feature", "Model parameter", "Hyperparameter", "Validation metric", "Target label"],
+      "choices": [
+        "Input feature",
+        "Model parameter",
+        "Hyperparameter",
+        "Validation metric",
+        "Target label"
+      ],
       "answer": "Target label",
       "explanation": "The label provides the outcome against which the training prediction can be compared.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §2.1.4, Supervised Versus Unsupervised Learning. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -32,7 +44,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "The training examples have input variables but no provided outcome to predict.",
-      "choices": ["Supervised learning", "Semi-supervised learning", "Unsupervised learning", "Imitation learning", "Reinforcement learning"],
+      "choices": [
+        "Supervised learning",
+        "Semi-supervised learning",
+        "Unsupervised learning",
+        "Imitation learning",
+        "Reinforcement learning"
+      ],
       "answer": "Unsupervised learning",
       "explanation": "Unsupervised methods look for structure in the inputs without provided target outcomes.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §2.1.4, Supervised Versus Unsupervised Learning. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -44,7 +62,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "Split text into units a language model can map to vocabulary IDs.",
-      "choices": ["Tokenization", "Embedding lookup", "Attention weighting", "Probability calibration", "Sequence decoding"],
+      "choices": [
+        "Tokenization",
+        "Embedding lookup",
+        "Attention weighting",
+        "Probability calibration",
+        "Sequence decoding"
+      ],
       "answer": "Tokenization",
       "explanation": "A tokenizer maps text to a sequence of tokens, often subword pieces.",
       "reference": "Jurafsky and Martin, Speech and Language Processing, 3rd ed. draft (August 2026), Ch. 2, Words and Tokens. https://web.stanford.edu/~jurafsky/slp3/2.pdf"
@@ -56,7 +80,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "A separate portion of the data is reserved for the final evaluation after all tuning is done.",
-      "choices": ["Training set", "Validation set", "Bootstrap sample", "Test set", "Calibration set"],
+      "choices": [
+        "Training set",
+        "Validation set",
+        "Bootstrap sample",
+        "Test set",
+        "Calibration set"
+      ],
       "answer": "Test set",
       "explanation": "An untouched test set estimates how the finished model performs on unseen examples.",
       "reference": "Google Machine Learning Crash Course, Datasets: Dividing the original dataset, Dividing the original dataset. https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets"
@@ -68,7 +98,13 @@
       "difficulty": "easy",
       "clue_type": "definition",
       "clue": "A neural network layer sits between the input and the output.",
-      "choices": ["Input layer", "Output layer", "Hidden layer", "Loss function", "Target vector"],
+      "choices": [
+        "Input layer",
+        "Output layer",
+        "Hidden layer",
+        "Loss function",
+        "Target vector"
+      ],
       "answer": "Hidden layer",
       "explanation": "A hidden layer transforms intermediate representations before later layers use them.",
       "reference": "Google Machine Learning Crash Course, Neural networks: Nodes and hidden layers, Implementing a hidden layer. https://developers.google.com/machine-learning/crash-course/neural-networks/nodes-hidden-layers"
@@ -80,7 +116,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "A maze solver explores all routes one step from the start before examining routes two steps away.",
-      "choices": ["Breadth-first search", "Depth-first search", "Greedy best-first search", "Hill climbing", "Backtracking search"],
+      "choices": [
+        "Breadth-first search",
+        "Depth-first search",
+        "Greedy best-first search",
+        "Hill climbing",
+        "Backtracking search"
+      ],
       "answer": "Breadth-first search",
       "explanation": "Breadth-first search expands the shallowest available nodes first.",
       "reference": "Stanford CS 221 teaching notes, States-based Models, Search optimization and Tree search. https://web.stanford.edu/~shervine/teaching/cs-221/cheatsheet-states-models/"
@@ -92,7 +134,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "A model predicts the next day’s energy use in kilowatt-hours from past readings and weather.",
-      "choices": ["Binary classification", "Multiclass classification", "Ranking", "Regression", "Clustering"],
+      "choices": [
+        "Binary classification",
+        "Multiclass classification",
+        "Ranking",
+        "Regression",
+        "Clustering"
+      ],
       "answer": "Regression",
       "explanation": "Predicting a numerical response is a regression task.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §2.1.5, Regression Versus Classification Problems. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -104,7 +152,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "To label a new plant, vote among the labels of its k nearest plants in the training data.",
-      "choices": ["Naive Bayes", "k-nearest neighbors", "Logistic regression", "Decision tree", "Support vector machine"],
+      "choices": [
+        "Naive Bayes",
+        "k-nearest neighbors",
+        "Logistic regression",
+        "Decision tree",
+        "Support vector machine"
+      ],
       "answer": "k-nearest neighbors",
       "explanation": "The class prediction comes from nearby labeled training examples.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §2.2.3, The Classification Setting, K-Nearest Neighbors. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -116,7 +170,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "Group unlabeled songs by similar tempo and loudness without specifying target groups beforehand.",
-      "choices": ["Class prediction", "Linear regression", "Association-rule mining", "Anomaly scoring", "Cluster analysis"],
+      "choices": [
+        "Class prediction",
+        "Linear regression",
+        "Association-rule mining",
+        "Anomaly scoring",
+        "Cluster analysis"
+      ],
       "answer": "Cluster analysis",
       "explanation": "Clustering groups observations using similarity in their measured features.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.4, Clustering Methods. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -128,7 +188,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "Several model settings are tried. Which data can choose among them while leaving a separate test set untouched?",
-      "choices": ["Training set", "Final test set", "Deployment stream", "Validation set", "Bootstrap training sample"],
+      "choices": [
+        "Training set",
+        "Final test set",
+        "Deployment stream",
+        "Validation set",
+        "Bootstrap training sample"
+      ],
       "answer": "Validation set",
       "explanation": "Validation scores inform tuning while the test set remains available for final evaluation.",
       "reference": "Google Machine Learning Crash Course, Datasets: Dividing the original dataset, Dividing the original dataset. https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets"
@@ -140,7 +206,13 @@
       "difficulty": "easy",
       "clue_type": "scenario",
       "clue": "Split homes repeatedly by feature thresholds, then predict sale price by the average price in each terminal region.",
-      "choices": ["Linear regression", "Regression tree", "k-nearest-neighbor regression", "Logistic regression", "Principal component regression"],
+      "choices": [
+        "Linear regression",
+        "Regression tree",
+        "k-nearest-neighbor regression",
+        "Logistic regression",
+        "Principal component regression"
+      ],
       "answer": "Regression tree",
       "explanation": "A regression tree partitions the feature space and can predict each region’s mean response.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §8.1.1, Regression Trees. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -152,11 +224,18 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "(TP + TN) / (TP + TN + FP + FN)\nConfusion-matrix counts.",
-      "choices": ["Precision", "Recall", "Specificity", "False positive rate", "Accuracy"],
+      "choices": [
+        "Precision",
+        "Recall",
+        "Specificity",
+        "False positive rate",
+        "Accuracy"
+      ],
       "answer": "Accuracy",
       "explanation": "Accuracy is the fraction of all predictions with the correct class.",
       "reference": "Google Machine Learning Crash Course, Classification: Accuracy, recall, precision, and related metrics. https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
-      "convention": "TP and TN count true positives and true negatives. FP and FN count false positives and false negatives."
+      "convention": "TP and TN count true positives and true negatives. FP and FN count false positives and false negatives.",
+      "math_clue": "$\\frac{\\mathrm{TP}+\\mathrm{TN}}{\\mathrm{TP}+\\mathrm{TN}+\\mathrm{FP}+\\mathrm{FN}}$ Confusion-matrix counts."
     },
     {
       "id": "aiml-014",
@@ -165,11 +244,18 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "TP / (TP + FP)\nConfusion-matrix counts.",
-      "choices": ["Recall", "Specificity", "Precision", "Accuracy", "False negative rate"],
+      "choices": [
+        "Recall",
+        "Specificity",
+        "Precision",
+        "Accuracy",
+        "False negative rate"
+      ],
       "answer": "Precision",
       "explanation": "Precision measures the share of positive predictions that are correct.",
       "reference": "Google Machine Learning Crash Course, Classification: Accuracy, recall, precision, and related metrics. https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
-      "convention": "TP and FP count true positives and false positives. Assumes at least one positive prediction."
+      "convention": "TP and FP count true positives and false positives. Assumes at least one positive prediction.",
+      "math_clue": "$\\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FP}}$ Confusion-matrix counts."
     },
     {
       "id": "aiml-015",
@@ -178,10 +264,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "ŷ = b₀ + b₁x\nOne numeric feature predicts a numeric outcome.",
-      "choices": ["Simple linear regression", "Logistic regression", "Quadratic regression", "Nearest-neighbor regression", "Constant-mean regression"],
+      "choices": [
+        "Simple linear regression",
+        "Logistic regression",
+        "Quadratic regression",
+        "Nearest-neighbor regression",
+        "Constant-mean regression"
+      ],
       "answer": "Simple linear regression",
       "explanation": "The fitted slope multiplies the feature and the intercept shifts the predicted outcome.",
-      "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §3.1.1, Estimating the Coefficients. https://datamineaz.org/textbooks/jamesISL.pdf"
+      "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §3.1.1, Estimating the Coefficients. https://datamineaz.org/textbooks/jamesISL.pdf",
+      "math_clue": "$\\hat{y}=b_0+b_1x$ One numeric feature predicts a numeric outcome."
     },
     {
       "id": "aiml-016",
@@ -190,10 +283,17 @@
       "difficulty": "easy",
       "clue_type": "formula",
       "clue": "max(0, z)\nWhich activation function is this?",
-      "choices": ["Sigmoid", "Hyperbolic tangent", "Softplus", "Identity", "ReLU"],
+      "choices": [
+        "Sigmoid",
+        "Hyperbolic tangent",
+        "Softplus",
+        "Identity",
+        "ReLU"
+      ],
       "answer": "ReLU",
       "explanation": "ReLU outputs zero for negative inputs and passes positive inputs through unchanged.",
-      "reference": "Google Machine Learning Crash Course, Neural networks: Activation functions, Common activation functions. https://developers.google.com/machine-learning/crash-course/neural-networks/activation-functions#common-activation-functions"
+      "reference": "Google Machine Learning Crash Course, Neural networks: Activation functions, Common activation functions. https://developers.google.com/machine-learning/crash-course/neural-networks/activation-functions#common-activation-functions",
+      "math_clue": "$\\max(0,z)$ Which activation function is this?"
     },
     {
       "id": "aiml-017",
@@ -202,7 +302,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "A function estimates the remaining cost from a search state to a goal.",
-      "choices": ["Accumulated path cost", "Transition cost", "Heuristic function", "Goal test", "Successor function"],
+      "choices": [
+        "Accumulated path cost",
+        "Transition cost",
+        "Heuristic function",
+        "Goal test",
+        "Successor function"
+      ],
       "answer": "Heuristic function",
       "explanation": "The estimate can prioritize states that appear cheaper to complete from.",
       "reference": "Stanford CS 221, Search 2, A* search and heuristic functions. https://web.stanford.edu/class/archive/cs/cs221/cs221.1192/lectures/search2-6pp.pdf"
@@ -214,7 +320,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "A training feature encodes the outcome using information available only after prediction time.",
-      "choices": ["Target leakage", "Class imbalance", "Concept drift", "Feature scaling", "Random label noise"],
+      "choices": [
+        "Target leakage",
+        "Class imbalance",
+        "Concept drift",
+        "Feature scaling",
+        "Random label noise"
+      ],
       "answer": "Target leakage",
       "explanation": "The field would be unavailable at prediction time and can carry information about the target.",
       "reference": "Google Machine Learning Crash Course, Production ML systems: Monitoring pipelines, Check for label leakage. https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring#check_for_label_leakage"
@@ -226,7 +338,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "A representative location is the arithmetic mean of all feature vectors assigned to that cluster.",
-      "choices": ["Cluster medoid", "Cluster radius", "Cluster diameter", "Cluster centroid", "Cluster boundary"],
+      "choices": [
+        "Cluster medoid",
+        "Cluster radius",
+        "Cluster diameter",
+        "Cluster centroid",
+        "Cluster boundary"
+      ],
       "answer": "Cluster centroid",
       "explanation": "The centroid averages feature values coordinate by coordinate.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.4.1, K-Means Clustering. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -238,7 +356,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "What fraction measures how much of the data’s total variance one principal component captures?",
-      "choices": ["Classification accuracy", "Proportion of variance explained", "Silhouette coefficient", "Cluster cohesion", "Average pairwise distance"],
+      "choices": [
+        "Classification accuracy",
+        "Proportion of variance explained",
+        "Silhouette coefficient",
+        "Cluster cohesion",
+        "Average pairwise distance"
+      ],
       "answer": "Proportion of variance explained",
       "explanation": "This proportion compares a component’s variance with the sum of all component variances.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.2.3, The Proportion of Variance Explained. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -250,7 +374,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "In a transformer, queries, keys and values are all computed from the same sequence of representations.",
-      "choices": ["Self-attention", "Cross-attention", "Convolution", "Tokenization", "Position encoding"],
+      "choices": [
+        "Self-attention",
+        "Cross-attention",
+        "Convolution",
+        "Tokenization",
+        "Position encoding"
+      ],
       "answer": "Self-attention",
       "explanation": "Self-attention relates positions within one sequence. Cross-attention uses keys and values from another sequence.",
       "reference": "Jurafsky and Martin, Speech and Language Processing, 3rd ed. draft (August 2026), Ch. 7, Transformers and Pretraining. https://web.stanford.edu/~jurafsky/slp3/7.pdf"
@@ -262,7 +392,13 @@
       "difficulty": "medium",
       "clue_type": "definition",
       "clue": "Apply the chain rule from a network’s loss back through its layers to obtain parameter gradients.",
-      "choices": ["Forward propagation", "Gradient clipping", "Batch normalization", "Backpropagation", "Learning-rate scheduling"],
+      "choices": [
+        "Forward propagation",
+        "Gradient clipping",
+        "Batch normalization",
+        "Backpropagation",
+        "Learning-rate scheduling"
+      ],
       "answer": "Backpropagation",
       "explanation": "Backpropagation efficiently computes gradients used by an optimization step.",
       "reference": "Google Machine Learning Crash Course, Neural Networks: Training using backpropagation. https://developers.google.com/machine-learning/crash-course/neural-networks/backpropagation"
@@ -274,7 +410,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "A route planner always expands the route with the smallest cost so far. Road costs vary and are positive.",
-      "choices": ["Breadth-first search", "Uniform-cost search", "Depth-first search", "Greedy best-first search", "Hill climbing"],
+      "choices": [
+        "Breadth-first search",
+        "Uniform-cost search",
+        "Depth-first search",
+        "Greedy best-first search",
+        "Hill climbing"
+      ],
       "answer": "Uniform-cost search",
       "explanation": "Uniform-cost search orders the frontier by accumulated path cost.",
       "reference": "Stanford CS 221, Search 1, Uniform cost search. https://web.stanford.edu/class/archive/cs/cs221/cs221.1196/lectures/search1-6pp.pdf"
@@ -286,7 +428,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Start with known facts. Whenever the premises of a rule are known, add its conclusion and continue.",
-      "choices": ["Backward chaining", "Alpha-beta pruning", "Uniform-cost search", "Constraint propagation", "Forward chaining"],
+      "choices": [
+        "Backward chaining",
+        "Alpha-beta pruning",
+        "Uniform-cost search",
+        "Constraint propagation",
+        "Forward chaining"
+      ],
       "answer": "Forward chaining",
       "explanation": "Forward chaining starts from facts and derives every conclusion supported by applicable rules.",
       "reference": "UC Berkeley CS 188 course notes, §10.6, Forward Chaining. https://inst.eecs.berkeley.edu/~cs188/textbook/logic/forward.html"
@@ -298,7 +446,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Photos of the same object come from many views. Keep all views of an object in a single fold.",
-      "choices": ["Ordinary random k-fold validation", "Class-stratified k-fold validation", "Grouped cross-validation", "Leave-one-image-out validation", "Out-of-bag scoring"],
+      "choices": [
+        "Ordinary random k-fold validation",
+        "Class-stratified k-fold validation",
+        "Grouped cross-validation",
+        "Leave-one-image-out validation",
+        "Out-of-bag scoring"
+      ],
       "answer": "Grouped cross-validation",
       "explanation": "Holding entire objects together keeps their other views out of training when the object is evaluated.",
       "reference": "scikit-learn documentation, GroupKFold, non-overlapping groups. https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html"
@@ -310,7 +464,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Train trees on bootstrap samples and try a fresh random subset of features at each split.",
-      "choices": ["Gradient-boosted trees", "Random forest", "Single classification tree", "Extra trees with random thresholds", "Ordinary tree bagging"],
+      "choices": [
+        "Gradient-boosted trees",
+        "Random forest",
+        "Single classification tree",
+        "Extra trees with random thresholds",
+        "Ordinary tree bagging"
+      ],
       "answer": "Random forest",
       "explanation": "A random forest adds random feature selection at splits to reduce correlation among trees.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §8.2.2, Random Forests. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -322,7 +482,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "Start with one cluster per customer, then repeatedly merge the closest clusters into a hierarchy.",
-      "choices": ["Divisive clustering", "k-means clustering", "Density-based clustering", "Gaussian mixture clustering", "Agglomerative clustering"],
+      "choices": [
+        "Divisive clustering",
+        "k-means clustering",
+        "Density-based clustering",
+        "Gaussian mixture clustering",
+        "Agglomerative clustering"
+      ],
       "answer": "Agglomerative clustering",
       "explanation": "Agglomerative clustering builds the hierarchy from the smallest groups upward.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.4.2, Hierarchical Clustering. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -334,7 +500,13 @@
       "difficulty": "medium",
       "clue_type": "scenario",
       "clue": "A writing model adds one token at a time, conditioning each prediction on all earlier tokens it can see.",
-      "choices": ["Masked-token reconstruction", "Parallel sequence prediction", "Autoregressive generation", "Document retrieval", "Sequence classification"],
+      "choices": [
+        "Masked-token reconstruction",
+        "Parallel sequence prediction",
+        "Autoregressive generation",
+        "Document retrieval",
+        "Sequence classification"
+      ],
       "answer": "Autoregressive generation",
       "explanation": "Each generated token joins the context for the next token prediction.",
       "reference": "Jurafsky and Martin, Speech and Language Processing, 3rd ed. draft (August 2026), Ch. 7, Transformers and Pretraining. https://web.stanford.edu/~jurafsky/slp3/7.pdf"
@@ -346,10 +518,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "Priority = g(n) + h(n)\ng is cost from the start, h estimated cost to the goal.",
-      "choices": ["A* search", "Uniform-cost search", "Greedy best-first search", "Breadth-first search", "Depth-first search"],
+      "choices": [
+        "A* search",
+        "Uniform-cost search",
+        "Greedy best-first search",
+        "Breadth-first search",
+        "Depth-first search"
+      ],
       "answer": "A* search",
       "explanation": "A* prioritizes the sum of cost already incurred and estimated cost to finish.",
-      "reference": "Stanford CS 221, Search 2, A* search and heuristic functions. https://web.stanford.edu/class/archive/cs/cs221/cs221.1192/lectures/search2-6pp.pdf"
+      "reference": "Stanford CS 221, Search 2, A* search and heuristic functions. https://web.stanford.edu/class/archive/cs/cs221/cs221.1192/lectures/search2-6pp.pdf",
+      "math_clue": "$\\mathrm{Priority}=g(n)+h(n)$ Here g is the cost from the start and h estimates the remaining cost."
     },
     {
       "id": "aiml-030",
@@ -358,11 +537,18 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "TP / (TP + FN)\nConfusion-matrix counts.",
-      "choices": ["Specificity", "Precision", "Accuracy", "Recall", "False positive rate"],
+      "choices": [
+        "Specificity",
+        "Precision",
+        "Accuracy",
+        "Recall",
+        "False positive rate"
+      ],
       "answer": "Recall",
       "explanation": "Recall is the share of actual positives the classifier finds.",
       "reference": "Google Machine Learning Crash Course, Classification: Accuracy, recall, precision, and related metrics. https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
-      "convention": "TP and FN count true positives and false negatives. Assumes at least one actual positive."
+      "convention": "TP and FN count true positives and false negatives. Assumes at least one actual positive.",
+      "math_clue": "$\\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FN}}$ Confusion-matrix counts."
     },
     {
       "id": "aiml-031",
@@ -371,10 +557,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "p = 1 / [1 + exp(−z)]\nz is the fitted linear score for a binary outcome.",
-      "choices": ["Multiclass softmax vector", "Probit transformation", "Logistic sigmoid", "Rectified linear activation", "Complementary log-log inverse link"],
+      "choices": [
+        "Multiclass softmax vector",
+        "Probit transformation",
+        "Logistic sigmoid",
+        "Rectified linear activation",
+        "Complementary log-log inverse link"
+      ],
       "answer": "Logistic sigmoid",
       "explanation": "The sigmoid turns log odds into a probability between zero and one.",
-      "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §4.3.1, The Logistic Model. https://datamineaz.org/textbooks/jamesISL.pdf"
+      "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §4.3.1, The Logistic Model. https://datamineaz.org/textbooks/jamesISL.pdf",
+      "math_clue": "$p=\\frac{1}{1+\\exp(-z)}$ Here z is the fitted linear score for a binary outcome."
     },
     {
       "id": "aiml-032",
@@ -383,10 +576,17 @@
       "difficulty": "medium",
       "clue_type": "formula",
       "clue": "Σᵢ ‖xᵢ − μ[c(i)]‖²\nμc(i) is the mean of the cluster assigned to xᵢ.",
-      "choices": ["k-means objective", "k-medoids objective", "Silhouette coefficient", "Single-linkage criterion", "Between-cluster sum of squares"],
+      "choices": [
+        "k-means objective",
+        "k-medoids objective",
+        "Silhouette coefficient",
+        "Single-linkage criterion",
+        "Between-cluster sum of squares"
+      ],
       "answer": "k-means objective",
       "explanation": "The objective sums squared distances from observations to their assigned cluster means.",
-      "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.4.1, K-Means Clustering. https://datamineaz.org/textbooks/jamesISL.pdf"
+      "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.4.1, K-Means Clustering. https://datamineaz.org/textbooks/jamesISL.pdf",
+      "math_clue": "$\\sum_i\\left\\Vert x_i-\\mu_{c(i)}\\right\\Vert^2$ The indexed mean belongs to the cluster assigned to observation i."
     },
     {
       "id": "aiml-033",
@@ -395,7 +595,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "In a deterministic two-player zero-sum game, choose the move whose worst opponent reply gives the best payoff.",
-      "choices": ["Expectimax", "Greedy best-first search", "Uniform-cost search", "Minimax", "Beam search"],
+      "choices": [
+        "Expectimax",
+        "Greedy best-first search",
+        "Uniform-cost search",
+        "Minimax",
+        "Beam search"
+      ],
       "answer": "Minimax",
       "explanation": "Minimax assumes the opponent will choose the reply least favorable to the current player.",
       "reference": "UC Berkeley CS 188 course notes, §3.2, Minimax. https://inst.eecs.berkeley.edu/~cs188/textbook/games/minimax.html"
@@ -407,7 +613,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "Skip branches whose available bounds show they cannot change the minimax value.",
-      "choices": ["Beam search", "Alpha-beta pruning", "Early stopping", "Depth-limited search", "Iterative deepening"],
+      "choices": [
+        "Beam search",
+        "Alpha-beta pruning",
+        "Early stopping",
+        "Depth-limited search",
+        "Iterative deepening"
+      ],
       "answer": "Alpha-beta pruning",
       "explanation": "Alpha-beta pruning avoids evaluating irrelevant branches while preserving the exact minimax value.",
       "reference": "UC Berkeley CS 188 course notes, §3.2.1, Alpha-Beta Pruning. https://inst.eecs.berkeley.edu/~cs188/textbook/games/minimax.html"
@@ -419,7 +631,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "Among cases with similar predicted event probabilities, the observed event rate matches those probabilities.",
-      "choices": ["Class balance", "Perfect classification", "Score discrimination", "Threshold optimization", "Probability calibration"],
+      "choices": [
+        "Class balance",
+        "Perfect classification",
+        "Score discrimination",
+        "Threshold optimization",
+        "Probability calibration"
+      ],
       "answer": "Probability calibration",
       "explanation": "Calibration asks whether forecast probabilities agree with observed frequencies.",
       "reference": "scikit-learn User Guide, Probability calibration, Calibration curves. https://scikit-learn.org/stable/modules/calibration.html#calibration-curves"
@@ -431,7 +649,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "This classifier maximizes a separating margin while penalizing permitted margin violations.",
-      "choices": ["Hard-margin support vector classifier", "Linear discriminant analysis", "Logistic regression", "Soft-margin support vector classifier", "Nearest-neighbor classifier"],
+      "choices": [
+        "Hard-margin support vector classifier",
+        "Linear discriminant analysis",
+        "Logistic regression",
+        "Soft-margin support vector classifier",
+        "Nearest-neighbor classifier"
+      ],
       "answer": "Soft-margin support vector classifier",
       "explanation": "The soft margin trades a wide margin against the cost of margin violations on the training examples.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §9.2.2, Details of the Support Vector Classifier. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -443,7 +667,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "Build clusters from connected dense neighborhoods and mark sparse points outside them as noise.",
-      "choices": ["k-means", "DBSCAN", "k-medoids", "Complete-linkage clustering", "Gaussian mixture clustering"],
+      "choices": [
+        "k-means",
+        "DBSCAN",
+        "k-medoids",
+        "Complete-linkage clustering",
+        "Gaussian mixture clustering"
+      ],
       "answer": "DBSCAN",
       "explanation": "DBSCAN grows clusters from dense regions and can leave isolated observations unassigned.",
       "reference": "Ester et al. (1996), A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise, §§3–4. https://cdn.aaai.org/KDD/1996/KDD96-037.pdf"
@@ -455,7 +685,13 @@
       "difficulty": "hard",
       "clue_type": "definition",
       "clue": "During training, block each token position from attending to later positions in the same sequence.",
-      "choices": ["Padding mask", "Position encoding", "Dropout mask", "Cross-attention layer", "Causal attention mask"],
+      "choices": [
+        "Padding mask",
+        "Position encoding",
+        "Dropout mask",
+        "Cross-attention layer",
+        "Causal attention mask"
+      ],
       "answer": "Causal attention mask",
       "explanation": "A causal mask preserves the left-to-right information available when predicting the next token.",
       "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.1, Encoder and Decoder Stacks. https://arxiv.org/html/1706.03762#S3.SS1"
@@ -467,7 +703,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A scheduling solver chooses the next unassigned task by finding the one with the fewest legal time slots remaining.",
-      "choices": ["Least constraining value", "Arc consistency", "Minimum remaining values", "Forward checking", "Uniform-cost ordering"],
+      "choices": [
+        "Least constraining value",
+        "Arc consistency",
+        "Minimum remaining values",
+        "Forward checking",
+        "Uniform-cost ordering"
+      ],
       "answer": "Minimum remaining values",
       "explanation": "The most constrained unassigned variable is considered first.",
       "reference": "UC Berkeley CS 188 course notes, §2.4, Ordering. https://inst.eecs.berkeley.edu/~cs188/textbook/csp/ordering.html"
@@ -479,7 +721,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "After fitting a tree, the next tree fits the negative loss gradients of the current ensemble on the training cases.",
-      "choices": ["Gradient boosting", "Random forest", "Ordinary tree bagging", "Tree pruning", "Stacked generalization"],
+      "choices": [
+        "Gradient boosting",
+        "Random forest",
+        "Ordinary tree bagging",
+        "Tree pruning",
+        "Stacked generalization"
+      ],
       "answer": "Gradient boosting",
       "explanation": "Gradient boosting builds an additive model by fitting successive corrections to reduce the loss.",
       "reference": "Friedman (2001), Greedy Function Approximation: A Gradient Boosting Machine, Algorithm 1. https://doi.org/10.1214/aos/1013203451"
@@ -491,7 +739,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Before PCA, put measurements in meters and kilograms on comparable scales so raw units have less influence.",
-      "choices": ["Center the features only", "Sort the rows by feature value", "Remove all covariances", "Reorder the feature columns", "Standardize the features"],
+      "choices": [
+        "Center the features only",
+        "Sort the rows by feature value",
+        "Remove all covariances",
+        "Reorder the feature columns",
+        "Standardize the features"
+      ],
       "answer": "Standardize the features",
       "explanation": "Centering and scaling each feature by its standard deviation avoids dominance from its original units.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.2.4, More on PCA, Scaling the Variables. https://datamineaz.org/textbooks/jamesISL.pdf"
@@ -503,7 +757,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A team estimates feature means and scales from all rows before cross-validation. What flaw does this introduce?",
-      "choices": ["Class imbalance", "Label permutation", "Preprocessing leakage", "Model underfitting", "Temporal concept drift"],
+      "choices": [
+        "Class imbalance",
+        "Label permutation",
+        "Preprocessing leakage",
+        "Model underfitting",
+        "Temporal concept drift"
+      ],
       "answer": "Preprocessing leakage",
       "explanation": "Validation rows influence the learned transform. Fit it separately on each training fold.",
       "reference": "UC Berkeley STAT 154, Cross Validation, §5.1, Example: using the validation data without noticing. https://stat154.berkeley.edu/fall-2026/labs/lab4_cross_val/lab4_presentation_2026.html"
@@ -515,7 +775,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "Two clusterings use different label numbers. Which measure compares membership pairs and adjusts for chance?",
-      "choices": ["Adjusted Rand index", "Raw Rand index", "Silhouette coefficient", "Within-cluster inertia", "Overall classification accuracy"],
+      "choices": [
+        "Adjusted Rand index",
+        "Raw Rand index",
+        "Silhouette coefficient",
+        "Within-cluster inertia",
+        "Overall classification accuracy"
+      ],
       "answer": "Adjusted Rand index",
       "explanation": "The adjusted Rand index compares pair memberships, ignores label names, and corrects for chance.",
       "reference": "scikit-learn User Guide, Clustering, Rand index. https://scikit-learn.org/stable/modules/clustering.html#rand-index"
@@ -527,7 +793,13 @@
       "difficulty": "hard",
       "clue_type": "scenario",
       "clue": "A question-answering system retrieves manual passages for each query and feeds them to its text generator.",
-      "choices": ["Supervised fine-tuning", "Knowledge distillation", "Masked language modeling", "Retrieval-augmented generation", "Beam search"],
+      "choices": [
+        "Supervised fine-tuning",
+        "Knowledge distillation",
+        "Masked language modeling",
+        "Retrieval-augmented generation",
+        "Beam search"
+      ],
       "answer": "Retrieval-augmented generation",
       "explanation": "Retrieved passages provide additional context for generation at query time.",
       "reference": "Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, §2, Methods. https://papers.nips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf"
@@ -539,10 +811,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "V*(s) = maxₐ E[r + γV*(s′) ∣ s,a]\nr is reward, s′ the next state.",
-      "choices": ["Bellman equation for a fixed policy", "Bellman optimality equation", "Temporal-difference prediction update", "Monte Carlo return estimate", "Supervised loss function"],
+      "choices": [
+        "Bellman equation for a fixed policy",
+        "Bellman optimality equation",
+        "Temporal-difference prediction update",
+        "Monte Carlo return estimate",
+        "Supervised loss function"
+      ],
       "answer": "Bellman optimality equation",
       "explanation": "The optimum takes the best action’s expected immediate reward plus discounted future value.",
-      "reference": "UC Berkeley CS 188 course notes, §4.2, Solving Markov Decision Processes, Bellman equation. https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/solve.html"
+      "reference": "UC Berkeley CS 188 course notes, §4.2, Solving Markov Decision Processes, Bellman equation. https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/solve.html",
+      "math_clue": "$V^*(s)=\\max_a\\mathrm{E}[r+\\gamma V^*(s')\\mid s,a]$ Here r is the reward and s prime is the next state."
     },
     {
       "id": "aiml-046",
@@ -551,10 +830,17 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "softmax(QKᵀ / √d) V\nQ, K, V are queries, keys and values. d is key dimension.",
-      "choices": ["Scaled dot-product attention", "Additive attention", "Max pooling", "Unscaled dot-product attention", "Layer normalization"],
+      "choices": [
+        "Scaled dot-product attention",
+        "Additive attention",
+        "Max pooling",
+        "Unscaled dot-product attention",
+        "Layer normalization"
+      ],
       "answer": "Scaled dot-product attention",
       "explanation": "The scaled query-key similarities determine the weights applied to the values.",
-      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2.1, Scaled Dot-Product Attention. https://arxiv.org/html/1706.03762#S3.SS2.SSS1"
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2.1, Scaled Dot-Product Attention. https://arxiv.org/html/1706.03762#S3.SS2.SSS1",
+      "math_clue": "$\\operatorname{softmax}\\left(\\frac{QK^{\\mathsf{T}}}{\\sqrt{d}}\\right)V$ Q, K, V are queries, keys and values. d is key dimension."
     },
     {
       "id": "aiml-047",
@@ -563,11 +849,18 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "2PR / (P + R)\nP is precision and R is recall.",
-      "choices": ["Balanced accuracy", "Matthews correlation", "Specificity", "F1 score", "Area under the ROC curve"],
+      "choices": [
+        "Balanced accuracy",
+        "Matthews correlation",
+        "Specificity",
+        "F1 score",
+        "Area under the ROC curve"
+      ],
       "answer": "F1 score",
       "explanation": "F1 is the harmonic mean of precision and recall.",
       "reference": "Google Machine Learning Crash Course, Classification: Accuracy, recall, precision, and related metrics. https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
-      "convention": "Assumes precision and recall are defined and P + R is positive."
+      "convention": "Assumes precision and recall are defined and P + R is positive.",
+      "math_clue": "$\\frac{2PR}{P+R}$ P is precision and R is recall."
     },
     {
       "id": "aiml-048",
@@ -576,11 +869,1872 @@
       "difficulty": "hard",
       "clue_type": "formula",
       "clue": "[b(i) − a(i)] / max[a(i), b(i)]\na is mean within-cluster distance, b is the lowest mean distance to another cluster.",
-      "choices": ["Adjusted Rand index", "Silhouette coefficient", "Cluster inertia", "Within-cluster sum of squares", "Average linkage distance"],
+      "choices": [
+        "Adjusted Rand index",
+        "Silhouette coefficient",
+        "Cluster inertia",
+        "Within-cluster sum of squares",
+        "Average linkage distance"
+      ],
       "answer": "Silhouette coefficient",
       "explanation": "Silhouette compares how close an observation is to its own cluster and to its nearest alternative cluster.",
       "reference": "scikit-learn User Guide, Clustering, Silhouette Coefficient. https://scikit-learn.org/stable/modules/clustering.html#silhouette-coefficient",
-      "convention": "Assumes at least two clusters and a non-singleton cluster for the observation. Exclude the observation itself from a."
+      "convention": "Assumes at least two clusters and a non-singleton cluster for the observation. Exclude the observation itself from a.",
+      "math_clue": "$\\frac{b(i)-a(i)}{\\max[a(i),b(i)]}$ a is mean within-cluster distance, b is the lowest mean distance to another cluster."
+    },
+    {
+      "id": "aiml-049",
+      "concept": "goal test",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A route planner must recognize any charger with an open bay as a finished route. Which part checks that condition?",
+      "choices": [
+        "Goal test",
+        "Transition model",
+        "Path cost",
+        "Action generator",
+        "Initial state"
+      ],
+      "answer": "Goal test",
+      "explanation": "A goal test determines whether a state satisfies the objective.",
+      "reference": "UC Berkeley CS 188 §1.2, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-050",
+      "concept": "transition model",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A sliding puzzle needs to predict which board results from moving the blank left. Which component supplies that board?",
+      "choices": [
+        "Transition model",
+        "Goal test",
+        "Path cost",
+        "Initial state",
+        "Search frontier"
+      ],
+      "answer": "Transition model",
+      "explanation": "The transition model maps a state and action to the resulting state.",
+      "reference": "UC Berkeley CS 188 §1.2, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-051",
+      "concept": "path cost",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A delivery bot adds the seconds of travel along the moves made so far. What has it computed?",
+      "choices": [
+        "Path cost",
+        "Heuristic value",
+        "Branching factor",
+        "Goal test",
+        "Search depth"
+      ],
+      "answer": "Path cost",
+      "explanation": "The accumulated cost is the sum of the costs of its traversed actions.",
+      "reference": "UC Berkeley CS 188 §1.2, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-052",
+      "concept": "search frontier",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A solver stores discovered routes that it has yet to expand. What is that collection called?",
+      "choices": [
+        "Search frontier",
+        "Explored set",
+        "Goal set",
+        "Action model",
+        "Cost function"
+      ],
+      "answer": "Search frontier",
+      "explanation": "The frontier holds candidates awaiting expansion.",
+      "reference": "UC Berkeley CS 188 §1.3, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-053",
+      "concept": "depth first search",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A maze solver keeps following the newest branch until it hits a dead end, then backs up. Which strategy matches this?",
+      "choices": [
+        "Depth-first search",
+        "Breadth-first search",
+        "Uniform-cost search",
+        "Greedy best-first search",
+        "Bidirectional search"
+      ],
+      "answer": "Depth-first search",
+      "explanation": "It explores one branch deeply before trying alternatives.",
+      "reference": "UC Berkeley CS 188 §1.3, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-054",
+      "concept": "uniform cost search",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A route planner expands whichever route has the least accumulated toll. It never estimates upcoming tolls. Which strategy is this?",
+      "choices": [
+        "Uniform-cost search",
+        "Depth-first search",
+        "Breadth-first search",
+        "Greedy best-first search",
+        "Beam search"
+      ],
+      "answer": "Uniform-cost search",
+      "explanation": "Uniform-cost search orders the frontier by cost already incurred.",
+      "reference": "UC Berkeley CS 188 §1.3, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-055",
+      "concept": "greedy best first search",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A robot expands the route whose end is closest to the goal in straight-line distance, ignoring distance already travelled. Which strategy is this?",
+      "choices": [
+        "Greedy best-first search",
+        "Uniform-cost search",
+        "Depth-first search",
+        "Breadth-first search",
+        "A* search"
+      ],
+      "answer": "Greedy best-first search",
+      "explanation": "Greedy best-first search ranks candidates using the heuristic alone.",
+      "reference": "UC Berkeley CS 188 §1.4, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-056",
+      "concept": "a star search",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A search priority adds the actual path cost and a heuristic estimate of the cost to the goal. Which search uses both?",
+      "choices": [
+        "A* search",
+        "Breadth-first search",
+        "Depth-first search",
+        "Uniform-cost search",
+        "Greedy best-first search"
+      ],
+      "answer": "A* search",
+      "explanation": "A* estimates total path cost by combining the cost already incurred with estimated remaining cost.",
+      "reference": "UC Berkeley CS 188 §1.4, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-057",
+      "concept": "admissible heuristic",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A travel estimate never exceeds the true cheapest remaining trip. Which property does this guarantee?",
+      "choices": [
+        "Admissibility",
+        "Exactness",
+        "Optimality of the current path",
+        "Independence",
+        "Cost symmetry"
+      ],
+      "answer": "Admissibility",
+      "explanation": "An admissible heuristic is a lower bound on the remaining cost.",
+      "reference": "UC Berkeley CS 188 §1.4, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-058",
+      "concept": "hill climbing",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A scheduler repeatedly makes the best improving swap among neighbours of its current schedule. Which search is illustrated?",
+      "choices": [
+        "Hill climbing",
+        "Breadth-first search",
+        "Uniform-cost search",
+        "Backtracking",
+        "Monte Carlo tree search"
+      ],
+      "answer": "Hill climbing",
+      "explanation": "Hill climbing moves to a better neighbour until none is available.",
+      "reference": "UC Berkeley CS 188 §1.5, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-059",
+      "concept": "constraint domain",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "For the Tuesday shift, Dana, Efe and Grace are the only staff eligible before applying pairwise rules. What is that list for the shift variable?",
+      "choices": [
+        "Variable domain",
+        "Search frontier",
+        "Constraint graph",
+        "Goal test",
+        "Solution path"
+      ],
+      "answer": "Variable domain",
+      "explanation": "A domain lists the candidate values a variable may take.",
+      "reference": "UC Berkeley CS 188 §2.1, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-060",
+      "concept": "backtracking search",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A roster builder unwinds its latest assignment after discovering that no qualified person can cover the next shift. What technique is it using?",
+      "choices": [
+        "Backtracking search",
+        "Greedy best-first search",
+        "Policy iteration",
+        "Expectimax",
+        "Forward chaining"
+      ],
+      "answer": "Backtracking search",
+      "explanation": "Backtracking revisits an earlier decision after a partial assignment fails.",
+      "reference": "UC Berkeley CS 188 §2.2, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-061",
+      "concept": "minimum remaining values constraint ordering",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Three unassigned slots have 1, 2 and 4 legal choices. A solver chooses the slot with 1 choice first. Which rule is it using?",
+      "choices": [
+        "Minimum remaining values",
+        "Least constraining value",
+        "Uniform-cost search",
+        "Maximum likelihood",
+        "Depth cutoff"
+      ],
+      "answer": "Minimum remaining values",
+      "explanation": "It selects the variable with the fewest currently feasible values.",
+      "reference": "UC Berkeley CS 188 §2.4, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-062",
+      "concept": "minimax strategy",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A game search assumes its opponent always selects the available continuation least favourable to the player. Which principle is this?",
+      "choices": [
+        "Minimax",
+        "Expectimax",
+        "Uniform-cost search",
+        "Random rollout",
+        "Greedy best-first search"
+      ],
+      "answer": "Minimax",
+      "explanation": "Opponent nodes use their minimum value from the player's perspective.",
+      "reference": "UC Berkeley CS 188 §3.2, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-063",
+      "concept": "alpha beta pruning",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "During minimax, a solver skips leaves whose values could no longer change its chosen move. Which optimization enables this?",
+      "choices": [
+        "Alpha–beta pruning",
+        "Depth-first expansion",
+        "Policy evaluation",
+        "Beam search",
+        "Expectimax averaging"
+      ],
+      "answer": "Alpha–beta pruning",
+      "explanation": "The bounds from already evaluated moves can rule out a branch.",
+      "reference": "UC Berkeley CS 188 §3.2, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-064",
+      "concept": "expectimax",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A game tree has a node whose successor states depend on a random roll. How does expectimax combine the child scores here?",
+      "choices": [
+        "A probability-weighted average",
+        "The minimum child value",
+        "The maximum child value",
+        "The median child value",
+        "The most probable branch alone"
+      ],
+      "answer": "A probability-weighted average",
+      "explanation": "A chance node values every possible outcome using its probability.",
+      "reference": "UC Berkeley CS 188 §3.3, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-065",
+      "concept": "markov property",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Given the robot's current state and action, earlier states add no information about its next state. Which property is assumed?",
+      "choices": [
+        "Markov property",
+        "Stationarity",
+        "Determinism",
+        "Reversibility",
+        "Independence of actions"
+      ],
+      "answer": "Markov property",
+      "explanation": "The conditional next-state distribution depends only on the present state and action.",
+      "reference": "UC Berkeley CS 188 §4.1, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-066",
+      "concept": "discount factor",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In a planning objective, what controls the relative importance of the same reward now and several steps later?",
+      "choices": [
+        "Discount factor",
+        "Learning rate",
+        "Action probability",
+        "Transition cost",
+        "Search depth"
+      ],
+      "answer": "Discount factor",
+      "explanation": "The discount factor assigns progressively different weights to future rewards.",
+      "reference": "UC Berkeley CS 188 §4.1, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-067",
+      "concept": "modus ponens",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The rules say if switch A is on then B is on. A is on. What follows about B?",
+      "choices": [
+        "Switch B is on",
+        "Switch B is off",
+        "Switch B changes state",
+        "Switch B is unpowered",
+        "Switch B is unknown"
+      ],
+      "answer": "Switch B is on",
+      "explanation": "A true antecedent lets the implication establish its consequent.",
+      "reference": "UC Berkeley CS 188 §10.3, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-068",
+      "concept": "forward chaining",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Starting with verified facts, a rules engine adds any conclusions whose premises are satisfied. Which direction of reasoning is shown?",
+      "choices": [
+        "Forward chaining",
+        "Backward chaining",
+        "Heuristic search",
+        "Policy iteration",
+        "Random restart"
+      ],
+      "answer": "Forward chaining",
+      "explanation": "Forward chaining reasons from available facts toward new conclusions.",
+      "reference": "UC Berkeley CS 188 §10.6, Introduction to Artificial Intelligence: https://inst.eecs.berkeley.edu/~cs188/textbook/"
+    },
+    {
+      "id": "aiml-069",
+      "concept": "classification task",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A shop predicts whether each unshipped order will arrive on time, late or never. What type of task predicts these three categories?",
+      "choices": [
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Dimensionality reduction",
+        "Density estimation"
+      ],
+      "answer": "Classification",
+      "explanation": "The outcome is a set of discrete classes.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 2: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-070",
+      "concept": "regression task",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A model predicts how many litres of paint a job needs using a continuous output. Which task is this?",
+      "choices": [
+        "Regression",
+        "Classification",
+        "Clustering",
+        "Anomaly detection",
+        "Feature extraction"
+      ],
+      "answer": "Regression",
+      "explanation": "Regression predicts a numeric response.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 2: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-071",
+      "concept": "supervised target label",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An insurer trains a model to predict a new customer's claim amount from known details. Which column serves as the target in labelled examples?",
+      "choices": [
+        "Actual claim amount",
+        "Customer age",
+        "Policy type",
+        "Deductible",
+        "Insured value"
+      ],
+      "answer": "Actual claim amount",
+      "explanation": "The target supplies the outcome the model is trained to predict.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 2: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-072",
+      "concept": "k nearest neighbors classifier",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In unweighted nearest-neighbour classification, what decides the predicted label once the local neighbours are found?",
+      "choices": [
+        "The most common label among them",
+        "The most common global label",
+        "The class with largest feature mean",
+        "The class farthest from the query",
+        "The label of the earliest training record"
+      ],
+      "answer": "The most common label among them",
+      "explanation": "The classifier gives each neighbour one vote and picks the class with the most votes.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 2: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-073",
+      "concept": "classification decision boundary",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Moving slightly across a line changes a classifier's prediction from class A to class B. What is the line called?",
+      "choices": [
+        "Decision boundary",
+        "Residual line",
+        "Learning curve",
+        "Precision curve",
+        "Calibration curve"
+      ],
+      "answer": "Decision boundary",
+      "explanation": "A decision boundary separates regions assigned to different classes.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 2: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-074",
+      "concept": "linear regression prediction",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "In ŷ = b₀ + b₁x, which coefficient shifts all fitted values by the same amount?",
+      "choices": [
+        "The intercept",
+        "The slope",
+        "The input",
+        "The residual",
+        "The target"
+      ],
+      "answer": "The intercept",
+      "explanation": "The intercept is added once to every fitted value.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 3: https://www.statlearning.com/",
+      "math_clue": "Consider $\\hat{y}=b_0+b_1x$. Which coefficient shifts all fitted values by the same amount?"
+    },
+    {
+      "id": "aiml-075",
+      "concept": "regression slope",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A fitted straight line rises from left to right. What does its slope describe?",
+      "choices": [
+        "Change in the fitted output per unit increase in the input",
+        "The fitted output when the input is zero",
+        "The average squared residual",
+        "The amount of data used to fit the line",
+        "The covariance of prediction errors"
+      ],
+      "answer": "Change in the fitted output per unit increase in the input",
+      "explanation": "The slope determines the direction and rate of change in the fitted output.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 3: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-076",
+      "concept": "regression residual",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A price model overestimates a sale price. Under the observed-minus-fitted convention, what is the residual's sign?",
+      "choices": [
+        "Negative",
+        "Positive",
+        "Zero",
+        "Always the same as the predictor",
+        "Undetermined from the convention"
+      ],
+      "answer": "Negative",
+      "explanation": "An overestimate places the fitted value above the observation.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 3: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-077",
+      "concept": "least squares criterion",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What does ordinary least squares minimize when choosing the coefficients of a line?",
+      "choices": [
+        "Sum of squared residuals",
+        "Mean signed residual",
+        "Largest absolute residual",
+        "Sum of absolute residuals",
+        "Median signed residual"
+      ],
+      "answer": "Sum of squared residuals",
+      "explanation": "Squaring the observed-minus-fitted differences and adding them defines its fit criterion.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 3: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-078",
+      "concept": "logistic sigmoid link",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In binary logistic regression, why apply the sigmoid to the fitted linear score?",
+      "choices": [
+        "To map it to a probability between zero and one",
+        "To force it to be a class label",
+        "To map it to an unrestricted real value",
+        "To make all inputs equally influential",
+        "To preserve the score in its original units"
+      ],
+      "answer": "To map it to a probability between zero and one",
+      "explanation": "The sigmoid converts the unrestricted fitted score into the bounded probability scale.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 4: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-079",
+      "concept": "log odds interpretation",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A fitted logistic regression coefficient is positive. Holding the other predictors fixed, what happens to the event odds as that predictor increases?",
+      "choices": [
+        "They increase",
+        "They decrease",
+        "They stay constant",
+        "They become negative",
+        "They become unrelated to the coefficient"
+      ],
+      "answer": "They increase",
+      "explanation": "A positive coefficient raises the fitted log odds, and odds move in the same direction.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 4: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-080",
+      "concept": "naive bayes assumption",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Under the naive Bayes model, when are predictor values assumed to be independent of one another?",
+      "choices": [
+        "Given the class",
+        "Across classes only",
+        "For every dataset",
+        "Given the prediction error",
+        "Given the sample size"
+      ],
+      "answer": "Given the class",
+      "explanation": "It factors the predictors' joint distribution separately within each class.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 4: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-081",
+      "concept": "multiclass classification",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A model assigns each flower exactly one of four species names. Which task is this?",
+      "choices": [
+        "Multiclass classification",
+        "Binary classification",
+        "Multilabel classification",
+        "Regression",
+        "Clustering"
+      ],
+      "answer": "Multiclass classification",
+      "explanation": "The label belongs to more than two mutually exclusive classes.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 4: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-082",
+      "concept": "tree split",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A tree sends cases left or right according to whether a measurement exceeds a cutoff. What is this part of the tree?",
+      "choices": [
+        "Internal decision node",
+        "Terminal leaf",
+        "Ensemble vote",
+        "Feature weight",
+        "Target residual"
+      ],
+      "answer": "Internal decision node",
+      "explanation": "An internal node applies a rule to split cases between child branches.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 8: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-083",
+      "concept": "regression tree leaf",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A standard regression tree uses squared error. Which summary of the training responses is stored as a terminal prediction?",
+      "choices": [
+        "The arithmetic mean of the responses in that leaf",
+        "The median response in the root",
+        "The most frequent predictor value",
+        "The largest response in that leaf",
+        "The average response of neighbouring leaves"
+      ],
+      "answer": "The arithmetic mean of the responses in that leaf",
+      "explanation": "For a constant prediction, the arithmetic mean minimizes the sum of squared differences in the leaf.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 8: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-084",
+      "concept": "cost complexity pruning",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A tree fitter compares nested smaller trees using a score that penalizes extra terminal leaves. What approach is this?",
+      "choices": [
+        "Cost-complexity pruning",
+        "Bootstrap aggregation",
+        "Gradient boosting",
+        "Nearest-neighbour voting",
+        "Random feature splitting"
+      ],
+      "answer": "Cost-complexity pruning",
+      "explanation": "The method trades training error against the number of leaves.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 8: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-085",
+      "concept": "bootstrap aggregation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A planner fits trees on bootstrap samples and averages their predictions. Every tree can consider all features for each split. Which method is described?",
+      "choices": [
+        "Bootstrap aggregation",
+        "Gradient boosting",
+        "Stacked generalization",
+        "Cost-complexity pruning",
+        "Single-tree fitting"
+      ],
+      "answer": "Bootstrap aggregation",
+      "explanation": "Bagging averages models fitted to bootstrap samples without a random-feature restriction.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 8: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-086",
+      "concept": "random forest",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An ensemble trains bootstrap trees and gives each split a freshly sampled subset of predictors. Which method uses both choices?",
+      "choices": [
+        "Random forest",
+        "Gradient boosting",
+        "Cost-complexity pruning",
+        "Ordinary bagging",
+        "Nearest-neighbour voting"
+      ],
+      "answer": "Random forest",
+      "explanation": "A random forest decorrelates its bagged trees by restricting split candidates.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 8: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-087",
+      "concept": "gradient boosting",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A model adds shallow trees one at a time to reduce the loss left by the current ensemble. Which method matches this?",
+      "choices": [
+        "Gradient boosting",
+        "Random forest",
+        "Bootstrap aggregation",
+        "Standalone tree pruning",
+        "Ordinary least squares"
+      ],
+      "answer": "Gradient boosting",
+      "explanation": "Boosting fits successive additions to improve the ensemble's current predictions.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 8: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-088",
+      "concept": "support vectors",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A margin classifier relies on a subset of training cases on or inside the margin to define its separating rule. What are those cases called?",
+      "choices": [
+        "Support vectors",
+        "Centroids",
+        "Held-out cases",
+        "Bootstrap draws",
+        "Residuals"
+      ],
+      "answer": "Support vectors",
+      "explanation": "Support vectors are the training examples with nonzero contributions to the margin classifier.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 9: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-089",
+      "concept": "kernel trick",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A classifier evaluates inner products in a richer feature space without explicitly constructing those features. What technique makes this possible?",
+      "choices": [
+        "Kernel trick",
+        "Feature pruning",
+        "Bootstrap resampling",
+        "Gradient clipping",
+        "Nearest-neighbour voting"
+      ],
+      "answer": "Kernel trick",
+      "explanation": "A kernel supplies the inner products directly.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 9: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-090",
+      "concept": "unsupervised learning",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An analyst explores patterns in hundreds of sensor records without a known outcome column. Which learning setting is this?",
+      "choices": [
+        "Unsupervised learning",
+        "Supervised learning",
+        "Reinforcement learning",
+        "Cost-sensitive learning",
+        "Ordinal regression"
+      ],
+      "answer": "Unsupervised learning",
+      "explanation": "The inputs are available without labelled responses.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-091",
+      "concept": "cluster analysis",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A museum groups visits with similar movement patterns without predefined visitor labels. Which task is it solving?",
+      "choices": [
+        "Cluster analysis",
+        "Classification",
+        "Regression",
+        "Calibration",
+        "Feature imputation"
+      ],
+      "answer": "Cluster analysis",
+      "explanation": "Clustering finds groups of similar observations without known classes.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-092",
+      "concept": "cluster centroid",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "During a k-means update the memberships stay fixed. What location is assigned to each cluster representative?",
+      "choices": [
+        "The centre obtained by averaging its member coordinates",
+        "The member closest to the origin",
+        "The midpoint of the most distant two clusters",
+        "The least dense location in the cluster",
+        "The same point chosen for all clusters"
+      ],
+      "answer": "The centre obtained by averaging its member coordinates",
+      "explanation": "A k-means centroid is the coordinate-wise average of its assigned points.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-093",
+      "concept": "k means assignment",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "During k-means assignment, which cluster receives a point when the centroids are held fixed?",
+      "choices": [
+        "Nearest centroid",
+        "Largest cluster",
+        "Farthest centroid",
+        "Densest cluster",
+        "Earliest centroid"
+      ],
+      "answer": "Nearest centroid",
+      "explanation": "Each point goes to the centroid with minimum squared distance.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-094",
+      "concept": "k means squared error objective",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What quantities does standard k-means sum in its objective?",
+      "choices": [
+        "Squared point-to-centroid distances",
+        "Distances between centroid pairs",
+        "Absolute coordinate deviations",
+        "Distances between all point pairs",
+        "Distances to the global centroid"
+      ],
+      "answer": "Squared point-to-centroid distances",
+      "explanation": "The objective adds the squared distance from each point to its assigned centroid.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-095",
+      "concept": "k means random starts",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team repeats k-means with several starting centroid sets. What is the purpose?",
+      "choices": [
+        "Reduce poor-start risk",
+        "Fix the number of clusters",
+        "Make all clusters equal",
+        "Avoid distance computations",
+        "Create true class labels"
+      ],
+      "answer": "Reduce poor-start risk",
+      "explanation": "Different starts can converge to different solutions. Repetition can find one with lower within-cluster error.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-096",
+      "concept": "agglomerative hierarchical clustering",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An agglomerative method starts with one cluster per item. What operation builds successively larger clusters?",
+      "choices": [
+        "Merge nearby groups",
+        "Remove isolated points",
+        "Split the largest group",
+        "Reassign every point",
+        "Average every feature"
+      ],
+      "answer": "Merge nearby groups",
+      "explanation": "It merges an eligible pair selected by the linkage criterion.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-097",
+      "concept": "dendrogram cut",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A dendrogram cut is moved above several extra merge heights. How does the cluster count change?",
+      "choices": [
+        "Fewer clusters",
+        "More clusters",
+        "Same number of clusters",
+        "Cluster count doubles",
+        "Cluster count becomes undefined"
+      ],
+      "answer": "Fewer clusters",
+      "explanation": "The new cut includes more merges, leaving fewer separate groups.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-098",
+      "concept": "single linkage",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which linkage can connect two long groups if only one cross-group pair is very close?",
+      "choices": [
+        "Single linkage",
+        "Complete linkage",
+        "Average linkage",
+        "Ward linkage",
+        "Centroid linkage"
+      ],
+      "answer": "Single linkage",
+      "explanation": "Single linkage uses the closest pair across the two groups, so one close bridge can be enough.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-099",
+      "concept": "complete linkage",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team wants two groups to merge only when every cross-cluster pair is within a set distance. Which distance should drive the merge?",
+      "choices": [
+        "Farthest cross-cluster pair",
+        "Nearest cross-cluster pair",
+        "Average cross-cluster pair",
+        "Distance between centroids",
+        "Distance within the larger group"
+      ],
+      "answer": "Farthest cross-cluster pair",
+      "explanation": "Complete linkage measures the most distant pair between the two groups.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-100",
+      "concept": "average linkage",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which linkage takes all the distances between members of different groups and gives each pair the same weight?",
+      "choices": [
+        "Average linkage",
+        "Single linkage",
+        "Complete linkage",
+        "Centroid linkage",
+        "Ward linkage"
+      ],
+      "answer": "Average linkage",
+      "explanation": "Average linkage takes the mean of the cross-group distances.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-101",
+      "concept": "dbscan density clustering",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "DBSCAN finds a point with too few neighbours that is also unreachable from any core point. How is it labelled?",
+      "choices": [
+        "Noise point",
+        "Core point",
+        "Border point",
+        "Cluster centroid",
+        "Medoid"
+      ],
+      "answer": "Noise point",
+      "explanation": "It belongs to neither a dense core nor its reachable boundary.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-102",
+      "concept": "dbscan core point",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Under DBSCAN, a point's radius neighbourhood contains at least min_samples points counting itself. How is it classified?",
+      "choices": [
+        "Core point",
+        "Noise point",
+        "Border point",
+        "Cluster medoid",
+        "Cluster centroid"
+      ],
+      "answer": "Core point",
+      "explanation": "Meeting the minimum neighbourhood count makes it a core point.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-103",
+      "concept": "silhouette coefficient",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A point has a strongly negative silhouette value. What does that suggest?",
+      "choices": [
+        "Point fits another cluster better",
+        "Its own cluster is very compact around it",
+        "It is equally close to both clusters",
+        "It defines the cluster centroid",
+        "Its label is known to be correct"
+      ],
+      "answer": "Point fits another cluster better",
+      "explanation": "Its mean distance to another cluster is smaller than to its own.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-104",
+      "concept": "adjusted rand agreement",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A clustering's label names are permuted but every pair of points has the same group relationship. What happens to its adjusted Rand score against a fixed reference?",
+      "choices": [
+        "Unchanged",
+        "Becomes zero",
+        "Changes sign",
+        "Doubles",
+        "Becomes undefined"
+      ],
+      "answer": "Unchanged",
+      "explanation": "The score compares pairwise group membership, so names do not matter.",
+      "reference": "scikit-learn user guide, Clustering: https://scikit-learn.org/stable/modules/clustering.html"
+    },
+    {
+      "id": "aiml-105",
+      "concept": "first principal component",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What distinguishes the first principal component direction among unit-length directions?",
+      "choices": [
+        "Largest projected variance",
+        "Smallest projected variance",
+        "Largest fitted slope",
+        "Smallest fitted residual",
+        "Largest marginal mean"
+      ],
+      "answer": "Largest projected variance",
+      "explanation": "Its projection of the centered data captures the most variance.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-106",
+      "concept": "principal component loadings",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analyst wants the weights on the original variables that define a component axis. Which quantities should they inspect?",
+      "choices": [
+        "Component loadings",
+        "Component scores",
+        "Class probabilities",
+        "Cluster labels",
+        "Residual distances"
+      ],
+      "answer": "Component loadings",
+      "explanation": "Loadings specify the direction's coefficients on the measured features.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-107",
+      "concept": "principal component scores",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A student projects each country's measurements onto the first component axis. What are the resulting coordinates called?",
+      "choices": [
+        "Component scores",
+        "Component loadings",
+        "Feature means",
+        "Class labels",
+        "Eigenvalues"
+      ],
+      "answer": "Component scores",
+      "explanation": "A score locates one observation on a principal component axis.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-108",
+      "concept": "principal component variance explained",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What does a large fraction of variance explained by the first principal component indicate?",
+      "choices": [
+        "One direction captures much of the variation",
+        "All features have identical measurements",
+        "Every later direction has equal variance",
+        "The component gives class labels",
+        "There are no large residuals for any point"
+      ],
+      "answer": "One direction captures much of the variation",
+      "explanation": "The fraction compares variation along that component with total variation across components.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-109",
+      "concept": "feature scaling before pca",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A PCA should give comparable prior weight to variables measured in dollars and kilograms. What preprocessing addresses scale differences?",
+      "choices": [
+        "Standardize features",
+        "Sort the observations",
+        "Round the larger variable",
+        "Add the feature means",
+        "Remove the intercept"
+      ],
+      "answer": "Standardize features",
+      "explanation": "Standardization puts each feature on a comparable variance scale.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 12: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-110",
+      "concept": "true positive",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A filter flags a message as spam, and manual review confirms it is spam. Which confusion-matrix cell gains one?",
+      "choices": [
+        "True positive",
+        "False positive",
+        "True negative",
+        "False negative",
+        "Unlabelled observation"
+      ],
+      "answer": "True positive",
+      "explanation": "The prediction and the actual class are both positive.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-111",
+      "concept": "false positive",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A screen flags a valid library card as expired. The positive class is expired. How is this prediction counted?",
+      "choices": [
+        "False positive",
+        "True positive",
+        "True negative",
+        "False negative",
+        "Unlabelled observation"
+      ],
+      "answer": "False positive",
+      "explanation": "It predicts positive for a genuinely negative case.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-112",
+      "concept": "false negative",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A detector misses a dent on a panel, with dent the positive class. Which type of error occurred?",
+      "choices": [
+        "False negative",
+        "False positive",
+        "True positive",
+        "True negative",
+        "Correct rejection"
+      ],
+      "answer": "False negative",
+      "explanation": "A positive case received a negative prediction.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-113",
+      "concept": "true negative",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A sensor correctly labels a good tile as free of defects, with defect the positive class. Which cell does it enter?",
+      "choices": [
+        "True negative",
+        "True positive",
+        "False positive",
+        "False negative",
+        "Unlabelled observation"
+      ],
+      "answer": "True negative",
+      "explanation": "The actual label and prediction are both negative.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-114",
+      "concept": "positive predictive precision",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Of all items flagged by a detector, which metric asks how many of those flags are genuine?",
+      "choices": [
+        "Positive predictive precision",
+        "Recall",
+        "Specificity",
+        "False-positive rate",
+        "Overall accuracy"
+      ],
+      "answer": "Positive predictive precision",
+      "explanation": "This metric uses predicted positives as its denominator.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-115",
+      "concept": "positive class recall",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A factory wants to know how often equipment faults are detected among the faults that actually occur. Which metric should it report?",
+      "choices": [
+        "Positive-class recall",
+        "Precision",
+        "Specificity",
+        "False-positive rate",
+        "Overall accuracy"
+      ],
+      "answer": "Positive-class recall",
+      "explanation": "Recall starts with actual positive cases and asks what fraction the detector finds.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-116",
+      "concept": "specificity",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which metric measures correct rejections among cases that really are negative?",
+      "choices": [
+        "Specificity",
+        "Positive-class recall",
+        "Precision",
+        "False-positive rate",
+        "Overall accuracy"
+      ],
+      "answer": "Specificity",
+      "explanation": "A genuinely negative case counts toward specificity when the classifier calls it negative.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-117",
+      "concept": "false positive rate",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Among pages that are truly clean, which quantity measures the share incorrectly flagged as errors?",
+      "choices": [
+        "False-positive rate",
+        "False-negative rate",
+        "Sensitivity",
+        "Specificity",
+        "Positive predictive precision"
+      ],
+      "answer": "False-positive rate",
+      "explanation": "A false alarm is a predicted positive among the actual negatives.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-118",
+      "concept": "f1 harmonic mean",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Which expression gives F1 from precision P and recall R?",
+      "choices": [
+        "2PR/(P+R)",
+        "(P+R)/2",
+        "P×R",
+        "P/(P+R)",
+        "√(P×R)"
+      ],
+      "answer": "2PR/(P+R)",
+      "explanation": "F1 is their harmonic mean, which requires their sum in the denominator.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification",
+      "math_choices": {
+        "2PR/(P+R)": "\\frac{2PR}{P+R}",
+        "(P+R)/2": "\\frac{P+R}{2}",
+        "P×R": "P\\times R",
+        "P/(P+R)": "\\frac{P}{P+R}",
+        "√(P×R)": "\\sqrt{P\\times R}"
+      }
+    },
+    {
+      "id": "aiml-119",
+      "concept": "roc axes",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An ROC curve puts true-positive rate on its vertical axis. What is on the horizontal axis?",
+      "choices": [
+        "False-positive rate",
+        "Precision",
+        "Specificity",
+        "Accuracy",
+        "Predicted probability"
+      ],
+      "answer": "False-positive rate",
+      "explanation": "The curve traces true-positive rate against false-positive rate as the threshold varies.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-120",
+      "concept": "threshold tradeoff",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A classifier lowers the score required to predict positive. What can happen to its true-positive and false-positive counts on the same cases?",
+      "choices": [
+        "Both counts can rise",
+        "Both counts can fall",
+        "True positives must fall",
+        "False positives must fall",
+        "Both counts must stay fixed"
+      ],
+      "answer": "Both counts can rise",
+      "explanation": "The larger set of positive predictions may contain additional real positives and negatives.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-121",
+      "concept": "majority class baseline",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A detector always predicts the majority label. Why can accuracy look good on a strongly imbalanced test set?",
+      "choices": [
+        "Accuracy gives the common class most of the weight",
+        "Accuracy treats both classes as equally frequent",
+        "Accuracy excludes any missed rare cases from its denominator",
+        "Accuracy uses only predicted positives",
+        "Accuracy averages the two class recalls equally"
+      ],
+      "answer": "Accuracy gives the common class most of the weight",
+      "explanation": "The majority class contributes most of the cases to an ordinary accuracy score.",
+      "reference": "Google Machine Learning Crash Course, Classification: https://developers.google.com/machine-learning/crash-course/classification"
+    },
+    {
+      "id": "aiml-122",
+      "concept": "probability calibration",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "How can a reliability diagram check the calibration of a probability model?",
+      "choices": [
+        "Compare predicted probabilities with observed frequencies",
+        "Compare feature means with feature variances",
+        "Compare training time with prediction time",
+        "Compare sample sizes with class counts",
+        "Compare feature ranks with coefficient ranks"
+      ],
+      "answer": "Compare predicted probabilities with observed frequencies",
+      "explanation": "The diagram checks whether observations assigned similar probabilities occur at similar frequencies.",
+      "reference": "scikit-learn user guide, Probability calibration: https://scikit-learn.org/stable/modules/calibration.html"
+    },
+    {
+      "id": "aiml-123",
+      "concept": "calibration overprediction",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Cases scored near 0.80 are positive only about half the time in a large holdout. What does this indicate for that score range?",
+      "choices": [
+        "Probabilities are too high",
+        "Probabilities are too low",
+        "Ranking must be poor",
+        "Accuracy is exactly 80%",
+        "The base rate is 80%"
+      ],
+      "answer": "Probabilities are too high",
+      "explanation": "Observed frequency is well below predicted probability, indicating overprediction in that range.",
+      "reference": "scikit-learn user guide, Probability calibration: https://scikit-learn.org/stable/modules/calibration.html"
+    },
+    {
+      "id": "aiml-124",
+      "concept": "k fold cross validation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which practice distinguishes ordinary k-fold validation from a single fixed validation split?",
+      "choices": [
+        "Rotate which subset is held out",
+        "Use one permanent test split throughout",
+        "Evaluate only the training data",
+        "Change the target between fits",
+        "Tune only on the test set"
+      ],
+      "answer": "Rotate which subset is held out",
+      "explanation": "Each subset serves as the holdout while other blocks supply training data.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 5: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-125",
+      "concept": "grouped cross validation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A dataset contains four scans per person. A model must generalize to new people. How should validation be split?",
+      "choices": [
+        "Group by person",
+        "Shuffle scans individually",
+        "Sort scans by score",
+        "Split each person's scans",
+        "Train and test on all scans"
+      ],
+      "answer": "Group by person",
+      "explanation": "Keeping each person's scans together avoids testing on people represented in training.",
+      "reference": "scikit-learn user guide, Cross-validation: https://scikit-learn.org/stable/modules/cross_validation.html"
+    },
+    {
+      "id": "aiml-126",
+      "concept": "time ordered validation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team evaluates a model for next month's demand. Which split best reflects deployment over time?",
+      "choices": [
+        "Train earlier, validate later",
+        "Train later, validate earlier",
+        "Shuffle all dates",
+        "Split each day across sets",
+        "Reuse training dates"
+      ],
+      "answer": "Train earlier, validate later",
+      "explanation": "Forecasting evaluates future observations after fitting on earlier ones.",
+      "reference": "scikit-learn user guide, Cross-validation: https://scikit-learn.org/stable/modules/cross_validation.html"
+    },
+    {
+      "id": "aiml-127",
+      "concept": "preprocessing leakage from global scaling",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Within a cross-validation run, what data should determine the mean used to center a feature?",
+      "choices": [
+        "Training fold only",
+        "Validation fold only",
+        "All folds pooled",
+        "Test set only",
+        "Training and test pooled"
+      ],
+      "answer": "Training fold only",
+      "explanation": "Estimating the mean only from the training fold leaves the validation fold independent of preprocessing.",
+      "reference": "scikit-learn user guide, Common pitfalls, Data leakage: https://scikit-learn.org/stable/common_pitfalls.html#data-leakage"
+    },
+    {
+      "id": "aiml-128",
+      "concept": "target leakage",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A model predicts at order time whether a refund will occur. Which feature risks leaking the outcome?",
+      "choices": [
+        "Final refund amount",
+        "Order total",
+        "Shipping speed",
+        "Product category",
+        "Payment method"
+      ],
+      "answer": "Final refund amount",
+      "explanation": "The actual refund amount is generated after the prediction moment and reveals the outcome.",
+      "reference": "scikit-learn user guide, Common pitfalls, Data leakage: https://scikit-learn.org/stable/common_pitfalls.html#data-leakage"
+    },
+    {
+      "id": "aiml-129",
+      "concept": "held-out test set",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team tunes all settings using validation data and keeps a separate untouched set. What should the untouched set be used for?",
+      "choices": [
+        "Final performance estimate",
+        "Choose the hyperparameters",
+        "Refit feature scalers",
+        "Select decision thresholds",
+        "Pick candidate features"
+      ],
+      "answer": "Final performance estimate",
+      "explanation": "After choices are fixed, the test set estimates performance on fresh data.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 5: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-130",
+      "concept": "neural hidden layer",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Between a network's measurements and its final score, a set of learned units transforms the inputs. What is this layer called?",
+      "choices": [
+        "Hidden layer",
+        "Input layer",
+        "Output layer",
+        "Loss layer",
+        "Training batch"
+      ],
+      "answer": "Hidden layer",
+      "explanation": "It is internal to the network, between input and output.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-131",
+      "concept": "rectified linear activation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "Which feature of max(0, x) separates this activation from the identity function?",
+      "choices": [
+        "The flat segment for negative inputs",
+        "A flat segment for positive inputs",
+        "A jump at the origin",
+        "A finite upper bound",
+        "A smooth slope everywhere"
+      ],
+      "answer": "The flat segment for negative inputs",
+      "explanation": "It transmits positive inputs and maps negative inputs to the same output.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/",
+      "math_clue": "Which feature of $\\max(0,x)$ separates this activation from the identity function?"
+    },
+    {
+      "id": "aiml-132",
+      "concept": "activation nonlinearity",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "If every layer applies only an affine transformation, what is the combined network before the loss?",
+      "choices": [
+        "A single affine map",
+        "A decision tree",
+        "A quadratic curve",
+        "A sigmoid curve",
+        "A nearest-neighbour rule"
+      ],
+      "answer": "A single affine map",
+      "explanation": "Compositions of affine maps are still affine. Nonlinear activations change that.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-133",
+      "concept": "neural backpropagation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A program applies the chain rule from the loss through the network to obtain weight derivatives. Which procedure is this?",
+      "choices": [
+        "Backpropagation",
+        "Forward inference",
+        "Weight initialization",
+        "Data augmentation",
+        "Greedy decoding"
+      ],
+      "answer": "Backpropagation",
+      "explanation": "Backpropagation carries derivative information backward through each layer.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-134",
+      "concept": "gradient descent update",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "In wₜ₊₁ = wₜ − η∇L(wₜ), which term sets the scale of each step?",
+      "choices": [
+        "Learning rate",
+        "Loss value",
+        "Current weight",
+        "Gradient direction",
+        "Batch size"
+      ],
+      "answer": "Learning rate",
+      "explanation": "The learning rate scales the component subtracted from the current weight.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/",
+      "math_clue": "In $w_{t+1}=w_t-\\eta\\nabla L(w_t)$, which term sets the scale of each step?"
+    },
+    {
+      "id": "aiml-135",
+      "concept": "mini batch",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An optimizer uses 32 training examples to estimate the gradient for its next update. What are those 32 examples called?",
+      "choices": [
+        "Mini-batch",
+        "Validation fold",
+        "Training epoch",
+        "Hidden layer",
+        "Target vector"
+      ],
+      "answer": "Mini-batch",
+      "explanation": "A mini-batch is the subset used for one update.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-136",
+      "concept": "training epoch",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A network has processed one full pass through its training set. What has it completed?",
+      "choices": [
+        "Epoch",
+        "Mini-batch",
+        "Single gradient step",
+        "Validation fold",
+        "Prediction horizon"
+      ],
+      "answer": "Epoch",
+      "explanation": "An epoch covers the entire training set once.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-137",
+      "concept": "dropout",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A trainer randomly zeros selected hidden activations on each training update to limit co-adaptation. What method is this?",
+      "choices": [
+        "Dropout",
+        "Early stopping",
+        "Data normalization",
+        "Weight decay",
+        "Gradient clipping"
+      ],
+      "answer": "Dropout",
+      "explanation": "Dropout makes the network train with a changing subset of active units.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-138",
+      "concept": "early stopping",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Training loss keeps falling but validation loss starts rising. The trainer restores the weights with the best validation loss. What technique is this?",
+      "choices": [
+        "Early stopping",
+        "Dropout",
+        "Feature scaling",
+        "Bootstrap averaging",
+        "Gradient clipping"
+      ],
+      "answer": "Early stopping",
+      "explanation": "Stopping at the best validation point can avoid fitting training noise.",
+      "reference": "James et al., An Introduction to Statistical Learning with Applications in Python, chapter 10: https://www.statlearning.com/"
+    },
+    {
+      "id": "aiml-139",
+      "concept": "text tokenization",
+      "level": "AI/ML",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A text pipeline divides a sentence into units that will be mapped to integer IDs. What is this step called?",
+      "choices": [
+        "Tokenization",
+        "Stemming",
+        "Parsing",
+        "Pooling",
+        "Classification"
+      ],
+      "answer": "Tokenization",
+      "explanation": "Tokenization defines the units the model consumes.",
+      "reference": "Jurafsky and Martin, Speech and Language Processing, Words and Tokens: https://web.stanford.edu/~jurafsky/slp3/2.pdf"
+    },
+    {
+      "id": "aiml-140",
+      "concept": "subword tokenization",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A tokenizer encodes an unfamiliar word as several reusable fragments rather than introducing a word-specific ID. Which scheme is described?",
+      "choices": [
+        "Subword tokenization",
+        "Word-only tokenization",
+        "Sentence tokenization",
+        "Sentence pooling",
+        "One-hot labels"
+      ],
+      "answer": "Subword tokenization",
+      "explanation": "Reusable fragments allow previously unseen words to be represented by known pieces.",
+      "reference": "Jurafsky and Martin, Speech and Language Processing, Words and Tokens: https://web.stanford.edu/~jurafsky/slp3/2.pdf"
+    },
+    {
+      "id": "aiml-141",
+      "concept": "bigram language model",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What history does a standard bigram model use to predict the next token?",
+      "choices": [
+        "Previous token only",
+        "No preceding tokens",
+        "Two preceding tokens",
+        "Three preceding tokens",
+        "All preceding tokens"
+      ],
+      "answer": "Previous token only",
+      "explanation": "It conditions on the immediately preceding token.",
+      "reference": "Jurafsky and Martin, Speech and Language Processing, N-gram Language Models: https://web.stanford.edu/~jurafsky/slp3/3.pdf"
+    },
+    {
+      "id": "aiml-142",
+      "concept": "autoregressive token generation",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An autoregressive text decoder has just sampled one token. What happens before it predicts the next one?",
+      "choices": [
+        "Use the generated token as context",
+        "Remove the generated token",
+        "Score all continuations independently",
+        "Reinitialize model weights",
+        "Replace the entire prefix"
+      ],
+      "answer": "Use the generated token as context",
+      "explanation": "The sampled token joins the prefix that conditions the next prediction.",
+      "reference": "Jurafsky and Martin, Speech and Language Processing, Transformers and Pretraining: https://web.stanford.edu/~jurafsky/slp3/7.pdf"
+    },
+    {
+      "id": "aiml-143",
+      "concept": "greedy decoding",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A decoder always emits whichever token has the largest probability at the current step. Which strategy is it using?",
+      "choices": [
+        "Greedy decoding",
+        "Beam search",
+        "Top-p sampling",
+        "Temperature sampling",
+        "Uniform sampling"
+      ],
+      "answer": "Greedy decoding",
+      "explanation": "Greedy decoding makes a locally best token choice each step.",
+      "reference": "Jurafsky and Martin, Speech and Language Processing, Transformers and Pretraining: https://web.stanford.edu/~jurafsky/slp3/7.pdf"
+    },
+    {
+      "id": "aiml-144",
+      "concept": "temperature scaling",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Keeping unequal logits fixed, a decoder increases a positive temperature before applying softmax. How do the token probabilities generally change?",
+      "choices": [
+        "A flatter distribution",
+        "A sharper distribution",
+        "A uniform distribution at all temperatures",
+        "A reversed ranking",
+        "An unchanged distribution"
+      ],
+      "answer": "A flatter distribution",
+      "explanation": "Dividing the logits by a larger temperature reduces score gaps and makes the probabilities more even.",
+      "reference": "Jurafsky and Martin, Speech and Language Processing, Transformers and Pretraining: https://web.stanford.edu/~jurafsky/slp3/7.pdf"
+    },
+    {
+      "id": "aiml-145",
+      "concept": "causal attention mask",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "During decoder-only training, which positions must a token be prevented from attending to if it predicts the next token without a future leak?",
+      "choices": [
+        "Later positions",
+        "Earlier positions",
+        "Its own position",
+        "The first position",
+        "All positions"
+      ],
+      "answer": "Later positions",
+      "explanation": "The causal mask blocks access to positions beyond the current one.",
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2: https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "id": "aiml-146",
+      "concept": "attention value vectors",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An attention head has computed probabilities over input positions. Which vectors does it combine with those probabilities?",
+      "choices": [
+        "Value vectors",
+        "Query vectors",
+        "Key vectors",
+        "Position indices",
+        "Target labels"
+      ],
+      "answer": "Value vectors",
+      "explanation": "Attention weights multiply value vectors to form the output.",
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2: https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "id": "aiml-147",
+      "concept": "scaled dot product attention",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "In scaled dot-product attention, which factor divides the query-key dot product when keys have dimension dₖ?",
+      "choices": [
+        "√dₖ",
+        "dₖ",
+        "dₖ²",
+        "1/dₖ",
+        "log(dₖ)"
+      ],
+      "answer": "√dₖ",
+      "explanation": "The square root scaling limits growth in logit magnitude with key width.",
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2: https://arxiv.org/abs/1706.03762",
+      "math_clue": "In scaled dot-product attention, which factor divides the query–key dot product when keys have dimension $d_k$?",
+      "math_choices": {
+        "√dₖ": "\\sqrt{d_k}",
+        "dₖ": "d_k",
+        "dₖ²": "d_k^2",
+        "1/dₖ": "\\frac{1}{d_k}",
+        "log(dₖ)": "\\log(d_k)"
+      }
+    },
+    {
+      "id": "aiml-148",
+      "concept": "cross attention",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A translation decoder uses queries from its own states and keys and values from the encoded input sentence. What attention pattern is this?",
+      "choices": [
+        "Cross-attention",
+        "Self-attention",
+        "Causal self-attention",
+        "Masked pooling",
+        "Feature normalization"
+      ],
+      "answer": "Cross-attention",
+      "explanation": "The queries come from a different sequence than the keys and values.",
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2: https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "id": "aiml-149",
+      "concept": "multi-head attention",
+      "level": "AI/ML",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A Transformer computes several independently projected attention outputs in parallel and then combines them. Which component is this?",
+      "choices": [
+        "Multi-head attention",
+        "Single-head attention",
+        "Positional encoding",
+        "Global average pooling",
+        "Weight tying"
+      ],
+      "answer": "Multi-head attention",
+      "explanation": "Multiple projected heads can focus on different patterns before their outputs are combined.",
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2: https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "id": "aiml-150",
+      "concept": "positional encoding",
+      "level": "AI/ML",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Attention layers receive token embeddings and an added signal for where each token appeared in the sequence. What is this signal?",
+      "choices": [
+        "Positional encoding",
+        "Label smoothing",
+        "Dropout mask",
+        "Gradient clipping",
+        "Vocabulary logits"
+      ],
+      "answer": "Positional encoding",
+      "explanation": "Positional encoding communicates token order to an attention model.",
+      "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.5: https://arxiv.org/abs/1706.03762"
     }
   ]
 }

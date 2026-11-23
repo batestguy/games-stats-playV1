@@ -1,9 +1,10 @@
 # Games Statisticians Play (Volume 1) handoff
 
-As of 22 November 2026, the full internal quiz is playable on Windows. It has six
-statistics levels, AI/ML Bonus, and Pro, backed by 576 draft questions. The latest Windows
-suite passed all 29 tests. Independent question approval and Android handset testing are
-still open. The Android packaging workflow is prepared and awaits a runnable Ubuntu job.
+As of 23 November 2026, the full internal quiz is playable on Windows. It has six
+statistics levels, AI/ML Bonus, and Pro, backed by 1,050 draft questions. The latest Windows
+suite passed all 31 tests. Independent question approval and Android handset testing are
+still open. The Android packaging workflow is available in GitHub Actions. A 10-second
+Galton board opening, eight level secretaries, and optional nicknames are available locally.
 
 The original brief records the initial Android design. The approved plan chose Python and
 Kivy for the internal build, with a TypeScript and Capacitor fallback if a focused fix cannot
@@ -23,10 +24,11 @@ conda activate appdev-conda
 python app/main.py
 ```
 
-Choose **Solo** or **Pass-and-play**, select a level, and set a round length from 1 to 20.
-Solo saves the best accuracy on the current machine. The two-player flow uses **Player 1**
-and **Player 2** and passes the same device between them. Use this build for the internal
-Windows experience. [App entry point](app/main.py)
+The opening advances automatically after 10 seconds. Choose **Solo** or **Pass-and-play**, select a level,
+and set a round length from 1 to 20. Choose an optional nickname. Solo remembers that
+nickname and the best accuracy on the current machine. In pass-and-play, enter two nicknames
+for each match or use **Player 1** and **Player 2**, then pass the same device between them.
+[App entry point](app/main.py)
 
 ### Browser phone simulation
 
@@ -46,9 +48,10 @@ also expired correctly while the launcher was open. The launcher, backgrounds, a
 browser design candidates. Android installation, native system bars, TalkBack, and
 signed updates still require a native build and handset checks. [Open the phone preview](preview/index.html)
 
-After changing the draft bank, run `python -m preview.sync_bank` from the root to
-regenerate the browser copy. The generated copy includes the fields needed for play.
-The browser rules were checked in Node against all 576 questions, including all
+After editing the LaTeX in the draft bank, run `python -m curriculum.render_equations`
+to regenerate the offline images. Run `python -m preview.sync_bank` to update the
+browser question bank and refresh the bundled About profile from the app assets.
+The browser rules were checked in Node against all 1,050 questions, including all
 round lengths, every Pro rounding offset, distinct matched pairs, and sudden
 death outcomes. [Preview bank generator](preview/sync_bank.py) ·
 [Browser game rules](preview/game.js) · [Preview controls and screens](preview/preview.js)
@@ -57,19 +60,20 @@ death outcomes. [Preview bank generator](preview/sync_bank.py) ·
 
 | Area | Current rule |
 | --- | --- |
-| Question | Identify a concept from a short definition, scenario, or formula. The stored five choices stay fixed and the display order is shuffled on each appearance. |
+| Question | Recognize a formula, concept, or distribution in 25 seconds. Equations display with LaTeX typesetting and the five choices are shuffled on each appearance. |
 | Round length | Any whole number from 1 to 20. The default is 10 questions in solo or 10 per player in pass-and-play. |
-| Year selection | The solo ladder advances through Level 100, 200, 300, 400, Final Year, and Graduate Mix. A completed round with at least 60% correct unlocks the next year. Pass-and-play allows every year immediately. |
+| Year selection | The solo ladder advances through Level 100, 200, 300, 400, Final Year, and Graduate Mix. A perfect completed solo round unlocks the next year. Pass-and-play allows every year immediately. |
 | Year question mix | Level 100 uses its own questions. Higher years use about 80% from the selected year and 20% from one combined pool of earlier years, rounding the review count to the nearest whole item. A 10-question round draws 8 and 2. A 20-question round draws 16 and 4. |
 | AI/ML Bonus | Available immediately in both modes. Draws exclusively from the AI/ML bank and has its own solo best score. |
 | Pro · Bring It All | Available immediately in both modes. Draws about 70% from Level 400, Final Year, and Graduate Mix combined, 20% from AI/ML, and 10% from Levels 100–300 combined. Ten questions draw 7, 2, and 1. Twenty draw 14, 4, and 2. Randomized rounding keeps all three pools eligible in a one-question round. Pro has its own solo best score. |
-| Scoring | A correct answer earns one point. An incorrect answer or timeout earns zero. Solo shows the correct choice and explanation before **Next**. Pass-and-play reveals answers and explanations on the results screen. |
+| Scoring and feedback | A correct answer earns one point and shows an explanation. An incorrect answer or timeout earns zero and shows a guiding hint. Solo shows feedback before **Next**. Pass-and-play keeps feedback private during play and shows it in each player’s results review. |
 | Matched turns | Each pair uses two distinct concepts from the same source level, difficulty, and clue type. Question IDs cannot repeat within a match, including reserve pairs. Both players get the same mix of source levels. |
-| Handover | The screen removes the previous clue and answers before showing the incoming player. The next 10 seconds start when that player taps **Ready**. |
+| Handover | The screen removes the previous clue and answers before showing the incoming player. The next 25 seconds start when that player taps **Ready**. |
+| Exit during play | Use **Exit round** or **Exit match** and confirm to return home. Unfinished rounds do not update best scores. The countdown continues while the exit choice is open. |
 | Match winner | Compare regulation points first, then faster average time on correct regulation answers. An unresolved tie uses up to three matched reserve pairs. The first pair with exactly one correct answer decides the match. If all three pairs tie, record a draw. Reserves come from the chosen year, AI/ML for that mode, or Pro’s higher-year pool. |
 
 The deadline is checked against elapsed time, including when the app resumes. A tap at
-or after 10 seconds records a timeout. Once a turn records an outcome, stale or repeated
+or after 25 seconds records a timeout. Once a turn records an outcome, stale or repeated
 taps have no effect. Windows uses a monotonic clock. Android code uses the platform’s
 `elapsedRealtime` clock, which includes device sleep. Physical rotation and backgrounding
 still need verification on a phone.
@@ -84,20 +88,21 @@ player’s best. Bonus and Pro best scores affect only their own entries.
 
 | Pool | Draft items | Outcomes | Available disjoint pairs |
 | --- | ---: | ---: | ---: |
-| Level 100 | 100 | 4 | 50 |
-| Level 200 | 84 | 4 | 42 |
-| Level 300 | 84 | 4 | 42 |
-| Level 400 | 92 | 4 | 46 |
-| Final Year | 84 | 4 | 42 |
-| Graduate Mix | 84 | 5 | 42 |
-| AI/ML Bonus | 48 | 5 | 24 |
-| **Total** | **576** | **30** | **288** |
+| Level 100 | 150 | 4 | 74 |
+| Level 200 | 150 | 4 | 73 |
+| Level 300 | 150 | 4 | 73 |
+| Level 400 | 150 | 4 | 73 |
+| Final Year | 150 | 4 | 73 |
+| Graduate Mix | 150 | 5 | 73 |
+| AI/ML Bonus | 150 | 5 | 74 |
+| **Total** | **1,050** | **30** | **513** |
 
-The 100 Level 100 items include the eight original prototype samples. The six statistics
-levels account for 528 items, above the approved plan’s 525-item statistics target.
-AI/ML adds 48. Pro draws from existing pools. All 576 current IDs appear in the map, and
-the smallest outcome has nine linked questions. Pair capacities are calculated within each
-pool by the current matching rules. [Bundled question files](app/assets) · [Coverage map](curriculum/coverage.v1.json)
+The 150 Level 100 items include the eight original prototype samples. The six statistics
+levels account for 900 items and AI/ML adds 150. Pro draws from existing pools. The
+expansion added 474 questions and preserved all 576 originals. Every question maps
+to a curriculum outcome. The smallest outcome now has 30 linked questions.
+Pair capacities are calculated within each pool by the current matching rules.
+[Bundled question files](app/assets) · [Coverage map](curriculum/coverage.v1.json)
 
 The version 1 question format stores an ID, concept, level, difficulty, clue type, clue,
 five choices, answer, short explanation, reference, and an optional notation convention.
@@ -108,7 +113,9 @@ assets. [Sample format](app/assets/sample-bank.v1.json) · [Curriculum sources](
 
 The release checker currently returns only “The curriculum map has no approval for this
 version of the bank.” Its draft fingerprint is
-`42755fb6ae734d1ef5968ec3a4f477f6f4f4370a549995c9dc17123a1db65e68`.
+`41efea4babf2a29bfd8fdc3f52e83241a1848ab5f474b61fb89075112e479b61`.
+The calculation review covered all 1,050 draft items. Two Level 400 clues now state the
+formula property directly so players can focus on recognition and interpretation.
 The approved fingerprint remains empty. An independent reviewer must check correctness,
 exactly one best answer, credible alternatives, sources, and unintended visual clues.
 Record approval for the reviewed fingerprint after corrections. The checker hashes the
@@ -117,12 +124,19 @@ fingerprint. [Release checker](curriculum/check_release.py)
 
 ## Verification and working files
 
-The Windows automated suite was rerun for this handoff and passed **29 tests**. It exercises
+The Windows automated suite was rerun for this handoff and passed **31 tests**. It exercises
 all round lengths in both modes, the draw and pairing rules, shuffled answers, timing
 boundaries, ties, progression, and old saved scores. The default pytest temp and cache
 folders returned Windows access errors on this machine. The commands below use a fresh
 temporary directory and disable pytest’s cache. The release check exits with status 1
 while approval is pending. [Automated tests](tests/test_game.py)
+
+The Windows app and offline Chromium preview both passed the full 10-second Galton board
+opening and replay. In Chromium, the board filled the viewport with no visible text or
+controls. Reduced motion displayed a still board for the same interval. All eight distinct
+World Statistics Secretary portraits loaded on the level picker, and no other screen
+displayed a secretary. Both editions passed named pass-and-play handovers. The Chromium
+preview also passed its compact phone layout at 160% text size. [Offline preview](preview/index.html)
 
 ```powershell
 conda activate appdev-conda
@@ -134,9 +148,7 @@ python -m curriculum.check_release app/assets curriculum/coverage.v1.json
 Earlier Windows play-throughs verified the round chooser, the Level 200 unlock, a
 20-question-per-player match, and the optional sections. The earlier prototype also
 passed a Windows run at doubled font scale after switching question clues and feedback
-to DejaVu Sans. [Initial prototype record](.agent/20261122-android-prototype-d842/progress.md) ·
-[Expanded game record](.agent/20261122-cumulative-quiz-492d/report.md) ·
-[Optional modes record](.agent/20261122-optional-play-e5a7/report.md)
+to DejaVu Sans.
 
 | File | Where to work |
 | --- | --- |
@@ -147,7 +159,7 @@ to DejaVu Sans. [Initial prototype record](.agent/20261122-android-prototype-d84
 
 The internal packaging job uses Python 3.12, Java 17, and Buildozer 1.6.0. The spec
 selects Android NDK 28c, the SDL2 bootstrap, a pinned Python-for-Android revision,
-and 64-bit and 32-bit ARM builds. It includes only Python and JSON files from
+and 64-bit and 32-bit ARM builds. It includes Python, JSON and JPG files from
 `app/`, so the root reference PDF and browser simulator stay outside the APK.
 
 ## Remaining release work
@@ -166,7 +178,7 @@ and 64-bit and 32-bit ARM builds. It includes only Python and JSON files from
    once. Use maximum system text and display size in portrait and landscape. On Android 16,
    verify clear timer and controls under both gesture and three-button navigation. Rotate
    during a question and return after backgrounding past the deadline. Leave the handover
-   on screen for more than 10 seconds, confirm the previous question is absent visually and
+   on screen for more than 25 seconds, confirm the previous question is absent visually and
    with TalkBack, then tap **Ready** and verify a full countdown. If a focused Kivy fix
    cannot pass the accessibility checks, use the approved TypeScript and Capacitor
    fallback and repeat them. [Phone checklist](README.md#android-phone-check)

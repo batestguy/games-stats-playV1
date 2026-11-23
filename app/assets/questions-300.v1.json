@@ -233,7 +233,8 @@
       ],
       "answer": "Margin of error",
       "explanation": "In a symmetric interval, the multiplier times the standard error is the half-width.",
-      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
+      "math_clue": "$c\\times\\mathrm{SE}$\nwhere a symmetric interval is estimate ± c × SE"
     },
     {
       "id": "300-014",
@@ -251,7 +252,8 @@
       ],
       "answer": "Lower confidence limit",
       "explanation": "Subtracting the margin of error gives the lower endpoint.",
-      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
+      "math_clue": "$\\bar x-c\\times\\mathrm{SE}$\nfor a symmetric interval with c > 0"
     },
     {
       "id": "300-015",
@@ -269,7 +271,8 @@
       ],
       "answer": "Upper confidence limit",
       "explanation": "Adding the margin of error gives the upper endpoint.",
-      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
+      "math_clue": "$\\bar x+c\\times\\mathrm{SE}$\nfor a symmetric interval with c > 0"
     },
     {
       "id": "300-016",
@@ -287,7 +290,8 @@
       ],
       "answer": "Estimated standard error",
       "explanation": "Replacing the population standard deviation with s estimates the standard error of the mean.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error",
+      "math_clue": "$\\frac{s}{\\sqrt{n}}$\nfor the mean of n independent observations with sample SD s"
     },
     {
       "id": "300-017",
@@ -305,7 +309,8 @@
       ],
       "answer": "Confidence interval width",
       "explanation": "The upper and lower limits each lie one margin of error from the center, so the total width is twice the margin.",
-      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04"
+      "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
+      "math_clue": "$2c\\times\\mathrm{SE}$\nfor a symmetric interval x̄ ± c × SE"
     },
     {
       "id": "300-018",
@@ -323,7 +328,8 @@
       ],
       "answer": "False-positive probability",
       "explanation": "This is the probability of making a Type I error, rejecting a true null.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type I error"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type I error",
+      "math_clue": "$P(\\mathrm{reject}\\ H_0\\mid H_0\\ \\mathrm{is\\ true})$\nfor a simple null hypothesis"
     },
     {
       "id": "300-019",
@@ -594,7 +600,8 @@
       ],
       "answer": "Mean squared error",
       "explanation": "The mean squared error averages the squared difference between estimator and target.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error",
+      "math_clue": "$\\mathrm{E}[(\\hat{\\theta}-\\theta)^2]$\nwhere θ̂ estimates the fixed target θ"
     },
     {
       "id": "300-034",
@@ -612,7 +619,8 @@
       ],
       "answer": "Method of moments",
       "explanation": "The method equates a sample moment to the corresponding population moment.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 277, Method of moments"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 277, Method of moments",
+      "math_clue": "$\\bar x=\\mathrm{E}_{\\theta}[X]$\nMatch the sample mean to the model expectation and solve for θ. Assume one unknown parameter."
     },
     {
       "id": "300-035",
@@ -630,7 +638,8 @@
       ],
       "answer": "Maximum likelihood estimate",
       "explanation": "The maximizing parameter value is the maximum likelihood estimate.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation",
+      "math_clue": "$\\mathrm{arg}\\,\\max_{\\theta}\\,L(\\theta)$\nChoose the parameter value that maximizes the likelihood for the observed data."
     },
     {
       "id": "300-036",
@@ -648,7 +657,8 @@
       ],
       "answer": "One-sample t statistic",
       "explanation": "The one-sample t statistic uses an estimated standard error for a single sample mean.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student’s t-distribution"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student’s t-distribution",
+      "math_clue": "$\\frac{\\bar x-\\mu_0}{s/\\sqrt{n}}$\nfor a hypothesized mean μ₀ and sample SD s"
     },
     {
       "id": "300-037",
@@ -666,7 +676,8 @@
       ],
       "answer": "False-negative probability",
       "explanation": "This is the probability of making a Type II error at the specified alternative.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type II error"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type II error",
+      "math_clue": "$P(\\mathrm{fail\\ to\\ reject}\\ H_0\\mid H_1)$\nHere H₁ denotes a specified true alternative."
     },
     {
       "id": "300-038",
@@ -684,7 +695,8 @@
       ],
       "answer": "One-sample z statistic",
       "explanation": "The z statistic uses the known population standard deviation in its standard error.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 468, z-test"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 468, z-test",
+      "math_clue": "$\\frac{\\bar x-\\mu_0}{\\sigma/\\sqrt{n}}$\nfor known population SD σ and hypothesized mean μ₀"
     },
     {
       "id": "300-039",
@@ -702,7 +714,8 @@
       ],
       "answer": "Critical value",
       "explanation": "The critical value is the cutoff for the test statistic.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 115, Critical value"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 115, Critical value",
+      "math_clue": "$P(Z>c)=\\alpha$\nWhat is the number c that satisfies this condition when Z follows its null distribution?"
     },
     {
       "id": "300-040",
@@ -720,7 +733,8 @@
       ],
       "answer": "Test inversion",
       "explanation": "Inverting a family of tests gives a confidence set from the null values not rejected.",
-      "reference": "Penn State STAT 415, Lesson 10, confidence interval and hypothesis test duality: https://online.stat.psu.edu/stat415/Lesson10"
+      "reference": "Penn State STAT 415, Lesson 10, confidence interval and hypothesis test duality: https://online.stat.psu.edu/stat415/Lesson10",
+      "math_clue": "$H_0:\\theta=\\theta_0$\nKeep all values θ₀ for which the matching two-sided test of this null does not reject at level α."
     },
     {
       "id": "300-041",
@@ -882,7 +896,8 @@
       ],
       "answer": "One-sample t interval",
       "explanation": "The t multiplier and sample standard deviation produce an interval for one population mean.",
-      "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals"
+      "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals",
+      "math_clue": "$\\bar x\\pm c\\times\\frac{s}{\\sqrt{n}}$\nwhere c comes from a t distribution with n − 1 degrees of freedom"
     },
     {
       "id": "300-050",
@@ -900,7 +915,8 @@
       ],
       "answer": "Known-variance z interval",
       "explanation": "With known population standard deviation, a normal cutoff sets the confidence interval’s margin.",
-      "reference": "Penn State STAT 415, Lesson 6, Theorem 6.1, Z-Interval for a Mean: https://online.stat.psu.edu/stat415/Lesson06"
+      "reference": "Penn State STAT 415, Lesson 6, Theorem 6.1, Z-Interval for a Mean: https://online.stat.psu.edu/stat415/Lesson06",
+      "math_clue": "$\\bar x\\pm c\\times\\frac{\\sigma}{\\sqrt{n}}$\nwhere σ is known and c is a standard normal cutoff"
     },
     {
       "id": "300-051",
@@ -918,7 +934,8 @@
       ],
       "answer": "Estimated standard error of a proportion",
       "explanation": "The sample proportion substitutes for the unknown population probability in the standard error.",
-      "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08"
+      "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08",
+      "math_clue": "$\\sqrt{\\frac{\\hat p(1-\\hat p)}{n}}$\nfor an observed proportion p̂ and n independent trials"
     },
     {
       "id": "300-052",
@@ -936,7 +953,8 @@
       ],
       "answer": "Unbiased sample variance",
       "explanation": "With the n − 1 correction, the estimator’s expectation equals the population variance.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance",
+      "math_clue": "$\\frac{\\sum_i(x_i-\\bar x)^2}{n-1}$\nfor n > 1 independent draws with a common finite variance"
     },
     {
       "id": "300-053",
@@ -1170,7 +1188,8 @@
       ],
       "answer": "Risk difference",
       "explanation": "Subtracting the risks gives the absolute difference on the probability scale.",
-      "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03"
+      "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03",
+      "math_clue": "$p_1-p_2$\nwhere p₁ and p₂ are two groups’ event probabilities"
     },
     {
       "id": "300-066",
@@ -1188,7 +1207,8 @@
       ],
       "answer": "Risk ratio",
       "explanation": "Dividing the probabilities gives risk in group one relative to group two.",
-      "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03"
+      "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03",
+      "math_clue": "$\\frac{p_1}{p_2}$\nwhere p₁ and p₂ are group risks and p₂ > 0"
     },
     {
       "id": "300-067",
@@ -1206,7 +1226,8 @@
       ],
       "answer": "Odds ratio",
       "explanation": "Convert each probability to odds, then divide the two odds.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds ratio"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds ratio",
+      "math_clue": "$\\frac{p_1/(1-p_1)}{p_2/(1-p_2)}$\nfor group probabilities strictly between 0 and 1"
     },
     {
       "id": "300-068",
@@ -1224,7 +1245,8 @@
       ],
       "answer": "Equal-tail probability",
       "explanation": "The two tails share the total probability α evenly.",
-      "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals"
+      "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals",
+      "math_clue": "$\\frac{\\alpha}{2}$\nfor each of the two equally sized tails outside the central area 1 − α"
     },
     {
       "id": "300-069",
@@ -1242,7 +1264,8 @@
       ],
       "answer": "Welch’s t statistic",
       "explanation": "Welch’s standard error uses the two separate sample variances.",
-      "reference": "Penn State STAT 555, §2.6, t-tests, Welch’s two-sample t statistic: https://online.stat.psu.edu/stat555/node/36/"
+      "reference": "Penn State STAT 555, §2.6, t-tests, Welch’s two-sample t statistic: https://online.stat.psu.edu/stat555/node/36/",
+      "math_clue": "$\\frac{\\bar x_1-\\bar x_2}{\\sqrt{s_1^2/n_1+s_2^2/n_2}}$\nfor independent means and a null difference of zero"
     },
     {
       "id": "300-070",
@@ -1260,7 +1283,8 @@
       ],
       "answer": "Statistical power",
       "explanation": "The chance of detecting the fixed effect is one minus the chance of missing it.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power",
+      "math_clue": "$1-\\beta$\nwhere β is the probability of missing a fixed real effect"
     },
     {
       "id": "300-071",
@@ -1422,7 +1446,8 @@
       ],
       "answer": "Pooled proportion",
       "explanation": "Add all successes and divide by the combined number of trials.",
-      "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09"
+      "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09",
+      "math_clue": "$\\frac{x_1+x_2}{n_1+n_2}$\nfor independent success counts x₁ and x₂ with a shared probability"
     },
     {
       "id": "300-080",
@@ -1440,7 +1465,8 @@
       ],
       "answer": "Paired mean confidence interval",
       "explanation": "Use one observation per pair, namely its difference.",
-      "reference": "Penn State STAT 500, Lesson 7, Comparing Two Population Parameters: https://online.stat.psu.edu/stat500/Lesson07"
+      "reference": "Penn State STAT 500, Lesson 7, Comparing Two Population Parameters: https://online.stat.psu.edu/stat500/Lesson07",
+      "math_clue": "$\\bar d\\pm c\\times\\frac{s_d}{\\sqrt{n}}$\nwhere c is a t cutoff and d is the within-pair difference"
     },
     {
       "id": "300-081",
@@ -1458,7 +1484,8 @@
       ],
       "answer": "Bonferroni threshold",
       "explanation": "The sum of the local Type I error bounds is at most α.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction",
+      "math_clue": "$\\frac{\\alpha}{m}$\nused as each local cutoff when testing m hypotheses to control familywise error"
     },
     {
       "id": "300-082",
@@ -1476,7 +1503,8 @@
       ],
       "answer": "One-proportion z statistic",
       "explanation": "The denominator uses the null probability p₀ in the standard error.",
-      "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08"
+      "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08",
+      "math_clue": "$\\frac{\\hat p-p_0}{\\sqrt{p_0(1-p_0)/n}}$\nfor a sample proportion p̂ and hypothesized p₀"
     },
     {
       "id": "300-083",
@@ -1494,7 +1522,8 @@
       ],
       "answer": "Bias–variance decomposition",
       "explanation": "Expanding squared error shows variance and squared bias add to total mean squared error.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error",
+      "math_clue": "$\\mathrm{MSE}(\\hat{\\theta})=\\mathrm{Var}(\\hat{\\theta})+[\\mathrm{E}(\\hat{\\theta})-\\theta]^2$"
     },
     {
       "id": "300-084",
@@ -1512,7 +1541,1197 @@
       ],
       "answer": "Unpooled interval standard error",
       "explanation": "Estimate each group’s variance separately when constructing the usual interval for their difference.",
-      "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09"
+      "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09",
+      "math_clue": "$\\sqrt{\\frac{\\hat p_1(1-\\hat p_1)}{n_1}+\\frac{\\hat p_2(1-\\hat p_2)}{n_2}}$\nfor two independent sample proportions"
+    },
+    {
+      "id": "300-085",
+      "concept": "estimator bias",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A measurement rule overestimates its target on average across repeated samples. How should its bias be described?",
+      "choices": [
+        "Negative",
+        "Zero",
+        "Equal to its standard error",
+        "Positive",
+        "Undefined because results vary"
+      ],
+      "answer": "Positive",
+      "explanation": "Bias is positive when the estimator's expectation exceeds its target.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 45, Bias"
+    },
+    {
+      "id": "300-086",
+      "concept": "mean squared error",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An estimator has a systematic offset and also varies across samples. Which two contributions determine the mean squared error?",
+      "choices": [
+        "Sampling standard deviation and signed bias",
+        "Sampling variance and signed bias",
+        "Squared variance and squared bias",
+        "Sampling standard deviation and sample size",
+        "Sampling variance and squared bias"
+      ],
+      "answer": "Sampling variance and squared bias",
+      "explanation": "Mean squared error reflects variability and the magnitude of the systematic offset.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error"
+    },
+    {
+      "id": "300-087",
+      "concept": "relative efficiency",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "When comparing unbiased estimators of the same target, what property identifies the one with the smaller mean squared error?",
+      "choices": [
+        "Higher sampling variance",
+        "Lower sampling variance",
+        "Larger mean estimate",
+        "Smaller target parameter",
+        "Higher bias magnitude"
+      ],
+      "answer": "Lower sampling variance",
+      "explanation": "For unbiased estimators, only the sampling variance contributes to mean squared error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 149, Efficiency"
+    },
+    {
+      "id": "300-088",
+      "concept": "precision",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A scale's estimates have tiny sampling variation but average 5 kg above the target. What does this establish?",
+      "choices": [
+        "High precision with positive bias",
+        "High precision with negative bias",
+        "High precision with zero bias",
+        "Low precision with positive bias",
+        "Low precision with negative bias"
+      ],
+      "answer": "High precision with positive bias",
+      "explanation": "Small variation measures precision, while the average overshoot is positive bias.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 335, Precision"
+    },
+    {
+      "id": "300-089",
+      "concept": "estimand of a survey",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A national survey uses a sample median to estimate national median income. What is the estimand?",
+      "choices": [
+        "The standard error of the median",
+        "The largest sampled income",
+        "The sample size",
+        "The national population median income",
+        "The sample median income"
+      ],
+      "answer": "The national population median income",
+      "explanation": "The estimand is the population quantity targeted.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 154, Estimand"
+    },
+    {
+      "id": "300-090",
+      "concept": "constants as estimators",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An estimation rule returns the same predetermined value for every dataset. What can still prevent the rule from being accurate?",
+      "choices": [
+        "Its estimates can vary greatly across samples",
+        "Its standard error can be very large",
+        "Its sampled values can be correlated",
+        "Its output can have a heavy-tailed distribution",
+        "Its constant value can differ from the target"
+      ],
+      "answer": "Its constant value can differ from the target",
+      "explanation": "A constant estimator has no sampling variability but can be biased.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 154, Estimator"
+    },
+    {
+      "id": "300-091",
+      "concept": "observed estimate as a difference",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A trial records the sample mean difference between treatment and control. What is the recorded numerical result called?",
+      "choices": [
+        "An estimand",
+        "An estimator",
+        "An estimate",
+        "A confidence level",
+        "A sampling distribution"
+      ],
+      "answer": "An estimate",
+      "explanation": "The estimate is the realised output of the estimation rule applied to the trial data.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 154, Estimate"
+    },
+    {
+      "id": "300-092",
+      "concept": "unbiased estimator",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "What happens to the expectation of an unbiased estimator if a fixed constant is added to every possible estimate?",
+      "choices": [
+        "It stays at the original target",
+        "It shifts by that same constant",
+        "It shifts by the square of the constant",
+        "It moves in the opposite direction",
+        "It becomes the estimator's variance"
+      ],
+      "answer": "It shifts by that same constant",
+      "explanation": "Adding a fixed constant shifts the expectation by that constant.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 440, Unbiased"
+    },
+    {
+      "id": "300-093",
+      "concept": "consistency",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Estimator Tₙ has bias 1/n and variance 1/n for a fixed target. What happens as n grows?",
+      "choices": [
+        "It is consistent despite finite-sample bias",
+        "It is unbiased for every n",
+        "It remains negatively biased",
+        "Its MSE approaches one",
+        "Its precision deteriorates"
+      ],
+      "answer": "It is consistent despite finite-sample bias",
+      "explanation": "Bias and variance both tend to zero, so MSE tends to zero and the estimator converges in probability.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency",
+      "math_clue": "$\\mathrm{bias}(T_n)=1/n,\\quad \\mathrm{Var}(T_n)=1/n$\nThe target is fixed. What happens to this estimator as n grows?"
+    },
+    {
+      "id": "300-094",
+      "concept": "consistency",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For an infinite sequence of independent draws from a population with positive finite variance, use only the first draw to estimate the mean for every n. How does this rule behave?",
+      "choices": [
+        "Biased but consistent",
+        "Consistent with increasing precision",
+        "Unbiased but inconsistent",
+        "Biased and inconsistent",
+        "Unbiased and consistent"
+      ],
+      "answer": "Unbiased but inconsistent",
+      "explanation": "Its expectation is the mean and its variation does not shrink as n grows.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency"
+    },
+    {
+      "id": "300-095",
+      "concept": "method of moments",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A one-parameter family has an expected value that changes with the parameter. Which feature of a sample does the first-moment method match to that expected value?",
+      "choices": [
+        "The sample variance",
+        "The sample mean",
+        "The sample maximum",
+        "The sample median",
+        "The sample range"
+      ],
+      "answer": "The sample mean",
+      "explanation": "The first raw sample moment is the average of the observations.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 277, Method of moments"
+    },
+    {
+      "id": "300-096",
+      "concept": "binomial maximum likelihood",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In a fixed sequence of independent Bernoulli trials, which observed feature is the maximum likelihood estimate of the common success probability?",
+      "choices": [
+        "The first trial's outcome",
+        "The chance of observing the most common sequence",
+        "The excess of successes over failures",
+        "The fraction of trials before the first success",
+        "The fraction of trials that succeed"
+      ],
+      "answer": "The fraction of trials that succeed",
+      "explanation": "The likelihood for the common probability is maximized at the observed success fraction.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation"
+    },
+    {
+      "id": "300-097",
+      "concept": "likelihood ties",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Among allowed parameter values A, B and C, their likelihoods for the observed data are 0.12, 0.20 and 0.20. Which are maximum likelihood estimates?",
+      "choices": [
+        "C only",
+        "B only",
+        "A only",
+        "B and C",
+        "A, B and C"
+      ],
+      "answer": "B and C",
+      "explanation": "The two largest likelihood values tie.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 273, Maximum likelihood estimation"
+    },
+    {
+      "id": "300-098",
+      "concept": "plug-in principle",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A survival probability is the complement of event probability. What makes an estimate obtained from the estimated event probability a plug-in estimate?",
+      "choices": [
+        "It evaluates the complement at the estimated event probability",
+        "It replaces the event probability by its standard error",
+        "It reevaluates the data without the last observation",
+        "It assumes the survival probability has maximum likelihood one",
+        "It substitutes the observed event times for the sample size"
+      ],
+      "answer": "It evaluates the complement at the estimated event probability",
+      "explanation": "The plug-in principle applies the desired function to an estimate of its argument.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 327, Plug-in principle"
+    },
+    {
+      "id": "300-099",
+      "concept": "sufficient count in bernoulli data",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For independent Bernoulli trials with fixed n, which summary is sufficient for their common success probability?",
+      "choices": [
+        "Whether the final two outcomes match",
+        "The first trial's outcome and the last trial's outcome",
+        "The final outcome",
+        "The total number of successes",
+        "The first outcome"
+      ],
+      "answer": "The total number of successes",
+      "explanation": "The likelihood depends on the sequence only through its success count.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 420, Sufficient statistic"
+    },
+    {
+      "id": "300-100",
+      "concept": "variance of a random variable",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "In the usual unbiased sample variance, why is there one fewer residual degree of freedom than observations?",
+      "choices": [
+        "The final observation is omitted from the data",
+        "The largest deviation is always discarded",
+        "The deviations use a mean estimated from the same sample",
+        "A second sample was used to set the mean",
+        "The observations must be sampled in pairs"
+      ],
+      "answer": "The deviations use a mean estimated from the same sample",
+      "explanation": "Deviations from the sample mean sum to zero, so one is determined by the others.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance"
+    },
+    {
+      "id": "300-101",
+      "concept": "jackknife replicate count",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "How does a leave-one-out jackknife construct its replicate datasets?",
+      "choices": [
+        "Redraw observations with replacement",
+        "Split the data into treatment and control",
+        "Omit one original observation in turn",
+        "Omit every observation with the same outcome",
+        "Duplicate one observation in turn"
+      ],
+      "answer": "Omit one original observation in turn",
+      "explanation": "Each jackknife replicate leaves out a different original observation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 226, Jackknife"
+    },
+    {
+      "id": "300-102",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What does the margin of error represent in a symmetric confidence interval?",
+      "choices": [
+        "The distance from the estimate to either endpoint",
+        "The distance from the estimate to zero",
+        "The midpoint of the interval",
+        "The distance from one endpoint to the other",
+        "The residual standard deviation of an observation"
+      ],
+      "answer": "The distance from the estimate to either endpoint",
+      "explanation": "The margin of error is the symmetric half-width around the point estimate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-103",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "definition",
+      "clue": "Two symmetric intervals use the same critical multiplier. Which feature gives one a wider margin of error?",
+      "choices": [
+        "A larger estimated standard error",
+        "A larger point estimate with the same standard error",
+        "A smaller standard error",
+        "A smaller point estimate with the same standard error",
+        "A change in reporting order for the two endpoints"
+      ],
+      "answer": "A larger estimated standard error",
+      "explanation": "The critical multiplier scales the standard error into a margin.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-104",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In the usual symmetric confidence interval, what makes the lower confidence limit the lower of the two endpoints?",
+      "choices": [
+        "The margin of error is added to the estimate",
+        "The margin is measured upwards from a sample minimum",
+        "The critical multiplier is estimated from the lower half only",
+        "The margin of error is subtracted from the estimate",
+        "The estimate is divided by the margin of error"
+      ],
+      "answer": "The margin of error is subtracted from the estimate",
+      "explanation": "The lower limit is one margin below the point estimate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-105",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Where is the estimate in a symmetric confidence interval constructed as equal distances around it?",
+      "choices": [
+        "At the lower confidence limit",
+        "At the upper confidence limit",
+        "At the midpoint of the interval",
+        "At the closest possible value to zero",
+        "It can have any location inside the interval"
+      ],
+      "answer": "At the midpoint of the interval",
+      "explanation": "A symmetric interval places its two endpoints at equal distances from the estimate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-106",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "definition",
+      "clue": "Several equal-tail normal intervals target the same parameter using the same estimate and standard error. Which property makes an interval wider?",
+      "choices": [
+        "A higher confidence level",
+        "A lower confidence level",
+        "A smaller critical multiplier",
+        "A smaller margin of error",
+        "A different name for the parameter"
+      ],
+      "answer": "A higher confidence level",
+      "explanation": "A higher confidence level uses a larger critical multiplier when the standard error is fixed.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-107",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Two comparable mean intervals at 95% are [3, 7] and [1, 9]. Which estimate has greater interval precision?",
+      "choices": [
+        "The estimate with interval [1, 9]",
+        "Precision depends only on the common centre",
+        "Both estimates are equally precise",
+        "Both estimates have zero precision",
+        "The estimate with interval [3, 7]"
+      ],
+      "answer": "The estimate with interval [3, 7]",
+      "explanation": "The narrower interval reflects a more precise estimate when the methods are comparable.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-108",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Under a valid 90% confidence procedure, what is expected across many repeated samples?",
+      "choices": [
+        "About 90% of observations are inside each interval",
+        "The parameter moves into each interval with probability 90%",
+        "About 90% of interval centres equal the parameter",
+        "Each interval overlaps 90% of the preceding intervals",
+        "About 90% of intervals cover the fixed parameter"
+      ],
+      "answer": "About 90% of intervals cover the fixed parameter",
+      "explanation": "Confidence describes coverage of the method across repeated sampling.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-109",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "For a fixed parameter, what varies across repetitions of a valid confidence interval procedure?",
+      "choices": [
+        "The true parameter being estimated",
+        "The parameter's name",
+        "The procedure's nominal confidence under its fixed assumptions",
+        "The units of the parameter",
+        "The interval that is formed"
+      ],
+      "answer": "The interval that is formed",
+      "explanation": "New samples produce new intervals. The target parameter stays fixed.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-110",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Both endpoints of a two-sided confidence interval for the difference between two means are positive. Which null claim is incompatible with the interval?",
+      "choices": [
+        "The two population means are equal",
+        "The first population mean exceeds the second",
+        "The true difference could lie inside the interval",
+        "The population means could differ",
+        "The estimated difference is positive"
+      ],
+      "answer": "The two population means are equal",
+      "explanation": "Equality corresponds to a difference of zero, which lies outside an interval with two positive endpoints.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-111",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A 95% interval is formed by inverting the corresponding two-sided tests. Its limits are −3 and 2. What does the 5% test do at a null value of zero?",
+      "choices": [
+        "It rejects toward negative values",
+        "It rejects toward positive values",
+        "It has p = 1",
+        "It does not reject",
+        "It has p = 0"
+      ],
+      "answer": "It does not reject",
+      "explanation": "In an inverted interval, retained values are those the matching test does not reject.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-112",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A 95% confidence interval for a reduction is [1, 4] days. A practical target is at least 5 days. How does the interval compare with that target?",
+      "choices": [
+        "Its lower limit equals the target",
+        "The entire interval is above the target",
+        "The entire interval is below the target",
+        "Its upper limit equals the target",
+        "It spans the target"
+      ],
+      "answer": "The entire interval is below the target",
+      "explanation": "Even the upper limit, 4 days, falls below 5.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-113",
+      "concept": "standard error of the mean",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Symmetric intervals use a common critical multiplier but have different standard errors. What feature of the intervals will differ because of those standard errors?",
+      "choices": [
+        "The confidence level used for both",
+        "The number of endpoints",
+        "The fact that each is symmetric",
+        "Which sampling units enter each study",
+        "Their widths"
+      ],
+      "answer": "Their widths",
+      "explanation": "The width is proportional to the standard error when the multiplier stays fixed.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error"
+    },
+    {
+      "id": "300-114",
+      "concept": "standard error of the mean",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Why can a larger independent sample make a known-variance mean interval narrower at the same confidence level?",
+      "choices": [
+        "It reduces the population variance by changing the population",
+        "It reduces the mean's standard error",
+        "It reduces the chosen confidence level",
+        "It makes the observed mean equal to zero",
+        "It changes a two-sided interval into a one-sided bound"
+      ],
+      "answer": "It reduces the mean's standard error",
+      "explanation": "The standard error of an average decreases with larger independent samples.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error"
+    },
+    {
+      "id": "300-115",
+      "concept": "one-sided lower confidence bound",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An analysis reports a one-sided 95% lower confidence bound of 8. Which values does the reported confidence set include?",
+      "choices": [
+        "All values except 8",
+        "All values at most 8",
+        "All values between −8 and 8",
+        "All values at least 8",
+        "Only the value 8"
+      ],
+      "answer": "All values at least 8",
+      "explanation": "The confidence set extends upward from its lower boundary.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-116",
+      "concept": "one-sided upper confidence bound",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "An exact 95% upper confidence bound is used repeatedly. In which direction can its bound miss the true parameter?",
+      "choices": [
+        "It can be below the parameter",
+        "It misses whenever it is positive",
+        "It misses above and below equally often",
+        "It can only be above the parameter",
+        "It misses exactly at equality"
+      ],
+      "answer": "It can be below the parameter",
+      "explanation": "The confidence set extends to smaller values, so a miss occurs if the true parameter exceeds the bound.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-117",
+      "concept": "tolerance interval",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "A 95% confidence, 90% coverage tolerance interval is reported. What does the 90% describe?",
+      "choices": [
+        "The procedure's repeated-sample confidence",
+        "The fraction of intervals that are symmetric",
+        "The chance the population mean is in the realised interval",
+        "The targeted fraction of the population covered",
+        "The fraction of omitted observations"
+      ],
+      "answer": "The targeted fraction of the population covered",
+      "explanation": "A tolerance interval targets coverage of individual population values.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 432, Tolerance interval"
+    },
+    {
+      "id": "300-118",
+      "concept": "tolerance interval",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A manufacturer wants limits covering at least 98% of production. Which method directly addresses the fraction of production covered?",
+      "choices": [
+        "A confidence interval for the mean",
+        "A confidence interval for the median",
+        "An interval for the standard error",
+        "A tolerance interval",
+        "A lower bound on the mean"
+      ],
+      "answer": "A tolerance interval",
+      "explanation": "Tolerance intervals target a specified proportion of the population.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 432, Tolerance interval"
+    },
+    {
+      "id": "300-119",
+      "concept": "standard normal distribution",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "In an equal-tail normal confidence interval, how is the probability outside the two critical values divided?",
+      "choices": [
+        "Entirely in the upper tail",
+        "Entirely in the lower tail",
+        "According to the sample mean's sign",
+        "According to the measurement units",
+        "Equally between the two tails"
+      ],
+      "answer": "Equally between the two tails",
+      "explanation": "Equal-tail construction splits the excluded probability evenly.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standard normal variable"
+    },
+    {
+      "id": "300-120",
+      "concept": "student’s t-distribution",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What determines the degrees of freedom for the critical multiplier in a one-sample t interval for a normal population mean?",
+      "choices": [
+        "The observed size of the sample mean",
+        "How many different observed values appear",
+        "The probability in the upper tail only",
+        "The sample size after allowing for the estimated mean",
+        "The value of the population's unknown standard deviation"
+      ],
+      "answer": "The sample size after allowing for the estimated mean",
+      "explanation": "The sample mean imposes one constraint on the deviations used to estimate variance.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student's t-distribution"
+    },
+    {
+      "id": "300-121",
+      "concept": "confidence limits",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A scientist changes a mean-distance confidence interval from metres to centimetres. Which feature necessarily stays the same?",
+      "choices": [
+        "The numerical values of the limits",
+        "The confidence level",
+        "The numerical width",
+        "The standard error expressed in the measurement units",
+        "The numerical midpoint"
+      ],
+      "answer": "The confidence level",
+      "explanation": "A positive unit conversion changes numerical endpoints and scale while preserving coverage.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-122",
+      "concept": "confidence interval",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A two-sided confidence interval for a risk ratio is [1.2, 1.8]. Where is its no-difference value?",
+      "choices": [
+        "At the lower limit",
+        "In the middle",
+        "At the upper limit",
+        "Above the upper limit",
+        "Below the lower limit"
+      ],
+      "answer": "Below the lower limit",
+      "explanation": "Equal risks give a ratio of one, which is below 1.2.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+    },
+    {
+      "id": "300-123",
+      "concept": "p-value",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A preplanned test returns p = 0.03. What happens at significance level 0.05?",
+      "choices": [
+        "Reject the null",
+        "Set alpha to 0.03 before deciding",
+        "Assign the null a probability of 0.03",
+        "Retain the null at every alpha",
+        "Declare the effect clinically important"
+      ],
+      "answer": "Reject the null",
+      "explanation": "The p-value is below the stated significance level.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value"
+    },
+    {
+      "id": "300-124",
+      "concept": "p-value",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A test gives p = 0.02. Which pair of decisions is correct at levels 0.05 and 0.01, in that order?",
+      "choices": [
+        "Both are undecidable",
+        "Fail to reject, then reject",
+        "Reject, then fail to reject",
+        "Reject, then reject",
+        "Fail to reject, then fail to reject"
+      ],
+      "answer": "Reject, then fail to reject",
+      "explanation": "The same p-value falls below 0.05 and above 0.01.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value"
+    },
+    {
+      "id": "300-125",
+      "concept": "one-sided test",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A preplanned study tests only for a decline in defects from a baseline rate of 0.08. What is its alternative?",
+      "choices": [
+        "The defect rate is at least 0.08",
+        "The defect rate is below 0.08",
+        "The defect rate is above 0.08",
+        "The defect rate equals 0.08",
+        "The defect rate differs from 0.08"
+      ],
+      "answer": "The defect rate is below 0.08",
+      "explanation": "The alternative matches the prespecified direction.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 311, One-sided test"
+    },
+    {
+      "id": "300-126",
+      "concept": "critical region",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Where is the critical region for a lower one-sided test when small values of the test statistic support the alternative?",
+      "choices": [
+        "In the upper tail of its null distribution",
+        "In the lower tail of its null distribution",
+        "At both tails with equal probability",
+        "In the centre of its null distribution",
+        "In both tails with unequal probability"
+      ],
+      "answer": "In the lower tail of its null distribution",
+      "explanation": "Small statistics give evidence in the prespecified direction, so only the lower tail is used.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 115, Critical region"
+    },
+    {
+      "id": "300-127",
+      "concept": "symmetric test tail probability",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For an observed positive test statistic under a continuous symmetric null law, which region supplies the equal-tail two-sided p-value?",
+      "choices": [
+        "Just the upper tail beyond the statistic",
+        "Just the lower tail below the negative of the statistic",
+        "Both tails at least as far from zero as the statistic",
+        "The middle region between the statistic and its negative",
+        "The full area above zero"
+      ],
+      "answer": "Both tails at least as far from zero as the statistic",
+      "explanation": "The two-sided test counts equally extreme departures in both directions.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 438, Two-sided test"
+    },
+    {
+      "id": "300-128",
+      "concept": "statistical power",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "When a specified alternative is true, which outcome is the complement of rejecting the null?",
+      "choices": [
+        "Rejecting the null when it is true",
+        "Failing to reject the null",
+        "Choosing a significance level",
+        "Measuring a large observed effect",
+        "Failing to reject the null when it is true"
+      ],
+      "answer": "Failing to reject the null",
+      "explanation": "At that alternative, rejection is a detection and non-rejection is a Type II error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+    },
+    {
+      "id": "300-129",
+      "concept": "statistical power",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A right-tailed test of a population mean uses a fixed sample size and variance. Which change in the true mean raises its power?",
+      "choices": [
+        "Moving farther above the null mean",
+        "Moving below the null mean",
+        "Moving toward the null mean from above",
+        "Leaving the mean at the null value",
+        "Moving farther below the null mean"
+      ],
+      "answer": "Moving farther above the null mean",
+      "explanation": "As the true mean moves in the direction of the alternative, the test statistic is more likely to enter the rejection region.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+    },
+    {
+      "id": "300-130",
+      "concept": "statistical power",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For a fixed test statistic and sample size, lowering alpha shrinks a nested rejection region. What happens to power at a fixed alternative?",
+      "choices": [
+        "It becomes one minus alpha",
+        "It can only decrease or stay the same",
+        "It becomes the new alpha",
+        "It can only increase or stay the same",
+        "It must be exactly unchanged"
+      ],
+      "answer": "It can only decrease or stay the same",
+      "explanation": "A smaller rejection region cannot increase the chance of falling inside it.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+    },
+    {
+      "id": "300-131",
+      "concept": "type i error",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "When the null is true, which long-run outcome does the Type I error rate describe?",
+      "choices": [
+        "The fraction of tests that fail to reject the null",
+        "The fraction of tests that detect a real effect",
+        "The size of the estimated effect",
+        "The standard deviation of the null distribution",
+        "The fraction of tests that reject the null"
+      ],
+      "answer": "The fraction of tests that reject the null",
+      "explanation": "A rejection is a false positive whenever the tested null is true.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type I error"
+    },
+    {
+      "id": "300-132",
+      "concept": "type i error",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A quality check flags a correctly calibrated instrument as miscalibrated. With correct calibration as the null, what happened?",
+      "choices": [
+        "Type II error",
+        "Correct non-rejection",
+        "Type I error",
+        "An increase in power",
+        "Correct rejection"
+      ],
+      "answer": "Type I error",
+      "explanation": "The test rejected a null that was true.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type I error"
+    },
+    {
+      "id": "300-133",
+      "concept": "statistical power",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Which change usually raises power for a fixed nonzero effect in a normal mean test at a fixed significance level?",
+      "choices": [
+        "Increase the sample size",
+        "Reduce the sample size",
+        "Increase the measurement variance",
+        "Move the true effect closer to zero",
+        "Reduce both sample size and effect magnitude"
+      ],
+      "answer": "Increase the sample size",
+      "explanation": "More independent observations reduce the mean's standard error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power"
+    },
+    {
+      "id": "300-134",
+      "concept": "bonferroni threshold",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "For fixed familywise significance, what happens to the common Bonferroni cutoff as the number of hypotheses increases?",
+      "choices": [
+        "It becomes less stringent",
+        "It becomes more stringent",
+        "It stays the same",
+        "It becomes the smallest observed p-value",
+        "It becomes unrelated to the familywise level"
+      ],
+      "answer": "It becomes more stringent",
+      "explanation": "The allowed familywise level is divided among more individual tests.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction"
+    },
+    {
+      "id": "300-135",
+      "concept": "false positives at family level",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "definition",
+      "clue": "What event defines familywise error when all four nulls in a family are true?",
+      "choices": [
+        "No null is rejected",
+        "Exactly two nulls are rejected",
+        "Every null is rejected",
+        "Four observed effects are zero",
+        "At least one null is rejected"
+      ],
+      "answer": "At least one null is rejected",
+      "explanation": "Familywise error counts the occurrence of one or more false rejections.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 164, Familywise error rate"
+    },
+    {
+      "id": "300-136",
+      "concept": "permuting labels",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "For a randomized two-group trial under a sharp no-effect null, what is changed when recalculating the statistic in each permutation?",
+      "choices": [
+        "Treatment labels under the original assignment scheme",
+        "Observed outcomes themselves",
+        "The significance level",
+        "The chosen alternative each time",
+        "The number of observations"
+      ],
+      "answer": "Treatment labels under the original assignment scheme",
+      "explanation": "The sharp null keeps each outcome fixed under reassignment, so treatment labels vary according to the design.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 324, Permutation test"
+    },
+    {
+      "id": "300-137",
+      "concept": "sign test and zero differences",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "In the ordinary paired sign test, which observations are removed before assigning positive or negative signs?",
+      "choices": [
+        "Pairs with zero difference",
+        "Pairs with positive difference",
+        "Pairs with negative difference",
+        "Pairs with the largest absolute difference",
+        "Pairs with equal signs as their neighbours"
+      ],
+      "answer": "Pairs with zero difference",
+      "explanation": "A zero difference has neither a positive nor a negative sign and is treated as a tie.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 393, Sign test"
+    },
+    {
+      "id": "300-138",
+      "concept": "random allocation",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team recruits volunteers and assigns each by a coin toss to one of two programs. Which random step occurred?",
+      "choices": [
+        "Volunteer recruitment",
+        "Population sampling",
+        "Outcome measurement",
+        "Treatment assignment",
+        "Attrition"
+      ],
+      "answer": "Treatment assignment",
+      "explanation": "The coin toss allocates treatments among enrolled people.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 354, Random allocation"
+    },
+    {
+      "id": "300-139",
+      "concept": "controls without random allocation",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Families choose their own meal plans, and investigators compare health later without assigning any plan. What type of study is this?",
+      "choices": [
+        "Randomized factorial",
+        "Double-blind randomized trial",
+        "Randomized block experiment",
+        "Randomized crossover",
+        "Observational"
+      ],
+      "answer": "Observational",
+      "explanation": "The researchers measure outcomes after participants choose their own exposure.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 308, Observational study"
+    },
+    {
+      "id": "300-140",
+      "concept": "outcome assessor blinding",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An examiner scores injuries without seeing treatment assignments. Whose blinding does this establish?",
+      "choices": [
+        "The recruitment team",
+        "Outcome assessors",
+        "The statistician",
+        "All participants",
+        "All treating clinicians"
+      ],
+      "answer": "Outcome assessors",
+      "explanation": "The examiner measures outcomes without knowing the groups.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 57, Blinding"
+    },
+    {
+      "id": "300-141",
+      "concept": "placebo",
+      "level": "300",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An inactive pill matches an experimental medication in appearance. Which trial feature does the inactive pill provide?",
+      "choices": [
+        "Random sampling",
+        "Placebo control",
+        "Per-protocol analysis",
+        "Crossover sequence",
+        "Wash-out period"
+      ],
+      "answer": "Placebo control",
+      "explanation": "A matched inactive pill helps control for the experience and expectations of receiving medication.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 327, Placebo"
+    },
+    {
+      "id": "300-142",
+      "concept": "crossover design",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A team measures current symptoms and current work hours in one survey. Which design best describes its time structure?",
+      "choices": [
+        "Randomized parallel trial",
+        "Cross-sectional",
+        "Prospective cohort",
+        "Crossover",
+        "Case-control"
+      ],
+      "answer": "Cross-sectional",
+      "explanation": "Exposure and outcome are measured at a common point or short period.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Cross-sectional study"
+    },
+    {
+      "id": "300-143",
+      "concept": "case-control study",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A case-control study deliberately recruits 100 patients with a condition and 100 controls. Which quantity did the recruitment rule fix at 50% in the data?",
+      "choices": [
+        "The sample fraction exposed",
+        "The unexposed population's disease risk",
+        "The sample fraction with the condition",
+        "The exposed population's disease risk",
+        "The population prevalence"
+      ],
+      "answer": "The sample fraction with the condition",
+      "explanation": "The design fixes the disease split in the sample, so the split does not estimate prevalence.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 69, Case-control study"
+    },
+    {
+      "id": "300-144",
+      "concept": "exposure-based recruitment",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Researchers select current welders and office workers, then track future breathing problems. Which design follows these exposure groups?",
+      "choices": [
+        "Cross-sectional",
+        "Prospective cohort",
+        "Crossover trial",
+        "Case series",
+        "Case-control"
+      ],
+      "answer": "Prospective cohort",
+      "explanation": "The exposures define the groups, and outcomes are measured later.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 90, Cohort study"
+    },
+    {
+      "id": "300-145",
+      "concept": "blocking",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A trial randomizes separately within each hospital. For that randomization, what role does hospital play?",
+      "choices": [
+        "Blocking variable",
+        "Placebo treatment",
+        "Repeated measurement",
+        "Outcome variable",
+        "Follow-up interval"
+      ],
+      "answer": "Blocking variable",
+      "explanation": "Patients are grouped by site before treatment allocation within each group.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 58, Blocking"
+    },
+    {
+      "id": "300-146",
+      "concept": "factorial design",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "What does it mean for a diet and exercise study to use a full factorial design?",
+      "choices": [
+        "It includes every combination of diet and exercise levels",
+        "It includes diets paired only with their most common exercise plan",
+        "It tests all diets but uses only one exercise level",
+        "It tests all exercise levels but uses only one diet",
+        "It assigns both factors but never in the same group"
+      ],
+      "answer": "It includes every combination of diet and exercise levels",
+      "explanation": "A full factorial crosses each level of one factor with every level of the other.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 161, Factorial designs"
+    },
+    {
+      "id": "300-147",
+      "concept": "crossover design",
+      "level": "300",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Each participant receives both devices in separate periods. Which comparison uses this crossover design to control stable differences among participants?",
+      "choices": [
+        "Compare only each person's first response with the population mean",
+        "Compare different people who received the same device",
+        "Compare the two periods without regard to device",
+        "Compare group sizes across the two sequences",
+        "Compare each person's responses on the two devices"
+      ],
+      "answer": "Compare each person's responses on the two devices",
+      "explanation": "Each person serves as their own comparison across devices.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Crossover design"
+    },
+    {
+      "id": "300-148",
+      "concept": "carryover mitigation",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A treatment has effects lasting days. What design component reduces contamination of the next treatment period?",
+      "choices": [
+        "A more frequent questionnaire",
+        "A larger first-period dose",
+        "A shorter first period only",
+        "A new random seed for analysis",
+        "An adequate wash-out period"
+      ],
+      "answer": "An adequate wash-out period",
+      "explanation": "An interval between treatments allows the earlier effect to dissipate.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 453, Wash-out period"
+    },
+    {
+      "id": "300-149",
+      "concept": "interaction",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A participant assigned to control switches to active treatment. In an intention-to-treat analysis, to which group does the participant contribute?",
+      "choices": [
+        "Neither group",
+        "A nonadherence group only",
+        "The control group",
+        "The active-treatment group",
+        "Both groups"
+      ],
+      "answer": "The control group",
+      "explanation": "Intention-to-treat retains the original randomized assignment.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 219, Intention-to-treat analysis"
+    },
+    {
+      "id": "300-150",
+      "concept": "per-protocol analysis",
+      "level": "300",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analysis includes only participants who met the adherence rules in their assigned arms. What defines its analysis set?",
+      "choices": [
+        "The direction of the estimated effect",
+        "Protocol adherence",
+        "Original random assignment alone",
+        "Whether outcomes improved",
+        "Whether participants were blinded"
+      ],
+      "answer": "Protocol adherence",
+      "explanation": "A per-protocol set is restricted to participants satisfying protocol criteria.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 324, Per protocol"
     }
   ]
 }

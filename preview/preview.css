@@ -16,6 +16,33 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 [hidden] { display: none !important; }
 
+body.opening {
+  min-height: 100dvh;
+  overflow: hidden;
+  color: #eef8f1;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 25px, #afd6c814 25px 26px),
+    repeating-linear-gradient(90deg, transparent 0 25px, #afd6c814 25px 26px),
+    #142a32;
+}
+.opening .topbar, .opening .workspace { display: none; }
+#opening-screen {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
+  width: 100%;
+  height: 100dvh;
+  padding: clamp(8px, 3vmin, 28px);
+}
+#opening-screen:focus { outline: none; }
+#opening-board {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: min(1000px, 150dvh);
+  max-height: 800px;
+}
+
 .topbar {
   min-height: 74px;
   display: flex;
@@ -187,13 +214,58 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
   font-weight: 650;
   text-align: left;
 }
-.home { display: grid; gap: 21px; min-height: 100%; align-content: space-between; }
+.home { position: relative; isolation: isolate; display: grid; gap: 21px; min-height: 100%; align-content: space-between; }
+.symbol-field {
+  position: absolute;
+  z-index: -1;
+  inset: -12px -12px 118px;
+  min-height: 240px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.symbol {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  color: var(--accent);
+  opacity: .27;
+  font: 750 calc(1rem * var(--size))/1 "Segoe UI", "Segoe UI Symbol", sans-serif;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(var(--angle));
+}
+.symbol.tone-1 { color: var(--soft-ink); opacity: .29; }
+.symbol.tone-2 { color: #e4c789; opacity: .4; }
+.device[data-theme="paper"] .symbol.tone-2 { color: #826239; }
 .home-hero { padding: 14px 0 4px; }
 .home-hero .app-icon { --icon-size: 62px; margin-bottom: 21px; }
 .home-hero h2 { font-size: min(2.84em, calc(var(--screen-w) * .165)); line-height: .99; margin: 0 0 .34em; letter-spacing: -.065em; }
 .home-hero h2 span { display: block; }
-.home-hero p { max-width: 19em; color: var(--soft-ink); font-size: 1.02em; }
 .home-actions { display: grid; gap: 9px; align-self: end; }
+.about-game, .author-profile { max-width: 34em; }
+.about-game h3 { margin: 1em 0 .25em; font-size: 1em; }
+.about-game p { color: var(--soft-ink); }
+.about-game p:first-of-type { color: var(--ink); }
+.author-profile { display: grid; gap: 15px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--app-line); }
+.author-photo {
+  width: min(46%, 142px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--app-line);
+}
+.author-heading .credit-label {
+  color: var(--accent);
+  font-size: .76em;
+  font-weight: 750;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+  margin: 0 0 .4em;
+}
+.author-profile h2, .author-heading h3, .author-profile .author-bio { margin: 0; }
+.author-heading h3 { font-size: 1.22em; }
+.author-bio { color: var(--soft-ink); line-height: 1.5; }
+.author-profile .game-button { text-decoration: none; }
 .game-button {
   width: 100%;
   display: flex;
@@ -216,9 +288,21 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 .game-button .button-note { color: var(--soft-ink); font-size: .78em; font-weight: 500; display: block; margin-top: .1em; }
 .game-button.primary .button-note { color: var(--accent-ink); }
 .level-list, .options, .result-actions { display: grid; gap: 7px; margin-top: 1em; }
+.game-button.level-tile {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  gap: 10px;
+}
+.level-tile .secretary-portrait { width: 54px; height: 54px; object-fit: cover; object-position: center 24%; border-radius: 7px; }
+.level-tile .level-details { grid-column: 2; min-width: 0; }
+.level-tile .secretary-name { display: block; color: var(--soft-ink); font-size: .82em; font-weight: 500; }
+.level-tile:disabled { opacity: 1; background: var(--surface); }
+.level-tile:disabled .button-note { font-weight: 650; }
+.level-tile:disabled > :last-child { visibility: hidden; }
 .levels-subtitle { margin: 1.1em 0 -.45em; color: var(--soft-ink); font-size: .82em; font-weight: 650; }
 .length-form { display: grid; gap: 12px; }
 .length-form label { color: var(--soft-ink); }
+.nickname-field { display: grid; gap: 5px; }
 .length-form input {
   width: 100%;
   min-height: 50px;
@@ -237,6 +321,35 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
   padding: .32em .6em;
   border-radius: 99px;
 }
+.question-controls { display: flex; align-items: center; gap: .5em; flex: none; }
+.exit-button {
+  min-height: 44px;
+  padding: .3em .45em;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--soft-ink);
+  font-weight: 650;
+}
+.exit-button:hover { color: var(--ink); text-decoration: underline; }
+.app-screen > .exit-button { margin: .6em 0 0; }
+#exit-dialog {
+  margin: auto;
+  width: min(320px, calc(100vw - 32px));
+  padding: 20px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--app-line);
+  border-radius: 16px;
+  box-shadow: 0 16px 50px #06111798;
+  font-size: calc(15px * var(--text-scale));
+  overflow-wrap: anywhere;
+}
+#exit-dialog::backdrop { background: #06111795; }
+#exit-dialog form { display: grid; gap: .6em; }
+#exit-dialog h2, #exit-dialog p { margin: 0; }
+#exit-dialog h2 { font-size: 1.38em; }
+#exit-dialog p { color: var(--soft-ink); margin-bottom: .25em; }
 .timer-track { height: 4px; background: var(--app-line); border-radius: 9px; overflow: hidden; }
 .timer-track > div { height: 100%; width: 100%; background: var(--accent); transform-origin: left; }
 .quiz-heading { margin-top: 1em !important; font-size: 1.13em !important; }
@@ -251,6 +364,16 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
   font-family: "Segoe UI", "Segoe UI Symbol", system-ui, sans-serif;
 }
 .options .game-button { justify-content: start; }
+.equation-clue { display: grid; gap: .55em; }
+.equation-image {
+  display: block;
+  width: calc(var(--equation-width) * var(--text-scale));
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.device[data-theme="paper"] .equation-image { filter: invert(1); }
+.options .equation-image { max-width: calc(100% - 2.4em); }
 .option-letter {
   display: grid;
   place-items: center;
@@ -268,6 +391,9 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 .outcome-note, .review-list { background: var(--panel); border: 1px solid var(--app-line); border-radius: 12px; padding: 1em; margin: .9em 0; }
 .review-list summary { cursor: pointer; font-weight: 650; }
 .review-list p { margin-top: .8em; }
+.review-outcome { border-top: 1px solid var(--app-line); margin-top: .9em; }
+.review-outcome .review-status { color: var(--soft-ink); font-size: .85em; font-weight: 650; }
+.review-outcome .outcome-note { margin-bottom: 0; }
 .launcher { min-height: 100%; display: grid; align-content: space-between; gap: 1.4em; }
 .launcher-tile {
   display: grid;

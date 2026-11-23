@@ -107,7 +107,8 @@
       "choices": ["Response fraction", "Sampling fraction", "Coverage fraction", "Attrition fraction", "Eligibility fraction"],
       "answer": "Sampling fraction",
       "explanation": "This is the fraction of population units included in the sample.",
-      "reference": "Penn State STAT 506, §6.1, Stratified Sampling. https://online.stat.psu.edu/stat506/Lesson06"
+      "reference": "Penn State STAT 506, §6.1, Stratified Sampling. https://online.stat.psu.edu/stat506/Lesson06",
+      "math_clue": "$\\frac{n}{N}$\nn sampled units from a population of N."
     },
     {
       "id": "final-010",
@@ -119,7 +120,8 @@
       "choices": ["Nonresponse-adjusted weight", "Poststratification weight", "Replicate survey weight", "Normalized survey weight", "Base sampling weight"],
       "answer": "Base sampling weight",
       "explanation": "Units with smaller inclusion probabilities have larger base weights.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator University of Maryland SURV 701, Winter 2018 syllabus, p. 1, Short Course Description. https://jpsm.umd.edu/sites/jpsm.umd.edu/files/syllabi/SURV701_Online_Winter2018_v1.pdf"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator University of Maryland SURV 701, Winter 2018 syllabus, p. 1, Short Course Description. https://jpsm.umd.edu/sites/jpsm.umd.edu/files/syllabi/SURV701_Online_Winter2018_v1.pdf",
+      "math_clue": "$\\frac{1}{\\pi_i}$\nThe denominator is unit i’s inclusion probability."
     },
     {
       "id": "final-011",
@@ -131,7 +133,8 @@
       "choices": ["Median imputation", "Regression imputation", "Hot-deck imputation", "Mean imputation", "Multiple imputation"],
       "answer": "Mean imputation",
       "explanation": "Every missing entry in the variable receives the same observed mean.",
-      "reference": "Penn State STAT 509, Lesson 1, Missing Data. https://online.stat.psu.edu/stat509/Lesson01"
+      "reference": "Penn State STAT 509, Lesson 1, Missing Data. https://online.stat.psu.edu/stat509/Lesson01",
+      "math_clue": "For every missing $x_i$, set $x_i=\\bar{x}_{\\mathrm{obs}}$."
     },
     {
       "id": "final-012",
@@ -143,7 +146,8 @@
       "choices": ["Mean squared error", "Root mean squared error", "Mean absolute error", "Median absolute error", "Mean signed error"],
       "answer": "Root mean squared error",
       "explanation": "The square root returns the squared prediction loss to the outcome’s units.",
-      "reference": "UC Berkeley STAT 20, Overfitting, Mean square error: another metric for evaluation. https://stat20.berkeley.edu/spring-2025/5-prediction/03-overfitting/notes.html"
+      "reference": "UC Berkeley STAT 20, Overfitting, Mean square error: another metric for evaluation. https://stat20.berkeley.edu/spring-2025/5-prediction/03-overfitting/notes.html",
+      "math_clue": "$\\sqrt{\\frac{\\sum_i(y_i-\\hat{y}_i)^2}{n}}$\nEvaluate on n held-out cases."
     },
     {
       "id": "final-013",
@@ -251,7 +255,8 @@
       "choices": ["Akaike information criterion", "Bayesian information criterion", "Likelihood-ratio statistic", "Deviance information criterion", "Adjusted R-squared"],
       "answer": "Akaike information criterion",
       "explanation": "The 2k term penalizes added parameters when comparing fits.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 10, Akaike’s information criterion (AIC)"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 10, Akaike’s information criterion (AIC)",
+      "math_clue": "$-2\\hat{\\ell}+2k$\nThe first symbol is the maximized log likelihood, and k is the parameter count."
     },
     {
       "id": "final-022",
@@ -263,7 +268,8 @@
       "choices": ["Akaike information criterion", "Likelihood-ratio statistic", "Deviance information criterion", "Bayesian information criterion", "Adjusted R-squared"],
       "answer": "Bayesian information criterion",
       "explanation": "BIC uses a complexity penalty that grows with the log of the sample size.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayesian information criterion (BIC). Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.7, Bayesian information criterion. https://stat.columbia.edu/~gelman/research/published/waic_understand3.pdf"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayesian information criterion (BIC). Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.7, Bayesian information criterion. https://stat.columbia.edu/~gelman/research/published/waic_understand3.pdf",
+      "math_clue": "$-2\\hat{\\ell}+k\\log(n)$\nk parameters and n independent observations."
     },
     {
       "id": "final-023",
@@ -276,7 +282,8 @@
       "answer": "Finite population correction",
       "explanation": "The correction reduces the variance as the fraction sampled increases.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 166, Finite population correction Penn State STAT 506, §1.3, Estimation of Population Mean and Total under SRS. https://online.stat.psu.edu/stat506/Lesson01",
-      "convention": "This is the variance multiplier when population variance uses denominator N − 1. The standard-error multiplier is its square root."
+      "convention": "This is the variance multiplier when population variance uses denominator N − 1. The standard-error multiplier is its square root.",
+      "math_clue": "$1-\\frac{n}{N}$\nFor the variance of a mean under simple random sampling without replacement."
     },
     {
       "id": "final-024",
@@ -288,7 +295,8 @@
       "choices": ["Weighted sample total", "Unweighted sample mean", "Mean survey weight", "Weighted sample variance", "Weighted sample mean"],
       "answer": "Weighted sample mean",
       "explanation": "Dividing the weighted total by the sum of the weights returns a mean on the original scale.",
-      "reference": "Harvard T.H. Chan School of Public Health, Software for Statistical Analysis of Sample Survey Data, weighted mean. https://www.hcp.med.harvard.edu/statistics/survey-soft/docs/blc_eob.html University of Maryland SURV 701, Winter 2018 syllabus, p. 1, Short Course Description. https://jpsm.umd.edu/sites/jpsm.umd.edu/files/syllabi/SURV701_Online_Winter2018_v1.pdf"
+      "reference": "Harvard T.H. Chan School of Public Health, Software for Statistical Analysis of Sample Survey Data, weighted mean. https://www.hcp.med.harvard.edu/statistics/survey-soft/docs/blc_eob.html University of Maryland SURV 701, Winter 2018 syllabus, p. 1, Short Course Description. https://jpsm.umd.edu/sites/jpsm.umd.edu/files/syllabi/SURV701_Online_Winter2018_v1.pdf",
+      "math_clue": "$\\frac{\\sum_i w_i y_i}{\\sum_i w_i}$\nUse the supplied survey weights."
     },
     {
       "id": "final-025",
@@ -397,7 +405,8 @@
       "answer": "Total pooled variance",
       "explanation": "The formula combines within- and between-imputation uncertainty and adjusts for a finite m.",
       "reference": "Duke University, Missing Data lecture, Total variance. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html#total-variance",
-      "convention": "m is the number of imputations, at least two."
+      "convention": "m is the number of imputations, at least two.",
+      "math_clue": "$\\bar{U}+\\left(1+\\frac{1}{m}\\right)B$\nThe first term is mean within-imputation variance, and B is between-imputation variance."
     },
     {
       "id": "final-034",
@@ -409,7 +418,8 @@
       "choices": ["Normalized weighted mean", "Horvitz–Thompson total", "Unweighted sample total", "Ratio-estimator total", "Poststratified population mean"],
       "answer": "Horvitz–Thompson total",
       "explanation": "The total sums each sampled value multiplied by the inverse of its inclusion probability.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator",
+      "math_clue": "$\\sum_{i\\in s}\\frac{y_i}{\\pi_i}$\nThe denominator is the inclusion probability for sampled unit i."
     },
     {
       "id": "final-035",
@@ -422,7 +432,8 @@
       "answer": "Lasso penalty",
       "explanation": "The absolute-value penalty can set some fitted slopes exactly to zero.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 242, Lasso",
-      "convention": "The intercept is excluded from this penalty. Elastic net here means a mix of positive L1 and positive L2 penalties."
+      "convention": "The intercept is excluded from this penalty. Elastic net here means a mix of positive L1 and positive L2 penalties.",
+      "math_clue": "$\\lambda\\sum_j|\\beta_j|,\\quad \\lambda>0$\nThe beta terms are regression slopes."
     },
     {
       "id": "final-036",
@@ -435,7 +446,8 @@
       "answer": "Binary Brier score",
       "explanation": "The binary Brier score is mean squared error for probability forecasts against 0–1 outcomes.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 64, Brier score",
-      "convention": "Uses the single-event binary form with range 0 to 1."
+      "convention": "Uses the single-event binary form with range 0 to 1.",
+      "math_clue": "$\\frac{1}{n}\\sum_i(p_i-y_i)^2$\nEach outcome is 0 or 1. Each forecast is the predicted probability of 1."
     },
     {
       "id": "final-037",
@@ -592,7 +604,8 @@
       "answer": "Response rate",
       "explanation": "This simplified response rate counts complete interviews among eligible sampled units.",
       "reference": "University of Michigan Survey Research Center, Cross-Cultural Survey Guidelines, Sample Design, Appendix D. https://ccsg.isr.umich.edu/chapters/sample-design/appendix-d/",
-      "convention": "All units are known eligible. Partial interviews are excluded under this simplified definition."
+      "convention": "All units are known eligible. Partial interviews are excluded under this simplified definition.",
+      "math_clue": "$\\frac{r}{e}$\nAll e sampled units are known eligible, and r completed an interview."
     },
     {
       "id": "final-050",
@@ -604,7 +617,8 @@
       "choices": ["Sampling fraction", "Design effect", "Systematic sampling interval", "Response propensity", "Effective sample size"],
       "answer": "Systematic sampling interval",
       "explanation": "The ratio gives the fixed step after selecting a random start.",
-      "reference": "University of Michigan Survey Research Center, Cross-Cultural Survey Guidelines, Sample Design, Appendix C. https://ccsg.isr.umich.edu/chapters/sample-design/appendix-c/"
+      "reference": "University of Michigan Survey Research Center, Cross-Cultural Survey Guidelines, Sample Design, Appendix C. https://ccsg.isr.umich.edu/chapters/sample-design/appendix-c/",
+      "math_clue": "$\\frac{N}{n}$\nSelect n units from an ordered list of N, where N is a multiple of n."
     },
     {
       "id": "final-051",
@@ -616,7 +630,8 @@
       "choices": ["Root mean squared prediction error", "Mean squared prediction error", "Mean absolute prediction error", "Mean signed prediction error", "Median absolute prediction error"],
       "answer": "Mean squared prediction error",
       "explanation": "Each held-out error is squared before averaging.",
-      "reference": "UC Berkeley STAT 20, Overfitting, Mean square error: another metric for evaluation. https://stat20.berkeley.edu/spring-2025/5-prediction/03-overfitting/notes.html"
+      "reference": "UC Berkeley STAT 20, Overfitting, Mean square error: another metric for evaluation. https://stat20.berkeley.edu/spring-2025/5-prediction/03-overfitting/notes.html",
+      "math_clue": "$\\frac{1}{n}\\sum_i(y_i-\\hat{y}_i)^2$\nEvaluate on n held-out outcomes."
     },
     {
       "id": "final-052",
@@ -629,7 +644,8 @@
       "answer": "Observation indicator",
       "explanation": "The indicator records whether that outcome is observed.",
       "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html",
-      "convention": "R = 1 denotes observed here. Some sources reverse the coding."
+      "convention": "R = 1 denotes observed here. Some sources reverse the coding.",
+      "math_clue": "$R_i=1$ if $y_i$ is recorded, and $R_i=0$ otherwise.\nWhat does the indicator encode?"
     },
     {
       "id": "final-053",
@@ -738,7 +754,8 @@
       "answer": "Ridge penalty",
       "explanation": "Squaring the slopes gives a smooth penalty that shrinks large coefficients.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 370, Ridge regression Penn State STAT 508, Lesson 6, Regression Shrinkage Methods. https://online.stat.psu.edu/stat508/Lesson06.html",
-      "convention": "Elastic net here includes a positive absolute-value penalty as well as a positive squared penalty."
+      "convention": "Elastic net here includes a positive absolute-value penalty as well as a positive squared penalty.",
+      "math_clue": "$\\lambda\\sum_j\\beta_j^2,\\quad \\lambda>0$\nThe beta terms are regression slopes."
     },
     {
       "id": "final-062",
@@ -750,7 +767,8 @@
       "choices": ["Median absolute prediction error", "Mean absolute prediction error", "Root mean squared prediction error", "Mean signed prediction error", "Mean squared prediction error"],
       "answer": "Mean absolute prediction error",
       "explanation": "Absolute values prevent positive and negative prediction errors from cancelling.",
-      "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation, Stan implementation with random folds. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html"
+      "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation, Stan implementation with random folds. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html",
+      "math_clue": "$\\frac{1}{n}\\sum_i|y_i-\\hat{y}_i|$\nEvaluate on n held-out outcomes."
     },
     {
       "id": "final-063",
@@ -762,7 +780,8 @@
       "choices": ["Weighted count with outcome 1", "Unweighted proportion with outcome 1", "Weighted response rate by design", "Unweighted count with outcome 1", "Weighted proportion with outcome 1"],
       "answer": "Weighted proportion with outcome 1",
       "explanation": "The formula divides the weighted count of target outcomes by the total weight.",
-      "reference": "Harvard T.H. Chan School of Public Health, Software for Statistical Analysis of Sample Survey Data, weighted mean. https://www.hcp.med.harvard.edu/statistics/survey-soft/docs/blc_eob.html"
+      "reference": "Harvard T.H. Chan School of Public Health, Software for Statistical Analysis of Sample Survey Data, weighted mean. https://www.hcp.med.harvard.edu/statistics/survey-soft/docs/blc_eob.html",
+      "math_clue": "$\\frac{\\sum_i w_i\\,\\mathrm{I}(y_i=1)}{\\sum_i w_i}$\nSurvey weights are positive."
     },
     {
       "id": "final-064",
@@ -774,7 +793,8 @@
       "choices": ["Pooled sampling variance", "Between-imputation variance", "Pooled point estimate", "Within-imputation variance", "Relative variance increase"],
       "answer": "Pooled point estimate",
       "explanation": "Rubin’s rules average the completed-data point estimates.",
-      "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html"
+      "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html",
+      "math_clue": "$\\frac{1}{m}\\sum_j\\hat{Q}_j$\nThe same effect is estimated in each completed dataset."
     },
     {
       "id": "final-065",
@@ -884,7 +904,8 @@
       "choices": ["Ordinary R-squared", "Adjusted R-squared", "Mallows’ Cp", "Predicted R-squared", "Mean square error"],
       "answer": "Adjusted R-squared",
       "explanation": "The residual degrees of freedom account for how many slopes were estimated.",
-      "reference": "Penn State STAT 462, §11.3, Best Subsets Regression, Adjusted R-Sq, Mallows Cp. https://online.stat.psu.edu/stat462/node/197/"
+      "reference": "Penn State STAT 462, §11.3, Best Subsets Regression, Adjusted R-Sq, Mallows Cp. https://online.stat.psu.edu/stat462/node/197/",
+      "math_clue": "$1-\\frac{\\mathrm{SSE}/(n-k-1)}{\\mathrm{SST}/(n-1)}$\nn rows and k slopes in a regression with intercept."
     },
     {
       "id": "final-074",
@@ -896,7 +917,8 @@
       "choices": ["Adjusted R-squared", "Akaike information criterion", "Bayesian information criterion", "Predicted R-squared", "Mallows’ Cp"],
       "answer": "Mallows’ Cp",
       "explanation": "Mallows’ Cp scales residual error by a full-model variance estimate and adjusts for complexity.",
-      "reference": "Penn State STAT 462, §11.3, Best Subsets Regression, Adjusted R-Sq, Mallows Cp. https://online.stat.psu.edu/stat462/node/197/"
+      "reference": "Penn State STAT 462, §11.3, Best Subsets Regression, Adjusted R-Sq, Mallows Cp. https://online.stat.psu.edu/stat462/node/197/",
+      "math_clue": "$\\frac{\\mathrm{SSE}_p}{\\mathrm{MSE}_{\\mathrm{full}}}-n+2p$\np counts the subset model’s coefficients, including its intercept."
     },
     {
       "id": "final-075",
@@ -908,7 +930,8 @@
       "choices": ["Within-imputation variance", "Total pooled variance", "Between-imputation variance", "Pooled point estimate", "Relative variance increase"],
       "answer": "Between-imputation variance",
       "explanation": "This is the sample variance across the separately fitted estimates.",
-      "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html"
+      "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html",
+      "math_clue": "$\\frac{\\sum_j(\\hat{Q}_j-\\bar{Q})^2}{m-1}$\nThe effect estimates are from m completed datasets. Their mean is subtracted before squaring."
     },
     {
       "id": "final-076",
@@ -920,7 +943,8 @@
       "choices": ["Horvitz–Thompson total", "Hansen–Hurwitz total", "Unweighted sample total", "Weighted mean of the draws", "Population ratio estimate"],
       "answer": "Hansen–Hurwitz total",
       "explanation": "The estimator averages each draw’s contribution using its per-draw selection probability.",
-      "reference": "Penn State STAT 506, Lesson 3, Unequal Probability Sampling. https://online.stat.psu.edu/stat506/Lesson03"
+      "reference": "Penn State STAT 506, Lesson 3, Unequal Probability Sampling. https://online.stat.psu.edu/stat506/Lesson03",
+      "math_clue": "$\\frac{1}{m}\\sum_{j=1}^{m}\\frac{y_{i_j}}{p_{i_j}}$\nThere are m independent draws with replacement, with per-draw probabilities p."
     },
     {
       "id": "final-077",
@@ -1004,7 +1028,8 @@
       "choices": ["Proportional allocation", "Equal allocation", "Poststratification", "Neyman allocation", "Systematic allocation"],
       "answer": "Neyman allocation",
       "explanation": "At equal unit cost, allocation proportional to size times spread minimizes the stratified mean’s variance.",
-      "reference": "Penn State STAT 506, §6.1, Stratified Sampling. https://online.stat.psu.edu/stat506/Lesson06"
+      "reference": "Penn State STAT 506, §6.1, Stratified Sampling. https://online.stat.psu.edu/stat506/Lesson06",
+      "math_clue": "$n_h\\propto N_h S_h$\nWithin strata, unit sampling costs are equal. The S term is the outcome standard deviation."
     },
     {
       "id": "final-084",
@@ -1016,7 +1041,807 @@
       "choices": ["Between-imputation variance", "Within-imputation variance", "Total pooled variance", "Pooled point estimate", "Relative variance increase"],
       "answer": "Within-imputation variance",
       "explanation": "The calculation averages the usual fitted variances within the completed datasets.",
-      "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html"
+      "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html",
+      "math_clue": "$\\frac{1}{m}\\sum_j U_j$\nThe U term is the fitted variance for an estimate from completed dataset j."
+    },
+    {
+      "id": "final-085",
+      "concept": "leave-one-out validation unit",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "When a cross-validation fold contains exactly one observation, what prediction does that fold evaluate?",
+      "choices": ["A prediction for each training observation", "An in-sample prediction for the whole dataset", "A prediction for a bootstrap sample", "A prediction for a permanently reserved test set", "A prediction for the one omitted observation"],
+      "answer": "A prediction for the one omitted observation",
+      "explanation": "Each fold predicts its omitted case using a fit trained on the other cases.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Cross-validation"
+    },
+    {
+      "id": "final-086",
+      "concept": "deleted residual definition",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "eᵢ,₋ᵢ = yᵢ − ŷᵢ,₋ᵢ\nRecord i was excluded when fitting ŷᵢ,₋ᵢ. What is eᵢ,₋ᵢ?",
+      "choices": ["A deleted residual", "An ordinary training residual", "A studentized residual", "A prediction interval error", "A standardized leverage score"],
+      "answer": "A deleted residual",
+      "explanation": "A deleted residual compares an observed response with its prediction from a fit that excluded that observation.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 336, PRESS statistic",
+      "math_clue": "$e_{i,-i}=y_i-\\hat{y}_{i,-i}$\nRecord i was excluded from the fit. What is this residual?"
+    },
+    {
+      "id": "final-087",
+      "concept": "aic offset against added complexity",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "When choosing between nested models with AIC, what can make the larger model preferable?",
+      "choices": ["The added term always forces the score down", "The parameter count increases while maximized fit stays unchanged", "The model reuses the same data without changing fit", "The fit gain offsets the added parameter penalty", "The reduced model has identical fit and fewer parameters"],
+      "answer": "The fit gain offsets the added parameter penalty",
+      "explanation": "AIC rewards higher maximized likelihood and charges a fixed penalty for each additional parameter.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 10, Akaike’s information criterion (AIC)"
+    },
+    {
+      "id": "final-088",
+      "concept": "bic sample-size penalty",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "k ln(n)\nHere k is the parameter count and n is the sample size. Which criterion adds this penalty to the fitted deviance?",
+      "choices": ["Akaike information criterion", "Bayesian information criterion", "Mallows’ Cₚ", "Adjusted R-squared", "Generalized cross-validation"],
+      "answer": "Bayesian information criterion",
+      "explanation": "The BIC complexity term scales the count of fitted parameters by the natural log of sample size.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayesian information criterion (BIC)",
+      "math_clue": "$k\\ln(n)$\nHere k is the parameter count and n is the sample size. Which criterion adds this penalty to the fitted deviance?"
+    },
+    {
+      "id": "final-089",
+      "concept": "holdout contamination by duplication",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Copies of some patients are split across fit and evaluation sets. What is the clearest risk?",
+      "choices": ["Optimistic evaluation error", "Pessimistic evaluation error", "Higher regularization", "Higher effective sample size", "Poorer fit to duplicated patients"],
+      "answer": "Optimistic evaluation error",
+      "explanation": "The evaluation set includes outcomes the model effectively saw during training.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 207, Holdout estimate"
+    },
+    {
+      "id": "final-090",
+      "concept": "regularization limiting fit",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "In ridge regression, the penalty weight becomes very large. What happens to the penalized slopes?",
+      "choices": ["They grow without limit", "They approach the fitted intercept", "They approach their least squares values", "They approach zero", "They approach one"],
+      "answer": "They approach zero",
+      "explanation": "A very large squared-coefficient penalty strongly favors small slopes.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 370, Ridge regression"
+    },
+    {
+      "id": "final-091",
+      "concept": "brier penalty for confident errors",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Why does a highly confident forecast get a large Brier loss when it predicts the wrong binary outcome?",
+      "choices": ["Its predicted event probability is near the observed indicator", "Its predicted event probability is far from the observed indicator", "The realized outcome is treated as unavailable", "The score depends only on a classification threshold", "The score rewards forecasting the rarer outcome"],
+      "answer": "Its predicted event probability is far from the observed indicator",
+      "explanation": "Squared error penalizes probability forecasts most when they are far from the realized zero or one.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 64, Brier score"
+    },
+    {
+      "id": "final-092",
+      "concept": "constant forecast baseline for brier score",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "For each held-out case, assign pᵢ = the event rate observed in training. What baseline is this when comparing Brier scores?",
+      "choices": ["A thresholded regression prediction", "A constant prevalence forecast", "A case-specific calibrated forecast", "A uniform random class label", "An oracle forecast of the realized outcome"],
+      "answer": "A constant prevalence forecast",
+      "explanation": "A prevalence baseline uses one training event rate as the probability for every held-out case.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 64, Brier score",
+      "math_clue": "For each held-out case, assign $p_i=\\hat{\\pi}_{\\mathrm{train}}$, the event rate observed in training.\nWhat baseline is this when comparing Brier scores?"
+    },
+    {
+      "id": "final-093",
+      "concept": "resubstitution error",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A classifier is evaluated on the same labeled records used to train it. What error was measured?",
+      "choices": ["Held-out error", "Out-of-bag error", "External validation error", "Resubstitution error", "Leave-one-out error"],
+      "answer": "Resubstitution error",
+      "explanation": "Resubstitution evaluates the fitted rule on its own training observations.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 370, Resubstitution error rate"
+    },
+    {
+      "id": "final-094",
+      "concept": "repeated cross-validation partitions",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Why rerun cross-validation with freshly drawn folds when evaluating one fixed model specification?",
+      "choices": ["To remove the need for validation observations", "To make each individual fit use the full dataset", "To establish independence between all fold scores", "To reduce dependence on a single random partition", "To choose a causal interpretation without new assumptions"],
+      "answer": "To reduce dependence on a single random partition",
+      "explanation": "Averaging over different partitions can make the estimate less sensitive to one random partition.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 116, Cross-validation"
+    },
+    {
+      "id": "final-095",
+      "concept": "parsimony with equivalent fit",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Two models describe the same pattern equally well. Which rule simply favors the model with fewer parameters?",
+      "choices": ["Maximum entropy", "Parsimony principle", "Conditional inference", "Likelihood principle", "Forward selection"],
+      "answer": "Parsimony principle",
+      "explanation": "Parsimony prefers a simpler explanation when the competing descriptions fit equally well.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 317, Parsimony principle"
+    },
+    {
+      "id": "final-096",
+      "concept": "search scope of all subsets regression",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "What distinguishes all-subsets regression from forward selection?",
+      "choices": ["It begins with all variables and only deletes", "It forces every model to use the same predictors", "It picks the best first predictor and only builds on that choice", "It fits a single penalized model", "It can compare models that are not on a single sequence of additions"],
+      "answer": "It can compare models that are not on a single sequence of additions",
+      "explanation": "All subsets can examine competing combinations that a greedy forward path would skip.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 11, All subsets regression"
+    },
+    {
+      "id": "final-097",
+      "concept": "time ordering for holdout",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A shop wants to validate a model for next month’s sales. Which holdout most closely mimics deployment?",
+      "choices": ["Evaluate all months used to fit the model", "Hold out records with the largest fitted errors", "Hold out only unusual sales days", "Hold out the most recent month", "Hold out the first month and train on later months"],
+      "answer": "Hold out the most recent month",
+      "explanation": "A recent time block lets the model predict later sales using only earlier records.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 207, Holdout estimate"
+    },
+    {
+      "id": "final-098",
+      "concept": "lasso constraint geometry",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Which penalty most directly encourages exact zeros among fitted slopes?",
+      "choices": ["λ times the sum of absolute slopes", "λ times the sum of squared fitted values", "λ times the sum of squared slopes", "λ times the mean squared residual", "λ times the squared residual sum"],
+      "answer": "λ times the sum of absolute slopes",
+      "explanation": "The absolute-value penalty has a corner at zero, which can make a slope exactly zero.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 242, Lasso",
+      "math_choices": {"λ times the sum of absolute slopes": "\\lambda\\sum_j|\\beta_j|", "λ times the sum of squared fitted values": "\\lambda\\sum_i\\hat{y}_i^2", "λ times the sum of squared slopes": "\\lambda\\sum_j\\beta_j^2", "λ times the mean squared residual": "\\frac{\\lambda}{n}\\sum_i(y_i-\\hat{y}_i)^2", "λ times the squared residual sum": "\\lambda\\left[\\sum_i(y_i-\\hat{y}_i)\\right]^2"}
+    },
+    {
+      "id": "final-099",
+      "concept": "planned missing by design",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A random-number generator picks which survey module each person skips, independently of all responses. What mechanism is designed in?",
+      "choices": ["MCAR", "Self-selected item nonresponse", "MNAR", "MAR but never MCAR", "Outcome-dependent dropout"],
+      "answer": "MCAR",
+      "explanation": "Assignment independent of observed and unobserved responses makes the missingness completely at random.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 279, Missing completely at random (MCAR)"
+    },
+    {
+      "id": "final-100",
+      "concept": "mar conditional example",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A recorded age predicts whether income is blank. Within each age, the true income does not predict blanks. Which is the most specific mechanism?",
+      "choices": ["MNAR", "Outcome-dependent dropout after age adjustment", "Missingness independent of the observed data", "MAR but not MCAR", "MCAR"],
+      "answer": "MAR but not MCAR",
+      "explanation": "Missingness depends on observed age and does not depend on the missing income after conditioning on age.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 279, Missing at random (MAR)"
+    },
+    {
+      "id": "final-101",
+      "concept": "nonignorable self censoring",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Within every observed age and job group, higher-income respondents are less likely to report income. What mechanism is this?",
+      "choices": ["Missing completely at random", "Missing not at random", "Random module assignment", "Known design-based subsampling", "Missing at random conditional on age and job"],
+      "answer": "Missing not at random",
+      "explanation": "Missingness still depends on the missing income after conditioning on measured predictors.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 218, Informative missing values"
+    },
+    {
+      "id": "final-102",
+      "concept": "nonidentification of mechanisms",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which claim about MAR versus MNAR can the observed records alone generally support?",
+      "choices": ["They cannot settle whether missing values drive missingness", "They distinguish both by sample size alone", "They establish MAR whenever a balance check passes", "They establish MCAR whenever missingness is below 5%", "They establish MNAR whenever age predicts missingness"],
+      "answer": "They cannot settle whether missing values drive missingness",
+      "explanation": "The dependence of missingness on unseen values cannot generally be determined from observations alone.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 279, Missing at random (MAR)"
+    },
+    {
+      "id": "final-103",
+      "concept": "required fields for complete cases",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An analysis uses an outcome and a fixed set of predictors. Which missing values determine eligibility for a complete-case fit?",
+      "choices": ["Only missing values in unused fields", "Missing values in any variable used in the fit", "Missing outcomes only, regardless of predictor gaps", "Only values absent in every sampled row", "Only items marked missing by a second analyst"],
+      "answer": "Missing values in any variable used in the fit",
+      "explanation": "Complete cases have all the variables required for the particular analysis.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 94, Complete case analysis"
+    },
+    {
+      "id": "final-104",
+      "concept": "pairwise covariance eligibility",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Under available-case analysis, which records can inform the covariance of X and Y when a separate variable Z is also in the dataset?",
+      "choices": ["Records with either X or Y observed, regardless of Z", "Only records containing X, Y and Z", "All records, including those with neither X nor Y", "Records with both X and Y observed, regardless of Z", "Records with Z and either X or Y"],
+      "answer": "Records with both X and Y observed, regardless of Z",
+      "explanation": "Each covariance uses observed measurements of both variables in that pair.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 27, Available case analysis"
+    },
+    {
+      "id": "final-105",
+      "concept": "mean imputation invariance",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "If every missing value is replaced by the observed mean, what property of the variable is preserved exactly?",
+      "choices": ["Its mean", "Its variance", "Its skewness", "Its median", "Its empirical distribution"],
+      "answer": "Its mean",
+      "explanation": "Values added at the original mean do not change the completed mean.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 213, Imputation"
+    },
+    {
+      "id": "final-106",
+      "concept": "locf trend bias",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "At the last visit, likely missing responses would have kept rising. What direction of error does carrying the earlier value forward tend to introduce for those cases?",
+      "choices": ["Underestimation", "Attenuation toward the final mean of completers", "Symmetric errors around the unseen value", "No change in the estimated final mean", "Overestimation"],
+      "answer": "Underestimation",
+      "explanation": "Replacing a later rising response with its earlier, lower value tends to underestimate it.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 242, Last observation carried forward"
+    },
+    {
+      "id": "final-107",
+      "concept": "hot deck support",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Which property is guaranteed when every missing blood type is filled by a donor from the current survey?",
+      "choices": ["Donors and recipients have identical covariates", "Imputed blood type counts match the population counts", "The estimated sampling variance is unchanged", "Blood type becomes independent of other variables", "Each imputation is a blood type already recorded in the survey"],
+      "answer": "Each imputation is a blood type already recorded in the survey",
+      "explanation": "A hot-deck donor supplies an actually recorded category from the current survey.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Hot deck"
+    },
+    {
+      "id": "final-108",
+      "concept": "auxiliary predictors for imputation",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A fully recorded test score predicts both completion and the missing outcome. Which imputation choice uses this information?",
+      "choices": ["Impute the overall observed outcome mean", "Drop the score and use case deletion", "Include the test score as a predictor", "Choose donors without using the score", "Use the missingness rate as the only predictor"],
+      "answer": "Include the test score as a predictor",
+      "explanation": "The auxiliary score helps predict the outcome and account for differences in who has it recorded.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 291, Multiple imputation"
+    },
+    {
+      "id": "final-109",
+      "concept": "finite-imputation adjustment",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "1 + 1/m\nIn Rubin’s pooling rules, what does this factor multiply?",
+      "choices": ["Between-imputation variance", "Mean within-imputation variance", "The pooled point estimate", "The variance from the first completed dataset only", "The total pooled variance"],
+      "answer": "Between-imputation variance",
+      "explanation": "With finitely many imputations, the adjustment increases the between-imputation contribution.",
+      "reference": "Duke University STA 440, Missing Data, Total variance. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html#total-variance",
+      "math_clue": "$1+\\frac{1}{m}$\nIn Rubin’s pooling rules, what does this factor multiply?"
+    },
+    {
+      "id": "final-110",
+      "concept": "pooled uncertainty interpretation",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Why should an analyst avoid deriving a standard error from only one completed dataset after multiple imputation?",
+      "choices": ["It assigns too much weight to the between-imputation variance", "It assumes the same parameter is estimated in each fit", "It ignores uncertainty across the completed datasets", "It uses the original number of incomplete records", "It forces the confidence interval to be centered at zero"],
+      "answer": "It ignores uncertainty across the completed datasets",
+      "explanation": "Pooling incorporates both typical within-imputation variance and variation across completed estimates.",
+      "reference": "Duke University STA 440, Missing Data, Total variance. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html#total-variance"
+    },
+    {
+      "id": "final-111",
+      "concept": "complete-case target shift",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "New hires miss the questionnaire more often and have higher satisfaction. What can happen to a mean calculated only from complete cases?",
+      "choices": ["It estimates only the new-hire mean", "It is unchanged by the missingness pattern", "It equals the new-hire mean", "It can only be biased upward", "It can be biased downward"],
+      "answer": "It can be biased downward",
+      "explanation": "Higher-satisfaction new hires are underrepresented among the complete cases.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 94, Complete case analysis"
+    },
+    {
+      "id": "final-112",
+      "concept": "shift sensitivity analysis",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "An analyst adds progressively larger offsets to imputed salaries and tracks when a conclusion changes. What is the purpose?",
+      "choices": ["Test whether the observed records are MCAR", "Assess sensitivity to unseen salaries", "Reduce variance across imputed samples", "Estimate the number of missing predictors", "Estimate the original response rate"],
+      "answer": "Assess sensitivity to unseen salaries",
+      "explanation": "Changing plausible unseen values shows how dependent the conclusion is on the imputation assumptions.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 388, Sensitivity analysis"
+    },
+    {
+      "id": "final-113",
+      "concept": "em monotonicity",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "In exact EM, an iteration starts at parameters with finite observed-data likelihood. Which change across the iteration is guaranteed?",
+      "choices": ["Observed-data likelihood always increases strictly", "Every missing value moves toward zero", "Observed-data likelihood does not decrease", "The completed-data likelihood increases for every completion", "Every parameter estimate increases"],
+      "answer": "Observed-data likelihood does not decrease",
+      "explanation": "An exact E-step and successful M-step make the observed-data likelihood nondecreasing.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 150, EM algorithm"
+    },
+    {
+      "id": "final-114",
+      "concept": "single imputation uncertainty gap",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Filling each blank with one fitted value and treating that dataset as complete omits which uncertainty?",
+      "choices": ["The design variance of the sampling fraction", "Uncertainty about the filled-in values", "Measurement error in the recorded units of the outcome", "Rounding error in the listed sample size", "The distance between observed and fitted means"],
+      "answer": "Uncertainty about the filled-in values",
+      "explanation": "Treating the single fills as known ignores how much those fills might vary under plausible completions.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 291, Multiple imputation"
+    },
+    {
+      "id": "final-115",
+      "concept": "dropout and intermittent missingness",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A participant misses visit 2, then returns for visits 3 and 4. Which pattern does that participant illustrate?",
+      "choices": ["Unit nonresponse", "Intermittent missingness", "Monotone dropout after visit 2", "Monotone dropout after visit 1", "Complete follow-up"],
+      "answer": "Intermittent missingness",
+      "explanation": "A later observed response follows a gap, so the missing pattern is intermittent.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 144, Dropout"
+    },
+    {
+      "id": "final-116",
+      "concept": "ratio estimation auxiliary total",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "To estimate a population total using a sample ratio of workers to kiosks, what auxiliary quantity anchors the extrapolation?",
+      "choices": ["The number of sampled workers", "The variance of workers per sampled kiosk", "The number of workers at the largest sampled kiosk", "The share of sampled kiosks with any workers", "The known number of kiosks in the population"],
+      "answer": "The known number of kiosks in the population",
+      "explanation": "The population kiosk count scales the estimated workers-per-kiosk ratio to the population.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 358, Ratio estimator"
+    },
+    {
+      "id": "final-117",
+      "concept": "poststratified mean weights",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "When combining poststratum means to match the target population, which weights should be used?",
+      "choices": ["Unadjusted sample shares for the poststrata", "Equal shares for all poststrata", "Target population shares for the poststrata", "The inverse of each group’s observed mean", "The within-group outcome variances"],
+      "answer": "Target population shares for the poststrata",
+      "explanation": "Poststratification uses known group proportions in the population.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Poststratification"
+    },
+    {
+      "id": "final-118",
+      "concept": "finite population correction census logic",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Why does a census of a fixed sampling frame remove sampling error for the frame mean?",
+      "choices": ["Every possible draw gives a new set of addresses", "The frame mean cannot vary across survey years", "Every possible draw includes the same frame units", "All measurements are necessarily exact", "The target population always equals the frame"],
+      "answer": "Every possible draw includes the same frame units",
+      "explanation": "A fixed frame census includes every frame unit, so randomness from selecting units disappears.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 166, Finite population correction"
+    },
+    {
+      "id": "final-119",
+      "concept": "two-phase sampling",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A survey collects short forms from 2,000 households and long forms from a random subsample of those same households. What design feature is illustrated?",
+      "choices": ["Poststratification", "Double sampling", "Systematic sampling", "Panel attrition", "Two-stage cluster sampling"],
+      "answer": "Double sampling",
+      "explanation": "The units are the same kind in both phases. The second phase obtains extra variables from a subsample of first-phase units.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 144, Double sampling"
+    },
+    {
+      "id": "final-120",
+      "concept": "cluster sample independent units",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A survey randomly selects 16 villages and interviews every household within them. What should a cluster-based standard error treat as first-stage units?",
+      "choices": ["Only households with complete forms", "Each village-household pair", "All interviewed households", "Every resident of sampled villages", "The 16 villages"],
+      "answer": "The 16 villages",
+      "explanation": "Villages are drawn first. Households in one drawn village share the selection event.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 87, Cluster sampling"
+    },
+    {
+      "id": "final-121",
+      "concept": "inverse joint inclusion weight",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "formula",
+      "clue": "1 / (πₕ πᵢ∣ₕ)\nπₕ selects a ward and πᵢ∣ₕ selects a resident given its ward is selected. What does the expression give?",
+      "choices": ["The ward’s base sampling weight", "The resident’s marginal inclusion probability", "The resident’s conditional probability given the ward", "The resident’s base sampling weight", "The resident’s item response probability"],
+      "answer": "The resident’s base sampling weight",
+      "explanation": "The resident’s base weight is the inverse of the joint inclusion probability across both stages.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 214, Inclusion probability",
+      "math_clue": "$\\frac{1}{\\pi_h\\pi_{i\\mid h}}$\nThe two factors are ward inclusion and resident inclusion conditional on the ward. What does the expression give?"
+    },
+    {
+      "id": "final-122",
+      "concept": "reinterview survey quality",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A random subset of respondents is interviewed again by a second interviewer. Which issue can disagreements help assess?",
+      "choices": ["Finite population correction", "Unequal first-stage inclusion probabilities", "Measurement inconsistency", "Frame undercoverage", "Between-stratum allocation"],
+      "answer": "Measurement inconsistency",
+      "explanation": "Repeat interviews can reveal answers that change across measurement attempts.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Reinterviewing"
+    },
+    {
+      "id": "final-123",
+      "concept": "panel sample interpretation",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "The same sampled households report income every April for five years. What design makes within-household changes observable?",
+      "choices": ["Panel study", "One-visit cluster sample", "Poststratified one-time survey", "Double sampling of extra items", "Repeated independent cross-section"],
+      "answer": "Panel study",
+      "explanation": "A panel follows the same units at more than one point in time.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 315, Panel study"
+    },
+    {
+      "id": "final-124",
+      "concept": "sampling variance vs coverage",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Which problem can persist if the sample from a fixed customer list grows until every listed customer responds?",
+      "choices": ["Customers omitted from the list", "Finite-population sampling variance", "Unit nonresponse on the list", "Random sampling error for the list mean", "Sampling variation between clusters in the list"],
+      "answer": "Customers omitted from the list",
+      "explanation": "A census of the list still misses eligible customers absent from that frame.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 377, Sampling frames"
+    },
+    {
+      "id": "final-125",
+      "concept": "ht relative contribution",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two sampled businesses report the same number of workers. Which contributes more to a Horvitz–Thompson total?",
+      "choices": ["The business with lower inclusion probability", "The business with higher inclusion probability", "The business encountered first", "Both contribute equally regardless of inclusion probability", "The business with the lower reported count"],
+      "answer": "The business with lower inclusion probability",
+      "explanation": "The same observed count receives greater weight when its inclusion probability is smaller.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator"
+    },
+    {
+      "id": "final-126",
+      "concept": "finite population correction standard error",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "formula",
+      "clue": "√(1 − n/N)\nUnder simple random sampling without replacement, what is this factor applied to?",
+      "choices": ["The uncorrected variance", "The point estimate of the mean", "Each respondent’s base weight", "The uncorrected standard error", "The sample size"],
+      "answer": "The uncorrected standard error",
+      "explanation": "The square root of the variance correction scales the standard error.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 166, Finite population correction",
+      "math_clue": "$\\sqrt{1-\\frac{n}{N}}$\nUnder simple random sampling without replacement, what is this factor applied to?"
+    },
+    {
+      "id": "final-127",
+      "concept": "unequal probability sampling design",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A design gives large firms higher chances of inclusion than small firms. What should the base weights do to represent all firms?",
+      "choices": ["Give large firms larger base weights", "Use the chances directly as weights", "Base weight only on each firm’s reported outcome", "Give large firms smaller base weights", "Give all firms the same base weight"],
+      "answer": "Give large firms smaller base weights",
+      "explanation": "Base weights are inverses of inclusion probabilities, so more likely units represent fewer firms.",
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 441, Unequal probability sampling"
+    },
+    {
+      "id": "final-128",
+      "concept": "artifact fingerprint",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "Two collaborators have files with the same name. Which check best detects whether their contents differ at the byte level?",
+      "choices": ["Compare the file extensions", "Compare the column names", "Compare SHA-256 checksums", "Compare the modification dates", "Compare the row counts"],
+      "answer": "Compare SHA-256 checksums",
+      "explanation": "Identical names and summaries can coexist with differences in the underlying bytes.",
+      "reference": "Reproducible Builds documentation, Definitions. https://reproducible-builds.org/docs/definition/"
+    },
+    {
+      "id": "final-129",
+      "concept": "locale-dependent dates",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A script interprets 04/05/2024 differently on two machines. Which change addresses the direct cause?",
+      "choices": ["Use the same folder names", "Record only the software language", "Specify the date format in the import code", "Sort dates after import", "Fix the pseudorandom seed"],
+      "answer": "Specify the date format in the import code",
+      "explanation": "An explicit day-month-year order removes reliance on machine-specific defaults.",
+      "reference": "Reproducible Builds documentation, Definitions. https://reproducible-builds.org/docs/definition/"
+    },
+    {
+      "id": "final-130",
+      "concept": "working directory and portability",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An analysis reads from a path beginning with the author’s personal home folder. Which edit makes the inputs easier to locate elsewhere?",
+      "choices": ["Add more folder levels under the home directory", "Use a path relative to the project root", "Put the file name in the paper title", "Use a different absolute path from the same laptop", "Use a random temporary file for each input"],
+      "answer": "Use a path relative to the project root",
+      "explanation": "A project-relative path works wherever readers unpack the same project layout.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-131",
+      "concept": "readme entry point",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "A package contains scripts and data but gives readers no starting point. Which addition addresses this gap?",
+      "choices": ["A list of the original authors", "A citation count for the analysis", "A copy of the journal cover", "A screenshot of the last figure", "A short run guide listing prerequisites and steps"],
+      "answer": "A short run guide listing prerequisites and steps",
+      "explanation": "A run guide gives readers the sequence and requirements for rerunning the workflow.",
+      "reference": "UC Berkeley STAT 243, Lab 4, Reproducibility. https://stat243.berkeley.edu/fall-2024/labs/lab4-reproducibility.html"
+    },
+    {
+      "id": "final-132",
+      "concept": "data dependency for workspace state",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A notebook computes a model using an object created in a previously run session. What repair makes the object reproducible?",
+      "choices": ["Set a seed where the object is used", "Store the notebook output as a screenshot", "Create or load the object in an earlier notebook cell", "Rename the object to match the model", "Rerun the final model cell twice"],
+      "answer": "Create or load the object in an earlier notebook cell",
+      "explanation": "Declaring how the object is obtained makes it available after a clean start.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-133",
+      "concept": "machine readable environment",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A colleague needs to rebuild a Python analysis with the original library versions. Which artifact can an installer consume directly?",
+      "choices": ["A screenshot of installed package names", "A bibliography of package papers", "A prose statement that Python was used", "An export of the model coefficients", "A pinned requirements file"],
+      "answer": "A pinned requirements file",
+      "explanation": "The requirements file provides a machine-readable recipe for library installation.",
+      "reference": "UC Berkeley STAT 243, Lab 4, Reproducibility. https://stat243.berkeley.edu/fall-2024/labs/lab4-reproducibility.html"
+    },
+    {
+      "id": "final-134",
+      "concept": "automatic dependency rebuild",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "The model code changes. A pipeline rebuilds the model but leaves an old figure. Which correction is most direct?",
+      "choices": ["Give the figure a newer filename", "Remove timestamps from the model output", "Declare the model artifact as a figure input", "Regenerate the raw files", "Add a new random seed"],
+      "answer": "Declare the model artifact as a figure input",
+      "explanation": "The build tool can invalidate the figure when its model input changes only if that dependency is known.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-135",
+      "concept": "ordered script execution",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Cleaning, fitting, and plotting scripts are all provided. What should one top-level command do first?",
+      "choices": ["Fit the model", "Compare the final plots", "Render the figure", "Record the fitted coefficients", "Clean the raw input"],
+      "answer": "Clean the raw input",
+      "explanation": "Fitting requires cleaned inputs, and plotting requires the fitted results.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-136",
+      "concept": "versioned archived workflow",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An article’s link points to a software branch whose contents keep changing. What identifier fixes the version used in the article?",
+      "choices": ["The latest revision number today", "The repository owner’s name", "The filename of the analysis script", "The exact commit identifier", "The branch’s default name"],
+      "answer": "The exact commit identifier",
+      "explanation": "A commit identifier selects a particular revision even after the branch advances.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Version control. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#version-control"
+    },
+    {
+      "id": "final-137",
+      "concept": "version comparison for cleaning",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two teams report different outlier exclusions on the same raw file. What comparison can diagnose the source?",
+      "choices": ["Compare the mean of a variable uninvolved in exclusion", "Compare the final sample sizes only", "Compare the filenames of the cleaned files", "Compare the plot captions for the final report", "Compare the exact exclusion rules and their retained row IDs"],
+      "answer": "Compare the exact exclusion rules and their retained row IDs",
+      "explanation": "The recorded rules and row sets reveal which exclusions differed despite a shared input.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-138",
+      "concept": "source version test",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A download endpoint always serves the most recent file. Which workflow prevents a rerun from silently using revised data?",
+      "choices": ["Keep the request URL while clearing local archives", "Sort the latest file in the original row order", "Download the latest file and log its size", "Use the endpoint again and check its column names", "Read an archived copy and verify its checksum"],
+      "answer": "Read an archived copy and verify its checksum",
+      "explanation": "An archived copy supplies the original version, and the checksum checks for changes to its bytes.",
+      "reference": "UC Berkeley R Bootcamp, Module 9, Some ideas for improving reproducibility. https://computing.stat.berkeley.edu/r-bootcamp-fall-2022/modules/module9_workflows"
+    },
+    {
+      "id": "final-139",
+      "concept": "restricted reproducibility inputs",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Confidential survey records cannot be released. What most helps authorized researchers reproduce the analysis?",
+      "choices": ["Replace the data with unrelated examples and omit that change", "Release only the rounded table", "Provide the workflow and document the secure data-access route", "Publish model code without identifying its intended inputs", "Provide only aggregate sample counts"],
+      "answer": "Provide the workflow and document the secure data-access route",
+      "explanation": "An approved route to the original records, along with the workflow, lets qualified readers rerun the study.",
+      "reference": "UC Berkeley STAT 243, Lab 4, Reproducibility. https://stat243.berkeley.edu/fall-2024/labs/lab4-reproducibility.html"
+    },
+    {
+      "id": "final-140",
+      "concept": "expected outputs for rerun",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "A rerun completes without errors. Which artifact helps determine whether it recovered the reported numbers?",
+      "choices": ["A complete input data dictionary", "A list of commands that ran", "A versioned set of expected numeric results", "A record of elapsed time", "A count of figures in the folder"],
+      "answer": "A versioned set of expected numeric results",
+      "explanation": "The numerical output must be compared with the published or archived values.",
+      "reference": "UC Berkeley STAT 243, Lab 4, Reproducibility. https://stat243.berkeley.edu/fall-2024/labs/lab4-reproducibility.html"
+    },
+    {
+      "id": "final-141",
+      "concept": "undocumented manual plot edit",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A published figure was cropped in an image editor after the plot script ran. Which change most directly makes the published figure reproducible?",
+      "choices": ["Save another copy of the raw inputs", "Document only the plot package version", "Rename the script with the publication date", "Add the cropping step to the workflow", "Rerun the analysis after changing its seed"],
+      "answer": "Add the cropping step to the workflow",
+      "explanation": "An explicit cropping step lets the analysis regenerate the final figure as shown.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-142",
+      "concept": "provenance acquisition timestamp",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An agency changes its open data daily. Which acquisition detail identifies when a snapshot was obtained?",
+      "choices": ["The model initialization seed", "The number of authors", "The observed minimum", "The plot export size", "The date and time of retrieval"],
+      "answer": "The date and time of retrieval",
+      "explanation": "The retrieval time links the snapshot to the state of a changing source.",
+      "reference": "UC Berkeley R Bootcamp, Module 9, Some ideas for improving reproducibility. https://computing.stat.berkeley.edu/r-bootcamp-fall-2022/modules/module9_workflows"
+    },
+    {
+      "id": "final-143",
+      "concept": "untracked model choice",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A published regression includes only one of four tested adjustment sets. Which record makes the published result rerunnable?",
+      "choices": ["The exact adjustment set used by the report", "The order in which the figures are numbered", "A version of the raw data alone", "The names of the four sets without their terms", "The total number of candidate covariates"],
+      "answer": "The exact adjustment set used by the report",
+      "explanation": "The reported model specification tells readers which predictors to include when rebuilding the fit.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-144",
+      "concept": "random draw workflow order",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "An analysis sets one seed at startup. Adding a random draw before it splits the data changes the split. What explains this?",
+      "choices": ["The seed selects a fresh random sequence for each command", "The output depends only on the rounded estimates", "The dataset content must have changed", "The added draw advances the random-number generator state", "The added draw changes the sample size"],
+      "answer": "The added draw advances the random-number generator state",
+      "explanation": "With the same seed, later values depend on how many earlier random draws consumed the sequence.",
+      "reference": "UC Berkeley R Bootcamp, Module 9, Some ideas for improving reproducibility. https://computing.stat.berkeley.edu/r-bootcamp-fall-2022/modules/module9_workflows"
+    },
+    {
+      "id": "final-145",
+      "concept": "intermediate artifact provenance",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "A raw-data cleaning step takes a day. Which practice permits fast reruns while retaining the ability to verify the cleaning?",
+      "choices": ["Keep the cleaned artifact and delete the raw input", "Store the cleaned artifact and retain the cleaning script and raw input", "Overwrite the cleaning script with a copy of the fitted model", "Keep the raw input and rewrite cleaning manually each time", "Store the final figures and discard the cleaned artifact"],
+      "answer": "Store the cleaned artifact and retain the cleaning script and raw input",
+      "explanation": "An intermediate file speeds reuse, while the original input and script permit full regeneration.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-146",
+      "concept": "execution parameter capture",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "The same script generates every bootstrap table by reading settings from a command line. Which item should accompany the published table?",
+      "choices": ["The exact argument values used for that table", "The code documentation without the selected settings", "A list of possible argument names only", "The names of the output files from all runs", "The date when the script was first written"],
+      "answer": "The exact argument values used for that table",
+      "explanation": "The values passed to the script determine the analysis actually performed.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-147",
+      "concept": "container environment first reproducibility",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "The analysis requires specific Python and system-library versions. Which shared artifact can describe both layers together?",
+      "choices": ["A random seed file", "The script output log alone", "A compressed copy of the input data", "A list of Python import statements", "A versioned container build recipe"],
+      "answer": "A versioned container build recipe",
+      "explanation": "A container recipe can specify system libraries and Python dependencies together.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Reproducible research. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#reproducible-research"
+    },
+    {
+      "id": "final-148",
+      "concept": "version history conflicting edits",
+      "level": "Final Year",
+      "difficulty": "easy",
+      "clue_type": "scenario",
+      "clue": "An author says a recent edit changed the model formula. Which record directly shows the lines changed between two saved revisions?",
+      "choices": ["A model residual plot", "A list of raw-data checksums", "A random-number seed log", "A version-control diff", "A package dependency file"],
+      "answer": "A version-control diff",
+      "explanation": "A diff displays the specific insertions and deletions between the two revisions.",
+      "reference": "UC Berkeley STAT 243, Unit 4, Version control. https://stat243.berkeley.edu/fall-2024/units/unit4-goodPractices.html#version-control"
+    },
+    {
+      "id": "final-149",
+      "concept": "diagnosing run differences systematically",
+      "level": "Final Year",
+      "difficulty": "hard",
+      "clue_type": "scenario",
+      "clue": "Two complete reruns differ. The input snapshot matches, but software versions and commands differ. What first comparison isolates the software’s role?",
+      "choices": ["Change both the commands and the environment", "Take an average of the two reported estimates", "Hold the commands fixed and vary only the environment", "Change the rounding rule and rerun only the plots", "Replace the inputs and keep the other differences"],
+      "answer": "Hold the commands fixed and vary only the environment",
+      "explanation": "Varying only the environment isolates it as the candidate source of a difference.",
+      "reference": "UC Berkeley STAT 243, Lab 4, Reproducibility. https://stat243.berkeley.edu/fall-2024/labs/lab4-reproducibility.html"
+    },
+    {
+      "id": "final-150",
+      "concept": "output workflow check",
+      "level": "Final Year",
+      "difficulty": "medium",
+      "clue_type": "scenario",
+      "clue": "Which check is best at finding a hidden dependence on old files produced by an earlier run?",
+      "choices": ["Open only the figures in another viewer", "Run the documented workflow from an empty output folder", "Read the final table twice without rerunning", "Compare the existing files by modification date", "Copy all the old output files into a renamed folder"],
+      "answer": "Run the documented workflow from an empty output folder",
+      "explanation": "An empty output folder forces the workflow to recreate each output it relies on.",
+      "reference": "UC Berkeley STAT 243, Lab 4, Reproducibility. https://stat243.berkeley.edu/fall-2024/labs/lab4-reproducibility.html"
     }
   ]
 }
