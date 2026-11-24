@@ -113,7 +113,7 @@ assets. [Sample format](app/assets/sample-bank.v1.json) · [Curriculum sources](
 
 The release checker currently returns only “The curriculum map has no approval for this
 version of the bank.” Its draft fingerprint is
-`41efea4babf2a29bfd8fdc3f52e83241a1848ab5f474b61fb89075112e479b61`.
+`6908696821172a55e7cb1c49a1509c0b42c9a1af4c868289cb4d391eee314e16`.
 The calculation review covered all 1,050 draft items. Two Level 400 clues now state the
 formula property directly so players can focus on recognition and interpretation.
 The approved fingerprint remains empty. An independent reviewer must check correctness,
@@ -137,6 +137,13 @@ controls. Reduced motion displayed a still board for the same interval. All eigh
 World Statistics Secretary portraits loaded on the level picker, and no other screen
 displayed a secretary. Both editions passed named pass-and-play handovers. The Chromium
 preview also passed its compact phone layout at 160% text size. [Offline preview](preview/index.html)
+
+The equation audit covered all 1,050 questions. The offline renderer bundles 343 distinct
+equations used in clues, choices, and explanations. Windows passed a mixed-formula question
+and correct-answer feedback at 340 px and 160% text. Offline Chromium resolved all generated
+equations and passed an authored Graduate Mix turn and feedback at 360 × 640 and 160% text.
+Question wording and answer keys were preserved. Android rendering and TalkBack still
+require a physical-device check.
 
 ```powershell
 conda activate appdev-conda
@@ -164,12 +171,14 @@ and 64-bit and 32-bit ARM builds. It includes Python, JSON and JPG files from
 
 ## Remaining release work
 
-1. **Run the internal Android build.** The previous attempt recorded a GitHub authentication
-   HTTP 401, found no matching connected repository, and did not establish an alternate
-   Linux runner through WSL or Docker. Use an authorized repository with an Ubuntu runner,
-   or another available Ubuntu runner, and use included build capacity. Capture a successful
-   build and APK artifact, then transfer it privately to a test phone. No successful native
-   build or APK artifact has been verified for this handoff.
+1. **Use the Android test prerelease.** The Ubuntu build on 24 November 2026 produced
+   the [v0.1.0 Android debug APK](https://github.com/batestguy/games-stats-playV1/releases/download/v0.1.0-internal/games-statisticians-play-0.1.0-internal-debug.apk).
+   It targets Android API 36, requires API 26 or newer, and includes 64-bit and 32-bit ARM
+   builds. The debug signature and all 20 bundled JSON and portrait assets passed
+   verification. The APK is 43,003,739 bytes and its SHA-256 is
+   `e1d7b4ff9e34c323547bd4dc818d8bcbcd51016f7139e773394a65a4535d9d2d`.
+   A matching copy is stored locally in the ignored `bin/` directory. The project owner
+   reported that it worked on their phone. The full handset checklist below is still open.
 2. **Pass the handset checks.** Record the build version, phone, Android version, TalkBack
    version, and text/display settings. Install and play both modes in airplane mode.
    Choose the icon and background after browser review, then check the implemented
