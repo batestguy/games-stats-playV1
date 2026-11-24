@@ -11,8 +11,9 @@ The **About** screen explains both modes, replays the opening, and credits Jerry
 [Download the browser game ZIP](https://github.com/batestguy/games-stats-playV1/archive/refs/heads/main.zip).
 Extract the ZIP, then open `preview/index.html` in your browser. Both game modes work offline.
 
-The public Android installer is pending. Watch [GitHub Releases](https://github.com/batestguy/games-stats-playV1/releases)
-for a future APK.
+For Android, [download the v0.1.0 test APK](https://github.com/batestguy/games-stats-playV1/releases/download/v0.1.0-internal/games-statisticians-play-0.1.0-internal-debug.apk).
+It is a debug prerelease for ARM phones running Android 8 or later.
+[Release notes and checksum](https://github.com/batestguy/games-stats-playV1/releases/tag/v0.1.0-internal)
 
 ## How rounds are drawn
 
@@ -81,4 +82,4 @@ python -m preview.sync_bank
 
 ## Release status
 
-The Windows build and tests are available. The Android prototype workflow is available in GitHub Actions. The Android installer, handset checks and independent review of the draft question bank remain pending. The public download follows internal testing, including Android 8, recent Android, 16 KB page compatibility and a signed update that preserves progress. Keep the release signing key and encrypted backup outside this workspace. [Android page-size checks](https://developer.android.com/guide/practices/page-sizes) · [Android app signing](https://developer.android.com/studio/publish/app-signing)
+The Windows build and tests are available. The Android prototype workflow is available in GitHub Actions. The Android debug prerelease is available above. Detailed handset checks and independent review of the draft question bank remain pending. The public download follows internal testing, including Android 8, recent Android, 16 KB page compatibility and a signed update that preserves progress. Keep the release signing key and encrypted backup outside this workspace. [Android page-size checks](https://developer.android.com/guide/practices/page-sizes) · [Android app signing](https://developer.android.com/studio/publish/app-signing)
