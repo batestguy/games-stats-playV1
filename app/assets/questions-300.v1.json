@@ -234,7 +234,7 @@
       "answer": "Margin of error",
       "explanation": "In a symmetric interval, the multiplier times the standard error is the half-width.",
       "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
-      "math_clue": "$c\\times\\mathrm{SE}$\nwhere a symmetric interval is estimate ± c × SE"
+      "math_clue": "$c\\times\\mathrm{SE}$\nwhere a symmetric interval is $\\mathrm{estimate}\\pm c\\times\\mathrm{SE}$"
     },
     {
       "id": "300-014",
@@ -253,7 +253,7 @@
       "answer": "Lower confidence limit",
       "explanation": "Subtracting the margin of error gives the lower endpoint.",
       "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
-      "math_clue": "$\\bar x-c\\times\\mathrm{SE}$\nfor a symmetric interval with c > 0"
+      "math_clue": "$\\bar x-c\\times\\mathrm{SE}$\nfor a symmetric interval with $c > 0$"
     },
     {
       "id": "300-015",
@@ -272,7 +272,7 @@
       "answer": "Upper confidence limit",
       "explanation": "Adding the margin of error gives the upper endpoint.",
       "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
-      "math_clue": "$\\bar x+c\\times\\mathrm{SE}$\nfor a symmetric interval with c > 0"
+      "math_clue": "$\\bar x+c\\times\\mathrm{SE}$\nfor a symmetric interval with $c > 0$"
     },
     {
       "id": "300-016",
@@ -291,7 +291,8 @@
       "answer": "Estimated standard error",
       "explanation": "Replacing the population standard deviation with s estimates the standard error of the mean.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error",
-      "math_clue": "$\\frac{s}{\\sqrt{n}}$\nfor the mean of n independent observations with sample SD s"
+      "math_clue": "$\\frac{s}{\\sqrt{n}}$\nfor the mean of $n$ independent observations with sample SD $s$",
+      "math_explanation": "Replacing the population standard deviation with $s$ estimates the standard error of the mean."
     },
     {
       "id": "300-017",
@@ -310,7 +311,7 @@
       "answer": "Confidence interval width",
       "explanation": "The upper and lower limits each lie one margin of error from the center, so the total width is twice the margin.",
       "reference": "Penn State STAT 200, Lesson 4, §§4.2–4.2.1, Confidence Intervals: https://online.stat.psu.edu/stat200/Lesson04",
-      "math_clue": "$2c\\times\\mathrm{SE}$\nfor a symmetric interval x̄ ± c × SE"
+      "math_clue": "$2c\\times\\mathrm{SE}$\nfor a symmetric interval $\\bar{x}\\pm c\\times\\mathrm{SE}$"
     },
     {
       "id": "300-018",
@@ -601,7 +602,7 @@
       "answer": "Mean squared error",
       "explanation": "The mean squared error averages the squared difference between estimator and target.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 274, Mean squared error",
-      "math_clue": "$\\mathrm{E}[(\\hat{\\theta}-\\theta)^2]$\nwhere θ̂ estimates the fixed target θ"
+      "math_clue": "$\\mathrm{E}[(\\hat{\\theta}-\\theta)^2]$\nwhere $\\hat{\\theta}$ estimates the fixed target $\\theta$"
     },
     {
       "id": "300-034",
@@ -620,7 +621,7 @@
       "answer": "Method of moments",
       "explanation": "The method equates a sample moment to the corresponding population moment.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 277, Method of moments",
-      "math_clue": "$\\bar x=\\mathrm{E}_{\\theta}[X]$\nMatch the sample mean to the model expectation and solve for θ. Assume one unknown parameter."
+      "math_clue": "$\\bar x=\\mathrm{E}_{\\theta}[X]$\nMatch the sample mean to the model expectation and solve for $\\theta$. Assume one unknown parameter."
     },
     {
       "id": "300-035",
@@ -658,7 +659,8 @@
       "answer": "One-sample t statistic",
       "explanation": "The one-sample t statistic uses an estimated standard error for a single sample mean.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student’s t-distribution",
-      "math_clue": "$\\frac{\\bar x-\\mu_0}{s/\\sqrt{n}}$\nfor a hypothesized mean μ₀ and sample SD s"
+      "math_clue": "$\\frac{\\bar x-\\mu_0}{s/\\sqrt{n}}$\nfor a hypothesized mean $\\mu_0$ and sample SD $s$",
+      "math_explanation": "The one-sample $t$ statistic uses an estimated standard error for a single sample mean."
     },
     {
       "id": "300-037",
@@ -677,7 +679,7 @@
       "answer": "False-negative probability",
       "explanation": "This is the probability of making a Type II error at the specified alternative.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 439, Type II error",
-      "math_clue": "$P(\\mathrm{fail\\ to\\ reject}\\ H_0\\mid H_1)$\nHere H₁ denotes a specified true alternative."
+      "math_clue": "$P(\\mathrm{fail\\ to\\ reject}\\ H_0\\mid H_1)$\nHere $H_1$ denotes a specified true alternative."
     },
     {
       "id": "300-038",
@@ -696,7 +698,7 @@
       "answer": "One-sample z statistic",
       "explanation": "The z statistic uses the known population standard deviation in its standard error.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 468, z-test",
-      "math_clue": "$\\frac{\\bar x-\\mu_0}{\\sigma/\\sqrt{n}}$\nfor known population SD σ and hypothesized mean μ₀"
+      "math_clue": "$\\frac{\\bar x-\\mu_0}{\\sigma/\\sqrt{n}}$\nfor known population SD $\\sigma$ and hypothesized mean $\\mu_0$"
     },
     {
       "id": "300-039",
@@ -715,7 +717,7 @@
       "answer": "Critical value",
       "explanation": "The critical value is the cutoff for the test statistic.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 115, Critical value",
-      "math_clue": "$P(Z>c)=\\alpha$\nWhat is the number c that satisfies this condition when Z follows its null distribution?"
+      "math_clue": "$P(Z>c)=\\alpha$\nWhat is the number $c$ that satisfies this condition when $Z$ follows its null distribution?"
     },
     {
       "id": "300-040",
@@ -734,7 +736,7 @@
       "answer": "Test inversion",
       "explanation": "Inverting a family of tests gives a confidence set from the null values not rejected.",
       "reference": "Penn State STAT 415, Lesson 10, confidence interval and hypothesis test duality: https://online.stat.psu.edu/stat415/Lesson10",
-      "math_clue": "$H_0:\\theta=\\theta_0$\nKeep all values θ₀ for which the matching two-sided test of this null does not reject at level α."
+      "math_clue": "$H_0:\\theta=\\theta_0$\nKeep all values $\\theta_0$ for which the matching two-sided test of this null does not reject at level $\\alpha$."
     },
     {
       "id": "300-041",
@@ -897,7 +899,8 @@
       "answer": "One-sample t interval",
       "explanation": "The t multiplier and sample standard deviation produce an interval for one population mean.",
       "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals",
-      "math_clue": "$\\bar x\\pm c\\times\\frac{s}{\\sqrt{n}}$\nwhere c comes from a t distribution with n − 1 degrees of freedom"
+      "math_clue": "$\\bar x\\pm c\\times\\frac{s}{\\sqrt{n}}$\nwhere $c$ comes from a $t$ distribution with $n-1$ degrees of freedom",
+      "math_explanation": "The $t$ multiplier and sample standard deviation produce an interval for one population mean."
     },
     {
       "id": "300-050",
@@ -916,7 +919,7 @@
       "answer": "Known-variance z interval",
       "explanation": "With known population standard deviation, a normal cutoff sets the confidence interval’s margin.",
       "reference": "Penn State STAT 415, Lesson 6, Theorem 6.1, Z-Interval for a Mean: https://online.stat.psu.edu/stat415/Lesson06",
-      "math_clue": "$\\bar x\\pm c\\times\\frac{\\sigma}{\\sqrt{n}}$\nwhere σ is known and c is a standard normal cutoff"
+      "math_clue": "$\\bar x\\pm c\\times\\frac{\\sigma}{\\sqrt{n}}$\nwhere $\\sigma$ is known and $c$ is a standard normal cutoff"
     },
     {
       "id": "300-051",
@@ -935,7 +938,7 @@
       "answer": "Estimated standard error of a proportion",
       "explanation": "The sample proportion substitutes for the unknown population probability in the standard error.",
       "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08",
-      "math_clue": "$\\sqrt{\\frac{\\hat p(1-\\hat p)}{n}}$\nfor an observed proportion p̂ and n independent trials"
+      "math_clue": "$\\sqrt{\\frac{\\hat p(1-\\hat p)}{n}}$\nfor an observed proportion $\\hat{p}$ and $n$ independent trials"
     },
     {
       "id": "300-052",
@@ -954,7 +957,8 @@
       "answer": "Unbiased sample variance",
       "explanation": "With the n − 1 correction, the estimator’s expectation equals the population variance.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance",
-      "math_clue": "$\\frac{\\sum_i(x_i-\\bar x)^2}{n-1}$\nfor n > 1 independent draws with a common finite variance"
+      "math_clue": "$\\frac{\\sum_i(x_i-\\bar x)^2}{n-1}$\nfor $n > 1$ independent draws with a common finite variance",
+      "math_explanation": "With the $n-1$ correction, the estimator’s expectation equals the population variance."
     },
     {
       "id": "300-053",
@@ -1189,7 +1193,7 @@
       "answer": "Risk difference",
       "explanation": "Subtracting the risks gives the absolute difference on the probability scale.",
       "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03",
-      "math_clue": "$p_1-p_2$\nwhere p₁ and p₂ are two groups’ event probabilities"
+      "math_clue": "$p_1-p_2$\nwhere $p_1$ and $p_2$ are two groups’ event probabilities"
     },
     {
       "id": "300-066",
@@ -1208,7 +1212,7 @@
       "answer": "Risk ratio",
       "explanation": "Dividing the probabilities gives risk in group one relative to group two.",
       "reference": "Penn State STAT 504, Lesson 3, Two-Way Tables and Relative Risk: https://online.stat.psu.edu/stat504/Lesson03",
-      "math_clue": "$\\frac{p_1}{p_2}$\nwhere p₁ and p₂ are group risks and p₂ > 0"
+      "math_clue": "$\\frac{p_1}{p_2}$\nwhere $p_1$ and $p_2$ are group risks and $p_2>0$"
     },
     {
       "id": "300-067",
@@ -1246,7 +1250,8 @@
       "answer": "Equal-tail probability",
       "explanation": "The two tails share the total probability α evenly.",
       "reference": "Penn State STAT Online, S.2 Confidence Intervals, t-interval and equal-tail multipliers: https://online.stat.psu.edu/statprogram/reviews/statistical-concepts/confidence-intervals",
-      "math_clue": "$\\frac{\\alpha}{2}$\nfor each of the two equally sized tails outside the central area 1 − α"
+      "math_clue": "$\\frac{\\alpha}{2}$\nfor each of the two equally sized tails outside the central area $1-\\alpha$",
+      "math_explanation": "The two tails share the total probability $\\alpha$ evenly."
     },
     {
       "id": "300-069",
@@ -1284,7 +1289,7 @@
       "answer": "Statistical power",
       "explanation": "The chance of detecting the fixed effect is one minus the chance of missing it.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Power",
-      "math_clue": "$1-\\beta$\nwhere β is the probability of missing a fixed real effect"
+      "math_clue": "$1-\\beta$\nwhere $\\beta$ is the probability of missing a fixed real effect"
     },
     {
       "id": "300-071",
@@ -1447,7 +1452,7 @@
       "answer": "Pooled proportion",
       "explanation": "Add all successes and divide by the combined number of trials.",
       "reference": "Penn State STAT 200, Lesson 9, Inference for Two Samples: https://online.stat.psu.edu/stat200/Lesson09",
-      "math_clue": "$\\frac{x_1+x_2}{n_1+n_2}$\nfor independent success counts x₁ and x₂ with a shared probability"
+      "math_clue": "$\\frac{x_1+x_2}{n_1+n_2}$\nfor independent success counts $x_1$ and $x_2$ with a shared probability"
     },
     {
       "id": "300-080",
@@ -1466,7 +1471,7 @@
       "answer": "Paired mean confidence interval",
       "explanation": "Use one observation per pair, namely its difference.",
       "reference": "Penn State STAT 500, Lesson 7, Comparing Two Population Parameters: https://online.stat.psu.edu/stat500/Lesson07",
-      "math_clue": "$\\bar d\\pm c\\times\\frac{s_d}{\\sqrt{n}}$\nwhere c is a t cutoff and d is the within-pair difference"
+      "math_clue": "$\\bar d\\pm c\\times\\frac{s_d}{\\sqrt{n}}$\nwhere $c$ is a $t$ cutoff and $d$ is the within-pair difference"
     },
     {
       "id": "300-081",
@@ -1485,7 +1490,8 @@
       "answer": "Bonferroni threshold",
       "explanation": "The sum of the local Type I error bounds is at most α.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction",
-      "math_clue": "$\\frac{\\alpha}{m}$\nused as each local cutoff when testing m hypotheses to control familywise error"
+      "math_clue": "$\\frac{\\alpha}{m}$\nused as each local cutoff when testing $m$ hypotheses to control familywise error",
+      "math_explanation": "The sum of the local Type I error bounds is at most $\\alpha$."
     },
     {
       "id": "300-082",
@@ -1504,7 +1510,8 @@
       "answer": "One-proportion z statistic",
       "explanation": "The denominator uses the null probability p₀ in the standard error.",
       "reference": "Penn State STAT 200, Lesson 8, §8.1 Inference for One Proportion: https://online.stat.psu.edu/stat200/Lesson08",
-      "math_clue": "$\\frac{\\hat p-p_0}{\\sqrt{p_0(1-p_0)/n}}$\nfor a sample proportion p̂ and hypothesized p₀"
+      "math_clue": "$\\frac{\\hat p-p_0}{\\sqrt{p_0(1-p_0)/n}}$\nfor a sample proportion $\\hat{p}$ and hypothesized $p_0$",
+      "math_explanation": "The denominator uses the null probability $p_0$ in the standard error."
     },
     {
       "id": "300-083",
@@ -1705,7 +1712,7 @@
       "answer": "It is consistent despite finite-sample bias",
       "explanation": "Bias and variance both tend to zero, so MSE tends to zero and the estimator converges in probability.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency",
-      "math_clue": "$\\mathrm{bias}(T_n)=1/n,\\quad \\mathrm{Var}(T_n)=1/n$\nThe target is fixed. What happens to this estimator as n grows?"
+      "math_clue": "$\\mathrm{bias}(T_n)=1/n,\\quad \\mathrm{Var}(T_n)=1/n$\nThe target is fixed. What happens to this estimator as $n$ grows?"
     },
     {
       "id": "300-094",
@@ -1723,7 +1730,8 @@
       ],
       "answer": "Unbiased but inconsistent",
       "explanation": "Its expectation is the mean and its variation does not shrink as n grows.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 100, Consistency",
+      "math_clue": "For an infinite sequence of independent draws from a population with positive finite variance, use only the first draw to estimate the mean for every $n$. How does this rule behave?"
     },
     {
       "id": "300-095",
@@ -2029,7 +2037,12 @@
       ],
       "answer": "It does not reject",
       "explanation": "In an inverted interval, retained values are those the matching test does not reject.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval",
+      "math_clue": "A 95% interval is formed by inverting the corresponding two-sided tests. Its limits are $-3$ and $2$. What does the 5% test do at a null value of zero?",
+      "math_choices": {
+        "It has p = 1": "It has $p = 1$",
+        "It has p = 0": "It has $p = 0$"
+      }
     },
     {
       "id": "300-112",
@@ -2101,7 +2114,10 @@
       ],
       "answer": "All values at least 8",
       "explanation": "The confidence set extends upward from its lower boundary.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 99, Confidence interval",
+      "math_choices": {
+        "All values between −8 and 8": "All values between $-8$ and $8$"
+      }
     },
     {
       "id": "300-116",
@@ -2191,7 +2207,8 @@
       ],
       "answer": "The sample size after allowing for the estimated mean",
       "explanation": "The sample mean imposes one constraint on the deviations used to estimate variance.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student's t-distribution"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student's t-distribution",
+      "math_clue": "What determines the degrees of freedom for the critical multiplier in a one-sample $t$ interval for a normal population mean?"
     },
     {
       "id": "300-121",
@@ -2245,7 +2262,8 @@
       ],
       "answer": "Reject the null",
       "explanation": "The p-value is below the stated significance level.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value",
+      "math_clue": "A preplanned test returns $p = 0.03$. What happens at significance level 0.05?"
     },
     {
       "id": "300-124",
@@ -2263,7 +2281,8 @@
       ],
       "answer": "Reject, then fail to reject",
       "explanation": "The same p-value falls below 0.05 and above 0.01.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 346, P-value",
+      "math_clue": "A test gives $p = 0.02$. Which pair of decisions is correct at levels 0.05 and 0.01, in that order?"
     },
     {
       "id": "300-125",

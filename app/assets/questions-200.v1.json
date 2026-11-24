@@ -236,7 +236,7 @@
       "answer": "Expected value",
       "explanation": "The expected value weights each possible outcome by its probability.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 156, Expected value",
-      "math_clue": "$\\sum_x x\\,P(X=x)$\nfor a discrete X"
+      "math_clue": "$\\sum_x x\\,P(X=x)$\nfor a discrete $X$"
     },
     {
       "id": "200-014",
@@ -255,7 +255,7 @@
       "answer": "Variance of X",
       "explanation": "Variance measures the expected squared distance from the mean.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance",
-      "math_clue": "$\\mathrm{E}[(X-\\mu)^2]$\nwhere μ = E[X]"
+      "math_clue": "$\\mathrm{E}[(X-\\mu)^2]$\nwhere $\\mu=\\mathrm{E}[X]$"
     },
     {
       "id": "200-015",
@@ -274,7 +274,8 @@
       "answer": "Standard error of the mean",
       "explanation": "Averaging n independent draws divides their standard deviation by the square root of n.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 409, Standard error",
-      "math_clue": "$\\frac{\\sigma}{\\sqrt{n}}$\nfor n independent draws with standard deviation σ"
+      "math_clue": "$\\frac{\\sigma}{\\sqrt{n}}$\nfor $n$ independent draws with standard deviation $\\sigma$",
+      "math_explanation": "Averaging $n$ independent draws divides their standard deviation by the square root of $n$."
     },
     {
       "id": "200-016",
@@ -293,7 +294,7 @@
       "answer": "Sample proportion",
       "explanation": "The proportion is the observed number of successes divided by the total trial count.",
       "reference": "UC Berkeley STAT 2, Fall 2024, Module 7, sample percentage: https://stat2.berkeley.edu/fall-2024/#module-7-sampling-from-a-population-weeks-11-12",
-      "math_clue": "$\\frac{X}{n}$\nwhere X is the number of successes in n trials"
+      "math_clue": "$\\frac{X}{n}$\nwhere $X$ is the number of successes in $n$ trials"
     },
     {
       "id": "200-017",
@@ -312,7 +313,7 @@
       "answer": "Population z-score",
       "explanation": "This gives the number of population standard deviations from the mean.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standard scores",
-      "math_clue": "$\\frac{x-\\mu}{\\sigma}$\nwhere μ and σ are population values"
+      "math_clue": "$\\frac{x-\\mu}{\\sigma}$\nwhere $\\mu$ and $\\sigma$ are population values"
     },
     {
       "id": "200-018",
@@ -331,7 +332,8 @@
       "answer": "Interval probability",
       "explanation": "Subtracting the cumulative probabilities gives P(a < X ≤ b).",
       "reference": "MIT 18.05, Spring 2022, Reading 5b, Cumulative Distribution Function: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class05-prep-b_pdf/",
-      "math_clue": "$F(b)-F(a)$\nfor a cumulative distribution function F and a < b"
+      "math_clue": "$F(b)-F(a)$\nfor a cumulative distribution function $F$ and $a < b$",
+      "math_explanation": "Subtracting the cumulative probabilities gives $P(a<X\\leq b)$."
     },
     {
       "id": "200-019",
@@ -570,7 +572,7 @@
       "explanation": "This factor shrinks the standard error relative to drawing with replacement.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 166, Finite population correction",
       "convention": "Here the population variance uses denominator N and the correction multiplies the standard error.",
-      "math_clue": "$\\sqrt{\\frac{N-n}{N-1}}$\nfor n draws without replacement from N > 1 units"
+      "math_clue": "$\\sqrt{\\frac{N-n}{N-1}}$\nfor $n$ draws without replacement from $N > 1$ units"
     },
     {
       "id": "200-032",
@@ -627,7 +629,7 @@
       "answer": "Marginal probability mass",
       "explanation": "Summing over Y gives the probability that X takes the specified value.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 267, Marginal distribution",
-      "math_clue": "$\\sum_y P(X=x,Y=y)$\nfor discrete X and Y"
+      "math_clue": "$\\sum_y P(X=x,Y=y)$\nfor discrete $X$ and $Y$"
     },
     {
       "id": "200-035",
@@ -665,7 +667,7 @@
       "answer": "Survival function",
       "explanation": "The survival function gives the chance that the event happens after t.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 423, Survival function",
-      "math_clue": "$1-F(t)$\nwhere F(t) = P(T ≤ t) and T is time to an event"
+      "math_clue": "$1-F(t)$\nwhere $F(t)=P(T\\leq t)$ and $T$ is time to an event"
     },
     {
       "id": "200-037",
@@ -720,7 +722,7 @@
       "answer": "Moment generating function",
       "explanation": "Taking the expectation of the exponential gives the moment generating function.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 282, Moment generating function",
-      "math_clue": "$\\mathrm{E}[\\exp(tX)]$\nwhere this expectation exists around t = 0"
+      "math_clue": "$\\mathrm{E}[\\exp(tX)]$\nwhere this expectation exists around $t = 0$"
     },
     {
       "id": "200-040",
@@ -739,7 +741,7 @@
       "answer": "Variance of a sum",
       "explanation": "Independence makes the covariance zero, so the variances add.",
       "reference": "MIT 18.05, Spring 2022, Reading 7b, Covariance and Correlation, variance of a sum: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class07-prep-b_pdf/",
-      "math_clue": "$\\mathrm{Var}(X)+\\mathrm{Var}(Y)$\nfor independent X and Y with finite variances"
+      "math_clue": "$\\mathrm{Var}(X)+\\mathrm{Var}(Y)$\nfor independent $X$ and $Y$ with finite variances"
     },
     {
       "id": "200-041",
@@ -902,7 +904,7 @@
       "answer": "Mean of a linear transformation",
       "explanation": "Multiplying values multiplies their mean, and adding a fixed amount shifts it.",
       "reference": "MIT 18.05, Spring 2022, Problem Set 4 Solutions, affine transformations: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04_sol.pdf",
-      "math_clue": "$a\\,\\mathrm{E}[X]+b$\nwhen a and b are constants and Y = aX + b"
+      "math_clue": "$a\\,\\mathrm{E}[X]+b$\nwhen $a$ and $b$ are constants and $Y = aX + b$"
     },
     {
       "id": "200-050",
@@ -921,7 +923,8 @@
       "answer": "Variance of a linear transformation",
       "explanation": "Adding b shifts the center; multiplying by a scales the variance by a squared.",
       "reference": "MIT 18.05, Spring 2022, Problem Set 4 Solutions, affine transformations: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_pset04_sol.pdf",
-      "math_clue": "$a^2\\mathrm{Var}(X)$\nfor Y = aX + b, with a and b fixed"
+      "math_clue": "$a^2\\mathrm{Var}(X)$\nfor $Y = aX + b$, with $a$ and $b$ fixed",
+      "math_explanation": "Adding $b$ shifts the center; multiplying by $a$ scales the variance by $a^2$."
     },
     {
       "id": "200-051",
@@ -940,7 +943,8 @@
       "answer": "Mean of a binomial count",
       "explanation": "The count is a sum of n variables whose individual means are p.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 47, Binomial distribution",
-      "math_clue": "$np$\nfor X counting successes in n independent trials with fixed success chance p"
+      "math_clue": "$np$\nfor $X$ counting successes in $n$ independent trials with fixed success chance $p$",
+      "math_explanation": "The count is a sum of $n$ variables whose individual means are $p$."
     },
     {
       "id": "200-052",
@@ -959,7 +963,7 @@
       "answer": "Variance of a Bernoulli trial",
       "explanation": "The variance of a single indicator is p times one minus p.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 42, Bernoulli distribution",
-      "math_clue": "$p(1-p)$\nfor X equal to 1 with probability p and 0 otherwise"
+      "math_clue": "$p(1-p)$\nfor $X$ equal to 1 with probability $p$ and 0 otherwise"
     },
     {
       "id": "200-053",
@@ -1068,7 +1072,8 @@
       ],
       "answer": "Chebyshev’s inequality",
       "explanation": "The upper bound for being at least k standard deviations away is 1/k², with positive variance.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 77, Chebyshev’s inequality"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 77, Chebyshev’s inequality",
+      "math_explanation": "The upper bound for being at least $k$ standard deviations away is $\\frac{1}{k^2}$, with positive variance."
     },
     {
       "id": "200-059",
@@ -1195,7 +1200,8 @@
       "answer": "Poisson probability mass",
       "explanation": "The Poisson count law uses a positive expected count λ.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 330, Poisson distribution",
-      "math_clue": "$\\frac{\\exp(-\\lambda)\\,\\lambda^k}{k!}$\nfor counts k = 0, 1, 2, …"
+      "math_clue": "$\\frac{\\exp(-\\lambda)\\,\\lambda^k}{k!}$\nfor counts $k=0,1,2,\\ldots$",
+      "math_explanation": "The Poisson count law uses a positive expected count $\\lambda$."
     },
     {
       "id": "200-066",
@@ -1215,7 +1221,8 @@
       "explanation": "The exponential density decays from λ at rate λ.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 157, Exponential distribution",
       "convention": "λ is the rate, with mean 1/λ.",
-      "math_clue": "$\\lambda\\exp(-\\lambda x)$\nfor x ≥ 0 and λ > 0"
+      "math_clue": "$\\lambda\\exp(-\\lambda x)$\nfor $x\\geq0$ and $\\lambda>0$",
+      "math_explanation": "The exponential density decays from $\\lambda$ at rate $\\lambda$."
     },
     {
       "id": "200-067",
@@ -1234,7 +1241,8 @@
       "answer": "Binomial variance",
       "explanation": "The count sums n independent indicators, each with variance p times one minus p.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 47, Binomial distribution",
-      "math_clue": "$np(1-p)$\nfor a count X from n independent binary trials with success chance p"
+      "math_clue": "$np(1-p)$\nfor a count $X$ from $n$ independent binary trials with success chance $p$",
+      "math_explanation": "The count sums $n$ independent indicators, each with variance $p(1-p)$."
     },
     {
       "id": "200-068",
@@ -1253,7 +1261,7 @@
       "answer": "Standard error of a proportion",
       "explanation": "The spread of the sample proportion is the spread of its count divided by n.",
       "reference": "Penn State STAT 500, Lesson 4, §4.2, Sampling Distribution of the Sample Proportion: https://online.stat.psu.edu/stat500/Lesson04",
-      "math_clue": "$\\sqrt{\\frac{p(1-p)}{n}}$\nfor n independent trials with true success chance p"
+      "math_clue": "$\\sqrt{\\frac{p(1-p)}{n}}$\nfor $n$ independent trials with true success chance $p$"
     },
     {
       "id": "200-069",
@@ -1383,7 +1391,8 @@
       "answer": "Student’s t-distribution",
       "explanation": "This ratio follows Student’s t with degrees of freedom inherited from the chi-squared term.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student’s t-distribution Ratio definition in Penn State STAT 414, Lesson 26, §26.4: https://online.stat.psu.edu/stat414/Lesson26",
-      "math_clue": "$\\sqrt{V/8}$\nDivide a standard normal value by this quantity, where V is independent chi-squared with eight degrees of freedom."
+      "math_clue": "$\\sqrt{V/8}$\nDivide a standard normal value by this quantity, where $V$ is independent chi-squared with eight degrees of freedom.",
+      "math_explanation": "This ratio follows Student’s $t$ with degrees of freedom inherited from the chi-squared term."
     },
     {
       "id": "200-076",
@@ -1456,7 +1465,7 @@
       "answer": "CLT standardization",
       "explanation": "Subtract the population mean and divide by the standard error of the sample mean.",
       "reference": "MIT 18.05, Spring 2022, Reading 6b, Central Limit Theorem and the Law of Large Numbers: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class06-prep-b_pdf/",
-      "math_clue": "$\\sqrt{n}\\,\\frac{\\bar X-\\mu}{\\sigma}$\nfor an independent sample with common mean μ and positive finite SD σ"
+      "math_clue": "$\\sqrt{n}\\,\\frac{\\bar X-\\mu}{\\sigma}$\nfor an independent sample with common mean $\\mu$ and positive finite SD $\\sigma$"
     },
     {
       "id": "200-080",
@@ -1475,7 +1484,8 @@
       "answer": "Variance of the sample mean",
       "explanation": "The variance of the sum is nσ², and scaling by 1/n divides variance by n².",
       "reference": "Penn State STAT 414, Lesson 24, Several Independent Random Variables: https://online.stat.psu.edu/stat414/Lesson24",
-      "math_clue": "$\\frac{\\sigma^2}{n}$\nfor n independent draws from one distribution with variance σ²"
+      "math_clue": "$\\frac{\\sigma^2}{n}$\nfor $n$ independent draws from one distribution with variance $\\sigma^2$",
+      "math_explanation": "The variance of the sum is $n\\sigma^2$, and scaling by $\\frac{1}{n}$ divides variance by $n^2$."
     },
     {
       "id": "200-081",
@@ -1513,7 +1523,7 @@
       "answer": "Probability density from a CDF",
       "explanation": "The derivative of the CDF gives the density where the derivative exists.",
       "reference": "MIT 18.05, Spring 2022, Reading 5b, Continuous Random Variables: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class05-prep-b_pdf/",
-      "math_clue": "$\\frac{dF(x)}{dx}$\nfor a differentiable cumulative distribution function F"
+      "math_clue": "$\\frac{dF(x)}{dx}$\nfor a differentiable cumulative distribution function $F$"
     },
     {
       "id": "200-083",
@@ -1532,7 +1542,8 @@
       "answer": "Markov’s inequality",
       "explanation": "Nonnegative values above a contribute at least a times their probability to the mean.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 270, Markov inequality",
-      "math_clue": "$P(X\\geq a)\\leq\\frac{\\mathrm{E}[X]}{a}$\nfor nonnegative X with finite mean and a > 0"
+      "math_clue": "$P(X\\geq a)\\leq\\frac{\\mathrm{E}[X]}{a}$\nfor nonnegative $X$ with finite mean and $a > 0$",
+      "math_explanation": "Nonnegative values above $a$ contribute at least $a$ times their probability to the mean."
     },
     {
       "id": "200-084",
@@ -1552,7 +1563,8 @@
       "explanation": "Adding n observations scales the mean and variance by n, and the central limit theorem supplies the shape.",
       "reference": "MIT 18.05, Spring 2022, Reading 6b, Central Limit Theorem and the Law of Large Numbers: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/resources/mit18_05_s22_class06-prep-b_pdf/",
       "convention": "N(mean, variance). Population mean μ and finite positive variance σ².",
-      "math_clue": "$N(n\\mu,n\\sigma^2)$\nfor the total of many independent draws from one nonnormal population"
+      "math_clue": "$N(n\\mu,n\\sigma^2)$\nfor the total of many independent draws from one nonnormal population",
+      "math_explanation": "Adding $n$ observations scales the mean and variance by $n$, and the central limit theorem supplies the shape."
     },
     {
       "id": "200-085",
@@ -1932,7 +1944,9 @@
       ],
       "answer": "More in both tails",
       "explanation": "The t law is symmetric and has heavier tails for finite degrees of freedom.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student's t-distribution"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Student's t-distribution",
+      "math_clue": "Compared with a standard normal, how much probability sits beyond very large cutoffs under a Student $t$ law with 5 degrees of freedom?",
+      "math_explanation": "The $t$ law is symmetric and has heavier tails for finite degrees of freedom."
     },
     {
       "id": "200-106",
@@ -2456,7 +2470,8 @@
       ],
       "answer": "A normal population",
       "explanation": "Independent normal variables have normal linear combinations, even at n = 2.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 73, Central limit theorem"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 73, Central limit theorem",
+      "math_explanation": "Independent normal variables have normal linear combinations, even at $n = 2$."
     },
     {
       "id": "200-135",

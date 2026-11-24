@@ -23,6 +23,7 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.popup import Popup
 from kivy.uix.scrollview import ScrollView
+from kivy.uix.stacklayout import StackLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
 from kivy.utils import platform
@@ -32,7 +33,7 @@ from game import (
     Match, Progress, Turn,
     load_question_bank, match_questions, score, solo_questions,
 )
-from equations import equation_parts
+from equations import choice_parts, equation_parts
 from hints import reflection_hint
 from presentation import (
     INTRO_SECONDS, GaltonBoard, match_names, nickname,
@@ -111,7 +112,7 @@ def clock_for_device():
     return lambda: monotonic_ns() // 1_000_000
 
 
-def open_blog(url):
+def open_external_link(url):
     if platform == "android":
         from jnius import autoclass
 
@@ -245,19 +246,21 @@ class QuizPrototype(App):
             disabled=disabled,
         )
         button.bind(width=lambda widget, width: setattr(widget, "text_size", (max(dp(12), width - dp(24)), None)))
-        if equation in self.equations:
+        parts = choice_parts(equation)
+        if self.has_equations(parts):
             button.color = (0, 0, 0, 0)
-            image = self.equation_image(equation)
-            image.size_hint = (None, None)
-            button.height = max(dp(52), image.height + dp(18))
+            graphic = self.equation_group(parts, 18)
+            graphic.size_hint_x = None
 
-            def place_image(*_):
-                image.width = min(sp(self.equations[equation]["width"] / 2), max(0, button.width - dp(24)))
-                image.center = button.center
+            def place_graphic(*_):
+                graphic.width = max(dp(12), button.width - dp(24))
+                button.height = max(dp(52), graphic.height + dp(18))
+                graphic.center = button.center
 
-            button.add_widget(image)
-            button.bind(pos=place_image, size=place_image)
-            place_image()
+            button.add_widget(graphic)
+            button.bind(pos=place_graphic, width=place_graphic)
+            graphic.bind(height=place_graphic)
+            place_graphic()
         else:
             button.bind(texture_size=lambda widget, size: setattr(widget, "height", max(dp(52), size[1] + dp(18))))
         button.bind(on_release=lambda *_: action())
@@ -271,21 +274,54 @@ class QuizPrototype(App):
             self.equation_textures[equation] = TextureImage(
                 source, ext="png", nocache=True, keep_data=True,
             ).texture
-        return Image(
-            texture=self.equation_textures[equation], fit_mode="scale-down",
-            size_hint_y=None, height=sp(data["height"] / 2),
-        )
+        return Image(texture=self.equation_textures[equation], fit_mode="contain", size_hint=(None, None))
+
+    def has_equations(self, parts):
+        fragments = [part for is_math, part in parts if is_math]
+        return bool(fragments) and all(part in self.equations for part in fragments)
+
+    def equation_group(self, parts, font):
+        only_equation = len(parts) == 1
+        group = StackLayout(size_hint_y=None, spacing=(dp(5), dp(3)))
+        group.bind(minimum_height=group.setter("height"))
+        fragments = []
+        for is_math, text in parts:
+            if is_math:
+                data = self.equations[text]
+                widget = self.equation_image(text)
+                width, height = sp(data["width"] / 2), sp(data["height"] / 2)
+            else:
+                widget = Label(text=text, font_name=FORMULA_FONT, font_size=sp(font), color=INK,
+                               size_hint=(None, None), halign="left", valign="middle")
+                widget.texture_update()
+                width, height = widget.texture_size
+            fragments.append((widget, is_math, width, height))
+            group.add_widget(widget)
+
+        def wrap(*_):
+            for widget, is_math, width, height in fragments:
+                available = min(width, group.width)
+                if is_math:
+                    widget.width = group.width if only_equation else available
+                    widget.height = height * available / width
+                else:
+                    widget.width = available
+                    widget.text_size = (available, None)
+                    widget.texture_update()
+                    widget.height = widget.texture_size[1]
+
+        group.bind(width=wrap)
+        wrap()
+        return group
+
+    def show_math(self, parts, fallback, font=18):
+        if self.has_equations(parts):
+            self.content.add_widget(self.equation_group(parts, font))
+        else:
+            self.label(fallback, font, font_name=FORMULA_FONT)
 
     def show_clue(self, question, font=23):
-        parts = equation_parts(question.math_clue)
-        if not parts or any(part not in self.equations for is_math, part in parts if is_math):
-            self.label(question.clue, font, font_name=FORMULA_FONT)
-            return
-        for is_math, part in parts:
-            if is_math:
-                self.content.add_widget(self.equation_image(part))
-            else:
-                self.label(part, font, font_name=FORMULA_FONT)
+        self.show_math(equation_parts(question.math_clue), question.clue, font)
 
     def home(self):
         self.turn = None
@@ -325,14 +361,17 @@ class QuizPrototype(App):
             self.label(heading, 21, bold=True)
             self.label(description, color=MUTED)
         self.button("Watch the opening", lambda: self.opening(self.about))
-        self.label("About the creator", 23, bold=True)
-        self.content.add_widget(Image(
-            source=str(ASSETS / author["photo"]), fit_mode="contain",
-            size_hint_y=None, height=dp(160),
-        ))
-        self.label(author["name"], 25, bold=True)
-        self.label(author["bio"], color=MUTED)
-        self.button("Visit the author's blog", lambda: open_blog(author["url"]), primary=True)
+        self.label("About the developers", 23, bold=True)
+        for developer in (author, author["co_developer"]):
+            if developer.get("photo"):
+                self.content.add_widget(Image(
+                    source=str(ASSETS / developer["photo"]), fit_mode="contain",
+                    size_hint_y=None, height=dp(160),
+                ))
+            self.label(developer["name"], 25, bold=True)
+            self.label(developer["role"], 16, color=ACCENT, bold=True)
+            self.label(developer["bio"], color=MUTED)
+            self.button(developer["link_label"], lambda url=developer["url"]: open_external_link(url))
         self.button("Back to home", self.home)
 
     def choose_level(self, solo):
@@ -531,17 +570,13 @@ class QuizPrototype(App):
         self.label(status, 16, ACCENT, bold=True)
         question = outcome.question
         if outcome.correct:
-            equation = question.math_choices.get(question.answer)
-            if equation in self.equations:
-                self.content.add_widget(self.equation_image(equation))
-            else:
-                self.label(question.answer, 18 if review else 27, font_name=FORMULA_FONT)
-            detail = question.explanation
+            self.show_math(choice_parts(question.math_choices.get(question.answer)),
+                           question.answer, 18 if review else 27)
+            self.show_math(equation_parts(question.math_explanation), question.explanation)
         else:
             if review:
                 self.show_clue(question, 18)
-            detail = reflection_hint(question)
-        self.label(detail, font_name=FORMULA_FONT)
+            self.label(reflection_hint(question), font_name=FORMULA_FONT)
 
     def solo_feedback(self, outcome):
         self.screen()

@@ -108,7 +108,7 @@
       "answer": "Sampling fraction",
       "explanation": "This is the fraction of population units included in the sample.",
       "reference": "Penn State STAT 506, §6.1, Stratified Sampling. https://online.stat.psu.edu/stat506/Lesson06",
-      "math_clue": "$\\frac{n}{N}$\nn sampled units from a population of N."
+      "math_clue": "$\\frac{n}{N}$\n$n$ sampled units from a population of $N$."
     },
     {
       "id": "final-010",
@@ -121,7 +121,7 @@
       "answer": "Base sampling weight",
       "explanation": "Units with smaller inclusion probabilities have larger base weights.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator University of Maryland SURV 701, Winter 2018 syllabus, p. 1, Short Course Description. https://jpsm.umd.edu/sites/jpsm.umd.edu/files/syllabi/SURV701_Online_Winter2018_v1.pdf",
-      "math_clue": "$\\frac{1}{\\pi_i}$\nThe denominator is unit i’s inclusion probability."
+      "math_clue": "$\\frac{1}{\\pi_i}$\nThe denominator is unit $i$’s inclusion probability."
     },
     {
       "id": "final-011",
@@ -147,7 +147,7 @@
       "answer": "Root mean squared error",
       "explanation": "The square root returns the squared prediction loss to the outcome’s units.",
       "reference": "UC Berkeley STAT 20, Overfitting, Mean square error: another metric for evaluation. https://stat20.berkeley.edu/spring-2025/5-prediction/03-overfitting/notes.html",
-      "math_clue": "$\\sqrt{\\frac{\\sum_i(y_i-\\hat{y}_i)^2}{n}}$\nEvaluate on n held-out cases."
+      "math_clue": "$\\sqrt{\\frac{\\sum_i(y_i-\\hat{y}_i)^2}{n}}$\nEvaluate on $n$ held-out cases."
     },
     {
       "id": "final-013",
@@ -256,7 +256,7 @@
       "answer": "Akaike information criterion",
       "explanation": "The 2k term penalizes added parameters when comparing fits.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 10, Akaike’s information criterion (AIC)",
-      "math_clue": "$-2\\hat{\\ell}+2k$\nThe first symbol is the maximized log likelihood, and k is the parameter count."
+      "math_clue": "$-2\\hat{\\ell}+2k$\nThe first symbol is the maximized log likelihood, and $k$ is the parameter count."
     },
     {
       "id": "final-022",
@@ -269,7 +269,7 @@
       "answer": "Bayesian information criterion",
       "explanation": "BIC uses a complexity penalty that grows with the log of the sample size.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayesian information criterion (BIC). Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.7, Bayesian information criterion. https://stat.columbia.edu/~gelman/research/published/waic_understand3.pdf",
-      "math_clue": "$-2\\hat{\\ell}+k\\log(n)$\nk parameters and n independent observations."
+      "math_clue": "$-2\\hat{\\ell}+k\\log(n)$\n$k$ parameters and $n$ independent observations."
     },
     {
       "id": "final-023",
@@ -406,7 +406,7 @@
       "explanation": "The formula combines within- and between-imputation uncertainty and adjusts for a finite m.",
       "reference": "Duke University, Missing Data lecture, Total variance. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html#total-variance",
       "convention": "m is the number of imputations, at least two.",
-      "math_clue": "$\\bar{U}+\\left(1+\\frac{1}{m}\\right)B$\nThe first term is mean within-imputation variance, and B is between-imputation variance."
+      "math_clue": "$\\bar{U}+\\left(1+\\frac{1}{m}\\right)B$\nThe first term is mean within-imputation variance, and $B$ is between-imputation variance."
     },
     {
       "id": "final-034",
@@ -419,7 +419,7 @@
       "answer": "Horvitz–Thompson total",
       "explanation": "The total sums each sampled value multiplied by the inverse of its inclusion probability.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 208, Horvitz–Thompson estimator",
-      "math_clue": "$\\sum_{i\\in s}\\frac{y_i}{\\pi_i}$\nThe denominator is the inclusion probability for sampled unit i."
+      "math_clue": "$\\sum_{i\\in s}\\frac{y_i}{\\pi_i}$\nThe denominator is the inclusion probability for sampled unit $i$."
     },
     {
       "id": "final-035",
@@ -605,7 +605,7 @@
       "explanation": "This simplified response rate counts complete interviews among eligible sampled units.",
       "reference": "University of Michigan Survey Research Center, Cross-Cultural Survey Guidelines, Sample Design, Appendix D. https://ccsg.isr.umich.edu/chapters/sample-design/appendix-d/",
       "convention": "All units are known eligible. Partial interviews are excluded under this simplified definition.",
-      "math_clue": "$\\frac{r}{e}$\nAll e sampled units are known eligible, and r completed an interview."
+      "math_clue": "$\\frac{r}{e}$\nAll $e$ sampled units are known eligible, and $r$ completed an interview."
     },
     {
       "id": "final-050",
@@ -618,7 +618,7 @@
       "answer": "Systematic sampling interval",
       "explanation": "The ratio gives the fixed step after selecting a random start.",
       "reference": "University of Michigan Survey Research Center, Cross-Cultural Survey Guidelines, Sample Design, Appendix C. https://ccsg.isr.umich.edu/chapters/sample-design/appendix-c/",
-      "math_clue": "$\\frac{N}{n}$\nSelect n units from an ordered list of N, where N is a multiple of n."
+      "math_clue": "$\\frac{N}{n}$\nSelect $n$ units from an ordered list of $N$, where $N$ is a multiple of $n$."
     },
     {
       "id": "final-051",
@@ -631,7 +631,7 @@
       "answer": "Mean squared prediction error",
       "explanation": "Each held-out error is squared before averaging.",
       "reference": "UC Berkeley STAT 20, Overfitting, Mean square error: another metric for evaluation. https://stat20.berkeley.edu/spring-2025/5-prediction/03-overfitting/notes.html",
-      "math_clue": "$\\frac{1}{n}\\sum_i(y_i-\\hat{y}_i)^2$\nEvaluate on n held-out outcomes."
+      "math_clue": "$\\frac{1}{n}\\sum_i(y_i-\\hat{y}_i)^2$\nEvaluate on $n$ held-out outcomes."
     },
     {
       "id": "final-052",
@@ -768,7 +768,7 @@
       "answer": "Mean absolute prediction error",
       "explanation": "Absolute values prevent positive and negative prediction errors from cancelling.",
       "reference": "Stan User’s Guide, Held-Out Evaluation and Cross-Validation, Stan implementation with random folds. https://mc-stan.org/docs/2_36/stan-users-guide/cross-validation.html",
-      "math_clue": "$\\frac{1}{n}\\sum_i|y_i-\\hat{y}_i|$\nEvaluate on n held-out outcomes."
+      "math_clue": "$\\frac{1}{n}\\sum_i|y_i-\\hat{y}_i|$\nEvaluate on $n$ held-out outcomes."
     },
     {
       "id": "final-063",
@@ -905,7 +905,10 @@
       "answer": "Adjusted R-squared",
       "explanation": "The residual degrees of freedom account for how many slopes were estimated.",
       "reference": "Penn State STAT 462, §11.3, Best Subsets Regression, Adjusted R-Sq, Mallows Cp. https://online.stat.psu.edu/stat462/node/197/",
-      "math_clue": "$1-\\frac{\\mathrm{SSE}/(n-k-1)}{\\mathrm{SST}/(n-1)}$\nn rows and k slopes in a regression with intercept."
+      "math_clue": "$1-\\frac{\\mathrm{SSE}/(n-k-1)}{\\mathrm{SST}/(n-1)}$\n$n$ rows and $k$ slopes in a regression with intercept.",
+      "math_choices": {
+        "Mallows’ Cp": "Mallows’ $C_p$"
+      }
     },
     {
       "id": "final-074",
@@ -918,7 +921,11 @@
       "answer": "Mallows’ Cp",
       "explanation": "Mallows’ Cp scales residual error by a full-model variance estimate and adjusts for complexity.",
       "reference": "Penn State STAT 462, §11.3, Best Subsets Regression, Adjusted R-Sq, Mallows Cp. https://online.stat.psu.edu/stat462/node/197/",
-      "math_clue": "$\\frac{\\mathrm{SSE}_p}{\\mathrm{MSE}_{\\mathrm{full}}}-n+2p$\np counts the subset model’s coefficients, including its intercept."
+      "math_clue": "$\\frac{\\mathrm{SSE}_p}{\\mathrm{MSE}_{\\mathrm{full}}}-n+2p$\n$p$ counts the subset model’s coefficients, including its intercept.",
+      "math_explanation": "Mallows’ $C_p$ scales residual error by a full-model variance estimate and adjusts for complexity.",
+      "math_choices": {
+        "Mallows’ Cp": "Mallows’ $C_p$"
+      }
     },
     {
       "id": "final-075",
@@ -931,7 +938,7 @@
       "answer": "Between-imputation variance",
       "explanation": "This is the sample variance across the separately fitted estimates.",
       "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html",
-      "math_clue": "$\\frac{\\sum_j(\\hat{Q}_j-\\bar{Q})^2}{m-1}$\nThe effect estimates are from m completed datasets. Their mean is subtracted before squaring."
+      "math_clue": "$\\frac{\\sum_j(\\hat{Q}_j-\\bar{Q})^2}{m-1}$\nThe effect estimates are from $m$ completed datasets. Their mean is subtracted before squaring."
     },
     {
       "id": "final-076",
@@ -944,7 +951,7 @@
       "answer": "Hansen–Hurwitz total",
       "explanation": "The estimator averages each draw’s contribution using its per-draw selection probability.",
       "reference": "Penn State STAT 506, Lesson 3, Unequal Probability Sampling. https://online.stat.psu.edu/stat506/Lesson03",
-      "math_clue": "$\\frac{1}{m}\\sum_{j=1}^{m}\\frac{y_{i_j}}{p_{i_j}}$\nThere are m independent draws with replacement, with per-draw probabilities p."
+      "math_clue": "$\\frac{1}{m}\\sum_{j=1}^{m}\\frac{y_{i_j}}{p_{i_j}}$\nThere are $m$ independent draws with replacement, with per-draw probabilities $p$."
     },
     {
       "id": "final-077",
@@ -1029,7 +1036,7 @@
       "answer": "Neyman allocation",
       "explanation": "At equal unit cost, allocation proportional to size times spread minimizes the stratified mean’s variance.",
       "reference": "Penn State STAT 506, §6.1, Stratified Sampling. https://online.stat.psu.edu/stat506/Lesson06",
-      "math_clue": "$n_h\\propto N_h S_h$\nWithin strata, unit sampling costs are equal. The S term is the outcome standard deviation."
+      "math_clue": "$n_h\\propto N_h S_h$\nWithin strata, unit sampling costs are equal. The $S$ term is the outcome standard deviation."
     },
     {
       "id": "final-084",
@@ -1042,7 +1049,7 @@
       "answer": "Within-imputation variance",
       "explanation": "The calculation averages the usual fitted variances within the completed datasets.",
       "reference": "Duke University, Missing Data lecture, Missing data mechanisms and methods. https://www2.stat.duke.edu/~fl35/teaching/440-19F/decks/cs05_2_deck.html",
-      "math_clue": "$\\frac{1}{m}\\sum_j U_j$\nThe U term is the fitted variance for an estimate from completed dataset j."
+      "math_clue": "$\\frac{1}{m}\\sum_j U_j$\nThe $U$ term is the fitted variance for an estimate from completed dataset $j$."
     },
     {
       "id": "final-085",
@@ -1067,7 +1074,7 @@
       "answer": "A deleted residual",
       "explanation": "A deleted residual compares an observed response with its prediction from a fit that excluded that observation.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 336, PRESS statistic",
-      "math_clue": "$e_{i,-i}=y_i-\\hat{y}_{i,-i}$\nRecord i was excluded from the fit. What is this residual?"
+      "math_clue": "$e_{i,-i}=y_i-\\hat{y}_{i,-i}$\nRecord $i$ was excluded from the fit. What is this residual?"
     },
     {
       "id": "final-087",
@@ -1092,7 +1099,10 @@
       "answer": "Bayesian information criterion",
       "explanation": "The BIC complexity term scales the count of fitted parameters by the natural log of sample size.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayesian information criterion (BIC)",
-      "math_clue": "$k\\ln(n)$\nHere k is the parameter count and n is the sample size. Which criterion adds this penalty to the fitted deviance?"
+      "math_clue": "$k\\ln(n)$\nHere $k$ is the parameter count and $n$ is the sample size. Which criterion adds this penalty to the fitted deviance?",
+      "math_choices": {
+        "Mallows’ Cₚ": "Mallows’ $C_p$"
+      }
     },
     {
       "id": "final-089",

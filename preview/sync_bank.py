@@ -19,6 +19,7 @@ def main():
             "hint": reflection_hint(item),
             **({"math_clue": item.math_clue} if item.math_clue else {}),
             **({"math_choices": item.math_choices} if item.math_choices else {}),
+            **({"math_explanation": item.math_explanation} if item.math_explanation else {}),
         }
         for item in bank
     ]
@@ -36,7 +37,9 @@ def main():
         encoding="utf-8",
         newline="\n",
     )
-    copyfile(assets / author["photo"], preview / author["photo"])
+    for developer in (author, author["co_developer"]):
+        if photo := developer.get("photo"):
+            copyfile(assets / photo, preview / photo)
 
 
 if __name__ == "__main__":

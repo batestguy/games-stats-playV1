@@ -528,7 +528,7 @@
       "answer": "A* search",
       "explanation": "A* prioritizes the sum of cost already incurred and estimated cost to finish.",
       "reference": "Stanford CS 221, Search 2, A* search and heuristic functions. https://web.stanford.edu/class/archive/cs/cs221/cs221.1192/lectures/search2-6pp.pdf",
-      "math_clue": "$\\mathrm{Priority}=g(n)+h(n)$ Here g is the cost from the start and h estimates the remaining cost."
+      "math_clue": "$\\mathrm{Priority}=g(n)+h(n)$ Here $g$ is the cost from the start and $h$ estimates the remaining cost."
     },
     {
       "id": "aiml-030",
@@ -567,7 +567,7 @@
       "answer": "Logistic sigmoid",
       "explanation": "The sigmoid turns log odds into a probability between zero and one.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §4.3.1, The Logistic Model. https://datamineaz.org/textbooks/jamesISL.pdf",
-      "math_clue": "$p=\\frac{1}{1+\\exp(-z)}$ Here z is the fitted linear score for a binary outcome."
+      "math_clue": "$p=\\frac{1}{1+\\exp(-z)}$ Here $z$ is the fitted linear score for a binary outcome."
     },
     {
       "id": "aiml-032",
@@ -586,7 +586,7 @@
       "answer": "k-means objective",
       "explanation": "The objective sums squared distances from observations to their assigned cluster means.",
       "reference": "James et al. (2023), An Introduction to Statistical Learning with Applications in Python, §12.4.1, K-Means Clustering. https://datamineaz.org/textbooks/jamesISL.pdf",
-      "math_clue": "$\\sum_i\\left\\Vert x_i-\\mu_{c(i)}\\right\\Vert^2$ The indexed mean belongs to the cluster assigned to observation i."
+      "math_clue": "$\\sum_i\\left\\Vert x_i-\\mu_{c(i)}\\right\\Vert^2$ The indexed mean belongs to the cluster assigned to observation $i$."
     },
     {
       "id": "aiml-033",
@@ -821,7 +821,7 @@
       "answer": "Bellman optimality equation",
       "explanation": "The optimum takes the best action’s expected immediate reward plus discounted future value.",
       "reference": "UC Berkeley CS 188 course notes, §4.2, Solving Markov Decision Processes, Bellman equation. https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/solve.html",
-      "math_clue": "$V^*(s)=\\max_a\\mathrm{E}[r+\\gamma V^*(s')\\mid s,a]$ Here r is the reward and s prime is the next state."
+      "math_clue": "$V^*(s)=\\max_a\\mathrm{E}[r+\\gamma V^*(s')\\mid s,a]$ Here $r$ is the reward and $s'$ is the next state."
     },
     {
       "id": "aiml-046",
@@ -840,7 +840,7 @@
       "answer": "Scaled dot-product attention",
       "explanation": "The scaled query-key similarities determine the weights applied to the values.",
       "reference": "Vaswani et al. (2017), Attention Is All You Need, §3.2.1, Scaled Dot-Product Attention. https://arxiv.org/html/1706.03762#S3.SS2.SSS1",
-      "math_clue": "$\\operatorname{softmax}\\left(\\frac{QK^{\\mathsf{T}}}{\\sqrt{d}}\\right)V$ Q, K, V are queries, keys and values. d is key dimension."
+      "math_clue": "$\\operatorname{softmax}\\left(\\frac{QK^{\\mathsf{T}}}{\\sqrt{d}}\\right)V$ $Q, K, V$ are queries, keys and values. $d$ is key dimension."
     },
     {
       "id": "aiml-047",
@@ -860,7 +860,11 @@
       "explanation": "F1 is the harmonic mean of precision and recall.",
       "reference": "Google Machine Learning Crash Course, Classification: Accuracy, recall, precision, and related metrics. https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
       "convention": "Assumes precision and recall are defined and P + R is positive.",
-      "math_clue": "$\\frac{2PR}{P+R}$ P is precision and R is recall."
+      "math_clue": "$\\frac{2PR}{P+R}$ $P$ is precision and $R$ is recall.",
+      "math_explanation": "$F_1$ is the harmonic mean of precision and recall.",
+      "math_choices": {
+        "F1 score": "$F_1$ score"
+      }
     },
     {
       "id": "aiml-048",
@@ -880,7 +884,7 @@
       "explanation": "Silhouette compares how close an observation is to its own cluster and to its nearest alternative cluster.",
       "reference": "scikit-learn User Guide, Clustering, Silhouette Coefficient. https://scikit-learn.org/stable/modules/clustering.html#silhouette-coefficient",
       "convention": "Assumes at least two clusters and a non-singleton cluster for the observation. Exclude the observation itself from a.",
-      "math_clue": "$\\frac{b(i)-a(i)}{\\max[a(i),b(i)]}$ a is mean within-cluster distance, b is the lowest mean distance to another cluster."
+      "math_clue": "$\\frac{b(i)-a(i)}{\\max[a(i),b(i)]}$ $a$ is mean within-cluster distance, $b$ is the lowest mean distance to another cluster."
     },
     {
       "id": "aiml-049",
@@ -2148,7 +2152,9 @@
         "P×R": "P\\times R",
         "P/(P+R)": "\\frac{P}{P+R}",
         "√(P×R)": "\\sqrt{P\\times R}"
-      }
+      },
+      "math_clue": "Which expression gives $F_1$ from precision $P$ and recall $R$?",
+      "math_explanation": "$F_1$ is their harmonic mean, which requires their sum in the denominator."
     },
     {
       "id": "aiml-119",

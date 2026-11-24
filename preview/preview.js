@@ -371,20 +371,28 @@ function renderAbout() {
   );
   screen.append(backBar("Home", () => go("home"), "About"), about);
   if (!author) return;
-  const profile = el("article", "author-profile");
-  const portrait = el("img", "author-photo");
-  portrait.src = author.photo;
-  portrait.alt = "Portrait of " + author.name;
-  portrait.width = 400;
-  portrait.height = 400;
-  const heading = el("div", "author-heading");
-  heading.append(el("p", "credit-label", "Developed by"), el("h3", "", author.name));
-  const link = el("a", "game-button", "Visit Thoughts by Your Hommie ↗");
-  link.href = author.url;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  profile.append(el("h2", "", "About the creator"), portrait, heading, el("p", "author-bio", author.bio), link);
-  screen.append(profile);
+  const developers = el("section", "developer-credits");
+  developers.append(el("h2", "", "About the developers"));
+  for (const developer of [author, author.co_developer]) {
+    const profile = el("article", "author-profile");
+    if (developer.photo) {
+      const portrait = el("img", "author-photo");
+      portrait.src = developer.photo;
+      portrait.alt = "Portrait of " + developer.name;
+      portrait.width = 400;
+      portrait.height = 400;
+      profile.append(portrait);
+    }
+    const heading = el("div", "author-heading");
+    heading.append(el("h3", "", developer.name), el("p", "credit-label", developer.role));
+    const link = el("a", "game-button", developer.link_label + " ↗");
+    link.href = developer.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    profile.append(heading, el("p", "author-bio", developer.bio), link);
+    developers.append(profile);
+  }
+  screen.append(developers);
 }
 
 function renderLevels() {
@@ -490,45 +498,66 @@ function renderOptions(question, choices, onChoice) {
   choices.forEach((choice, index) => {
     const button = el("button", "game-button");
     button.type = "button";
+    button.setAttribute("aria-label", choice);
     const letter = el("span", "option-letter", String.fromCharCode(65 + index));
     letter.setAttribute("aria-hidden", "true");
-    button.append(letter, choiceContent(question, choice));
+    const content = choiceContent(question, choice);
+    content.classList.add("option-content");
+    button.append(letter, content);
     button.addEventListener("click", () => onChoice(choice));
     options.append(button);
   });
   screen.append(el("h2", "quiz-heading", "Answer the question"), clueContent(question, "clue"), options);
 }
 
-function equationImage(tex, alt = "") {
+function equationImage(tex, punctuation = "") {
+  if (!Object.hasOwn(equations, tex)) return null;
   const equation = equations[tex];
-  if (!equation) return null;
+  const run = el("span", "equation-run");
+  const unit = el("span", "equation-unit");
   const image = el("img", "equation-image");
   image.src = "data:image/png;base64," + equation.png;
-  image.alt = alt;
+  image.alt = "";
   image.style.setProperty("--equation-width", equation.width / 2 + "px");
   image.width = equation.width;
   image.height = equation.height;
-  return image;
+  unit.append(image);
+  if (punctuation) unit.append(el("span", "", punctuation));
+  run.append(unit);
+  return run;
 }
 
 function choiceContent(question, choice) {
-  return equationImage(question.math_choices?.[choice], choice) ?? el("span", "", choice);
+  return mathContent("span", "", choice, question.math_choices?.[choice], true);
 }
 
 function clueContent(question, className = "") {
-  if (!question.math_clue) return el("p", className, question.clue);
-  const parts = question.math_clue.split(/\$([^$\r\n]+)\$/);
-  const block = el("div", "equation-clue " + className);
-  block.setAttribute("role", "img");
-  block.setAttribute("aria-label", question.clue);
+  return mathContent("p", className, question.clue, question.math_clue);
+}
+
+function mathContent(tag, className, plain, source, allowStandalone = false) {
+  if (!source) return el(tag, className, plain);
+  const parts = allowStandalone && !source.includes("$")
+    ? ["", source]
+    : source.split(/\$([^$\r\n]+)\$/);
+  if (parts.length === 1) return el(tag, className, plain);
+  const visual = el("span", "math-visual");
+  visual.setAttribute("aria-hidden", "true");
   for (const [index, part] of parts.entries()) {
-    if (!part.trim()) continue;
-    const chunk = index % 2 ? equationImage(part.trim()) : el("div", "", part.trim());
-    if (!chunk) return el("p", className, question.clue);
-    chunk.setAttribute("aria-hidden", "true");
-    block.append(chunk);
+    if (index % 2 === 0) {
+      if (part.includes("$")) return el(tag, className, plain);
+      visual.append(part);
+      continue;
+    }
+    const punctuation = parts[index + 1]?.match(/^[,.;:!?%…\])}]+/)?.[0] ?? "";
+    const equation = equationImage(part.trim(), punctuation);
+    if (!equation) return el(tag, className, plain);
+    if (punctuation) parts[index + 1] = parts[index + 1].slice(punctuation.length);
+    visual.append(equation);
   }
-  return block;
+  const content = el(tag, className);
+  content.append(el("span", "screen-reader-only", plain), visual);
+  return content;
 }
 
 function exitButton() {
@@ -632,7 +661,9 @@ function outcomeNote(question, correct) {
   const answer = el("p", "", correct ? "Answer" + (formula ? "" : " · " + question.answer) : "Hint");
   note.append(answer);
   if (formula) note.append(choiceContent(question, question.answer));
-  note.append(el("p", "muted", correct ? question.explanation : question.hint));
+  note.append(correct
+    ? mathContent("p", "muted", question.explanation, question.math_explanation)
+    : el("p", "muted", question.hint));
   return note;
 }
 

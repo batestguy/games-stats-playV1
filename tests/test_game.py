@@ -13,7 +13,7 @@ from app.game import (
     AI_ML, LEVELS, MAX_ROUND_SIZE, PRO, QUESTION_MS, Match, Outcome, Progress, Turn, load_bank,
     load_question_bank, match_questions, matched_pairs, score, solo_questions,
 )
-from app.equations import equation_parts
+from app.equations import choice_parts, equation_parts
 from app.hints import CLUE_PROMPTS, GENERAL_PROMPTS, normalized, reflection_hint
 
 ASSETS = Path(__file__).parents[1] / "app" / "assets"
@@ -40,8 +40,10 @@ def test_bundled_equations_have_matching_offline_images():
     images = json.loads((ASSETS / "equations.json").read_text(encoding="utf-8"))
     authored = set()
     for question in load_question_bank(ASSETS):
-        parts = {part for is_math, part in equation_parts(question.math_clue) if is_math}
-        parts.update(question.math_choices.values())
+        parts = {part for markup in (question.math_clue, question.math_explanation)
+                 for is_math, part in equation_parts(markup) if is_math}
+        parts.update(part for markup in question.math_choices.values()
+                     for is_math, part in choice_parts(markup) if is_math)
         if question.clue_type == "formula":
             assert parts, question.id
         authored.update(parts)

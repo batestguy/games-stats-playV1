@@ -201,7 +201,7 @@
       "answer": "Error mean square",
       "explanation": "Dividing the residual sum by residual degrees of freedom estimates the error variance in the classical linear model.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 153, Error mean square",
-      "math_clue": "$\\frac{\\mathrm{SSE}}{n-p}$\nHere p is the number of fitted coefficients including the intercept."
+      "math_clue": "$\\frac{\\mathrm{SSE}}{n-p}$\nHere $p$ is the number of fitted coefficients including the intercept."
     },
     {
       "id": "400-012",
@@ -472,7 +472,8 @@
       ],
       "answer": "Fisher’s exact test",
       "explanation": "The exact test avoids relying on a large-sample chi-square approximation.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s exact test"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s exact test",
+      "math_clue": "Test independence in a sparse $2\\times2$ table using exact probabilities conditional on its margins."
     },
     {
       "id": "400-027",
@@ -528,7 +529,7 @@
       "explanation": "Cross multiplication gives the ratio of the two row odds for a positive-cell table.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds ratio",
       "convention": "Column one is the event in both rows.",
-      "math_clue": "$\\frac{ad}{bc}$\nFor the table with rows (a, b) and (c, d)."
+      "math_clue": "$\\frac{ad}{bc}$\nFor the table with rows $(a, b)$ and $(c, d)$."
     },
     {
       "id": "400-030",
@@ -548,7 +549,7 @@
       "explanation": "Divide the event proportion in the first row by that in the second row.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative risk",
       "convention": "Column one is the event in both rows.",
-      "math_clue": "$\\frac{a/(a+b)}{c/(c+d)}$\nFor the table with rows (a, b) and (c, d)."
+      "math_clue": "$\\frac{a/(a+b)}{c/(c+d)}$\nFor the table with rows $(a, b)$ and $(c, d)$."
     },
     {
       "id": "400-031",
@@ -567,7 +568,7 @@
       "answer": "Logit",
       "explanation": "The logit converts a probability to the natural logarithm of its odds.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 258, Logit",
-      "math_clue": "$\\ln\\left[\\frac{p}{1-p}\\right]$\nFor p strictly between zero and one."
+      "math_clue": "$\\ln\\left[\\frac{p}{1-p}\\right]$\nFor $p$ strictly between zero and one."
     },
     {
       "id": "400-032",
@@ -586,7 +587,7 @@
       "answer": "Pearson chi-square statistic",
       "explanation": "Each cell contributes its squared count discrepancy scaled by its expected count.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Pearson’s chi-squared statistic",
-      "math_clue": "$\\sum_{\\mathrm{cells}}\\frac{(O-E)^2}{E}$\nFor positive expected counts E."
+      "math_clue": "$\\sum_{\\mathrm{cells}}\\frac{(O-E)^2}{E}$\nFor positive expected counts $E$."
     },
     {
       "id": "400-033",
@@ -749,7 +750,8 @@
       "answer": "Variance inflation factor",
       "explanation": "A larger auxiliary R² means greater inflation of the coefficient’s variance.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 445, Variance inflation factor",
-      "math_clue": "$\\frac{1}{1-R_j^2}$\nUse the regression of predictor j on the other predictors."
+      "math_clue": "$\\frac{1}{1-R_j^2}$\nUse the regression of predictor $j$ on the other predictors.",
+      "math_explanation": "A larger auxiliary $R^2$ means greater inflation of the coefficient’s variance."
     },
     {
       "id": "400-042",
@@ -768,7 +770,7 @@
       "answer": "Leverage",
       "explanation": "The diagonal weight measures how strongly an observation’s response enters its own fitted value.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 247, Leverage points",
-      "math_clue": "$X(X^\\mathrm{T}X)^{-1}X^\\mathrm{T}$\nIdentify hᵢᵢ, the ith diagonal entry of this matrix."
+      "math_clue": "$X(X^\\mathrm{T}X)^{-1}X^\\mathrm{T}$\nIdentify $h_{ii}$, the $i$th diagonal entry of this matrix."
     },
     {
       "id": "400-043",
@@ -807,7 +809,7 @@
       "answer": "Externally studentized residual",
       "explanation": "The deleted-case variance estimate keeps the tested observation out of the scale estimate.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 419, Studentized residual",
-      "math_clue": "$\\frac{e_i}{s_{(i)}\\sqrt{1-h_{ii}}}$\nThe scale s₍ᵢ₎ is estimated after deleting case i."
+      "math_clue": "$\\frac{e_i}{s_{(i)}\\sqrt{1-h_{ii}}}$\nThe scale $s_{(i)}$ is estimated after deleting case $i$."
     },
     {
       "id": "400-045",
@@ -970,7 +972,8 @@
       "answer": "Standardized regression coefficient",
       "explanation": "This is the slope for predictor j when both the outcome and predictor are put on standard deviation scales.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standardized regression coefficient",
-      "math_clue": "$\\frac{b_j\\times\\mathrm{SD}(x_j)}{\\mathrm{SD}(y)}$\nFor a fitted linear model with an intercept."
+      "math_clue": "$\\frac{b_j\\times\\mathrm{SD}(x_j)}{\\mathrm{SD}(y)}$\nFor a fitted linear model with an intercept.",
+      "math_explanation": "This is the slope for predictor $j$ when both the outcome and predictor are put on standard deviation scales."
     },
     {
       "id": "400-054",
@@ -989,7 +992,7 @@
       "answer": "Partial correlation",
       "explanation": "It measures the linear association left after removing the effects of the controls from both variables.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 318, Partial correlation",
-      "math_clue": "$\\mathrm{corr}(e_x,e_y)$\nAfter regressing both x and y separately on the same controls."
+      "math_clue": "$\\mathrm{corr}(e_x,e_y)$\nAfter regressing both $x$ and $y$ separately on the same controls."
     },
     {
       "id": "400-055",
@@ -1008,7 +1011,8 @@
       "answer": "Multiple correlation coefficient",
       "explanation": "The sample multiple correlation equals the nonnegative square root of R².",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 290, Multiple correlation coefficient",
-      "math_clue": "$\\mathrm{corr}(y,\\hat y)$\nIn a nonconstant least-squares fit with an intercept."
+      "math_clue": "$\\mathrm{corr}(y,\\hat y)$\nIn a nonconstant least-squares fit with an intercept.",
+      "math_explanation": "The sample multiple correlation equals the nonnegative square root of $R^2$."
     },
     {
       "id": "400-056",
@@ -1027,7 +1031,7 @@
       "answer": "Residual",
       "explanation": "Subtracting the fitted value from the observation gives the model error for that case.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 367, Residual",
-      "math_clue": "$y_i-\\hat y_i$\nFor the ith fitted observation."
+      "math_clue": "$y_i-\\hat y_i$\nFor the $i$th fitted observation."
     },
     {
       "id": "400-057",
@@ -1137,7 +1141,8 @@
       "answer": "Contrast",
       "explanation": "The weights 2, −1 and −1 sum to zero, so a common shift in means cancels out.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast",
-      "math_clue": "$2\\mu_1-\\mu_2-\\mu_3$\nFor three group means. The coefficients sum to zero."
+      "math_clue": "$2\\mu_1-\\mu_2-\\mu_3$\nFor three group means. The coefficients sum to zero.",
+      "math_explanation": "The weights $2$, $-1$ and $-1$ sum to zero, so a common shift in means cancels out."
     },
     {
       "id": "400-063",
@@ -1194,7 +1199,8 @@
       "answer": "Bonferroni correction",
       "explanation": "The union bound keeps the overall false-positive risk at or below α.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 59, Bonferroni correction",
-      "math_clue": "To control familywise error at α across six planned hypotheses, use this cutoff for each test.\n$\\frac{\\alpha}{6}$"
+      "math_clue": "To control familywise error at $\\alpha$ across six planned hypotheses, use this cutoff for each test.\n$\\frac{\\alpha}{6}$",
+      "math_explanation": "The union bound keeps the overall false-positive risk at or below $\\alpha$."
     },
     {
       "id": "400-066",
@@ -1212,7 +1218,8 @@
       ],
       "answer": "Contrast",
       "explanation": "Weights of ½, ½ and −1 express that comparison.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 103, Contrast",
+      "math_explanation": "Weights of $\\frac{1}{2}$, $\\frac{1}{2}$ and $-1$ express that comparison."
     },
     {
       "id": "400-067",
@@ -1392,7 +1399,8 @@
       ],
       "answer": "Mantel–Haenszel estimator",
       "explanation": "It combines the within-stratum table information into a common effect estimate.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 266, Mantel–Haenszel estimator"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 266, Mantel–Haenszel estimator",
+      "math_clue": "A summary of the common odds ratio across several $2\\times2$ strata."
     },
     {
       "id": "400-077",
@@ -1465,7 +1473,8 @@
       ],
       "answer": "Fisher’s exact test",
       "explanation": "Fixing the margins gives the null probabilities of the possible tables.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s exact test"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s exact test",
+      "math_clue": "An analyst sums hypergeometric probabilities over tables at least as extreme in a small $2\\times2$ test with fixed margins."
     },
     {
       "id": "400-081",
@@ -1557,7 +1566,7 @@
       "explanation": "It scales the signed cell discrepancy using the square root of the fitted expected count.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Pearson’s residual",
       "convention": "Uses the raw Pearson form without an adjustment for fitted margins.",
-      "math_clue": "$\\frac{O-E}{\\sqrt{E}}$\nFor a cell count with positive expected value E."
+      "math_clue": "$\\frac{O-E}{\\sqrt{E}}$\nFor a cell count with positive expected value $E$."
     },
     {
       "id": "400-086",
@@ -1596,7 +1605,7 @@
       "explanation": "This measures the observed case's effect on one fitted coefficient.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 132, DFBETA",
       "convention": "Uses the unscaled deletion difference.",
-      "math_clue": "$\\hat{\\beta}_j-\\hat{\\beta}_{j(i)}$\nThe second estimate omits observation i."
+      "math_clue": "$\\hat{\\beta}_j-\\hat{\\beta}_{j(i)}$\nThe second estimate omits observation $i$."
     },
     {
       "id": "400-088",
@@ -1616,7 +1625,7 @@
       "explanation": "The denominator accounts for both estimated error scale and leverage.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 410, Standardized residual",
       "convention": "Uses the internally studentized convention.",
-      "math_clue": "$\\frac{e_i}{s\\sqrt{1-h_{ii}}}$\nUse s from the full linear model."
+      "math_clue": "$\\frac{e_i}{s\\sqrt{1-h_{ii}}}$\nUse $s$ from the full linear model."
     },
     {
       "id": "400-089",
@@ -2300,7 +2309,8 @@
       ],
       "answer": "Fisher's exact test",
       "explanation": "Fisher's test uses the conditional distribution of the cell counts given the margins.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher's exact test"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher's exact test",
+      "math_clue": "An independent two-group comparison gives a small $2\\times2$ table. Which test conditions on its observed margins to obtain an exact p-value?"
     },
     {
       "id": "400-127",
@@ -2588,7 +2598,9 @@
       ],
       "answer": "The other predictors almost reconstruct it",
       "explanation": "A high auxiliary R² means the chosen predictor has little variation left after accounting for the others.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 287, Multicollinearity"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 287, Multicollinearity",
+      "math_clue": "A predictor is regressed on the other predictors in a model. What does an auxiliary $R^2$ close to one suggest?",
+      "math_explanation": "A high auxiliary $R^2$ means the chosen predictor has little variation left after accounting for the others."
     },
     {
       "id": "400-143",

@@ -181,7 +181,12 @@
       "answer": "Posterior density of θ",
       "explanation": "Bayes’ rule normalizes the product of the prior and the likelihood by the marginal density of the data.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 39, Bayes’ Theorem Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
-      "math_clue": "$\\frac{p(\\theta)p(y\\mid\\theta)}{p(y)}$\ny is the observed data and θ is the parameter."
+      "math_clue": "$\\frac{p(\\theta)p(y\\mid\\theta)}{p(y)}$\n$y$ is the observed data and $\\theta$ is the parameter.",
+      "math_choices": {
+        "Prior density of θ": "Prior density of $\\theta$",
+        "Likelihood as a function of θ": "Likelihood as a function of $\\theta$",
+        "Posterior density of θ": "Posterior density of $\\theta$"
+      }
     },
     {
       "id": "grad-011",
@@ -201,7 +206,11 @@
       "explanation": "The group means vary around μ with conditional variance τ².",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
       "convention": "Normal(mean, variance).",
-      "math_clue": "$\\theta_j\\mid\\mu,\\tau\\sim\\mathcal{N}(\\mu,\\tau^2)$\nThe indexed theta is the latent mean for group j. What is the variance parameter?"
+      "math_clue": "$\\theta_j\\mid\\mu,\\tau\\sim\\mathcal{N}(\\mu,\\tau^2)$\nThe indexed theta is the latent mean for group $j$. What is the variance parameter?",
+      "math_explanation": "The group means vary around $\\mu$ with conditional variance $\\tau^2$.",
+      "math_choices": {
+        "Posterior variance of μ": "Posterior variance of $\\mu$"
+      }
     },
     {
       "id": "grad-012",
@@ -220,7 +229,7 @@
       "answer": "Convergence in probability",
       "explanation": "The probability of an error greater than any fixed tolerance goes to zero.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 104, Convergence in probability",
-      "math_clue": "$P(|X_n-X|>\\varepsilon)\\to0$\nThe statement holds for every positive ε."
+      "math_clue": "$P(|X_n-X|>\\varepsilon)\\to0$\nThe statement holds for every positive $\\varepsilon$."
     },
     {
       "id": "grad-013",
@@ -384,7 +393,8 @@
       "answer": "Score function",
       "explanation": "The score is the first derivative of the log likelihood with respect to θ.",
       "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
-      "math_clue": "$\\frac{d\\ell(\\theta)}{d\\theta}$\nThe function being differentiated is the log likelihood for fixed observations."
+      "math_clue": "$\\frac{d\\ell(\\theta)}{d\\theta}$\nThe function being differentiated is the log likelihood for fixed observations.",
+      "math_explanation": "The score is the first derivative of the log likelihood with respect to $\\theta$."
     },
     {
       "id": "grad-022",
@@ -423,7 +433,8 @@
       "answer": "Posterior predictive density",
       "explanation": "Predictive uncertainty averages the conditional outcome density over the updated distribution for θ.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 1, Probability and inference. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf Ohio State STAT 6570, Spring 2024 syllabus, pp. 1–2, Course Learning Outcomes. https://stat.osu.edu/sites/default/files/2024-02/Spring%202024%20STAT%206570%20syllabus%20for%20insructor%20Chkrebtii.pdf",
-      "math_clue": "$\\int p(\\tilde{y}\\mid\\theta,y)p(\\theta\\mid y)\\,d\\theta$\ny is observed and y with a tilde is one future outcome."
+      "math_clue": "$\\int p(\\tilde{y}\\mid\\theta,y)p(\\theta\\mid y)\\,d\\theta$\n$y$ is observed and $\\tilde{y}$ is one future outcome.",
+      "math_explanation": "Predictive uncertainty averages the conditional outcome density over the updated distribution for $\\theta$."
     },
     {
       "id": "grad-024",
@@ -442,7 +453,7 @@
       "answer": "Convergence in distribution",
       "explanation": "Agreement at all continuity points defines convergence in distribution.",
       "reference": "Stanford STAT 208, Lectures, Notions of Convergence, Convergence in Law. https://web.stanford.edu/class/stat208/node3.html",
-      "math_clue": "$F_n(x)\\to F(x)$ wherever F is continuous.\nBoth functions are cumulative distribution functions."
+      "math_clue": "$F_n(x)\\to F(x)$ wherever $F$ is continuous.\nBoth functions are cumulative distribution functions."
     },
     {
       "id": "grad-025",
@@ -498,7 +509,8 @@
       ],
       "answer": "Hyperprior",
       "explanation": "A hyperprior specifies uncertainty about a parameter of another prior distribution.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 211, Hyperprior"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 211, Hyperprior",
+      "math_clue": "A higher-level distribution is assigned to $\\tau$, the scale of a distribution for group effects. What is $p(\\tau)$?"
     },
     {
       "id": "grad-028",
@@ -609,7 +621,8 @@
       "explanation": "The expected negative curvature measures the information available about θ.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 167, Fisher’s information Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
       "convention": "Assumes differentiability and the regularity conditions for the expected curvature identity.",
-      "math_clue": "$\\mathrm{E}_{\\theta}\\!\\left[-\\ell''(\\theta)\\right]$\nThe ell symbol is the sample log likelihood, with expectation over the data."
+      "math_clue": "$\\mathrm{E}_{\\theta}\\!\\left[-\\ell''(\\theta)\\right]$\nThe ell symbol is the sample log likelihood, with expectation over the data.",
+      "math_explanation": "The expected negative curvature measures the information available about $\\theta$."
     },
     {
       "id": "grad-034",
@@ -648,7 +661,13 @@
       "answer": "Bayes factor for M₁ vs M₀",
       "explanation": "The ratio updates prior odds to posterior odds between the two models.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 37, Bayes factor",
-      "math_clue": "$\\frac{p(y\\mid M_1)}{p(y\\mid M_0)}$\nEach model’s likelihood is integrated over its own prior."
+      "math_clue": "$\\frac{p(y\\mid M_1)}{p(y\\mid M_0)}$\nEach model’s likelihood is integrated over its own prior.",
+      "math_choices": {
+        "Posterior odds for M₁ vs M₀": "Posterior odds for $M_1$ vs $M_0$",
+        "Prior odds for M₁ vs M₀": "Prior odds for $M_1$ vs $M_0$",
+        "Posterior probability of M₁": "Posterior probability of $M_1$",
+        "Bayes factor for M₁ vs M₀": "Bayes factor for $M_1$ vs $M_0$"
+      }
     },
     {
       "id": "grad-036",
@@ -668,7 +687,7 @@
       "explanation": "A first-order expansion of g scales the limiting error by its derivative.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 128, Delta (δ) method",
       "convention": "Assumes g is differentiable at θ with a nonzero derivative. N(mean, variance).",
-      "math_clue": "$\\sqrt{n}(\\hat{\\theta}-\\theta)\\overset{d}{\\to}\\mathcal{N}(0,V)$\nThe scaled error after applying g has limiting variance $[g'(\\theta)]^2V$. Which method?"
+      "math_clue": "$\\sqrt{n}(\\hat{\\theta}-\\theta)\\overset{d}{\\to}\\mathcal{N}(0,V)$\nThe scaled error after applying $g$ has limiting variance $[g'(\\theta)]^2V$. Which method?"
     },
     {
       "id": "grad-037",
@@ -704,7 +723,9 @@
       ],
       "answer": "Clinic level",
       "explanation": "Each θⱼ belongs to a particular clinic and is shared by observations within that clinic.",
-      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf"
+      "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 5, Hierarchical models. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
+      "math_clue": "A clinic model has one mean $\\theta_j$ for each clinic. At what level does $\\theta_j$ vary?",
+      "math_explanation": "Each $\\theta_j$ belongs to a particular clinic and is shared by observations within that clinic."
     },
     {
       "id": "grad-039",
@@ -1033,7 +1054,8 @@
       ],
       "answer": "Asymptotic unbiasedness",
       "explanation": "Asymptotic unbiasedness requires bias to tend to zero. It concerns expectations.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotically unbiased estimator"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotically unbiased estimator",
+      "math_clue": "The estimator’s expected value tends to the true parameter as $n$ grows. Which property follows directly?"
     },
     {
       "id": "grad-057",
@@ -1069,7 +1091,8 @@
       ],
       "answer": "Convergence in distribution only",
       "explanation": "Matching marginal distributions ensures distributional convergence. The persistent paired error rules out convergence in probability and almost sure convergence.",
-      "reference": "Stanford STAT 208, Lectures, Notions of Convergence, Convergence in Law. https://web.stanford.edu/class/stat208/node3.html"
+      "reference": "Stanford STAT 208, Lectures, Notions of Convergence, Convergence in Law. https://web.stanford.edu/class/stat208/node3.html",
+      "math_clue": "Every $X_n$ has the same distribution as $X$, but $X_n$ stays a fixed positive distance from $X$ on an event whose probability stays positive. What convergence follows?"
     },
     {
       "id": "grad-059",
@@ -1143,7 +1166,7 @@
       "answer": "Approximate MLE standard error",
       "explanation": "Information adds across independent identically distributed observations. Taking the inverse square root gives a standard error.",
       "reference": "Stanford STATS 200, Lecture 14, Consistency and asymptotic normality of the MLE. https://web.stanford.edu/class/stats200/Lecture14.pdf",
-      "math_clue": "$\\frac{1}{\\sqrt{n I(\\hat{\\theta})}}$\nI is expected information per observation for a regular scalar model."
+      "math_clue": "$\\frac{1}{\\sqrt{n I(\\hat{\\theta})}}$\n$I$ is expected information per observation for a regular scalar model."
     },
     {
       "id": "grad-063",
@@ -1162,7 +1185,12 @@
       "answer": "Prior predictive density",
       "explanation": "Averaging the observation model over the prior gives the prior predictive density.",
       "reference": "Gelman et al., Bayesian Data Analysis, 3rd ed., Ch. 6, Exercise 7, prior versus posterior predictive checks. https://sites.stat.columbia.edu/gelman/book/BDA3.pdf",
-      "math_clue": "$\\int p(y\\mid\\theta)p(\\theta)\\,d\\theta$\nWhat is this function of y before observing it?"
+      "math_clue": "$\\int p(y\\mid\\theta)p(\\theta)\\,d\\theta$\nWhat is this function of $y$ before observing it?",
+      "math_choices": {
+        "Prior density of θ": "Prior density of $\\theta$",
+        "Posterior density of θ": "Posterior density of $\\theta$",
+        "Likelihood as a function of θ": "Likelihood as a function of $\\theta$"
+      }
     },
     {
       "id": "grad-064",
@@ -1347,7 +1375,7 @@
       "answer": "Cramér–Rao lower bound",
       "explanation": "The Cramér–Rao inequality bounds the variance of a regular unbiased estimator from below.",
       "reference": "Stanford STATS 200, Lecture 15, Fisher information and the Cramér–Rao lower bound. https://web.stanford.edu/class/stats200/Lecture15.pdf",
-      "math_clue": "$\\operatorname{Var}(T)\\geq\\frac{1}{I(\\theta)}$\nT is unbiased for the parameter and I is sample Fisher information in a regular scalar model."
+      "math_clue": "$\\operatorname{Var}(T)\\geq\\frac{1}{I(\\theta)}$\n$T$ is unbiased for the parameter and $I$ is sample Fisher information in a regular scalar model."
     },
     {
       "id": "grad-074",
@@ -1404,7 +1432,7 @@
       "answer": "Leave-one-out log predictive score",
       "explanation": "Every observation is scored using a predictive density conditioned on the remaining data.",
       "reference": "Vehtari, Gelman and Gabry, Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC, expected log pointwise predictive density for leave-one-out cross-validation. https://sites.stat.columbia.edu/gelman/research/published/loo_stan.pdf",
-      "math_clue": "$\\sum_i\\log p(y_i\\mid y_{-i})$\nEach i is left out when fitting the predictor for that outcome."
+      "math_clue": "$\\sum_i\\log p(y_i\\mid y_{-i})$\nEach $i$ is left out when fitting the predictor for that outcome."
     },
     {
       "id": "grad-077",
@@ -1531,7 +1559,7 @@
       "answer": "Dirichlet",
       "explanation": "The Dirichlet prior is conjugate for the multinomial probabilities. Observed category counts update its parameters.",
       "reference": "UC Berkeley STAT 238, Lecture Thirteen, Dirichlet Prior and Multinomial Likelihood. https://stat238.berkeley.edu/spring-2026/lecturethirteen238spring2026/",
-      "math_clue": "$p\\sim\\operatorname{Dirichlet}(\\alpha)$\n$X\\mid p\\sim\\operatorname{Multinomial}(n,p)$\nWhich family contains the posterior of p?"
+      "math_clue": "$p\\sim\\operatorname{Dirichlet}(\\alpha)$\n$X\\mid p\\sim\\operatorname{Multinomial}(n,p)$\nWhich family contains the posterior of $p$?"
     },
     {
       "id": "grad-084",
@@ -1550,7 +1578,7 @@
       "answer": "Tightness",
       "explanation": "A single bounded interval can contain arbitrarily high probability for every distribution in the sequence.",
       "reference": "Stanford STATS 300B, Lecture 14, Tightness, Definitions 0.1–0.2 and Theorem 2. https://web.stanford.edu/class/stats300b/ScribeNotes/2021/lecture-14.pdf",
-      "math_clue": "$\\sup_n P(|Z_n|>M)<\\varepsilon$\nFor any positive ε, there is some finite M satisfying this inequality. What property does this define?"
+      "math_clue": "$\\sup_n P(|Z_n|>M)<\\varepsilon$\nFor any positive $\\varepsilon$, there is some finite $M$ satisfying this inequality. What property does this define?"
     },
     {
       "id": "grad-085",
@@ -1569,7 +1597,13 @@
       "answer": "The data favor θ₁ over θ₂ by the likelihood criterion",
       "explanation": "The likelihood comparison concerns which parameter value assigns more support to the observed data.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 244, Law of likelihood",
-      "math_clue": "For fixed data, $L(\\theta_1)>L(\\theta_2)$.\nHow should this comparison be read?"
+      "math_clue": "For fixed data, $L(\\theta_1)>L(\\theta_2)$.\nHow should this comparison be read?",
+      "math_choices": {
+        "The data favor θ₁ over θ₂ by the likelihood criterion": "The data favor $\\theta_1$ over $\\theta_2$ by the likelihood criterion",
+        "The prior must favor θ₁ over θ₂": "The prior must favor $\\theta_1$ over $\\theta_2$",
+        "The data favor θ₂ over θ₁ by the likelihood criterion": "The data favor $\\theta_2$ over $\\theta_1$ by the likelihood criterion",
+        "The probability that θ₁ is true must exceed one half": "The probability that $\\theta_1$ is true must exceed one half"
+      }
     },
     {
       "id": "grad-086",
@@ -1588,7 +1622,10 @@
       "answer": "It stays the same",
       "explanation": "Scaling by a positive constant preserves the ordering of likelihood values.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood",
-      "math_clue": "Every value of likelihood $L(\\theta)$ is multiplied by 10. What happens to the maximizer?"
+      "math_clue": "Every value of likelihood $L(\\theta)$ is multiplied by 10. What happens to the maximizer?",
+      "math_choices": {
+        "It shifts by ln(10)": "It shifts by $\\ln(10)$"
+      }
     },
     {
       "id": "grad-087",
@@ -1607,7 +1644,7 @@
       "answer": "Bernoulli likelihood for the observed trial sequence",
       "explanation": "The product gives one success factor or failure factor for each observation in the particular sequence.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood",
-      "math_clue": "$p^s(1-p)^f$\nIndependent binary trials have s successes and f failures. What is this expression as a function of p?"
+      "math_clue": "$p^s(1-p)^f$\nIndependent binary trials have $s$ successes and $f$ failures. What is this expression as a function of $p$?"
     },
     {
       "id": "grad-088",
@@ -1644,7 +1681,7 @@
       "answer": "A local maximum",
       "explanation": "A positive score means the log-likelihood rises, and a negative score means it falls.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 383, Score test",
-      "math_clue": "$U(\\lambda)=\\frac{d\\ell(\\lambda)}{d\\lambda}$\nAt an interior point the score changes from positive to negative as λ increases. What does that indicate for the log-likelihood there?"
+      "math_clue": "$U(\\lambda)=\\frac{d\\ell(\\lambda)}{d\\lambda}$\nAt an interior point the score changes from positive to negative as $\\lambda$ increases. What does that indicate for the log-likelihood there?"
     },
     {
       "id": "grad-090",
@@ -1680,7 +1717,13 @@
       ],
       "answer": "The model's support for the fixed data at each θ",
       "explanation": "A likelihood treats the observed data as fixed and varies the parameter.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 251, Likelihood",
+      "math_clue": "After collecting data, a likelihood is graphed against $\\theta$. What is on the vertical axis?",
+      "math_choices": {
+        "The frequency distribution of observed θ values": "The frequency distribution of observed $\\theta$ values",
+        "The prior density of θ": "The prior density of $\\theta$",
+        "The model's support for the fixed data at each θ": "The model's support for the fixed data at each $\\theta$"
+      }
     },
     {
       "id": "grad-092",
@@ -1770,7 +1813,15 @@
       ],
       "answer": "Fix θ at 2 and maximize over η",
       "explanation": "The profile at a chosen θ comes from the best fitting nuisance value at that θ.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 342, Profile likelihood"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 342, Profile likelihood",
+      "math_clue": "Interest is in $\\theta$, and $\\eta$ is a nuisance parameter. How is the profile likelihood at $\\theta=2$ found?",
+      "math_explanation": "The profile at a chosen $\\theta$ comes from the best fitting nuisance value at that $\\theta$.",
+      "math_choices": {
+        "Average the likelihood over observed θ values": "Average the likelihood over observed $\\theta$ values",
+        "Maximize jointly and report the fitted θ": "Maximize jointly and report the fitted $\\theta$",
+        "Fix θ at 2 and maximize over η": "Fix $\\theta$ at 2 and maximize over $\\eta$",
+        "Fix η at 2 and maximize over θ": "Fix $\\eta$ at 2 and maximize over $\\theta$"
+      }
     },
     {
       "id": "grad-097",
@@ -1844,7 +1895,11 @@
       "answer": "The first-order limiting variance after transforming by g",
       "explanation": "The first-order delta method multiplies the limiting variance by the squared derivative at the target.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 128, Delta (δ) method",
-      "math_clue": "$[g'(\\theta)]^2 V$\nAn asymptotically normal estimate of θ has limiting variance V on the square-root-n scale. What does this expression give?"
+      "math_clue": "$[g'(\\theta)]^2 V$\nAn asymptotically normal estimate of $\\theta$ has limiting variance $V$ on the $\\sqrt{n}$ scale. What does this expression give?",
+      "math_choices": {
+        "The variance of g evaluated only at the fixed θ": "The variance of $g$ evaluated only at the fixed $\\theta$",
+        "The first-order limiting variance after transforming by g": "The first-order limiting variance after transforming by $g$"
+      }
     },
     {
       "id": "grad-101",
@@ -1898,7 +1953,8 @@
       ],
       "answer": "The two variances are stated under different rates of scaling",
       "explanation": "Limiting variances measure fluctuations after rescaling. A comparison must account for how each estimator was scaled.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 24, Asymptotic relative efficiency"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 24, Asymptotic relative efficiency",
+      "math_clue": "Two consistent estimators both have normal limits, one scaled by $n$ and the other by $\\sqrt{n}$. Why can their displayed limiting variances not be compared directly?"
     },
     {
       "id": "grad-104",
@@ -1916,7 +1972,9 @@
       ],
       "answer": "It is not asymptotically unbiased",
       "explanation": "For asymptotic unbiasedness the expected value must approach θ, leaving no limiting bias.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotically unbiased estimator"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 23, Asymptotically unbiased estimator",
+      "math_clue": "An estimator’s expected value remains $\\theta + 0.2$ at every $n$. What follows about asymptotic unbiasedness?",
+      "math_explanation": "For asymptotic unbiasedness the expected value must approach $\\theta$, leaving no limiting bias."
     },
     {
       "id": "grad-105",
@@ -1971,7 +2029,7 @@
       "answer": "Slutsky’s theorem",
       "explanation": "Slutsky’s theorem combines a distributional limit with convergence in probability to a constant.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 399, Slutsky’s theorem",
-      "math_clue": "$X_n\\overset{d}{\\to}X,\\quad A_n\\overset{p}{\\to}a\\quad\\Longrightarrow\\quad A_nX_n\\overset{d}{\\to}aX$\nWhich theorem guarantees this when a is a constant?"
+      "math_clue": "$X_n\\overset{d}{\\to}X,\\quad A_n\\overset{p}{\\to}a\\quad\\Longrightarrow\\quad A_nX_n\\overset{d}{\\to}aX$\nWhich theorem guarantees this when $a$ is a constant?"
     },
     {
       "id": "grad-108",
@@ -2063,7 +2121,8 @@
       ],
       "answer": "The posterior mean of the success probability",
       "explanation": "A single future success has conditional probability p, so averaging over posterior draws gives the posterior mean of p.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior distributions"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 334, Posterior distributions",
+      "math_explanation": "A single future success has conditional probability $p$, so averaging over posterior draws gives the posterior mean of $p$."
     },
     {
       "id": "grad-113",
@@ -2189,7 +2248,8 @@
       ],
       "answer": "The mode must be recomputed in the transformed density",
       "explanation": "Density changes by a nonconstant Jacobian, so its maximizing point need not follow the transformation of the original mode.",
-      "reference": "Everitt and Skrondal (2010), 4th ed., p. 272, Maximum a posteriori estimate (MAP)"
+      "reference": "Everitt and Skrondal (2010), 4th ed., p. 272, Maximum a posteriori estimate (MAP)",
+      "math_clue": "A positive parameter $\\theta$ is transformed to $\\log\\theta$. What generally happens to the posterior mode when changing coordinates?"
     },
     {
       "id": "grad-120",
@@ -2699,7 +2759,7 @@
       "answer": "Deviance information criterion",
       "explanation": "This DIC form adds a complexity correction to the deviance evaluated at the posterior mean.",
       "reference": "Gelman, Hwang and Vehtari, Understanding predictive information criteria for Bayesian models, §3.3, DIC. https://sites.stat.columbia.edu/gelman/research/published/waic_understand3.pdf",
-      "math_clue": "$D(\\bar{\\theta})+2p_D$\nD is deviance, θ̄ is the posterior mean, and pD is an effective parameter count. Which criterion has this form?"
+      "math_clue": "$D(\\bar{\\theta})+2p_D$\n$D$ is deviance, $\\bar{\\theta}$ is the posterior mean, and $p_D$ is an effective parameter count. Which criterion has this form?"
     },
     {
       "id": "grad-148",

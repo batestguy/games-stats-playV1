@@ -15,6 +15,15 @@ button:disabled { cursor: default; }
 button, a, input, select { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 [hidden] { display: none !important; }
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 body.opening {
   min-height: 100dvh;
@@ -245,12 +254,14 @@ body.opening {
 .about-game h3 { margin: 1em 0 .25em; font-size: 1em; }
 .about-game p { color: var(--soft-ink); }
 .about-game p:first-of-type { color: var(--ink); }
+.developer-credits { margin-top: 24px; }
 .author-profile { display: grid; gap: 15px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--app-line); }
 .author-photo {
   width: min(46%, 142px);
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center 35%;
   border-radius: 18px;
   border: 1px solid var(--app-line);
 }
@@ -260,9 +271,9 @@ body.opening {
   font-weight: 750;
   letter-spacing: .075em;
   text-transform: uppercase;
-  margin: 0 0 .4em;
+  margin: .4em 0 0;
 }
-.author-profile h2, .author-heading h3, .author-profile .author-bio { margin: 0; }
+.developer-credits h2, .author-heading h3, .author-profile .author-bio { margin: 0; }
 .author-heading h3 { font-size: 1.22em; }
 .author-bio { color: var(--soft-ink); line-height: 1.5; }
 .author-profile .game-button { text-decoration: none; }
@@ -364,16 +375,26 @@ body.opening {
   font-family: "Segoe UI", "Segoe UI Symbol", system-ui, sans-serif;
 }
 .options .game-button { justify-content: start; }
-.equation-clue { display: grid; gap: .55em; }
+.option-content { flex: 1; min-width: 0; }
+.math-visual { white-space: pre-line; }
+.equation-run {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: middle;
+  scrollbar-width: thin;
+  scrollbar-color: var(--soft-ink) transparent;
+}
+.equation-unit { display: flex; align-items: center; width: max-content; max-width: 100%; }
 .equation-image {
   display: block;
   width: calc(var(--equation-width) * var(--text-scale));
   height: auto;
   max-width: 100%;
-  min-width: 0;
+  min-width: calc(var(--equation-width) * .75);
 }
+.equation-unit > span { flex: none; }
 .device[data-theme="paper"] .equation-image { filter: invert(1); }
-.options .equation-image { max-width: calc(100% - 2.4em); }
 .option-letter {
   display: grid;
   place-items: center;

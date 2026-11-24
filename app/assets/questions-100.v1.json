@@ -750,7 +750,7 @@
       "answer": "Odds of success",
       "explanation": "The ratio compares the chance of success with the chance of failure.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 309, Odds",
-      "math_clue": "$\\frac{p}{1-p}$ where p is the chance of success and lies strictly between zero and one."
+      "math_clue": "$\\frac{p}{1-p}$ where $p$ is the chance of success and lies strictly between zero and one."
     },
     {
       "id": "100-042",
@@ -1404,7 +1404,7 @@
       "explanation": "This inverse-ECDF rule returns the sample's 90th percentile.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 323, Percentile; 150, Empirical distribution function",
       "convention": "Uses the inverse empirical CDF convention, without interpolation.",
-      "math_clue": "The smallest x satisfying $F_n(x)\\geq0.90$ where F is the empirical distribution function for the sample."
+      "math_clue": "The smallest $x$ satisfying $F_n(x)\\geq0.90$ where $F$ is the empirical distribution function for the sample."
     },
     {
       "id": "100-078",
@@ -1462,7 +1462,7 @@
       "answer": "Cumulative frequency",
       "explanation": "Add the counts from every class that ends at or before the stated cutoff.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 117, Cumulative frequency distribution",
-      "math_clue": "$\\sum_{i=1}^{j} f_i$ where f is the count for each class and j identifies the last class included."
+      "math_clue": "$\\sum_{i=1}^{j} f_i$ where $f$ is the count for each class and $j$ identifies the last class included."
     },
     {
       "id": "100-081",
@@ -1682,7 +1682,7 @@
       "answer": "Relative frequency",
       "explanation": "Scaling by the total gives the observed fraction for that category.",
       "reference": "Everitt and Skrondal (2010), 4th ed., p. 364, Relative frequency",
-      "math_clue": "$\\frac{f}{n}$ where f is the observed count for a category and n is the total count."
+      "math_clue": "$\\frac{f}{n}$ where $f$ is the observed count for a category and $n$ is the total count."
     },
     {
       "id": "100-093",

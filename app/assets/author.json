@@ -1,6 +1,16 @@
 {
   "name": "Jerry Bannister Zachary",
-  "bio": "Jerry is a senior statistician at Abubakar Tafawa Balewa University in Bauchi, Nigeria, and runs JJMB Datascience Hub. His PhD research combines Bayesian statistics and deep learning to forecast how risks change across places and over time.",
+  "role": "Developer",
+  "bio": "Jerry is a senior statistician at Abubakar Tafawa Balewa University in Bauchi, Nigeria, and runs JJMB Datascience Hub. His work uses statistics and machine learning to study issues in health, science, poverty, and inclusion, with a focus on Nigeria. He also builds accessible data tools.",
   "url": "https://batestguy.github.io/QuartoWebsite-blog-others/about.html",
-  "photo": "author.jpg"
+  "link_label": "Visit Thoughts by Your Hommie",
+  "photo": "author.jpg",
+  "co_developer": {
+    "name": "Yusuf Strong Mashat",
+    "role": "Co-developer · Statistician and Lecturer",
+    "bio": "Strong is a statistician from Bokkos, Plateau State, and lectures in statistics at Plateau State University, Bokkos. His teaching covers probability distributions, sampling, regression analysis, survey design, and biostatistics.",
+    "url": "https://www.researchgate.net/profile/Strong-Mashat",
+    "link_label": "View Strong’s research on ResearchGate",
+    "photo": "yusuf-strong-mashat.jpg"
+  }
 }

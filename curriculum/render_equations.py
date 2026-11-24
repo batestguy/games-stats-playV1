@@ -10,7 +10,7 @@ from matplotlib import rc_context
 from matplotlib.font_manager import FontProperties
 from matplotlib.mathtext import math_to_image
 
-from app.equations import equation_parts
+from app.equations import choice_parts, equation_parts
 from app.game import load_question_bank
 
 
@@ -32,8 +32,9 @@ def render(tex):
 def main():
     sources = {}
     for question in load_question_bank(ASSETS):
-        if question.math_clue:
-            parts = equation_parts(question.math_clue)
+        displayed = [equation_parts(markup) for markup in (question.math_clue, question.math_explanation) if markup]
+        displayed.extend(choice_parts(markup) for markup in question.math_choices.values())
+        for parts in displayed:
             if not any(is_math for is_math, _ in parts) or any(
                 "$" in part for is_math, part in parts if not is_math
             ):
@@ -41,8 +42,6 @@ def main():
             for is_math, part in parts:
                 if is_math:
                     sources.setdefault(part, question.id)
-        for choice in question.math_choices.values():
-            sources.setdefault(choice, question.id)
     rows = []
     with rc_context({"savefig.transparent": True, "mathtext.fontset": "stix"}):
         for tex, question_id in sorted(sources.items()):

@@ -36,6 +36,7 @@ class Question:
     convention: str = ""
     math_clue: str = ""
     math_choices: dict[str, str] = field(default_factory=dict, hash=False)
+    math_explanation: str = ""
 
 
 def load_bank(path: Path) -> list[Question]:
@@ -63,6 +64,7 @@ def load_bank(path: Path) -> list[Question]:
             or item.answer not in item.choices
             or not isinstance(item.convention, str)
             or not isinstance(item.math_clue, str)
+            or not isinstance(item.math_explanation, str)
             or not isinstance(item.math_choices, dict)
             or any(choice not in item.choices or not isinstance(tex, str) or not tex.strip()
                    for choice, tex in item.math_choices.items())
