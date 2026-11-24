@@ -6,6 +6,14 @@ Open the [browser phone preview](preview/index.html) to play and compare screen 
 
 The **About** screen explains both modes, replays the opening, and credits Jerry Bannister Zachary with the profile photo and a short bio from his Quarto blog. [Thoughts by Your Hommie](https://batestguy.github.io/QuartoWebsite-blog-others/about.html)
 
+## Download
+
+[Download the browser game ZIP](https://github.com/batestguy/games-stats-playV1/archive/refs/heads/main.zip).
+Extract the ZIP, then open `preview/index.html` in your browser. Both game modes work offline.
+
+The public Android installer is pending. Watch [GitHub Releases](https://github.com/batestguy/games-stats-playV1/releases)
+for a future APK.
+
 ## How rounds are drawn
 
 - Level 100 draws entirely from its own bank. In every higher level, about 80% of the questions come from the selected level and 20% come from one combined pool of all earlier levels. The review share rounds to the nearest whole question. A ten-question round uses 8 current and 2 review questions. A twenty-question round uses 16 and 4.
